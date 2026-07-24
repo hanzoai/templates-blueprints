@@ -1,0 +1,28 @@
+[variables]
+main_domain = "${domain}"
+admin-email = "admin@example.com"
+admin-pass = ""
+formio-version = "1.90.7"
+mongo-version = "4.1"
+smtp-host = "${main_domain}"
+smtp-port = ""
+smtp-user = ""
+smtp-pass = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "formio"
+port = 3001
+host = "${main_domain}"
+
+[config.env]
+ADMIN_EMAIL = "${admin-email}"
+ADMIN_PASS = "${admin-pass}"
+FORMIO_VERSION = "${formio-version}"
+MONGO_VERSION = "${mongo-version}"
+SMTP_HOST = "${smtp-host}"
+SMTP_PORT = "${smtp-port}"
+SMTP_USER = "${smtp-user}"
+SMTP_PASS = "${smtp-pass}"
+ROOT_DOMAIN = "${main_domain}"

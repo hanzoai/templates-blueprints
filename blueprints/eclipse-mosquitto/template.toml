@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+eclipse-version = "latest"
+
+[config]
+
+[[config.domains]]
+serviceName = "eclipse-mosquitto"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+ECLIPSE_VERSION = "${eclipse-version}"

@@ -1,0 +1,16 @@
+{
+  "id": "whisparr",
+  "name": "Whisparr",
+  "description": "Adult movie collection manager.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Whisparr/Whisparr",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media",
+    "utilities"
+  ]
+}

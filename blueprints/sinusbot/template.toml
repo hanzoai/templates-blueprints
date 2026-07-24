@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+version = "1.0.0-beta.10-202ee4d"
+uid = "1000"
+gid = "1000"
+
+[config]
+
+[[config.domains]]
+serviceName = "sinusbot"
+port = 8087
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+UID = "${uid}"
+GID = "${gid}"

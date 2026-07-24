@@ -1,0 +1,16 @@
+{
+  "id": "actual",
+  "name": "Actual",
+  "description": "Actual Budget is a super fast and privacy-focused app for managing your finances. At its heart is the well proven and much loved Envelope Budgeting methodology.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://actualbudget.org/docs/",
+    "docs": "https://actualbudget.org/docs/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

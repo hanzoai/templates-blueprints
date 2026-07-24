@@ -1,0 +1,24 @@
+{
+  "id": "odoo",
+  "name": "odoo",
+  "description": "Odoo is a suite of open-source business apps that cover all your company needs.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.odoo.com/",
+    "docs": "https://www.odoo.com/"
+  },
+  "tags": [
+    "business",
+    "apps",
+    "crm",
+    "ecommerce",
+    "accounting",
+    "inventory",
+    "point-of-sale",
+    "project-management",
+    "open-source",
+    "productivity"
+  ]
+}

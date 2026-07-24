@@ -1,0 +1,17 @@
+services:
+  readeck:
+    image: codeberg.org/readeck/readeck:latest
+    environment:
+      - READECK_USE_X_FORWARDED=${READECK_USE_X_FORWARDED:-true}
+    volumes:
+      - readeck_data:/readeck
+    healthcheck:
+      test:
+        - CMD
+        - /bin/readeck
+        - healthcheck
+        - -config
+        - config.toml
+      interval: 30s
+      timeout: 2s
+      retries: 3

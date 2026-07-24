@@ -1,0 +1,15 @@
+{
+  "id": "monerod",
+  "name": "Monero Daemon",
+  "description": "Monero is a private, decentralized cryptocurrency that keeps your finances confidential and secure.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/sethforprivacy/simple-monerod-docker",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "finance"
+  ]
+}

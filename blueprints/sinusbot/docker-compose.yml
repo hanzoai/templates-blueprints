@@ -1,0 +1,15 @@
+services:
+  sinusbot:
+    image: sinusbot/docker:${VERSION}
+    environment:
+      UID: ${UID}
+      GID: ${GID}
+    volumes:
+      - sinusbot-data:/opt/sinusbot/data
+      - sinusbot-scripts:/opt/sinusbot/scripts
+    expose:
+      - "8087"
+    restart: always
+volumes:
+  sinusbot-data: {}
+  sinusbot-scripts: {}

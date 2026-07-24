@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+postgres-version = "9.6"
+sonar-version = "10.2.1-community"
+pg-pass = ""
+pg-initdb-args = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "sonarqube"
+port = 9000
+host = "${main_domain}"
+
+[config.env]
+POSTGRES_VERSION = "${postgres-version}"
+SONAR_VERSION = "${sonar-version}"
+PG_PASS = "${pg-pass}"
+PG_INITDB_ARGS = "${pg-initdb-args}"

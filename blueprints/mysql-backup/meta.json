@@ -1,0 +1,16 @@
+{
+  "id": "mysql-backup",
+  "name": "Mysql-Backup",
+  "description": "mysql-backup is a simple way to do MySQL database backups and restores when the database is running in a container.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/databack/mysql-backup",
+    "docs": "https://hub.docker.com/r/databack/mysql-backup"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

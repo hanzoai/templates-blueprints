@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "wings"
+port = 8443
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_WINGS = "${username}"

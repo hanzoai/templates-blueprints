@@ -1,0 +1,18 @@
+services:
+  sickchill:
+    image: linuxserver/sickchill:2023.6.27
+    environment:
+      PGID: "1000"
+      PUID: "1000"
+      TZ: Europe/London
+    expose:
+      - "8081"
+    volumes:
+      - sickchill-config:/config
+      - sickchill-downloads:/downloads
+      - sickchill-tv:/tv
+    restart: unless-stopped
+volumes:
+  sickchill-config: {}
+  sickchill-downloads: {}
+  sickchill-tv: {}

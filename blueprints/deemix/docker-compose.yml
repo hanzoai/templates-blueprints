@@ -1,0 +1,20 @@
+services:
+  deemix:
+    image: registry.gitlab.com/bockiii/deemix-docker:latest
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      UMASK_SET: "022"
+    volumes:
+      - deemix-config:/config
+      - deemix-media:/media
+      - deemix-downloads:/downloads
+      - deemix-music:/music
+    expose:
+      - "6595"
+    restart: always
+volumes:
+  deemix-config: {}
+  deemix-media: {}
+  deemix-downloads: {}
+  deemix-music: {}

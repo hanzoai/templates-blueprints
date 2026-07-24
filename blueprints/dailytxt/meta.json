@@ -1,0 +1,15 @@
+{
+  "id": "dailytxt",
+  "name": "DailyTxT",
+  "description": "Encrypted Diary Web-App",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/PhiTux/DailyTxT",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

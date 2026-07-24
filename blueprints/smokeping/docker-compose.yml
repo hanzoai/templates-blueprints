@@ -1,0 +1,16 @@
+services:
+  smokeping:
+    image: linuxserver/smokeping:${SMOKEPING_VERSION}
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TZ}
+    volumes:
+      - smokeping-config:/config
+      - smokeping-data:/data
+    expose:
+      - "80"
+    restart: always
+volumes:
+  smokeping-config: {}
+  smokeping-data: {}

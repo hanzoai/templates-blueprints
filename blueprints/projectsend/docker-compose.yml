@@ -1,0 +1,17 @@
+services:
+  projectsend:
+    image: linuxserver/projectsend:${PROJECTSEND_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: "1000"
+      PGID: "1000"
+      MAX_UPLOAD: ${MAX_UPLOAD}
+    volumes:
+      - projectsend-config:/config
+      - projectsend-data:/data
+    expose:
+      - "80"
+    restart: unless-stopped
+volumes:
+  projectsend-config: {}
+  projectsend-data: {}

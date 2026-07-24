@@ -1,0 +1,20 @@
+{
+  "id": "sure",
+  "name": "sure",
+  "description": "An all-in-one personal finance platform.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/we-promise/sure",
+    "website": "",
+    "docs": "https://github.com/we-promise/sure"
+  },
+  "tags": [
+    "budgeting",
+    "budget",
+    "money",
+    "expenses",
+    "income",
+    "finance"
+  ]
+}

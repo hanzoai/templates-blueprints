@@ -1,0 +1,16 @@
+{
+  "id": "raneto",
+  "name": "Raneto",
+  "description": "Raneto - is an open source Knowledgebase platform that uses static Markdown files to power your Knowledgebase.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/linuxserver/raneto",
+    "docs": "https://hub.docker.com/r/linuxserver/raneto"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

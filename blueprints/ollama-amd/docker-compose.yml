@@ -1,0 +1,12 @@
+services:
+  ollama-amd:
+    image: ollama/ollama:0.32.1-rocm
+    environment:
+      PORT: "11434"
+    volumes:
+      - ollama-amd-ollama:/root/.ollama
+    expose:
+      - "11434"
+    restart: always
+volumes:
+  ollama-amd-ollama: {}

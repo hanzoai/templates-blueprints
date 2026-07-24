@@ -1,0 +1,48 @@
+[variables]
+main_domain = "${domain}"
+n8n-version = "1.106.3"
+n8n-timezone = "UTC"
+n8n-environment = "production"
+n8n-diagnostics-enabled = "false"
+n8n-default-locale = "en"
+n8n-encryption-key = "${password:40}"
+n8n-concurrency-production-limit = "10"
+n8n-smtp-host = "${main_domain}"
+n8n-smtp-port = ""
+n8n-smtp-user = ""
+n8n-smtp-pass = ""
+n8n-smtp-sender = ""
+n8n-smtp-ssl = "true"
+postgres-version = "pg14"
+postgres-db = "n8n_queue"
+postgres-user = "n8n_queue"
+postgres-password = "${password:50}"
+redis-version = "8.2.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "n8n-io-queue-mode-editor"
+port = 5678
+host = "${main_domain}"
+
+[config.env]
+N8N_VERSION = "${n8n-version}"
+N8N_TIMEZONE = "${n8n-timezone}"
+N8N_ENVIRONMENT = "${n8n-environment}"
+N8N_DIAGNOSTICS_ENABLED = "${n8n-diagnostics-enabled}"
+N8N_DEFAULT_LOCALE = "${n8n-default-locale}"
+N8N_ENCRYPTION_KEY = "${n8n-encryption-key}"
+N8N_CONCURRENCY_PRODUCTION_LIMIT = "${n8n-concurrency-production-limit}"
+N8N_SMTP_HOST = "${n8n-smtp-host}"
+N8N_SMTP_PORT = "${n8n-smtp-port}"
+N8N_SMTP_USER = "${n8n-smtp-user}"
+N8N_SMTP_PASS = "${n8n-smtp-pass}"
+N8N_SMTP_SENDER = "${n8n-smtp-sender}"
+N8N_SMTP_SSL = "${n8n-smtp-ssl}"
+POSTGRES_VERSION = "${postgres-version}"
+POSTGRES_DB = "${postgres-db}"
+POSTGRES_USER = "${postgres-user}"
+POSTGRES_PASSWORD = "${postgres-password}"
+REDIS_VERSION = "${redis-version}"
+ROOT_DOMAIN = "${main_domain}"

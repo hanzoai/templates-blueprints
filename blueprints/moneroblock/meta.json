@@ -1,0 +1,15 @@
+{
+  "id": "moneroblock",
+  "name": "Moneroblock",
+  "description": "Decentralized and trustless Monero block explorer",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/duggavo/MoneroBlock",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

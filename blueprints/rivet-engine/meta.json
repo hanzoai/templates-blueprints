@@ -1,0 +1,21 @@
+{
+  "id": "rivet-engine",
+  "name": "rivet-engine",
+  "description": "Build and scale stateful workloads with long-lived processes",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.rivet.dev/docs",
+    "docs": "https://www.rivet.dev/docs"
+  },
+  "tags": [
+    "stateful",
+    "actors",
+    "realtime",
+    "backend",
+    "serverless",
+    "postgresql",
+    "development"
+  ]
+}

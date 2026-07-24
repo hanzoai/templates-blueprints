@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+version = "alpine"
+super-user = "root"
+super-email = "x@x.com"
+super-pass = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "etesync"
+port = 3735
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+SUPER_USER = "${super-user}"
+SUPER_EMAIL = "${super-email}"
+SUPER_PASS = "${super-pass}"

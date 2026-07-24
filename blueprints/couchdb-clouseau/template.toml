@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+couchdb-version = "3.2.1"
+couchdb-user = "mainuser"
+couchdb-password = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "couchdb-clouseau"
+port = 5984
+host = "${main_domain}"
+
+[config.env]
+COUCHDB_VERSION = "${couchdb-version}"
+COUCHDB_USER = "${couchdb-user}"
+COUCHDB_PASSWORD = "${couchdb-password}"

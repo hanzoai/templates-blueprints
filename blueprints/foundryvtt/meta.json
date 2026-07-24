@@ -1,0 +1,20 @@
+{
+  "id": "foundryvtt",
+  "name": "foundryvtt",
+  "description": "Foundry Virtual Tabletop is a self-hosted & modern roleplaying platform",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://foundryvtt.com/kb/",
+    "docs": "https://foundryvtt.com/kb/"
+  },
+  "tags": [
+    "foundryvtt",
+    "foundry",
+    "vtt",
+    "ttrpg",
+    "roleplaying",
+    "games"
+  ]
+}

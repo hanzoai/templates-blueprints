@@ -1,0 +1,24 @@
+services:
+  poste-io:
+    image: analogic/poste.io:${POSTE_VERSION}
+    environment:
+      TZ: ${POSTE_TZ}
+      HTTPS: ${POSTE_HTTPS}
+      DISABLE_CLAMAV: ${POSTE_DISABLE_CLAMAV}
+      DISABLE_RSPAMD: ${POSTE_DISABLE_RSPAMD}
+      DISABLE_ROUNDCUBE: ${POSTE_DISABLE_ROUNDCUBE}
+      VIRTUAL_HOST: ${POSTE_HOSTNAME}
+    volumes:
+      - poste-io:/data
+    ports:
+      - 25:25
+      - 110:110
+      - 143:143
+      - 465:465
+      - 587:587
+      - 993:993
+      - 995:995
+      - 4190:4190
+    restart: always
+volumes:
+  poste-io: {}

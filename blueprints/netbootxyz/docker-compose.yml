@@ -1,0 +1,12 @@
+services:
+  netbootxyz:
+    image: ghcr.io/netbootxyz/netbootxyz:0.7.6-nbxyz18
+    volumes:
+      - netbootxyz-config:/config
+      - netbootxyz-assets:/assets
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  netbootxyz-config: {}
+  netbootxyz-assets: {}

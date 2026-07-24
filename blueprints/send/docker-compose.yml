@@ -1,0 +1,24 @@
+services:
+  send:
+    image: registry.gitlab.com/timvisee/send:latest
+    environment:
+      NODE_ENV: production
+      BASE_URL: ${APP_PROTOCOL:-http}://${APP_DOMAIN}
+      REDIS_HOST: send-redis
+      MAX_FILE_SIZE: "2147483648"
+      FILE_DIR: /uploads
+    depends_on:
+      - send-redis
+    volumes:
+      - send-uploads:/uploads
+    expose:
+      - "1443"
+    restart: always
+  send-redis:
+    image: redis:alpine
+    volumes:
+      - send-data:/data
+    restart: always
+volumes:
+  send-uploads: {}
+  send-data: {}

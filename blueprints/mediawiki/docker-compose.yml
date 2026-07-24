@@ -1,0 +1,15 @@
+services:
+  mediawiki:
+    image: mediawiki:latest
+    volumes:
+      - mediawiki-images:/var/www/html/images
+      - mediawiki-sqlite:/var/www/html/data
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:80
+      interval: 5s
+      timeout: 20s
+      retries: 10

@@ -1,0 +1,16 @@
+{
+  "id": "node-exporter",
+  "name": "Node Exporter",
+  "description": "Prometheus exporter for machine metrics, written in Go with pluggable metric collectors.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/prometheus/node_exporter",
+    "website": "",
+    "docs": "https://github.com/prometheus/node_exporter"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

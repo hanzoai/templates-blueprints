@@ -1,0 +1,19 @@
+{
+  "id": "hatchet",
+  "name": "hatchet",
+  "description": "Hatchet allows you to run background tasks at scale with a high-throughput, low-latency computing service built on an open-source, fault-tolerant queue.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.hatchet.run/self-hosting/docker-compose",
+    "docs": "https://docs.hatchet.run/self-hosting/docker-compose"
+  },
+  "tags": [
+    "ai-agents",
+    "background-tasks",
+    "data-pipelines",
+    "scheduling",
+    "automation"
+  ]
+}

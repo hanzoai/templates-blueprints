@@ -1,0 +1,15 @@
+{
+  "id": "chatgpt-next-web",
+  "name": "ChatGPT Next Web",
+  "description": "A well-designed cross-platform ChatGPT UI.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/ChatGPTNextWeb/NextChat",
+    "website": "https://nextchat.club",
+    "docs": "https://docs.nextchat.dev/introduction"
+  },
+  "tags": [
+    "ai"
+  ]
+}

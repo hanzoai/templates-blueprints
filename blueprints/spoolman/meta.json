@@ -1,0 +1,16 @@
+{
+  "id": "spoolman",
+  "name": "Spoolman",
+  "description": "Keep track of your inventory of 3D-printer filament spools",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Donkie/Spoolman",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "automation"
+  ]
+}

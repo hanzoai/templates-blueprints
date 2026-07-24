@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "pgbackweb"
+port = 8085
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_64_PGBACKWEB = "${base64:64}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"

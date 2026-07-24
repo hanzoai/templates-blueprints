@@ -1,0 +1,15 @@
+{
+  "id": "index-tts-nvidia",
+  "name": "Index-TTS(Nvidia GPU)",
+  "description": "An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/index-tts/index-tts",
+    "website": "",
+    "docs": "https://github.com/index-tts/index-tts#readme"
+  },
+  "tags": [
+    "ai"
+  ]
+}

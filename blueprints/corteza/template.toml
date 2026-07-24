@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+postgre-db-name = "corteza"
+postgre-username = "cortezaUser"
+postgre-password = "${password:16}"
+lets-encrypt = "$$cap_appname.$$cap_root_domain"
+
+[config]
+
+[[config.domains]]
+serviceName = "corteza"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+POSTGRE_DB_NAME = "${postgre-db-name}"
+POSTGRE_USERNAME = "${postgre-username}"
+POSTGRE_PASSWORD = "${postgre-password}"
+LETS_ENCRYPT = "${lets-encrypt}"
+ROOT_DOMAIN = "${main_domain}"

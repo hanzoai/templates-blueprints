@@ -1,0 +1,16 @@
+{
+  "id": "formio",
+  "name": "Formio",
+  "description": "<form.io> is a combined Form and Data Management platform for form-based Progressive web applications.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/formio/formio",
+    "website": "",
+    "docs": "https://github.com/formio/formio"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

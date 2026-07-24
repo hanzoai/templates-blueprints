@@ -1,0 +1,37 @@
+services:
+  zpan:
+    image: ghcr.io/saltbo/zpan:2.7.2
+    environment:
+      PORT: "8222"
+      BETTER_AUTH_URL: ${PUBLIC_URL}
+      DATABASE_URL: /data/zpan.db
+    volumes:
+      - zpan-data:/data
+    expose:
+      - "8222"
+    restart: always
+  zpan-downloader:
+    image: ghcr.io/saltbo/zpan:2.7.2-cli
+    command:
+      - --config
+      - /data/config.yaml
+      - downloader
+      - up
+    environment:
+      ZPAN_SERVER_URL: http://zpan:8222
+      ZPAN_DOWNLOADER_ENGINE: auto
+      ZPAN_DOWNLOADER_DOWNLOAD_DIR: /data/downloads
+      ZPAN_DOWNLOADER_STATE_DIR: /data/state
+      ZPAN_DOWNLOADER_BT_LISTEN_PORT: "6881"
+      ZPAN_DOWNLOADER_SEED_CACHE_LIMIT: ${SEED_CACHE_LIMIT}
+    volumes:
+      - zpan-downloader-data:/data
+    depends_on:
+      - zpan
+    ports:
+      - ${BT_PORT}:6881/tcp
+      - ${BT_PORT}:6881/udp
+    restart: always
+volumes:
+  zpan-data: {}
+  zpan-downloader-data: {}

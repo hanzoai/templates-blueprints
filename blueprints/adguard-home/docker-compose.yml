@@ -1,0 +1,17 @@
+services:
+  adguard-home:
+    image: adguard/adguardhome:${ADGUARD_VERSION}
+    volumes:
+      - adguard-home-work:/opt/adguardhome/work
+      - adguard-home-conf:/opt/adguardhome/conf
+    ports:
+      - 53:53
+      - 67:67
+      - 68:68
+      - 853:853
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  adguard-home-work: {}
+  adguard-home-conf: {}

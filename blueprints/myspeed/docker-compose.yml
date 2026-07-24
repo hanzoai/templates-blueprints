@@ -1,0 +1,10 @@
+services:
+  myspeed:
+    image: germannewsmaker/myspeed:1.0.9
+    expose:
+      - "5216"
+    volumes:
+      - myspeed-data:/myspeed/data
+    restart: unless-stopped
+volumes:
+  myspeed-data: {}

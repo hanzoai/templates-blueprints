@@ -1,0 +1,10 @@
+services:
+  neo4j-db:
+    image: neo4j:${NEO4J_VERSION}
+    environment:
+      NEO4J_AUTH: ${DB_USER}/${DB_PASS}
+    volumes:
+      - neo4j-db-data:/data
+    restart: unless-stopped
+volumes:
+  neo4j-db-data: {}

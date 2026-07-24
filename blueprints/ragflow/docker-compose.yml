@@ -1,0 +1,148 @@
+services:
+  ragflow:
+    image: icewhaletech/ragflow:v0.21.1
+    environment:
+      - ES_HOST=ragflow-es01
+      - INFINITY_HOST=ragflow-infinity
+      - MINIO_HOST=ragflow-minio
+      - MYSQL_HOST=ragflow-mysql
+      - OS_HOST=ragflow-opensearch01
+      - REDIS_HOST=ragflow-redis
+      - TZ=$TZ
+    depends_on:
+      ragflow-mysql:
+        condition: service_healthy
+        required: true
+    expose:
+      - "9380"
+      - "80"
+      - "443"
+      - "5678"
+      - "5679"
+      - "9382"
+    volumes:
+      - ragflow-logs:/ragflow/logs
+      - ragflow-history-data-agent:/ragflow/history_data_agent
+    restart: unless-stopped
+  ragflow-es01:
+    image: elasticsearch:8.11.3
+    environment:
+      - ELASTIC_PASSWORD=infini_rag_flow
+      - TZ=$TZ
+      - bootstrap.memory_lock=false
+      - cluster.routing.allocation.disk.watermark.flood_stage=2gb
+      - cluster.routing.allocation.disk.watermark.high=3gb
+      - cluster.routing.allocation.disk.watermark.low=5gb
+      - discovery.type=single-node
+      - node.name=es01
+      - xpack.security.enabled=true
+      - xpack.security.http.ssl.enabled=false
+      - xpack.security.transport.ssl.enabled=false
+    expose:
+      - "9200"
+    volumes:
+      - ragflow-data:/usr/share/elasticsearch/data
+    restart: unless-stopped
+  ragflow-infinity:
+    image: icewhaletech/ragflow-infinity:v0.6.1
+    environment:
+      - TZ=$TZ
+    expose:
+      - "23817"
+      - "23820"
+      - "5432"
+    volumes:
+      - ragflow-infinity:/var/infinity
+    restart: unless-stopped
+  ragflow-minio:
+    image: quay.io/minio/minio:RELEASE.2025-06-13T11-33-47Z
+    command:
+      - server
+      - --console-address
+      - :9001
+      - /data
+    environment:
+      - MINIO_ROOT_PASSWORD=infini_rag_flow
+      - MINIO_ROOT_USER=rag_flow
+      - TZ=$TZ
+    expose:
+      - "9000"
+      - "9001"
+    volumes:
+      - ragflow-data:/data
+    restart: unless-stopped
+  ragflow-mysql:
+    image: icewhaletech/ragflow-mysql:8.0.39
+    command:
+      - --max_connections=1000
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+      - --tls_version=TLSv1.2,TLSv1.3
+      - --binlog_expire_logs_seconds=604800
+    environment:
+      - MYSQL_PASSWORD=infini_rag_flow
+      - MYSQL_ROOT_PASSWORD=mysql
+      - TZ=$TZ
+    expose:
+      - "3306"
+    volumes:
+      - ragflow-mysql:/var/lib/mysql
+    restart: unless-stopped
+  ragflow-opensearch01:
+    image: opensearchproject/opensearch:2.19.1
+    environment:
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=infini_rag_flow_OS_01
+      - OPENSEARCH_PASSWORD=infini_rag_flow_OS_01
+      - TZ=$TZ
+      - bootstrap.memory_lock=false
+      - cluster.routing.allocation.disk.watermark.flood_stage=2gb
+      - cluster.routing.allocation.disk.watermark.high=3gb
+      - cluster.routing.allocation.disk.watermark.low=5gb
+      - discovery.type=single-node
+      - http.port=9201
+      - node.name=opensearch01
+      - plugins.security.disabled=false
+      - plugins.security.ssl.http.enabled=false
+      - plugins.security.ssl.transport.enabled=true
+    expose:
+      - "9201"
+    volumes:
+      - ragflow-data:/usr/share/opensearch/data
+    restart: unless-stopped
+  ragflow-redis:
+    image: valkey/valkey:8
+    command:
+      - redis-server
+      - --requirepass
+      - infini_rag_flow
+      - --maxmemory
+      - 128mb
+      - --maxmemory-policy
+      - allkeys-lru
+    expose:
+      - "6379"
+    volumes:
+      - ragflow-data:/data
+    restart: unless-stopped
+  ragflow-sandbox-executor-manager:
+    image: infiniflow/sandbox-executor-manager:latest
+    environment:
+      - SANDBOX_BASE_NODEJS_IMAGE=infiniflow/sandbox-base-nodejs:latest
+      - SANDBOX_BASE_PYTHON_IMAGE=infiniflow/sandbox-base-python:latest
+      - SANDBOX_ENABLE_SECCOMP=false
+      - SANDBOX_EXECUTOR_MANAGER_POOL_SIZE=3
+      - SANDBOX_MAX_MEMORY=256m
+      - SANDBOX_TIMEOUT=10s
+      - TZ=$TZ
+    expose:
+      - "9385"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+volumes:
+  ragflow-logs: {}
+  ragflow-history-data-agent: {}
+  ragflow-data: {}
+  ragflow-infinity: {}
+  ragflow-mysql: {}

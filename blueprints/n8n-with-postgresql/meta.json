@@ -1,0 +1,21 @@
+{
+  "id": "n8n-with-postgresql",
+  "name": "n8n-with-postgresql",
+  "description": "n8n is an extendable workflow automation tool.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://n8n.io",
+    "docs": "https://n8n.io"
+  },
+  "tags": [
+    "n8n",
+    "workflow",
+    "automation",
+    "open",
+    "source",
+    "low",
+    "code"
+  ]
+}

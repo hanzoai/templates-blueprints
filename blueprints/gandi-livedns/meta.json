@@ -1,0 +1,15 @@
+{
+  "id": "gandi-livedns",
+  "name": "gandi-livedns",
+  "description": "Update your Gandi DNS zone records with your WAN IP",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/jbbodart/gandi-livedns",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "network"
+  ]
+}

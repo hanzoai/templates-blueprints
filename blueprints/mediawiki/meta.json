@@ -1,0 +1,18 @@
+{
+  "id": "mediawiki",
+  "name": "mediawiki",
+  "description": "MediaWiki is a collaboration and documentation platform brought to you by a vibrant community.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.mediawiki.org",
+    "docs": "https://www.mediawiki.org"
+  },
+  "tags": [
+    "wiki",
+    "collaboration",
+    "documentation",
+    "cms"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tinyauth",
+  "name": "Tinyauth",
+  "description": "The tiniest authentication and authorization server you have ever seen.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/steveiliop56/tinyauth",
+    "website": "https://tinyauth.app",
+    "docs": "https://tinyauth.app"
+  },
+  "tags": [
+    "security"
+  ]
+}

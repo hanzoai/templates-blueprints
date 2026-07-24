@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "yamtrack"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_YAMTRACK = "https://${main_domain}"
+SERVICE_PASSWORD_SECRET = "${password:32}"
+SERVICE_USER_POSTGRESQL = "${username}"
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"

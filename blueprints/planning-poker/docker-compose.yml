@@ -1,0 +1,10 @@
+services:
+  planning-poker:
+    image: axeleroy/self-host-planning-poker:1.2.1
+    volumes:
+      - planning-poker-data:/data
+    expose:
+      - "8000"
+    restart: always
+volumes:
+  planning-poker-data: {}

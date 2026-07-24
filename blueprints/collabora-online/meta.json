@@ -1,0 +1,16 @@
+{
+  "id": "collabora-online",
+  "name": "Collabora Online",
+  "description": "Collabora Online is an online and collaborating office suite",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/caprover/one-click-apps/pull/111",
+    "website": "",
+    "docs": "https://github.com/caprover/one-click-apps/pull/111"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

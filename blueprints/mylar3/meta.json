@@ -1,0 +1,15 @@
+{
+  "id": "mylar3",
+  "name": "Mylar3",
+  "description": "Automatic comic book (cbr/cbz) downloader",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/mylar3/mylar3",
+    "website": "",
+    "docs": "https://github.com/mylar3/mylar3/wiki"
+  },
+  "tags": [
+    "media"
+  ]
+}

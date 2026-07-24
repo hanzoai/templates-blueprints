@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "transmission"
+port = 9091
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_ADMIN = "${username}"
+SERVICE_PASSWORD_ADMIN = "${password:32}"

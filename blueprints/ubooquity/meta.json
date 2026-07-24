@@ -1,0 +1,16 @@
+{
+  "id": "ubooquity",
+  "name": "Ubooquity",
+  "description": "Ubooquity is an online cross-platform content server for reading e-books",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/linuxserver/ubooquity",
+    "docs": "https://hub.docker.com/r/linuxserver/ubooquity"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

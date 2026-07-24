@@ -1,0 +1,41 @@
+[variables]
+main_domain = "${domain}"
+minecraft-version = "1.20.1"
+forge-version = "47.0.46"
+cf-api-key = ""
+cf-page-url = "${main_domain}"
+mc-port = "25565"
+web-username = "admin"
+web-password = "${password:8}"
+rcon-password = "${password:8}"
+max-ram = "8"
+display-name = "Minecraft server"
+display-description = "Minecraft server powered by docker"
+online-mode = "FALSE"
+game-mode = "survival"
+max-players = "20"
+disable-healthcheck = "FALSE"
+
+[config]
+
+[[config.domains]]
+serviceName = "forge-minecraft-web"
+port = 4326
+host = "${main_domain}"
+
+[config.env]
+MINECRAFT_VERSION = "${minecraft-version}"
+FORGE_VERSION = "${forge-version}"
+CF_API_KEY = "${cf-api-key}"
+CF_PAGE_URL = "${cf-page-url}"
+MC_PORT = "${mc-port}"
+WEB_USERNAME = "${web-username}"
+WEB_PASSWORD = "${web-password}"
+RCON_PASSWORD = "${rcon-password}"
+MAX_RAM = "${max-ram}"
+DISPLAY_NAME = "${display-name}"
+DISPLAY_DESCRIPTION = "${display-description}"
+ONLINE_MODE = "${online-mode}"
+GAME_MODE = "${game-mode}"
+MAX_PLAYERS = "${max-players}"
+DISABLE_HEALTHCHECK = "${disable-healthcheck}"

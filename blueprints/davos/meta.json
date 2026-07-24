@@ -1,0 +1,16 @@
+{
+  "id": "davos",
+  "name": "Davos",
+  "description": "Davos is an FTP automation tool that periodically scans given host locations for new files.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/linuxserver/davos",
+    "website": "",
+    "docs": "https://github.com/linuxserver/davos"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "paperless",
+  "name": "paperless",
+  "description": "Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.paperless-ngx.com/configuration/",
+    "docs": "https://docs.paperless-ngx.com/configuration/"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

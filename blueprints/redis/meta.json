@@ -1,0 +1,16 @@
+{
+  "id": "redis",
+  "name": "Redis",
+  "description": "Redis is an in-memory data structure store, used as a database, cache and message broker",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/redis",
+    "docs": "https://hub.docker.com/_/redis"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

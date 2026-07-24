@@ -1,0 +1,22 @@
+services:
+  fileflows:
+    image: revenz/fileflows
+    environment:
+      - _APP_URL=$SERVICE_URL_FILE_FLOWS
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-America/Toronto}
+    volumes:
+      - fileflows_temp:/temp
+      - fileflows_configs:/app/Data
+      - fileflows_logs:/app/Logs
+      - fileflows_common:/app/common
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:5000/api/system/version
+      interval: 2s
+      timeout: 10s
+      retries: 15

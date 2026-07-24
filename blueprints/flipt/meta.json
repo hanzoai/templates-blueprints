@@ -1,0 +1,19 @@
+{
+  "id": "flipt",
+  "name": "flipt",
+  "description": "Flipt is a fully managed feature flag solution that enables you to keep your feature flags and remote config next to your code in Git.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.flipt.io/cloud/overview",
+    "docs": "https://docs.flipt.io/cloud/overview"
+  },
+  "tags": [
+    "feature-flags",
+    "devops",
+    "ci",
+    "cd",
+    "backend"
+  ]
+}

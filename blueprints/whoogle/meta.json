@@ -1,0 +1,17 @@
+{
+  "id": "whoogle",
+  "name": "whoogle",
+  "description": "Whoogle is a self-hosted, privacy-focused search engine front-end for accessing Google search results without tracking and data collection.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/benbusby/whoogle-search?tab=readme-ov-file",
+    "website": "",
+    "docs": "https://github.com/benbusby/whoogle-search?tab=readme-ov-file"
+  },
+  "tags": [
+    "privacy",
+    "search-engine",
+    "search"
+  ]
+}

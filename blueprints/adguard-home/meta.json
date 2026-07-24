@@ -1,0 +1,16 @@
+{
+  "id": "adguard-home",
+  "name": "AdGuard Home",
+  "description": "AdGuard Home is a fast and easy way to block ads on any device and protect kids online!",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/adguard/adguardhome",
+    "docs": "https://hub.docker.com/r/adguard/adguardhome"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

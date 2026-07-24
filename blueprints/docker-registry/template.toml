@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "registry"
+port = 5000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_REGISTRY = "${username}"
+SERVICE_PASSWORD_REGISTRY = "${password:32}"

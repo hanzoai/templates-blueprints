@@ -1,0 +1,15 @@
+{
+  "id": "gopeed",
+  "name": "Gopeed",
+  "description": "Open source, lightweight, native, supports (HTTP, BitTorrent, Magnet, etc.) for downloading.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/gopeedlab/gopeed",
+    "website": "https://gopeed.com",
+    "docs": "https://gopeed.com/docs"
+  },
+  "tags": [
+    "media"
+  ]
+}

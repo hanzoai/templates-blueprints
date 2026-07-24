@@ -1,0 +1,15 @@
+{
+  "id": "slskd",
+  "name": "SLSKD",
+  "description": "P2P downloads",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/slskd/slskd",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

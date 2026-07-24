@@ -1,0 +1,15 @@
+{
+  "id": "peanut",
+  "name": "PeaNUT",
+  "description": "UPS monitoring and power outage notification system",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/brandawg93/peanut",
+    "website": "",
+    "docs": "https://github.com/brandawg93/PeaNUT#readme"
+  },
+  "tags": [
+    "home"
+  ]
+}

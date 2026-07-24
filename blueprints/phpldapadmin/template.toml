@@ -1,0 +1,22 @@
+[variables]
+main_domain = "${domain}"
+openldap-version = "1.4.0"
+openldap-ldap-organisation = ""
+openldap-ldap-admin-password = ""
+phpldapadmin-version = "0.9.0"
+phpldapadmin-admin-email = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "phpldapadmin"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+OPENLDAP_VERSION = "${openldap-version}"
+OPENLDAP_LDAP_ORGANISATION = "${openldap-ldap-organisation}"
+OPENLDAP_LDAP_ADMIN_PASSWORD = "${openldap-ldap-admin-password}"
+PHPLDAPADMIN_VERSION = "${phpldapadmin-version}"
+PHPLDAPADMIN_ADMIN_EMAIL = "${phpldapadmin-admin-email}"
+ROOT_DOMAIN = "${main_domain}"

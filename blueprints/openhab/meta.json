@@ -1,0 +1,15 @@
+{
+  "id": "openhab",
+  "name": "OpenHAB",
+  "description": "Empowering the smart home",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/openhab/openhab-distro",
+    "website": "https://www.openhab.org",
+    "docs": "https://www.openhab.org/docs/"
+  },
+  "tags": [
+    "home"
+  ]
+}

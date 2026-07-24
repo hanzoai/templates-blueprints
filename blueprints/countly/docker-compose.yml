@@ -1,0 +1,8 @@
+services:
+  countly:
+    image: countly/countly-server:${COUNTLY_VERSION}
+    volumes:
+      - countly-data:/var/lib/mongodb
+    restart: always
+volumes:
+  countly-data: {}

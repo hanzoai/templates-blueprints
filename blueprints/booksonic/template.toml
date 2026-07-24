@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "booksonic"
+port = 8040
+host = "${main_domain}"
+
+[config.env]
+TZ = ""
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"

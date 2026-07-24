@@ -1,0 +1,22 @@
+[variables]
+main_domain = "${domain}"
+vito-version = "4.x"
+vito-app-key = "${password:43}"
+vito-admin-name = "admin"
+vito-admin-email = ""
+vito-admin-password = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "vitodeploy"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VITO_VERSION = "${vito-version}"
+VITO_APP_KEY = "${vito-app-key}"
+VITO_ADMIN_NAME = "${vito-admin-name}"
+VITO_ADMIN_EMAIL = "${vito-admin-email}"
+VITO_ADMIN_PASSWORD = "${vito-admin-password}"
+ROOT_DOMAIN = "${main_domain}"

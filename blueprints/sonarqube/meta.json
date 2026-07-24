@@ -1,0 +1,16 @@
+{
+  "id": "sonarqube",
+  "name": "sonarqube",
+  "description": "Catch bugs and vulnerabilities in your app, with thousands of automated Static Code Analysis rules",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/sonarqube",
+    "docs": "https://hub.docker.com/_/sonarqube"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

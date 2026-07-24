@@ -1,0 +1,16 @@
+{
+  "id": "wekan",
+  "name": "WeKan",
+  "description": "WeKan ® is an completely Open Source and Free software collaborative kanban board application with MIT license.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/wekan/wekan/blob/main/docker-compose.yml",
+    "website": "",
+    "docs": "https://github.com/wekan/wekan/blob/main/docker-compose.yml"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

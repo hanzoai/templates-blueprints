@@ -1,0 +1,19 @@
+services:
+  nitter:
+    image: zedeus/nitter:latest
+    depends_on:
+      - nitter-redis
+    volumes:
+      - nitter-nitter-conf:/src/nitter.conf
+    expose:
+      - "8080"
+    restart: always
+  nitter-redis:
+    image: redis:alpine
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - nitter-data:/data
+    restart: always
+volumes:
+  nitter-nitter-conf: {}
+  nitter-data: {}

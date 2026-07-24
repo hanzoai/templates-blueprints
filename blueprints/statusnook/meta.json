@@ -1,0 +1,25 @@
+{
+  "id": "statusnook",
+  "name": "statusnook",
+  "description": "Effortlessly deploy a status page and start monitoring endpoints in minutes",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://statusnook.com",
+    "docs": "https://statusnook.com"
+  },
+  "tags": [
+    "go",
+    "html",
+    "monitoring",
+    "sqlite",
+    "self",
+    "hosted",
+    "status",
+    "page",
+    "htmx",
+    "smtp",
+    "slack"
+  ]
+}

@@ -1,0 +1,36 @@
+[variables]
+main_domain = "${domain}"
+version = "v2.5.4"
+secret-key-base = "secret"
+calendso-encryption-key = "secret"
+postgres-user = "user"
+postgres-password = "password"
+postgres-db = "calendso"
+postgres-host = "${main_domain}"
+email-from = "notifications@example.com"
+email-host = "${main_domain}"
+email-port = "587"
+email-server-user = "email_user"
+email-server-password = "email_password"
+
+[config]
+
+[[config.domains]]
+serviceName = "call-only"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+SECRET_KEY_BASE = "${secret-key-base}"
+CALENDSO_ENCRYPTION_KEY = "${calendso-encryption-key}"
+POSTGRES_USER = "${postgres-user}"
+POSTGRES_PASSWORD = "${postgres-password}"
+POSTGRES_DB = "${postgres-db}"
+POSTGRES_HOST = "${postgres-host}"
+EMAIL_FROM = "${email-from}"
+EMAIL_HOST = "${email-host}"
+EMAIL_PORT = "${email-port}"
+EMAIL_SERVER_USER = "${email-server-user}"
+EMAIL_SERVER_PASSWORD = "${email-server-password}"
+ROOT_DOMAIN = "${main_domain}"

@@ -1,0 +1,37 @@
+[variables]
+main_domain = "${domain}"
+imagor-version = "1.9.1"
+env-imagor-unsafe = "1"
+env-imagor-secret = "${password:32}"
+env-aws-key-id = ""
+env-aws-secret-access-key = ""
+env-aws-region = ""
+env-s3-endpoint = ""
+env-s3-loader-bucket = "mybucket"
+env-s3-loader-bucket-dir = "images"
+env-s3-storage-bucket = "mybucket"
+env-s3-storage-bucket-dir = "images"
+env-s3-result-storage-bucket = "mybucket"
+env-s3-result-storage-bucket-dir = "images/result"
+
+[config]
+
+[[config.domains]]
+serviceName = "imagor-s3"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+IMAGOR_VERSION = "${imagor-version}"
+ENV_IMAGOR_UNSAFE = "${env-imagor-unsafe}"
+ENV_IMAGOR_SECRET = "${env-imagor-secret}"
+ENV_AWS_KEY_ID = "${env-aws-key-id}"
+ENV_AWS_SECRET_ACCESS_KEY = "${env-aws-secret-access-key}"
+ENV_AWS_REGION = "${env-aws-region}"
+ENV_S3_ENDPOINT = "${env-s3-endpoint}"
+ENV_S3_LOADER_BUCKET = "${env-s3-loader-bucket}"
+ENV_S3_LOADER_BUCKET_DIR = "${env-s3-loader-bucket-dir}"
+ENV_S3_STORAGE_BUCKET = "${env-s3-storage-bucket}"
+ENV_S3_STORAGE_BUCKET_DIR = "${env-s3-storage-bucket-dir}"
+ENV_S3_RESULT_STORAGE_BUCKET = "${env-s3-result-storage-bucket}"
+ENV_S3_RESULT_STORAGE_BUCKET_DIR = "${env-s3-result-storage-bucket-dir}"

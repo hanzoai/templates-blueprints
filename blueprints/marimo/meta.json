@@ -1,0 +1,19 @@
+{
+  "id": "marimo",
+  "name": "marimo",
+  "description": "An open-source reactive notebook for Python — reproducible, git-friendly, SQL built-in, executable as a script, and shareable as an app.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://marimo.io/",
+    "docs": "https://marimo.io/"
+  },
+  "tags": [
+    "notebook",
+    "python",
+    "data",
+    "analysis",
+    "devtools"
+  ]
+}

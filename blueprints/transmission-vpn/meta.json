@@ -1,0 +1,16 @@
+{
+  "id": "transmission-vpn",
+  "name": "Transmission (VPN)",
+  "description": "BitTorrent client with VPN support.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/haugene/docker-transmission-openvpn",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "security"
+  ]
+}

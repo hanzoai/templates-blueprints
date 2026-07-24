@@ -1,0 +1,10 @@
+services:
+  ollama:
+    image: ollama/ollama:0.24.0
+    expose:
+      - "11434"
+    volumes:
+      - ollama-ollama:/root/.ollama
+    restart: unless-stopped
+volumes:
+  ollama-ollama: {}

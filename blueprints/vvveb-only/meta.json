@@ -1,0 +1,16 @@
+{
+  "id": "vvveb-only",
+  "name": "Vvveb CMS - No Database",
+  "description": "This will create a Vvveb CMS instance only. You will need to create and configure the database information manually. Intended for advanced users.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/vvveb/vvvebcms",
+    "docs": "https://hub.docker.com/r/vvveb/vvvebcms"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

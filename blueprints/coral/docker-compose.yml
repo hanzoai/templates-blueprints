@@ -1,0 +1,26 @@
+services:
+  coral-mongo:
+    image: mongo:4.2
+    volumes:
+      - coral-mongo:/data/db
+    restart: always
+  coral-redis:
+    image: redis:3.2
+    volumes:
+      - coral-redis:/data
+    restart: always
+  coral-talk:
+    image: coralproject/talk:${TALK_VERSION}
+    environment:
+      MONGODB_URI: mongodb://coral-mongo:27017/coral
+      REDIS_URI: redis://coral-redis:6379
+      SIGNING_SECRET: ${SIGNING_SECRET}
+    depends_on:
+      - coral-mongo
+      - coral-redis
+    expose:
+      - "5000"
+    restart: always
+volumes:
+  coral-mongo: {}
+  coral-redis: {}

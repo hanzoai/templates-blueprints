@@ -1,0 +1,15 @@
+{
+  "id": "bitcoind",
+  "name": "Bitcoin",
+  "description": "Bitcoin core node",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/lncm/docker-bitcoind",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "finance"
+  ]
+}

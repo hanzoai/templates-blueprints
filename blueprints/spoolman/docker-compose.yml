@@ -1,0 +1,14 @@
+services:
+  spoolman:
+    image: ghcr.io/donkie/spoolman:0.25.0
+    environment:
+      TZ: ${TZ}
+      PUID: "0"
+      PGID: "0"
+    volumes:
+      - spoolman-spoolman:/home/app/.local/share/spoolman
+    expose:
+      - "8000"
+    restart: always
+volumes:
+  spoolman-spoolman: {}

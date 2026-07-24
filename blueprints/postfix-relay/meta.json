@@ -1,0 +1,15 @@
+{
+  "id": "postfix-relay",
+  "name": "Postfix Mail Relay",
+  "description": "Simple SMTP relay for environments where you may have private servers with no Internet connection.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/shamil/docker-postfix-relay",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "dragonflydb",
+  "name": "Dragonfly",
+  "description": "Dragonfly is a simple, performant, and cost-efficient in-memory data store.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.dragonflydb.io/docs/getting-started/docker",
+    "docs": "https://www.dragonflydb.io/docs/getting-started/docker"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

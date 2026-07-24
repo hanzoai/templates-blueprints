@@ -1,0 +1,13 @@
+services:
+  chatgpt-next-web:
+    image: yidadaa/chatgpt-next-web:v2.16.1
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+      CODE: ""
+      PROXY_URL: ""
+      BASE_URL: https://api.openai.com
+    expose:
+      - "3000"
+    restart: unless-stopped

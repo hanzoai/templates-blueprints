@@ -1,0 +1,22 @@
+{
+  "id": "trigger",
+  "name": "trigger",
+  "description": "The open source background jobs platform for developers",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://trigger.dev/docs/self-hosting/overview",
+    "docs": "https://trigger.dev/docs/self-hosting/overview"
+  },
+  "tags": [
+    "background-jobs",
+    "typescript",
+    "javascript",
+    "scheduling",
+    "workflows",
+    "automation",
+    "tasks",
+    "queues"
+  ]
+}

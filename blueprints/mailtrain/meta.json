@@ -1,0 +1,16 @@
+{
+  "id": "mailtrain",
+  "name": "Mailtrain V2(Beta)",
+  "description": "Mailtrain is a self hosted newsletter application built on Node.js (v10+) and MySQL (v8+) or MariaDB (v10+).",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/Mailtrain-org/mailtrain/blob/development/docker-compose.yml",
+    "website": "",
+    "docs": "https://github.com/Mailtrain-org/mailtrain/blob/development/docker-compose.yml"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

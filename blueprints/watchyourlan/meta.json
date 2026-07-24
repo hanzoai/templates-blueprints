@@ -1,0 +1,16 @@
+{
+  "id": "watchyourlan",
+  "name": "WatchYourLAN",
+  "description": "Lightweight network IP scanner",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/aceberg/WatchYourLAN",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "network",
+    "utilities"
+  ]
+}

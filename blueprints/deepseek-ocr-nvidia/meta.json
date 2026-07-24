@@ -1,0 +1,15 @@
+{
+  "id": "deepseek-ocr-nvidia",
+  "name": "DeepSeek OCR(Nvidia GPU)",
+  "description": "Powerful OCR powered by DeepSeek AI",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/rdumasia303/deepseek_ocr_app",
+    "website": "",
+    "docs": "https://github.com/rdumasia303/deepseek_ocr_app#readme"
+  },
+  "tags": [
+    "ai"
+  ]
+}

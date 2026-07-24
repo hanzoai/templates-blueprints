@@ -1,0 +1,26 @@
+[variables]
+main_domain = "${domain}"
+mysql-root-passwd = "${password:16}"
+mysql-database-name = "humhub"
+mysql-user = "humhub"
+mysql-passwd = "${password:16}"
+humhub-version = "1.6.2"
+humhub-protocol = "https"
+humhub-auto-install = "false"
+
+[config]
+
+[[config.domains]]
+serviceName = "humhub"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+MYSQL_ROOT_PASSWD = "${mysql-root-passwd}"
+MYSQL_DATABASE_NAME = "${mysql-database-name}"
+MYSQL_USER = "${mysql-user}"
+MYSQL_PASSWD = "${mysql-passwd}"
+HUMHUB_VERSION = "${humhub-version}"
+HUMHUB_PROTOCOL = "${humhub-protocol}"
+HUMHUB_AUTO_INSTALL = "${humhub-auto-install}"
+ROOT_DOMAIN = "${main_domain}"

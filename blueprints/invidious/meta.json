@@ -1,0 +1,16 @@
+{
+  "id": "invidious",
+  "name": "Invidious",
+  "description": "Invidious is an alternative front-end to YouTube.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/iv-org/invidious",
+    "website": "",
+    "docs": "https://github.com/iv-org/invidious"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

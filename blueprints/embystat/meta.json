@@ -1,0 +1,19 @@
+{
+  "id": "embystat",
+  "name": "embystat",
+  "description": "EmbyStat is a web analytics tool, designed to provide insight into website traffic and user behavior.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/mregni/EmbyStat",
+    "website": "",
+    "docs": "https://github.com/mregni/EmbyStat"
+  },
+  "tags": [
+    "analytics",
+    "insights",
+    "statistics",
+    "web",
+    "traffic"
+  ]
+}

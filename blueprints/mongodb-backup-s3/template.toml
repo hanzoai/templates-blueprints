@@ -1,0 +1,41 @@
+[variables]
+main_domain = "${domain}"
+aws-access-key-id = ""
+aws-secret-access-key = ""
+bucket = ""
+backup-folder = "mongo_dumps/"
+mongodb-host = "${main_domain}"
+mongodb-port = "27017"
+mongodb-user = "admin"
+mongodb-pass = ""
+mongodb-db = ""
+extra-opts = ""
+cron-time = "0 3 * * *"
+tz = "US/Eastern"
+init-backup = "true"
+init-restore = ""
+disable-cron = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "mongodb-backup-s3"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+AWS_ACCESS_KEY_ID = "${aws-access-key-id}"
+AWS_SECRET_ACCESS_KEY = "${aws-secret-access-key}"
+BUCKET = "${bucket}"
+BACKUP_FOLDER = "${backup-folder}"
+MONGODB_HOST = "${mongodb-host}"
+MONGODB_PORT = "${mongodb-port}"
+MONGODB_USER = "${mongodb-user}"
+MONGODB_PASS = "${mongodb-pass}"
+MONGODB_DB = "${mongodb-db}"
+EXTRA_OPTS = "${extra-opts}"
+CRON_TIME = "${cron-time}"
+TZ = "${tz}"
+INIT_BACKUP = "${init-backup}"
+INIT_RESTORE = "${init-restore}"
+DISABLE_CRON = "${disable-cron}"

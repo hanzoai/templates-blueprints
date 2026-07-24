@@ -1,0 +1,30 @@
+services:
+  plex-arm:
+    image: linuxserver/plex:${PLEX_VERSION}
+    environment:
+      TZ: ${TZ}
+      PLEX_CLAIM: ${PLEX_TOKEN}
+      ADVERTISE_IP: http://plex-arm.${ROOT_DOMAIN}/
+    volumes:
+      - plex-arm-config:/config
+      - plex-arm-transcode:/transcode
+      - plex-arm-movies:/movies
+      - plex-arm-tv:/tv
+    ports:
+      - 32400:32400
+      - 3005:3005
+      - 8324:8324
+      - 32469:32469
+      - 1900:1900
+      - 32410:32410
+      - 32412:32412
+      - 32413:32413
+      - 32414:32414
+    expose:
+      - "32400"
+    restart: always
+volumes:
+  plex-arm-config: {}
+  plex-arm-transcode: {}
+  plex-arm-movies: {}
+  plex-arm-tv: {}

@@ -1,0 +1,19 @@
+{
+  "id": "dozzle-with-auth",
+  "name": "dozzle-with-auth",
+  "description": "Dozzle is a simple and lightweight web UI for Docker logs.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://dozzle.dev/",
+    "docs": "https://dozzle.dev/"
+  },
+  "tags": [
+    "dozzle",
+    "docker",
+    "logs",
+    "web-ui",
+    "devtools"
+  ]
+}

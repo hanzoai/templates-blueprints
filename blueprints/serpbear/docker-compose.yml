@@ -1,0 +1,17 @@
+services:
+  serpbear:
+    image: towfiqi/serpbear:${SERPBEAR_VERSION}
+    environment:
+      NEXT_PUBLIC_APP_URL: http://serpbear.${ROOT_DOMAIN}
+      USER: ${SERPBEAR_USER}
+      PASSWORD: ${SERPBEAR_PASSWORD}
+      SECRET: ${SERPBEAR_SECRET}
+      APIKEY: ${SERPBEAR_APIKEY}
+      SESSION_DURATION: ${SERPBEAR_SESSION}
+    volumes:
+      - serpbear-serpbear-data:/app/data
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  serpbear-serpbear-data: {}

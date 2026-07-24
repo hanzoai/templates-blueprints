@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "open-archiver"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_HEX_64_ENCRYPTIONKEY = "${hash:64}"
+SERVICE_HEX_64_STORAGEENCRYPTIONKEY = "${hash:64}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_PASSWORD_MEILISEARCH = "${password:32}"
+SERVICE_PASSWORD_VALKEY = "${password:32}"
+SERVICE_BASE64_128_JWT = "${base64:32}"

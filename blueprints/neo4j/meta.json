@@ -1,0 +1,16 @@
+{
+  "id": "neo4j",
+  "name": "Neo4j",
+  "description": "Neo4j is an open-source, NoSQL, native graph database that provides an ACID-compliant transactional backend for your applications.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/neo4j",
+    "docs": "https://hub.docker.com/_/neo4j"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

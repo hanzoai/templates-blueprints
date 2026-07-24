@@ -1,0 +1,10 @@
+services:
+  thumbor:
+    image: minimalcompact/thumbor:${THUMBOR_VERSION}
+    environment:
+      THUMBOR_PORT: "80"
+    volumes:
+      - thumbor-data:/data
+    restart: always
+volumes:
+  thumbor-data: {}

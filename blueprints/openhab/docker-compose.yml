@@ -1,0 +1,18 @@
+services:
+  openhab:
+    image: openhab/openhab:5.1.4
+    environment:
+      CRYPTO_POLICY: unlimited
+      PGID: $PGID
+      PUID: $PUID
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - openhab-addons:/openhab/addons
+      - openhab-conf:/openhab/conf
+      - openhab-userdata:/openhab/userdata
+    restart: unless-stopped
+volumes:
+  openhab-addons: {}
+  openhab-conf: {}
+  openhab-userdata: {}

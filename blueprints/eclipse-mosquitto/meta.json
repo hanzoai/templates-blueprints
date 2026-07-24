@@ -1,0 +1,16 @@
+{
+  "id": "eclipse-mosquitto",
+  "name": "Eclipse Mosquitto - A MQTT Broker",
+  "description": "Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/eclipse/mosquitto",
+    "website": "",
+    "docs": "https://github.com/eclipse/mosquitto"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

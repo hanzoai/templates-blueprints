@@ -1,0 +1,15 @@
+{
+  "id": "webdav",
+  "name": "WebDAV",
+  "description": "A web-based file sharing and management protocol",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/ugeek/docker-webdav",
+    "website": "",
+    "docs": "https://github.com/ugeek/docker-webdav#readme"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

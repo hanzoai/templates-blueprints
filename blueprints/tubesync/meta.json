@@ -1,0 +1,16 @@
+{
+  "id": "tubesync",
+  "name": "TubeSync",
+  "description": "Syncs YouTube channels and playlists to a locally hosted media server",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

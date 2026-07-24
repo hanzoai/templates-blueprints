@@ -1,0 +1,27 @@
+services:
+  deepseek-ocr-backend:
+    image: icewhaletech/deepseek-ocr-backend:v2.2.0
+    environment:
+      API_HOST: 0.0.0.0
+      API_PORT: "8000"
+      FRONTEND_PORT: "3000"
+      MODEL_NAME: deepseek-ai/DeepSeek-OCR
+      HF_HOME: /models
+      MAX_UPLOAD_SIZE_MB: "100"
+      BASE_SIZE: "1024"
+      IMAGE_SIZE: "640"
+      CROP_MODE: "true"
+    expose:
+      - "8000"
+    volumes:
+      - deepseek-ocr-nvidia-models:/models
+    restart: always
+  deepseek-ocr-frontend:
+    image: icewhaletech/deepseek-ocr-frontend:v2.2.0
+    depends_on:
+      - deepseek-ocr-backend
+    expose:
+      - "80"
+    restart: always
+volumes:
+  deepseek-ocr-nvidia-models: {}

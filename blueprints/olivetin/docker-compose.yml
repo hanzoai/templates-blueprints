@@ -1,0 +1,10 @@
+services:
+  olivetin:
+    image: jamesread/olivetin:latest
+    volumes:
+      - olivetin-config:/config
+    expose:
+      - "1337"
+    restart: always
+volumes:
+  olivetin-config: {}

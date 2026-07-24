@@ -1,0 +1,15 @@
+{
+  "id": "postgresql",
+  "name": "PostgreSQL",
+  "description": "PostgreSQL is an advanced, enterprise-class, and open-source relational database system. PostgreSQL supports both SQL (relational) and JSON (non-relational) querying.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/postgres/postgres",
+    "website": "https://www.postgresql.org",
+    "docs": "https://www.postgresql.org/docs/17/"
+  },
+  "tags": [
+    "developer"
+  ]
+}

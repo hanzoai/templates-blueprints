@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "firefly"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_APPKEY = "${base64:32}"
+SERVICE_USER_MYSQL = "${username}"
+SERVICE_PASSWORD_MYSQL = "${password:32}"
+SERVICE_BASE64_CRONTOKEN = "${base64:32}"
+SERVICE_PASSWORD_MYSQLROOT = "${password:32}"

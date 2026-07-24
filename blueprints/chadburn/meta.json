@@ -1,0 +1,16 @@
+{
+  "id": "chadburn",
+  "name": "Chadburn",
+  "description": "Chadburn is a modern and low footprint job scheduler for docker environments, built on Go. Chadburn is a suitable replacement for the old fashioned cron in Docker environments.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/Premoweb/Chadburn",
+    "website": "",
+    "docs": "https://github.com/Premoweb/Chadburn"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

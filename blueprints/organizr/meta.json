@@ -1,0 +1,16 @@
+{
+  "id": "organizr",
+  "name": "organizr",
+  "description": "Homelab Services Organizer",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.organizr.app/",
+    "docs": "https://docs.organizr.app/"
+  },
+  "tags": [
+    "tool",
+    "productivity"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "deemix",
+  "name": "Deemix",
+  "description": "deemix is a barebone deezer downloader library built from the ashes of Deezloader Remix.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "",
+    "website": "https://deemix.app/",
+    "docs": "https://deemix.app/"
+  },
+  "tags": [
+    "media",
+    "music"
+  ]
+}

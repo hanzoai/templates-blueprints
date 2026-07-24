@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mdns-repeater"
+port = 9998
+host = "${main_domain}"
+
+[config.env]
+MDNS_HOST_NIC = ""
+MDNS_DOCKER_NIC = ""

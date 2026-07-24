@@ -1,0 +1,16 @@
+{
+  "id": "pihole",
+  "name": "Pi-hole",
+  "description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/pi-hole/docker-pi-hole",
+    "website": "",
+    "docs": "https://github.com/pi-hole/docker-pi-hole"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+papermerge-version = "v2.0.1-ls10"
+tz = "Asia/Kolkata"
+redis-url = "${main_domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "papermerge"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+PAPERMERGE_VERSION = "${papermerge-version}"
+TZ = "${tz}"
+REDIS_URL = "${redis-url}"

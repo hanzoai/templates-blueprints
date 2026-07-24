@@ -1,0 +1,15 @@
+{
+  "id": "copyparty",
+  "name": "CopyParty",
+  "description": "A simple, private file server.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/9001/copyparty",
+    "website": "https://copyparty.eu/",
+    "docs": "https://github.com/9001/copyparty/tree/hovudstraum/docs"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

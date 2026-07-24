@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+mysql-version = "8.4.3"
+db-pass = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "mysql-db"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+MYSQL_VERSION = "${mysql-version}"
+DB_PASS = "${db-pass}"

@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mindsdb"
+port = 47334
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_API_47335 = "https://${main_domain}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"

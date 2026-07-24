@@ -1,0 +1,6 @@
+services:
+  nginx-redirect:
+    image: caprover/nginx-redirect:latest
+    environment:
+      RETURN_LOCATION: return 301 ${REDIRECT_URL}$request_uri;
+    restart: always

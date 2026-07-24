@@ -1,0 +1,15 @@
+{
+  "id": "haven",
+  "name": "Haven",
+  "description": "Self-hostable private blogging.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/havenweb/haven",
+    "website": "https://havenweb.org",
+    "docs": "https://havenweb.org"
+  },
+  "tags": [
+    "social"
+  ]
+}

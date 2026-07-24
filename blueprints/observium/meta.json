@@ -1,0 +1,16 @@
+{
+  "id": "observium",
+  "name": "observium",
+  "description": "Observium is a comprehensive network monitoring platform designed to deliver powerful monitoring capabilities, combined with an elegant and intuitive user interface.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.observium.org/",
+    "docs": "https://docs.observium.org/"
+  },
+  "tags": [
+    "networking",
+    "monitoring"
+  ]
+}

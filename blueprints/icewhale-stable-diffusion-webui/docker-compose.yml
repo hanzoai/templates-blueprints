@@ -1,0 +1,17 @@
+services:
+  icewhale-stable-diffusion-webui:
+    image: johnguan/stable-diffusion-webui:latest
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CPU_FALLBACK=true
+    expose:
+      - "7860"
+    volumes:
+      - icewhale-stable-diffusion-webui-models:/data/models
+      - icewhale-stable-diffusion-webui-outputs:/data/outputs
+      - icewhale-stable-diffusion-webui-config:/data/config
+    restart: unless-stopped
+volumes:
+  icewhale-stable-diffusion-webui-models: {}
+  icewhale-stable-diffusion-webui-outputs: {}
+  icewhale-stable-diffusion-webui-config: {}

@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+smokeping-version = "2.7.3"
+puid = "1000"
+pgid = "1000"
+tz = "UTC"
+
+[config]
+
+[[config.domains]]
+serviceName = "smokeping"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SMOKEPING_VERSION = "${smokeping-version}"
+PUID = "${puid}"
+PGID = "${pgid}"
+TZ = "${tz}"

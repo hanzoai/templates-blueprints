@@ -1,0 +1,14 @@
+services:
+  write-freely:
+    image: nephatrine/write-freely:0.16
+    environment:
+      TZ: ${TZ}
+      PUID: "1000"
+      PGID: "1000"
+    volumes:
+      - write-freely-config:/mnt/config
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  write-freely-config: {}

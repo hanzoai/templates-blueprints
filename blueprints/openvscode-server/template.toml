@@ -1,0 +1,27 @@
+[variables]
+main_domain = "${domain}"
+openvscode-server-version = "1.74.3"
+openvscode-server-timezone = "UTC"
+openvscode-server-user-id = "1000"
+openvscode-server-group-id = "1000"
+openvscode-server-connection-token = "${password:16}"
+openvscode-server-connection-secret = ""
+openvscode-server-sudo-password = ""
+openvscode-server-sudo-hash = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "openvscode-server"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+OPENVSCODE_SERVER_VERSION = "${openvscode-server-version}"
+OPENVSCODE_SERVER_TIMEZONE = "${openvscode-server-timezone}"
+OPENVSCODE_SERVER_USER_ID = "${openvscode-server-user-id}"
+OPENVSCODE_SERVER_GROUP_ID = "${openvscode-server-group-id}"
+OPENVSCODE_SERVER_CONNECTION_TOKEN = "${openvscode-server-connection-token}"
+OPENVSCODE_SERVER_CONNECTION_SECRET = "${openvscode-server-connection-secret}"
+OPENVSCODE_SERVER_SUDO_PASSWORD = "${openvscode-server-sudo-password}"
+OPENVSCODE_SERVER_SUDO_HASH = "${openvscode-server-sudo-hash}"

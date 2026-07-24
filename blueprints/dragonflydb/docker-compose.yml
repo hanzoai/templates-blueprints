@@ -1,0 +1,11 @@
+services:
+  dragonflydb:
+    image: docker.dragonflydb.io/dragonflydb/dragonfly:${DRAGONFLYDB_VERSION}
+    environment:
+      DFLY_requirepass: ${DRAGONFLYDB_PASSWORD}
+      DFLY_maxmemory: ${DRAGONFLYDB_MAXMEM}
+    volumes:
+      - dragonflydb-dragonflydb-data:/data
+    restart: always
+volumes:
+  dragonflydb-dragonflydb-data: {}

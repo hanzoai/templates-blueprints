@@ -1,0 +1,10 @@
+services:
+  percona:
+    image: percona:${PERCONA_VERSION}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+    volumes:
+      - percona-data:/var/lib/mysql
+    restart: always
+volumes:
+  percona-data: {}

@@ -1,0 +1,45 @@
+services:
+  haven:
+    image: ghcr.io/havenweb/haven:latest
+    environment:
+      RAILS_ENV: production
+      HAVEN_DB_HOST: haven-db
+      HAVEN_DB_NAME: haven
+      HAVEN_DB_ROLE: haven
+      HAVEN_DB_PASSWORD: ${HAVEN_DB_PASSWORD}
+      HAVEN_USER_EMAIL: ${HAVEN_USER_EMAIL}
+      HAVEN_USER_PASS: ${HAVEN_USER_PASSWORD}
+    depends_on:
+      - haven-db
+    volumes:
+      - haven-storage:/storage
+    expose:
+      - "3000"
+    restart: always
+  haven-db:
+    image: postgres:13.2-alpine
+    command:
+      - postgres
+      - -c
+      - max_connections=1000
+      - -c
+      - synchronous_commit=off
+      - -c
+      - fsync=off
+      - -c
+      - full_page_writes=off
+      - -c
+      - max_wal_size=4GB
+      - -c
+      - checkpoint_timeout=30min
+      - -c
+      - wal_level=logical
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: haven
+    volumes:
+      - haven-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  haven-storage: {}
+  haven-data: {}

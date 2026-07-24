@@ -1,0 +1,21 @@
+{
+  "id": "cryptgeon",
+  "name": "cryptgeon",
+  "description": "Secure note / file sharing service inspired by PrivNote.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/cupcakearmy/cryptgeon",
+    "website": "",
+    "docs": "https://github.com/cupcakearmy/cryptgeon"
+  },
+  "tags": [
+    "cryptgeon",
+    "secure",
+    "note",
+    "sharing",
+    "privnote",
+    "file",
+    "security"
+  ]
+}

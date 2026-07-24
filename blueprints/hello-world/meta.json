@@ -1,0 +1,15 @@
+{
+  "id": "hello-world",
+  "name": "Hello World",
+  "description": "Hello World web server in under 2 MB",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/crccheck/docker-hello-world",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

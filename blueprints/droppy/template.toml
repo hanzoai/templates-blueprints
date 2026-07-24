@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+droppy-version = "v0.0.6"
+
+[config]
+
+[[config.domains]]
+serviceName = "droppy"
+port = 8989
+host = "${main_domain}"
+
+[config.env]
+DROPPY_VERSION = "${droppy-version}"

@@ -1,0 +1,10 @@
+services:
+  logzio-collector:
+    image: logzio/docker-collector-logs:${VERSION}
+    environment:
+      LOGZIO_TOKEN: ${TOKEN}
+      matchContainerName: ${MATCHCONTAINERNAME}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/containers:/var/lib/docker/containers
+    restart: always

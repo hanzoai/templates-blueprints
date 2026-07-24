@@ -1,0 +1,16 @@
+{
+  "id": "gogost",
+  "name": "GOST - GO Simple Tunnel",
+  "description": "A simple security tunnel written in Go lang",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/go-gost/gostctl/releases",
+    "website": "https://gost.run/en/",
+    "docs": "https://gost.run/en/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

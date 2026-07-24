@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+pyload-version = "0.5.0"
+tz = "Europe/Brussels"
+path-to-downloads = "pyload-downloads"
+puid = "1000"
+guid = "1000"
+
+[config]
+
+[[config.domains]]
+serviceName = "pyload"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+PYLOAD_VERSION = "${pyload-version}"
+TZ = "${tz}"
+PATH_TO_DOWNLOADS = "${path-to-downloads}"
+PUID = "${puid}"
+GUID = "${guid}"

@@ -1,0 +1,16 @@
+{
+  "id": "forge-minecraft",
+  "name": "Dynamic Minecraft itzg server",
+  "description": "Minecraft server with dynamic versions and types.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/itzg/docker-minecraft-server",
+    "website": "",
+    "docs": "https://github.com/itzg/docker-minecraft-server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

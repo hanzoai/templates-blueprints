@@ -1,0 +1,15 @@
+{
+  "id": "filedrop",
+  "name": "FileDrop",
+  "description": "FileDrop is a free, open source file sharing service",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "productivity"
+  ]
+}

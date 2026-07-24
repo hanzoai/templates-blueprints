@@ -1,0 +1,15 @@
+{
+  "id": "motioneye",
+  "name": "Motioneye",
+  "description": "A web frontend for the motion daemon.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/motioneye-project/motioneye",
+    "website": "",
+    "docs": "https://github.com/motioneye-project/motioneye/wiki"
+  },
+  "tags": [
+    "home"
+  ]
+}

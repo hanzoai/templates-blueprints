@@ -1,0 +1,16 @@
+{
+  "id": "imagor-local",
+  "name": "Imagor (Local storage)",
+  "description": "Imagor is a fast, Docker-ready image processing server written in Go. (Stores images locally as docker volumes)",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/cshum/imagor",
+    "website": "",
+    "docs": "https://github.com/cshum/imagor"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

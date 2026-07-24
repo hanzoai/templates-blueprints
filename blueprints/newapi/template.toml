@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "new-api"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_NEW_API_3000 = "https://${main_domain}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_BASE64_64_SESSION_SECRET = "${base64:64}"

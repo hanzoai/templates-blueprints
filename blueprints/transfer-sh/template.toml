@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+transfersh-version = "v1.4.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "transfer-sh"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+TRANSFERSH_VERSION = "${transfersh-version}"

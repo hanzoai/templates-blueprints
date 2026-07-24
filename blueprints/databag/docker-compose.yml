@@ -1,0 +1,13 @@
+services:
+  databag:
+    image: balzack/databag:${VERSION}
+    environment:
+      TZ: ${TZ}
+      PHP_TZ: ${TZ}
+    volumes:
+      - databag-data:/var/lib/databag
+    expose:
+      - "7000"
+    restart: always
+volumes:
+  databag-data: {}

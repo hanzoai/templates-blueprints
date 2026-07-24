@@ -1,0 +1,15 @@
+{
+  "id": "pdfding",
+  "name": "PdfDing",
+  "description": "Selfhosted PDF manager, viewer and editor",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/mrmn2/PdfDing",
+    "website": "https://www.pdfding.com",
+    "docs": "https://github.com/mrmn2/PdfDing#readme"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

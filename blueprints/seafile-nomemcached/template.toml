@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+seafile-version = "8.0.7"
+mariadb-version = "10.6.4"
+mariadb-root-pswd = "${password:10}"
+timezone = "Etc/UTC"
+admin-email = "admin@seafile.com"
+admin-pswd = "${password:10}"
+seafile-hostname = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "seafile-nomemcached"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SEAFILE_VERSION = "${seafile-version}"
+MARIADB_VERSION = "${mariadb-version}"
+MARIADB_ROOT_PSWD = "${mariadb-root-pswd}"
+TIMEZONE = "${timezone}"
+ADMIN_EMAIL = "${admin-email}"
+ADMIN_PSWD = "${admin-pswd}"
+SEAFILE_HOSTNAME = "${seafile-hostname}"

@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+umami-version = "3.0.3"
+db-url = "${main_domain}"
+db-user = ""
+db-name = ""
+db-pass = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "umami-only"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+UMAMI_VERSION = "${umami-version}"
+DB_URL = "${db-url}"
+DB_USER = "${db-user}"
+DB_NAME = "${db-name}"
+DB_PASS = "${db-pass}"

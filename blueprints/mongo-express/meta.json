@@ -1,0 +1,16 @@
+{
+  "id": "mongo-express",
+  "name": "Mongo Express",
+  "description": "Web-based MongoDB admin interface, written with Node.js and express",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/mongo-express/mongo-express\\nEnter",
+    "website": "https://hub.docker.com/_/mongo-express/",
+    "docs": "https://hub.docker.com/_/mongo-express/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

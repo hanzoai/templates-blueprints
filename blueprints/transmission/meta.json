@@ -1,0 +1,18 @@
+{
+  "id": "transmission",
+  "name": "transmission",
+  "description": "Fast, easy, and free BitTorrent client.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.linuxserver.io/images/docker-transmission/",
+    "docs": "https://docs.linuxserver.io/images/docker-transmission/"
+  },
+  "tags": [
+    "bittorrent",
+    "torrent",
+    "peer-to-peer",
+    "media"
+  ]
+}

@@ -1,0 +1,13 @@
+services:
+  adguard:
+    image: adguard/adguardhome:v0.107.78
+    expose:
+      - "53"
+      - "853"
+    volumes:
+      - adguard-work:/opt/adguardhome/work
+      - adguard-conf:/opt/adguardhome/conf
+    restart: always
+volumes:
+  adguard-work: {}
+  adguard-conf: {}

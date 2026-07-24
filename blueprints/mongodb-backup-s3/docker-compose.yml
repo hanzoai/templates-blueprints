@@ -1,0 +1,21 @@
+services:
+  mongodb-backup-s3:
+    image: halvves/mongodb-backup-s3@sha256:e709db5e0fe5d44873ac5a385af214e951f2a0366a7c02b515ebf7c983658b0c
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      BUCKET: ${BUCKET}
+      BACKUP_FOLDER: ${BACKUP_FOLDER}
+      MONGODB_HOST: ${MONGODB_HOST}
+      MONGODB_PORT: ${MONGODB_PORT}
+      MONGODB_USER: ${MONGODB_USER}
+      MONGODB_PASS: ${MONGODB_PASS}
+      MONGODB_DB: ${MONGODB_DB}
+      EXTRA_OPTS: ${EXTRA_OPTS}
+      CRON_TIME: ${CRON_TIME}
+      TZ: ${TZ}
+      CRON_TZ: ${TZ}
+      INIT_BACKUP: ${INIT_BACKUP}
+      INIT_RESTORE: ${INIT_RESTORE}
+      DISABLE_CRON: ${DISABLE_CRON}
+    restart: always

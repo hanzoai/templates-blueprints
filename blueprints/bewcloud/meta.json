@@ -1,0 +1,15 @@
+{
+  "id": "bewcloud",
+  "name": "bewCloud",
+  "description": "The Simple Web Cloud Solution.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/bewcloud/bewcloud",
+    "website": "https://bewcloud.com",
+    "docs": "https://bewcloud.com"
+  },
+  "tags": [
+    "data"
+  ]
+}

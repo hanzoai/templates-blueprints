@@ -1,0 +1,17 @@
+{
+  "id": "unmanic",
+  "name": "Unmanic",
+  "description": "Unmanic - Library Optimiser.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Unmanic/unmanic",
+    "website": "https://docs.unmanic.app/",
+    "docs": "https://docs.unmanic.app/"
+  },
+  "tags": [
+    "utilities",
+    "data",
+    "media"
+  ]
+}

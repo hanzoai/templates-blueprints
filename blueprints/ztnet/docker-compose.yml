@@ -1,0 +1,31 @@
+services:
+  ztnet:
+    image: sinamics/ztnet:0.7.18
+    environment:
+      ZT_ADDR: http://172.17.0.1:9993
+      POSTGRES_HOST: ztnet-postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: ztnet
+      POSTGRES_PASSWORD: ztnetbl5hbv98wl89x9v
+      POSTGRES_DB: ztnet
+      NEXTAUTH_URL: http://0.0.0.0:3050
+      NEXTAUTH_SECRET: mn6vor005ncgnu9iuqxn8bg
+      NEXTAUTH_URL_INTERNAL: http://ztnet:3000
+    depends_on:
+      - ztnet-postgres
+    expose:
+      - "3000"
+    volumes:
+      - /var/lib/zerotier-one:/var/lib/zerotier-one
+    restart: unless-stopped
+  ztnet-postgres:
+    image: postgres:15.2-alpine
+    environment:
+      POSTGRES_USER: ztnet
+      POSTGRES_PASSWORD: ztnetbl5hbv98wl89x9v
+      POSTGRES_DB: ztnet
+    volumes:
+      - ztnet-data:/var/lib/postgresql/data
+    restart: unless-stopped
+volumes:
+  ztnet-data: {}

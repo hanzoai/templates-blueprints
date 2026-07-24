@@ -1,0 +1,15 @@
+{
+  "id": "twingate-connector",
+  "name": "Twingate",
+  "description": "Twingate Connector for CasaOS",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.twingate.com",
+    "docs": "https://www.twingate.com/docs/connectors"
+  },
+  "tags": [
+    "networking"
+  ]
+}

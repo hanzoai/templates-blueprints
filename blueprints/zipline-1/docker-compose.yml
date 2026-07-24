@@ -1,0 +1,31 @@
+services:
+  zipline:
+    image: ghcr.io/diced/zipline:4.6.4
+    environment:
+      CORE_RETURN_HTTPS: "false"
+      CORE_SECRET: ${ZIPLINE_CORE_SECRET}
+      CORE_HOSTNAME: 0.0.0.0
+      CORE_PORT: "3000"
+      DATABASE_URL: postgres://tipi:${ZIPLINE_DB_PASSWORD}@zipline-db/zipline
+      CORE_LOGGER: "true"
+    depends_on:
+      - zipline-db
+    volumes:
+      - zipline-1-uploads:/zipline/uploads
+      - zipline-1-public:/zipline/public
+    expose:
+      - "3000"
+    restart: always
+  zipline-db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: tipi
+      POSTGRES_PASSWORD: ${ZIPLINE_DB_PASSWORD}
+      POSTGRES_DB: zipline
+    volumes:
+      - zipline-1-postgresql:/var/lib/postgresql
+    restart: always
+volumes:
+  zipline-1-uploads: {}
+  zipline-1-public: {}
+  zipline-1-postgresql: {}

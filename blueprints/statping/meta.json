@@ -1,0 +1,16 @@
+{
+  "id": "statping",
+  "name": "Statping",
+  "description": "Statping - Web and App Status Monitoring for Any Type of Project.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/statping/statping",
+    "website": "",
+    "docs": "https://github.com/statping/statping"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

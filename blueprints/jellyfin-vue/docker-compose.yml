@@ -1,0 +1,6 @@
+services:
+  jellyfin-vue:
+    image: ghcr.io/jellyfin/jellyfin-vue:unstable.2024-10-14.a47a7d5
+    expose:
+      - "80"
+    restart: always

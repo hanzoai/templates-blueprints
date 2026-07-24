@@ -1,0 +1,23 @@
+services:
+  unifi-controller:
+    image: linuxserver/unifi-controller:8.0.7
+    environment:
+      MEM_LIMIT: "1024"
+      MEM_STARTUP: "1024"
+      PGID: "1000"
+      PUID: "1000"
+    expose:
+      - "3478"
+      - "10001"
+      - "8080"
+      - "8443"
+      - "1900"
+      - "8843"
+      - "8880"
+      - "6789"
+      - "5514"
+    volumes:
+      - unifi-controller-config:/config
+    restart: unless-stopped
+volumes:
+  unifi-controller-config: {}

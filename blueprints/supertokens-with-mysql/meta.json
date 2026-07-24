@@ -1,0 +1,26 @@
+{
+  "id": "supertokens-with-mysql",
+  "name": "supertokens-with-mysql",
+  "description": "An open-source authentication solution that simplifies the implementation of secure user authentication and session management for web and mobile applications.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://supertokens.com/docs/guides",
+    "docs": "https://supertokens.com/docs/guides"
+  },
+  "tags": [
+    "supertokens",
+    "login",
+    "authentication",
+    "authorization",
+    "oauth",
+    "user-management",
+    "session-management",
+    "access-control",
+    "otp",
+    "magic-link",
+    "passwordless",
+    "auth"
+  ]
+}

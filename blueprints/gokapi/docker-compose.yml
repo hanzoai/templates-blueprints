@@ -1,0 +1,12 @@
+services:
+  gokapi:
+    image: f0rc3/gokapi:${GOKAPI_VERSION}
+    volumes:
+      - gokapi-gokapi-data:/app/data
+      - gokapi-config-data:/app/config
+    expose:
+      - "53842"
+    restart: always
+volumes:
+  gokapi-gokapi-data: {}
+  gokapi-config-data: {}

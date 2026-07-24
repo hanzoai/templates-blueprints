@@ -1,0 +1,10 @@
+services:
+  nexus3:
+    image: sonatype/nexus3:${VERSION}
+    volumes:
+      - nexus3-data:/nexus-data
+    expose:
+      - "8081"
+    restart: always
+volumes:
+  nexus3-data: {}

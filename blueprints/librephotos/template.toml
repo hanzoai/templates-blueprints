@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "librephotos"
+port = 8132
+host = "${main_domain}"
+
+[config.env]
+LIBREPHOTOS_DB_PASSWORD = "${hash:32}"
+LIBREPHOTOS_SECRET_KEY = "${hash:32}"
+LIBREPHOTOS_EMAIL = ""
+LIBREPHOTOS_USERNAME = ""
+LIBREPHOTOS_PASSWORD = "${password:32}"
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"
+INTERNAL_IP = ""
+APP_PORT = "80"

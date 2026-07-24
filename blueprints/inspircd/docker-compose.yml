@@ -1,0 +1,10 @@
+services:
+  inspircd:
+    image: inspircd/inspircd-docker:4.11.0
+    volumes:
+      - inspircd-conf:/inspircd/conf
+    expose:
+      - "6697"
+    restart: always
+volumes:
+  inspircd-conf: {}

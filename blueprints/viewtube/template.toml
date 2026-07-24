@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "viewtube"
+port = 8180
+host = "${main_domain}"
+
+[config.env]
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"

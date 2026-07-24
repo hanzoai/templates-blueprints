@@ -1,0 +1,16 @@
+{
+  "id": "terraria-server",
+  "name": "terraria-server",
+  "description": "Docker multi-arch Image for Terraria Server.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/hexlo/terraria-server-docker",
+    "website": "",
+    "docs": "https://github.com/hexlo/terraria-server-docker"
+  },
+  "tags": [
+    "terraria",
+    "games"
+  ]
+}

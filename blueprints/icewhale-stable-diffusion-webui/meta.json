@@ -1,0 +1,15 @@
+{
+  "id": "icewhale-stable-diffusion-webui",
+  "name": "Stable Diffusion",
+  "description": "An AI model used to generate images conditioned on text descriptions.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "website": "",
+    "docs": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki"
+  },
+  "tags": [
+    "ai"
+  ]
+}

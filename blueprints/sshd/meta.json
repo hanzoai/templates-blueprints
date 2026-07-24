@@ -1,0 +1,16 @@
+{
+  "id": "sshd",
+  "name": "SSH Container",
+  "description": "Just a simple container that has sshd installed so you can SSH directly into this container.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/linuxserver/docker-openssh-server",
+    "website": "",
+    "docs": "https://github.com/linuxserver/docker-openssh-server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

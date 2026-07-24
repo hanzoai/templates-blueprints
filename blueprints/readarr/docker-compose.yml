@@ -1,0 +1,18 @@
+services:
+  readarr:
+    image: lscr.io/linuxserver/readarr:${READARR_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: ${PUID}
+      PGID: ${GUID}
+    volumes:
+      - readarr-data:/config
+      - readarr-books:/books
+      - readarr-downloads:/downloads
+    expose:
+      - "8787"
+    restart: always
+volumes:
+  readarr-data: {}
+  readarr-books: {}
+  readarr-downloads: {}

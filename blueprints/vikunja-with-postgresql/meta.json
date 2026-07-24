@@ -1,0 +1,16 @@
+{
+  "id": "vikunja-with-postgresql",
+  "name": "vikunja-with-postgresql",
+  "description": "The open-source, self-hostable to-do app. Organize everything, on all platforms.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://vikunja.io",
+    "docs": "https://vikunja.io"
+  },
+  "tags": [
+    "productivity",
+    "todo"
+  ]
+}

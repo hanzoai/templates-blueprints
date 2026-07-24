@@ -1,0 +1,16 @@
+{
+  "id": "directus-mysql-redis",
+  "name": "Directus + MySQL + Redis",
+  "description": "Directus is an open-source headless CMS and an Open Data Platform built to democratize the database. It provides a dynamic API and intuitive Admin Panel App.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/directus",
+    "website": "https://docs.directus.io/self-hosted/docker-guide.html",
+    "docs": "https://docs.directus.io/self-hosted/docker-guide.html"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

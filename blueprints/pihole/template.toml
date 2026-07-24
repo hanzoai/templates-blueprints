@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+version = "2024.07.0"
+webpassword = "${password:12}"
+tz = "America/Los_Angeles"
+
+[config]
+
+[[config.domains]]
+serviceName = "pihole"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+WEBPASSWORD = "${webpassword}"
+TZ = "${tz}"
+ROOT_DOMAIN = "${main_domain}"

@@ -1,0 +1,14 @@
+services:
+  seerr:
+    image: ghcr.io/seerr-team/seerr:v3.3.0
+    environment:
+      LOG_LEVEL: debug
+      TZ: ${TZ}
+      PORT: "5055"
+    volumes:
+      - seerr-config:/app/config
+    expose:
+      - "5055"
+    restart: always
+volumes:
+  seerr-config: {}

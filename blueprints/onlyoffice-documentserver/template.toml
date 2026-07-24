@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+app-version = "7.3.3.50"
+secret-enable = "true"
+secret-pass = "${password:12}"
+header = "Authorization"
+body = "true"
+
+[config]
+
+[[config.domains]]
+serviceName = "onlyoffice-documentserver"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+APP_VERSION = "${app-version}"
+SECRET_ENABLE = "${secret-enable}"
+SECRET_PASS = "${secret-pass}"
+HEADER = "${header}"
+BODY = "${body}"

@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "ctfd"
+port = 8546
+host = "${main_domain}"
+
+[config.env]
+CTFD_MYSQL_DB_PASSWORD = "${hash:32}"
+CTFD_SECRET_KEY = "${hash:32}"
+CTFD_MYSQL_ROOT_PASSWORD = "${hash:32}"

@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "marimo"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_MARIMO = "${password:32}"

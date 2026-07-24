@@ -1,0 +1,15 @@
+{
+  "id": "beaverhabittracker",
+  "name": "BeaverHabitTracker",
+  "description": "A self-hosted, goal-free habit tracking tool.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/daya0576/beaverhabits",
+    "website": "https://beaverhabits.com/",
+    "docs": "https://github.com/daya0576/beaverhabits#readme"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+monica-version = "3.7"
+mariadb-version = "10.5.6"
+mariadb-db = "monica"
+mariadb-user = "monica"
+mariadb-pass = ""
+gensec32 = "${password:32}"
+
+[config]
+
+[[config.domains]]
+serviceName = "monica"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+MONICA_VERSION = "${monica-version}"
+MARIADB_VERSION = "${mariadb-version}"
+MARIADB_DB = "${mariadb-db}"
+MARIADB_USER = "${mariadb-user}"
+MARIADB_PASS = "${mariadb-pass}"
+GENSEC32 = "${gensec32}"

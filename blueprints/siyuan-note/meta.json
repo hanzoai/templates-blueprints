@@ -1,0 +1,15 @@
+{
+  "id": "siyuan-note",
+  "name": "SiYuan Note",
+  "description": "Private personal knowledge management",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/siyuan-note/siyuan",
+    "website": "https://b3log.org/siyuan/",
+    "docs": "https://b3log.org/siyuan/en/"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

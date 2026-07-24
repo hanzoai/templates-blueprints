@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "sequin"
+port = 7376
+host = "${main_domain}"
+
+[config.env]
+SERVICE_FQDN_SEQUIN = "${main_domain}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_REALBASE64_64_SECRETKEY = "${base64:64}"
+SERVICE_REALBASE64_VAULTKEY = "${base64:32}"

@@ -1,0 +1,11 @@
+services:
+  motioneye:
+    image: ccrisan/motioneye:master-amd64
+    expose:
+      - "8765"
+    volumes:
+      - motioneye-motioneye:/etc/motioneye
+      - motioneye-motioneye:/var/lib/motioneye
+    restart: unless-stopped
+volumes:
+  motioneye-motioneye: {}

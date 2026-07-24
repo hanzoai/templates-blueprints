@@ -1,0 +1,13 @@
+services:
+  checkmk:
+    image: checkmk/check-mk-raw:${VERSION}
+    volumes:
+      - checkmk-data:/omd/sites
+      - /etc/localtime:/etc/localtime
+    ports:
+      - 8000:8000
+    expose:
+      - "5000"
+    restart: always
+volumes:
+  checkmk-data: {}

@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "frontend"
+port = 8200
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_BACKEND = "https://${main_domain}"
+SERVICE_URL_RUSTFS = "https://${main_domain}"
+SERVICE_URL_FRONTEND = "https://${main_domain}"
+SERVICE_PASSWORD_JWT = "${password:32}"
+SERVICE_USER_MYSQL = "${username}"
+SERVICE_PASSWORD_MYSQL = "${password:32}"
+SERVICE_USER_RUSTFS = "${username}"
+SERVICE_PASSWORD_RUSTFS = "${password:32}"
+SERVICE_PASSWORD_MYSQLROOT = "${password:32}"

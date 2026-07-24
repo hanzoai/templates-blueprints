@@ -1,0 +1,16 @@
+{
+  "id": "deluge",
+  "name": "Deluge",
+  "description": "A lightweight, Free Software, cross-platform BitTorrent client with Full Encryption, WebUI, Plugin System, etc.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://deluge-torrent.org",
+    "docs": "https://deluge-torrent.org"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

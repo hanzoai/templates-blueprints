@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+version = "2.0.0"
+images = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "pigallery2"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+IMAGES = "${images}"

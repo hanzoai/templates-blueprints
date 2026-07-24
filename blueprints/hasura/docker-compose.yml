@@ -1,0 +1,25 @@
+services:
+  hasura-db:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASS}
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_INITDB_ARGS: ${PG_INITDB_ARGS}
+    volumes:
+      - hasura-db-data:/var/lib/postgresql/data
+    restart: always
+  hasura:
+    image: hasura/graphql-engine:${HASURA_VERSION}
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://${PG_USER}:${PG_PASS}@hasura-db:5432/${PG_DB}
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+      HASURA_GRAPHQL_ADMIN_SECRET: ${ADMIN_SECRET}
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+    depends_on:
+      - hasura-db
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  hasura-db-data: {}

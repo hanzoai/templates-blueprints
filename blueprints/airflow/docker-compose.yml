@@ -1,0 +1,95 @@
+services:
+  airflow-db:
+    image: bitnami/postgresql:${POSTGRESQL_VERSION}
+    environment:
+      POSTGRESQL_DATABASE: ${POSTGRESQL_NAME}
+      POSTGRESQL_USERNAME: ${POSTGRESQL_USER}
+      POSTGRESQL_PASSWORD: ${POSTGRESQL_PASSWORD}
+    volumes:
+      - airflow-postgresql-persistance:/bitnami
+    restart: always
+  airflow-redis:
+    image: bitnamilegacy/redis:${REDIS_VERSION}
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    volumes:
+      - airflow-redis-persistance:/bitnami
+    restart: always
+  airflow:
+    image: bitnamilegacy/airflow:${AIRFLOW_VERSION}
+    environment:
+      AIRFLOW_EXECUTOR: CeleryExecutor
+      AIRFLOW_DATABASE_HOST: airflow-db
+      AIRFLOW_DATABASE_NAME: ${POSTGRESQL_NAME}
+      AIRFLOW_DATABASE_USERNAME: ${POSTGRESQL_USER}
+      AIRFLOW_DATABASE_PASSWORD: ${POSTGRESQL_PASSWORD}
+      REDIS_HOST: airflow-redis
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      AIRFLOW_WEBSERVER_HOST: airflow
+      AIRFLOW_BASE_URL: https://airflow.${ROOT_DOMAIN}/
+      AIRFLOW_SECRET_KEY: ${AIRFLOW_SECRET_KEY}
+      AIRFLOW_LOAD_EXAMPLES: ${AIRFLOW_EXAMPLES}
+      AIRFLOW_USERNAME: ${AIRFLOW_USER}
+      AIRFLOW_PASSWORD: ${AIRFLOW_PASSWORD}
+      AIRFLOW_EMAIL: ${AIRFLOW_EMAIL}
+      AIRFLOW__SMTP__SMTP_HOST: ${SMTP_HOST}
+      AIRFLOW__SMTP__SMTP_PORT: ${SMTP_PORT}
+      AIRFLOW__SMTP__SMTP_STARTTLS: ${SMTP_STARTTLS}
+      AIRFLOW__SMTP__SMTP_SSL: ${SMTP_SSL}
+      AIRFLOW__SMTP__SMTP_USER: ${SMTP_USER}
+      AIRFLOW__SMTP__SMTP_PASSWORD: ${SMTP_PASSWORD}
+      AIRFLOW__SMTP__SMTP_MAIL_FROM: ${SMTP_MAIL_FROM}
+    volumes:
+      - ${AIRFLOW_DAG_PATH}:/opt/bitnami/airflow/dags
+      - ${AIRFLOW_PY_REQUIREMENTS}:/bitnami/python/requirements.txt
+    depends_on:
+      - airflow-db
+      - airflow-redis
+    expose:
+      - "8080"
+    restart: always
+  airflow-worker:
+    image: bitnamilegacy/airflow-worker:${AIRFLOW_WORKER_VERSION}
+    environment:
+      AIRFLOW_EXECUTOR: CeleryExecutor
+      AIRFLOW_DATABASE_HOST: airflow-db
+      AIRFLOW_DATABASE_NAME: ${POSTGRESQL_NAME}
+      AIRFLOW_DATABASE_USERNAME: ${POSTGRESQL_USER}
+      AIRFLOW_DATABASE_PASSWORD: ${POSTGRESQL_PASSWORD}
+      REDIS_HOST: airflow-redis
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      AIRFLOW_WEBSERVER_HOST: airflow
+      AIRFLOW_BASE_URL: https://airflow.${ROOT_DOMAIN}/
+      AIRFLOW_SECRET_KEY: ${AIRFLOW_SECRET_KEY}
+      AIRFLOW_LOAD_EXAMPLES: ${AIRFLOW_EXAMPLES}
+    volumes:
+      - airflow-data:/opt/bitnami/airflow/data
+      - ${AIRFLOW_DAG_PATH}:/opt/bitnami/airflow/dags
+      - ${AIRFLOW_PY_REQUIREMENTS}:/bitnami/python/requirements.txt
+    depends_on:
+      - airflow
+    restart: always
+  airflow-scheduler:
+    image: bitnamilegacy/airflow-scheduler:${AIRFLOW_SCHEDULER_VERSION}
+    environment:
+      AIRFLOW_EXECUTOR: CeleryExecutor
+      AIRFLOW_DATABASE_HOST: airflow-db
+      AIRFLOW_DATABASE_NAME: ${POSTGRESQL_NAME}
+      AIRFLOW_DATABASE_USERNAME: ${POSTGRESQL_USER}
+      AIRFLOW_DATABASE_PASSWORD: ${POSTGRESQL_PASSWORD}
+      REDIS_HOST: airflow-redis
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      AIRFLOW_WEBSERVER_HOST: airflow
+      AIRFLOW_BASE_URL: https://airflow.${ROOT_DOMAIN}/
+      AIRFLOW_SECRET_KEY: ${AIRFLOW_SECRET_KEY}
+      AIRFLOW_LOAD_EXAMPLES: ${AIRFLOW_EXAMPLES}
+    volumes:
+      - ${AIRFLOW_DAG_PATH}:/opt/bitnami/airflow/dags
+      - ${AIRFLOW_PY_REQUIREMENTS}:/bitnami/python/requirements.txt
+    depends_on:
+      - airflow
+    restart: always
+volumes:
+  airflow-postgresql-persistance: {}
+  airflow-redis-persistance: {}
+  airflow-data: {}

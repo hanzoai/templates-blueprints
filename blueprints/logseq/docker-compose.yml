@@ -1,0 +1,16 @@
+services:
+  logseq:
+    image: correctroad/logseq:v0.10.10
+    environment:
+      PGID: "0"
+      PUID: "0"
+    expose:
+      - "3000"
+      - "12315"
+    volumes:
+      - logseq-config:/config
+      - logseq-notes:/notes
+    restart: unless-stopped
+volumes:
+  logseq-config: {}
+  logseq-notes: {}

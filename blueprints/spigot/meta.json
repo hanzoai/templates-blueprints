@@ -1,0 +1,16 @@
+{
+  "id": "spigot",
+  "name": "Spigot",
+  "description": "Spigot is a performance optimized server for Minecraft with plugin support.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/nimmis/docker-spigot",
+    "website": "",
+    "docs": "https://github.com/nimmis/docker-spigot"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

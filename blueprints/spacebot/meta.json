@@ -1,0 +1,22 @@
+{
+  "id": "spacebot",
+  "name": "spacebot",
+  "description": "An agentic AI system with specialized processes for thinking, working, and remembering.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.spacebot.sh/docker",
+    "docs": "https://docs.spacebot.sh/docker"
+  },
+  "tags": [
+    "ai",
+    "agent",
+    "anthropic",
+    "openai",
+    "discord",
+    "slack",
+    "llm",
+    "agentic"
+  ]
+}

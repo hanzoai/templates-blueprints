@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "simplex-smp"
+port = 5223
+host = "${main_domain}"
+
+[config.env]
+SIMPLEX_SMP_PASSWORD = "${password:32}"
+APP_DOMAIN = "${main_domain}"

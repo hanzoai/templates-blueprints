@@ -1,0 +1,15 @@
+{
+  "id": "ztnet",
+  "name": "ZTnet",
+  "description": "Self-hosted ZeroTier network controller with web UI for centralized management.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/sinamics/ztnet",
+    "website": "https://ztnet.network/",
+    "docs": "https://ztnet.network/installation/docker-compose"
+  },
+  "tags": [
+    "networking"
+  ]
+}

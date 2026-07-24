@@ -1,0 +1,16 @@
+{
+  "id": "ombi",
+  "name": "Ombi",
+  "description": "Ombi is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/linuxserver/ombi",
+    "docs": "https://hub.docker.com/r/linuxserver/ombi"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

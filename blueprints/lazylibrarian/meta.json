@@ -1,0 +1,15 @@
+{
+  "id": "lazylibrarian",
+  "name": "Lazylibrarian",
+  "description": "eBook Auto Downloader",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/lazylibrarian/LazyLibrarian",
+    "website": "https://lazylibrarian.gitlab.io/",
+    "docs": "https://lazylibrarian.gitlab.io/"
+  },
+  "tags": [
+    "media"
+  ]
+}

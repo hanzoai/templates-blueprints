@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "homarr"
+port = 8102
+host = "${main_domain}"
+
+[config.env]
+TZ = ""
+HOMARR_SECRET_ENCRYPTION_KEY = "${hash:32}"

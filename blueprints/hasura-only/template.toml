@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+hasura-version = "v1.2.2"
+admin-secret = ""
+database-url = "${main_domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "hasura-only"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+HASURA_VERSION = "${hasura-version}"
+ADMIN_SECRET = "${admin-secret}"
+DATABASE_URL = "${database-url}"

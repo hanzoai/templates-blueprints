@@ -1,0 +1,15 @@
+{
+  "id": "myspeed",
+  "name": "MySpeed",
+  "description": "Analysis software that shows your internet speed for up to 30 days.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/gnmyt/myspeed",
+    "website": "https://myspeed.dev",
+    "docs": "https://docs.myspeed.dev"
+  },
+  "tags": [
+    "networking"
+  ]
+}

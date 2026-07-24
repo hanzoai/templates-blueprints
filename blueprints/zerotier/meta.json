@@ -1,0 +1,16 @@
+{
+  "id": "zerotier",
+  "name": "ZeroTier",
+  "description": "Easy to use zero configuration VPN.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/zerotier/ZeroTierOne",
+    "website": "https://www.zerotier.com",
+    "docs": "https://www.zerotier.com"
+  },
+  "tags": [
+    "network",
+    "security"
+  ]
+}

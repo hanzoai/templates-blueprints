@@ -1,0 +1,19 @@
+services:
+  gladys:
+    image: gladysassistant/gladys:v4.83.0
+    environment:
+      NODE_ENV: production
+      SERVER_PORT: "8270"
+      TZ: ${TZ}
+      SQLITE_FILE_PATH: /var/lib/gladysassistant/gladys-production.db
+    volumes:
+      - gladys-docker-sock:/var/run/docker.sock
+      - gladys-gladysassistant:/var/lib/gladysassistant
+      - gladys-dev:/dev
+      - gladys-udev:/run/udev
+    restart: always
+volumes:
+  gladys-docker-sock: {}
+  gladys-gladysassistant: {}
+  gladys-dev: {}
+  gladys-udev: {}

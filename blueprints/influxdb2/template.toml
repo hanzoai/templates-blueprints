@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+influx-version = "2.0"
+influx-bucket = "my-bucket"
+influx-init-username = "username"
+influx-init-password = "${password:12}"
+influx-token = "${password:24}"
+influx-init-org = "my-org"
+influx-retention = "52w"
+
+[config]
+
+[[config.domains]]
+serviceName = "influxdb2"
+port = 8086
+host = "${main_domain}"
+
+[config.env]
+INFLUX_VERSION = "${influx-version}"
+INFLUX_BUCKET = "${influx-bucket}"
+INFLUX_INIT_USERNAME = "${influx-init-username}"
+INFLUX_INIT_PASSWORD = "${influx-init-password}"
+INFLUX_TOKEN = "${influx-token}"
+INFLUX_INIT_ORG = "${influx-init-org}"
+INFLUX_RETENTION = "${influx-retention}"

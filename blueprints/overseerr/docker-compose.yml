@@ -1,0 +1,21 @@
+services:
+  overseerr:
+    image: sctx/overseerr:latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-America/Toronto}
+    volumes:
+      - overseerr-config:/app/config
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - --tries
+        - "1"
+        - --no-verbose
+        - --spider
+        - http://localhost:5055/api/v1/status
+      interval: 2s
+      timeout: 10s
+      retries: 15

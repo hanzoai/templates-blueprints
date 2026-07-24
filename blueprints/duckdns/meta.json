@@ -1,0 +1,15 @@
+{
+  "id": "duckdns",
+  "name": "duckdns",
+  "description": "Dynamic DNS for your domain, supporting both IPv4 and IPv6",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/linuxserver/docker-duckdns",
+    "website": "https://www.duckdns.org",
+    "docs": "https://docs.linuxserver.io/images/docker-duckdns/"
+  },
+  "tags": [
+    "networking"
+  ]
+}

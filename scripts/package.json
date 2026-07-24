@@ -1,0 +1,6 @@
+{
+  "name": "hanzo-templates-build",
+  "private": true,
+  "type": "module",
+  "dependencies": { "toml": "^3.0.0", "yaml": "^2.7.1" }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "matter-server",
+  "name": "Matter Server",
+  "description": "Interact with Matter. Works with HA !",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/home-assistant-libs/python-matter-server",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "automation"
+  ]
+}

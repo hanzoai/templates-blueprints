@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "nitropage"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_SALT = "${base64:32}"
+SERVICE_PASSWORD_64_SESSION = "${base64:64}"

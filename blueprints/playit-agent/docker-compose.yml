@@ -1,0 +1,4 @@
+services:
+  playit-agent:
+    image: ghcr.io/mafen/playit-docker:latest
+    restart: unless-stopped

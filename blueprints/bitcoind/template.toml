@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "bitcoind"
+port = 8333
+host = "${main_domain}"
+
+[config.env]
+BITCOIND_DB_CACHE = ""
+BITCOIND_MAX_MEMPOOL = ""
+BITCOIND_LISTEN = ""
+BITCOIND_SERVER = ""
+BITCOIND_PRUNING = ""
+BITCOIND_MAXPEERS = ""
+BITCOIND_TXINDEX = ""
+BITCOIND_BLOOM_FILTERS = ""
+BITCOIND_BLOCK_FILTER = ""

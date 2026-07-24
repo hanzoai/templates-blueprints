@@ -1,0 +1,31 @@
+services:
+  humhub-db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE_NAME}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWD}
+    volumes:
+      - humhub-db-data:/var/lib/mysql/
+    restart: always
+  humhub:
+    image: mriedmann/humhub:${HUMHUB_VERSION}
+    environment:
+      HUMHUB_AUTO_INSTALL: ${HUMHUB_AUTO_INSTALL}
+      HUMHUB_DB_HOST: humhub-db
+      HUMHUB_DB_NAME: ${MYSQL_DATABASE_NAME}
+      HUMHUB_DB_USER: ${MYSQL_USER}
+      HUMHUB_DB_PASSWORD: ${MYSQL_PASSWD}
+      HUMHUB_HOST: humhub.${ROOT_DOMAIN}
+      HUMHUB_PROTO: https
+    volumes:
+      - humhub-config:/var/www/localhost/htdocs/protected/config
+      - humhub-uploads:/var/www/localhost/htdocs/uploads
+      - humhub-modules:/var/www/localhost/htdocs/protected/modules
+    restart: always
+volumes:
+  humhub-db-data: {}
+  humhub-config: {}
+  humhub-uploads: {}
+  humhub-modules: {}

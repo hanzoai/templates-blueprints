@@ -1,0 +1,16 @@
+{
+  "id": "thingsboard-postgres",
+  "name": "ThingsBoard - Postgres",
+  "description": "ThingsBoard is an open-source IoT platform for data collection, processing, visualization, device management, with an integrated Postgres database.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://thingsboard.io/docs/user-guide/install/docker/",
+    "docs": "https://thingsboard.io/docs/user-guide/install/docker/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

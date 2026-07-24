@@ -1,0 +1,15 @@
+{
+  "id": "komga",
+  "name": "Komga",
+  "description": "Komga is a media server for your comics, mangas, BDs, magazines and eBooks.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/gotson/komga",
+    "website": "https://komga.org",
+    "docs": "https://komga.org/docs/introduction/"
+  },
+  "tags": [
+    "media"
+  ]
+}

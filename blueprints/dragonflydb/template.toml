@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+dragonflydb-version = "v1.14.0"
+dragonflydb-password = ""
+dragonflydb-maxmem = "4GB"
+
+[config]
+
+[[config.domains]]
+serviceName = "dragonflydb"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+DRAGONFLYDB_VERSION = "${dragonflydb-version}"
+DRAGONFLYDB_PASSWORD = "${dragonflydb-password}"
+DRAGONFLYDB_MAXMEM = "${dragonflydb-maxmem}"

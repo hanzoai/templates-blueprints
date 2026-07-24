@@ -1,0 +1,37 @@
+services:
+  kimai2-fpm:
+    image: kimai/kimai2:${KIMAI_VERSION}
+    environment:
+      ADMINMAIL: ${KIMAI_ADMINMAIL}
+      ADMINPASS: ${KIMAI_ADMINPASS}
+      MAILER_URL: ${KIMAI_MAILERURL}
+      MAILER_FROM: ${KIMAI_MAILERFROM}
+      DATABASE_URL: mysql://${MARIADB_USER}:${MARIADB_PASS}@kimai2-db/${MARIADB_DB}
+      TRUSTED_HOSTS: kimai2.${ROOT_DOMAIN},nginx,localhost,127.0.0.1
+    volumes:
+      - kimai2-public:/opt/kimai/public
+    depends_on:
+      - kimai2-db
+    restart: always
+  kimai2-db:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_DATABASE: ${MARIADB_DB}
+      MYSQL_USER: ${MARIADB_USER}
+      MYSQL_PASSWORD: ${MARIADB_PASS}
+      MYSQL_ROOT_PASSWORD: ${MARIADB_ROOTPASS}
+    volumes:
+      - kimai2-db-data:/var/lib/mysql
+    restart: unless-stopped
+  kimai2:
+    image: lcxat/nginx-fpm-reverse-proxy:${NGINX_VERSION}
+    environment:
+      FPM_NGINX_HOST: kimai2-fpm
+    volumes:
+      - kimai2-public:/opt/kimai/public:ro
+    depends_on:
+      - kimai2-fpm
+    restart: unless-stopped
+volumes:
+  kimai2-public: {}
+  kimai2-db-data: {}

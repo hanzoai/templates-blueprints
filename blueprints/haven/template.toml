@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "haven"
+port = 8130
+host = "${main_domain}"
+
+[config.env]
+HAVEN_DB_PASSWORD = "${hash:32}"
+HAVEN_USER_EMAIL = ""
+HAVEN_USER_PASSWORD = "${password:32}"

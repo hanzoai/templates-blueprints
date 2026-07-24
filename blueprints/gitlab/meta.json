@@ -1,0 +1,35 @@
+{
+  "id": "gitlab",
+  "name": "gitlab",
+  "description": "The all-in-one DevOps platform for seamless collaboration and continuous delivery.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.gitlab.com/ee/install/docker.html",
+    "docs": "https://docs.gitlab.com/ee/install/docker.html"
+  },
+  "tags": [
+    "gitlab",
+    "devops",
+    "continuousintegration",
+    "continuousdelivery",
+    "versioncontrol",
+    "collaboration",
+    "ci-cd",
+    "sourcecodemanagement",
+    "automation",
+    "codereview",
+    "agiledevelopment",
+    "projectmanagement",
+    "opensource",
+    "repositoryhosting",
+    "pipelineautomation",
+    "git",
+    "softwaredevelopment",
+    "issuetracking",
+    "teamcollaboration",
+    "deploymentautomation",
+    "securityintegration"
+  ]
+}

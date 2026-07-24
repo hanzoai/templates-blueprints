@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "chaskiq"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_URL = "https://${main_domain}"
+SERVICE_URL_CHASKIQ = "https://${main_domain}"
+SERVICE_URL_CHASKIQ_3000 = "https://${main_domain}"
+SERVICE_PASSWORD_ADMIN = "${password:32}"
+SERVICE_PASSWORD_64_SECRET = "${base64:64}"

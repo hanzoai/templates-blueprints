@@ -1,0 +1,15 @@
+{
+  "id": "planka",
+  "name": "Planka",
+  "description": "Free open source kanban board for workgroups.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/plankanban/planka",
+    "website": "https://docs.planka.cloud/",
+    "docs": "https://docs.planka.cloud/"
+  },
+  "tags": [
+    "development"
+  ]
+}

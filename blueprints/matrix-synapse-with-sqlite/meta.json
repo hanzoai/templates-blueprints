@@ -1,0 +1,24 @@
+{
+  "id": "matrix-synapse-with-sqlite",
+  "name": "matrix-synapse-with-sqlite",
+  "description": "Chat securely with your family, friends, community, or build great apps with Matrix!",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://element-hq.github.io/synapse/latest/welcome_and_overview.html",
+    "docs": "https://element-hq.github.io/synapse/latest/welcome_and_overview.html"
+  },
+  "tags": [
+    "chat",
+    "slack",
+    "discord",
+    "voip",
+    "video",
+    "call",
+    "matrix",
+    "synapse",
+    "sqlite",
+    "messaging"
+  ]
+}

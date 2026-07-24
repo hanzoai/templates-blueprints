@@ -1,0 +1,18 @@
+services:
+  nzbget:
+    image: linuxserver/nzbget:26.1.20260522
+    environment:
+      NZBGET_PASS: tegbzn6789
+      NZBGET_USER: nzbget
+      PGID: "1000"
+      PUID: "1000"
+      TZ: Europe/London
+    expose:
+      - "6789"
+    volumes:
+      - nzbget-config:/config
+      - nzbget-downloads:/downloads
+    restart: unless-stopped
+volumes:
+  nzbget-config: {}
+  nzbget-downloads: {}

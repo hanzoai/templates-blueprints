@@ -1,0 +1,21 @@
+{
+  "id": "uptime-kuma-with-mysql",
+  "name": "uptime-kuma-with-mysql",
+  "description": "Uptime Kuma is a monitoring tool for tracking the status and performance of your applications in real-time.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/louislam/uptime-kuma?tab=readme-ov-file",
+    "website": "",
+    "docs": "https://github.com/louislam/uptime-kuma?tab=readme-ov-file"
+  },
+  "tags": [
+    "monitoring",
+    "status",
+    "performance",
+    "web",
+    "services",
+    "applications",
+    "real-time"
+  ]
+}

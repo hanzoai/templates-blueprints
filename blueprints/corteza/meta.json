@@ -1,0 +1,16 @@
+{
+  "id": "corteza",
+  "name": "Corteza",
+  "description": "Corteza is a free, open-source, Low Code platform for building your organisation key applications, growing its productivity and protecting its data and the privacy of all those concerned.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/cortezaproject",
+    "website": "",
+    "docs": "https://github.com/cortezaproject"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "emqx"
+port = 18083
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_EMQX = "${password:32}"

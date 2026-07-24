@@ -1,0 +1,15 @@
+{
+  "id": "v2raya",
+  "name": "V2rayA",
+  "description": "A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Trojan, Tuic and Juicity protocols",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/v2rayA/v2rayA",
+    "website": "https://v2raya.org/",
+    "docs": "https://v2raya.org/en/docs/prologue/introduction/"
+  },
+  "tags": [
+    "networking"
+  ]
+}

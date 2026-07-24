@@ -1,0 +1,14 @@
+services:
+  etesync:
+    image: grburst/etesync:${VERSION}
+    environment:
+      SUPER_USER: ${SUPER_USER}
+      SUPER_EMAIL: ${SUPER_EMAIL}
+      SUPER_PASS: ${SUPER_PASS}
+    volumes:
+      - etesync-data:/data
+    expose:
+      - "3735"
+    restart: always
+volumes:
+  etesync-data: {}

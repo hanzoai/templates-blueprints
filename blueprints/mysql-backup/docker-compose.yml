@@ -1,0 +1,9 @@
+services:
+  mysql-backup-db:
+    image: databack/mysql-backup:${MYSQL_BACKUP_VERSION}
+    environment:
+      DB_SERVER: ${DB_SERVER}
+      DB_PORT: ${DB_PORT}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASSWORD}
+    restart: always

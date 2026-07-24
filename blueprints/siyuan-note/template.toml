@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "siyuan-note"
+port = 6806
+host = "${main_domain}"

@@ -1,0 +1,16 @@
+{
+  "id": "call-only",
+  "name": "Cal.com - No Database",
+  "description": "The open-source Calendly alternative.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/calcom/cal.com",
+    "website": "",
+    "docs": "https://github.com/calcom/cal.com"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

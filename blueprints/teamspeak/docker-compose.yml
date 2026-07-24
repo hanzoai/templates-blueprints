@@ -1,0 +1,14 @@
+services:
+  teamspeak:
+    image: teamspeak:${VERSION}
+    environment:
+      TS3SERVER_LICENSE: accept
+    volumes:
+      - teamspeak-data:/var/ts3server/
+    ports:
+      - ${PORT_VOICE}:9987
+      - ${PORT_FILES}:30033
+      - ${PORT_QUERY}:10011
+    restart: always
+volumes:
+  teamspeak-data: {}

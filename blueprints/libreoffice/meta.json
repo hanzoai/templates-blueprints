@@ -1,0 +1,20 @@
+{
+  "id": "libreoffice",
+  "name": "libreoffice",
+  "description": "LibreOffice is a free and powerful office suite.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.linuxserver.io/images/docker-libreoffice/",
+    "docs": "https://docs.linuxserver.io/images/docker-libreoffice/"
+  },
+  "tags": [
+    "office",
+    "document",
+    "spreadsheet",
+    "presentation",
+    "open-source",
+    "productivity"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "orangehrm",
+  "name": "orangehrm",
+  "description": "OrangeHRM open source HR management software.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://starterhelp.orangehrm.com/hc/en-us",
+    "docs": "https://starterhelp.orangehrm.com/hc/en-us"
+  },
+  "tags": [
+    "hr",
+    "hris",
+    "hrms",
+    "human-resource-management",
+    "orangehrm",
+    "hr-management",
+    "productivity"
+  ]
+}

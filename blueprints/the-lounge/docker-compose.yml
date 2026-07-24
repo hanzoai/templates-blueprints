@@ -1,0 +1,10 @@
+services:
+  the-lounge:
+    image: thelounge/thelounge:${LOUNGE_VERSION}
+    volumes:
+      - the-lounge-data:/var/opt/thelounge
+    expose:
+      - "9000"
+    restart: always
+volumes:
+  the-lounge-data: {}

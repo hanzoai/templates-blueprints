@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+pgadmin4-version = "4.27"
+email = ""
+password = "${password:10}"
+
+[config]
+
+[[config.domains]]
+serviceName = "pgadmin4"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+PGADMIN4_VERSION = "${pgadmin4-version}"
+EMAIL = "${email}"
+PASSWORD = "${password}"

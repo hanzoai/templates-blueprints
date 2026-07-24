@@ -1,0 +1,16 @@
+{
+  "id": "nginx-redirect",
+  "name": "Nginx Redirect",
+  "description": "A simple nginx image preloaded with redirect config that allows you to redirect to another URL. Useful for domain alias creation.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/caprover/nginx-redirect",
+    "website": "",
+    "docs": "https://github.com/caprover/nginx-redirect"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,17 @@
+services:
+  papermerge:
+    image: linuxserver/papermerge:${PAPERMERGE_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: "1000"
+      PGID: "1000"
+      REDIS_URL: ${REDIS_URL}
+    volumes:
+      - papermerge-config:/config
+      - papermerge-data:/data
+    expose:
+      - "8000"
+    restart: unless-stopped
+volumes:
+  papermerge-config: {}
+  papermerge-data: {}

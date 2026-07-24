@@ -1,0 +1,60 @@
+services:
+  mailtrain-db:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MARIADB_PASSWORD}
+      MYSQL_DATABASE: mailtrain
+      MYSQL_USER: mailtrain
+      MYSQL_PASSWORD: ${MARIADB_PASSWORD}
+    volumes:
+      - mailtrain-db-data:/var/lib/mysql
+    restart: always
+  mailtrain-redis:
+    image: redis:${REDIS_VERSION}
+    volumes:
+      - mailtrain-redis-data:/data
+    restart: always
+  mailtrain-mongo:
+    image: mongo:${MONGO_VERSION}
+    volumes:
+      - mailtrain-mongo-data:/data/db
+    restart: always
+  mailtrain:
+    image: mailtrain/mailtrain:${MAILTRAIN_VERSION}
+    environment:
+      URL_BASE_TRUSTED: https://mailtrain.${ROOT_DOMAIN}
+      URL_BASE_SANDBOX: https://mailtrain-${MAILTRAIN_SANDBOX_APPNAME}.${ROOT_DOMAIN}
+      URL_BASE_PUBLIC: https://mailtrain-${MAILTRAIN_LISTS_APPNAME}.${ROOT_DOMAIN}
+      WWW_PROXY: "true"
+      MONGO_HOST: mailtrain-mongo
+      REDIS_HOST: mailtrain-redis
+      MYSQL_HOST: mailtrain-db
+      MYSQL_PASSWORD: ${MARIADB_PASSWORD}
+    volumes:
+      - mailtrain-files:/app/server/files
+    depends_on:
+      - mailtrain-db
+      - mailtrain-redis
+      - mailtrain-mongo
+    expose:
+      - "3000"
+    restart: always
+  mailtrain-${MAILTRAIN_SANDBOX_APPNAME}:
+    image: caprover/nginx-reverse-proxy:1-ef5ffcb
+    environment:
+      UPSTREAM_HTTP_ADDRESS: http://mailtrain:3003
+    depends_on:
+      - mailtrain
+    restart: always
+  mailtrain-${MAILTRAIN_LISTS_APPNAME}:
+    image: caprover/nginx-reverse-proxy:1-ef5ffcb
+    environment:
+      UPSTREAM_HTTP_ADDRESS: http://mailtrain:3004
+    depends_on:
+      - mailtrain
+    restart: always
+volumes:
+  mailtrain-db-data: {}
+  mailtrain-redis-data: {}
+  mailtrain-mongo-data: {}
+  mailtrain-files: {}

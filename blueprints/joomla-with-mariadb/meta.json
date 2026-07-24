@@ -1,0 +1,19 @@
+{
+  "id": "joomla-with-mariadb",
+  "name": "joomla-with-mariadb",
+  "description": "Joomla! is the mobile-ready and user-friendly way to build your website. Choose from thousands of features and designs. Joomla! is free and open source.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://joomla.org",
+    "docs": "https://joomla.org"
+  },
+  "tags": [
+    "cms",
+    "blog",
+    "content",
+    "management",
+    "mariadb"
+  ]
+}

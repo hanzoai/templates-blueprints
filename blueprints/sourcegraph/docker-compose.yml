@@ -1,0 +1,12 @@
+services:
+  sourcegraph:
+    image: sourcegraph/server:${CONTAINER_VERSION}
+    volumes:
+      - sourcegraph-config:/etc/sourcegraph
+      - sourcegraph-data:/var/opt/sourcegraph
+    expose:
+      - "7080"
+    restart: always
+volumes:
+  sourcegraph-config: {}
+  sourcegraph-data: {}

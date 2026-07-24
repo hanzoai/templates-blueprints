@@ -1,0 +1,16 @@
+services:
+  stremio:
+    image: tsaridas/stremio-docker:v1.3.4
+    environment:
+      - NO_CORS=1
+      - AUTO_SERVER_URL=1
+    devices:
+      - /dev/dri:/dev/dri
+    expose:
+      - "11470"
+      - "8080"
+    volumes:
+      - stremio-stremio-server:/root/.stremio-server
+    restart: unless-stopped
+volumes:
+  stremio-stremio-server: {}

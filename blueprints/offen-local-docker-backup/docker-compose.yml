@@ -1,0 +1,12 @@
+services:
+  offen-local-docker-backup:
+    image: offen/docker-volume-backup:${VERSION}
+    environment:
+      BACKUP_FILENAME: ${BACKUP_FILENAME}
+      BACKUP_ARCHIVE: /archive
+      BACKUP_CRON_EXPRESSION: ${BACKUP_CRON_EXPRESSION}
+      BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS}
+    volumes:
+      - ${VOLUME_TO_BACKUP}:/backup/data
+      - ${BACKUP_PATH}:/archive
+    restart: always

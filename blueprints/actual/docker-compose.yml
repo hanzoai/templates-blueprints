@@ -1,0 +1,10 @@
+services:
+  actual:
+    image: actualbudget/actual-server:${VERSION}
+    volumes:
+      - actual-data:/data
+    expose:
+      - "5006"
+    restart: always
+volumes:
+  actual-data: {}

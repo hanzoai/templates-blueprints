@@ -1,0 +1,16 @@
+{
+  "id": "supabase-postgres",
+  "name": "Supabase PostgreSQL",
+  "description": "Supabase makes it easy to use Postgres.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/bitnamilegacy/supabase-postgres",
+    "docs": "https://hub.docker.com/r/bitnamilegacy/supabase-postgres"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

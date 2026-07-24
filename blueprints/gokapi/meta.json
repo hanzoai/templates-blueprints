@@ -1,0 +1,16 @@
+{
+  "id": "gokapi",
+  "name": "Gokapi",
+  "description": "Lightweight selfhosted Firefox Send alternative without public upload. AWS S3 supported.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

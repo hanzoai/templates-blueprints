@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "atuin"
+port = 8392
+host = "${main_domain}"
+
+[config.env]
+ATUIN_ALLOW_REGISTRATION = ""
+ATUIN_DB_PASSWORD = "${hash:32}"

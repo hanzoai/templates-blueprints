@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+redmine-version = "5.0.4"
+mysql-version = "5.7"
+mysql-password = "${password:16}"
+key-base = "${password:64}"
+
+[config]
+
+[[config.domains]]
+serviceName = "redmine-mysql"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+REDMINE_VERSION = "${redmine-version}"
+MYSQL_VERSION = "${mysql-version}"
+MYSQL_PASSWORD = "${mysql-password}"
+KEY_BASE = "${key-base}"

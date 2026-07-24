@@ -1,0 +1,16 @@
+{
+  "id": "minecraft-bedrock",
+  "name": "Minecraft Bedrock Server",
+  "description": "Minecraft Dedicated Server software for linux",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/itzg/docker-minecraft-bedrock-server",
+    "website": "",
+    "docs": "https://github.com/itzg/docker-minecraft-bedrock-server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,17 @@
+services:
+  mercure:
+    image: dunglas/mercure:${MERCURE_VERSION}
+    environment:
+      SERVER_NAME: :80
+      MERCURE_PUBLISHER_JWT_KEY: ${MERCURE_PUBLISHER_JWT_KEY}
+      MERCURE_SUBSCRIBER_JWT_KEY: ${MERCURE_SUBSCRIBER_JWT_KEY}
+      MERCURE_EXTRA_DIRECTIVES: ${MERCURE_EXTRA_DIRECTIVES}
+    volumes:
+      - mercure-mercure-data:/data
+      - mercure-mercure-config:/config
+    expose:
+      - "80"
+    restart: unless-stopped
+volumes:
+  mercure-mercure-data: {}
+  mercure-mercure-config: {}

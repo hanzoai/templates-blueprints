@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "synapse"
+port = 8008
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_ADMIN = "${username}"
+SERVICE_PASSWORD_ADMIN = "${password:32}"
+SERVICE_USER_POSTGRESQL = "${username}"
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"
+SERVICE_URL_SYNAPSE = "https://${main_domain}"

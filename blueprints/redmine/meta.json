@@ -1,0 +1,17 @@
+{
+  "id": "redmine",
+  "name": "redmine",
+  "description": "Redmine is a flexible project management web application.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.redmine.org/",
+    "docs": "https://www.redmine.org/"
+  },
+  "tags": [
+    "redmine",
+    "project-management",
+    "productivity"
+  ]
+}

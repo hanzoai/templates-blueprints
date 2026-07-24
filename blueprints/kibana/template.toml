@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+version = "8.4.1"
+kibana-defaultappid = "home"
+monitoring-enabled = "true"
+elasticsearch-hosts = ""
+server-publicbaseurl = "http://$$cap_appname.$$cap_root_domain"
+
+[config]
+
+[[config.domains]]
+serviceName = "kibana"
+port = 5601
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+KIBANA_DEFAULTAPPID = "${kibana-defaultappid}"
+MONITORING_ENABLED = "${monitoring-enabled}"
+ELASTICSEARCH_HOSTS = "${elasticsearch-hosts}"
+SERVER_PUBLICBASEURL = "${server-publicbaseurl}"

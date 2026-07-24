@@ -1,0 +1,16 @@
+{
+  "id": "redmine-mysql",
+  "name": "Redmine (MySQL)",
+  "description": "Redmine is a flexible project management web application written using Ruby on Rails framework. This app is packaged with MySQL.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Configuration",
+    "docs": "https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Configuration"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

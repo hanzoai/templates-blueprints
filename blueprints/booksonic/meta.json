@@ -1,0 +1,16 @@
+{
+  "id": "booksonic",
+  "name": "Booksonic",
+  "description": "The selfhosted audiobook server",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/popeen/Booksonic-Air",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "books",
+    "media"
+  ]
+}

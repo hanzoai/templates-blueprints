@@ -1,0 +1,78 @@
+services:
+  novu-cache:
+    image: redis:${REDIS_VERSION}
+    restart: always
+  novu-db:
+    image: mongo:${MONGO_VERSION}
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+    volumes:
+      - novu-db:/data/db
+    restart: always
+  novu-api:
+    image: ${NOVU_IMAGE_URL}/api:${NOVU_IMAGE_VERSION}
+    environment:
+      NODE_ENV: ${ENVIRONMENT}
+      API_ROOT_URL: http://novu-api.${ROOT_DOMAIN}
+      DISABLE_USER_REGISTRATION: ${NOVU_DISABLE_USER_REGISTRATION}
+      PORT: ${NOVU_API_PORT}
+      FRONT_BASE_URL: http://novu.${ROOT_DOMAIN}
+      MONGO_URL: mongodb://novu-db/${MONGO_DB}
+      REDIS_HOST: novu-cache
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_DB_INDEX: ${REDIS_DB_INDEX}
+      S3_LOCAL_STACK: ${NOVU_S3_LOCAL_STACK}
+      S3_BUCKET_NAME: ${NOVU_S3_BUCKET_NAME}
+      S3_REGION: ${NOVU_S3_REGION}
+      AWS_ACCESS_KEY_ID: ${NOVU_AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${NOVU_AWS_SECRET_ACCESS_KEY}
+      JWT_SECRET: ${NOVU_JWT_SECRET}
+      STORE_ENCRYPTION_KEY: ${NOVU_STORE_ENCRYPTION_KEY}
+      SENTRY_DSN: ${NOVU_API_SENTRY_DSN}
+    depends_on:
+      - novu-db
+      - novu-cache
+    restart: always
+  novu-ws:
+    image: ${NOVU_IMAGE_URL}/ws:${NOVU_IMAGE_VERSION}
+    environment:
+      PORT: ${NOVU_PORT_WEBSOCKET}
+      NODE_ENV: ${ENVIRONMENT}
+      MONGO_URL: mongodb://novu-db/${MONGO_DB}
+      REDIS_HOST: novu-cache
+      REDIS_PORT: ${REDIS_PORT}
+      JWT_SECRET: ${NOVU_JWT_SECRET}
+    depends_on:
+      - novu-db
+      - novu-cache
+    restart: always
+  novu:
+    image: ${NOVU_IMAGE_URL}/web:${NOVU_IMAGE_VERSION}
+    environment:
+      REACT_APP_API_URL: http://novu-api.${ROOT_DOMAIN}
+      REACT_APP_ENVIRONMENT: ${ENVIRONMENT}
+      REACT_APP_WIDGET_EMBED_PATH: http://novu-embed.${ROOT_DOMAIN}/embed.umd.min.js
+      REACT_APP_DOCKER_HOSTED_ENV: ${NOVU_DOCKER_HOSTED_ENVIRONMENT}
+    depends_on:
+      - novu-api
+    restart: always
+  novu-widget:
+    image: ${NOVU_IMAGE_URL}/widget:${NOVU_IMAGE_VERSION}
+    environment:
+      REACT_APP_API_URL: http://novu-api.${ROOT_DOMAIN}
+      REACT_APP_WS_URL: http://novu-ws.${ROOT_DOMAIN}
+      REACT_APP_ENVIRONMENT: ${ENVIRONMENT}
+    depends_on:
+      - novu-api
+      - novu
+    restart: always
+  novu-embed:
+    image: ${NOVU_IMAGE_URL}/embed:${NOVU_IMAGE_VERSION}
+    environment:
+      WIDGET_URL: http://novu-widget.${ROOT_DOMAIN}
+    depends_on:
+      - novu-widget
+    restart: always
+volumes:
+  novu-db: {}

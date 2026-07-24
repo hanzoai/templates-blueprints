@@ -1,0 +1,15 @@
+{
+  "id": "ddns-go",
+  "name": "ddns-go",
+  "description": "Simple and easy to use DDNS",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/jeessy2/ddns-go",
+    "website": "",
+    "docs": "https://github.com/jeessy2/ddns-go#readme"
+  },
+  "tags": [
+    "networking"
+  ]
+}

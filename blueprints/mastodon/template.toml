@@ -1,0 +1,28 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mastodon"
+port = 8210
+host = "${main_domain}"
+
+[config.env]
+TZ = ""
+MASTODON_LOCAL_DOMAIN = ""
+APP_DOMAIN = "${main_domain}"
+VAPID_PUBLIC_KEY = "${password:32}"
+VAPID_PRIVATE_KEY = "${password:32}"
+MASTODON_REDIS_PASSWORD = "${hash:32}"
+MASTODON_POSTGRES_PASSWORD = "${hash:32}"
+MASTODON_SECRET_KEY_BASE = "${hash:32}"
+MASTODON_OTP_SECRET = "${hash:32}"
+MASTODON_SMTP_SERVER = ""
+MASTODON_SMTP_PORT = ""
+MASTODON_SMTP_LOGIN = ""
+MASTODON_SMTP_PASSWORD = "${password:32}"
+MASTODON_SMTP_FROM_ADDRESS = ""
+MASTODON_ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY = "${hash:32}"
+MASTODON_ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT = "${hash:32}"
+MASTODON_ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY = "${hash:32}"

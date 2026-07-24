@@ -1,0 +1,11 @@
+services:
+  monerod:
+    image: sethsimmons/simple-monerod:v0.18.3.4
+    command: --rpc-restricted-bind-ip=0.0.0.0 --rpc-restricted-bind-port=18089 --public-node --no-igd --enable-dns-blocklist --prune-blockchain --zmq-pub=tcp://0.0.0.0:18083
+    volumes:
+      - monerod-bitmonero:/home/monero/.bitmonero
+    expose:
+      - "18080"
+    restart: always
+volumes:
+  monerod-bitmonero: {}

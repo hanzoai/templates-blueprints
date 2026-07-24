@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "postfix-relay"
+port = 2525
+host = "${main_domain}"
+
+[config.env]
+RELAY_ACCEPTED_NETWORKS = ""
+RELAY_SMTP_HOST = ""
+RELAY_SMTP_LOGIN = ""
+RELAY_SMTP_PASSWORD = "${password:32}"
+RELAY_SMTP_PORT = ""
+RELAY_TLS_VERIFY = ""
+RELAY_USE_TLS = ""

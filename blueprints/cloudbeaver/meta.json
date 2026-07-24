@@ -1,0 +1,24 @@
+{
+  "id": "cloudbeaver",
+  "name": "cloudbeaver",
+  "description": "CloudBeaver is a lightweight web application designed for comprehensive data management.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://dbeaver.com/docs/cloudbeaver/",
+    "docs": "https://dbeaver.com/docs/cloudbeaver/"
+  },
+  "tags": [
+    "dbeaver",
+    "data-management",
+    "data",
+    "database",
+    "mysql",
+    "postgres",
+    "sqlite",
+    "sql",
+    "mongodb",
+    "devtools"
+  ]
+}

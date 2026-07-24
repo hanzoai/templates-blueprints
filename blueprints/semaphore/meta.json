@@ -1,0 +1,15 @@
+{
+  "id": "semaphore",
+  "name": "Semaphore",
+  "description": "Modern UI for Ansible, Terraform, OpenTofu, Bash, Pulumi.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/semaphoreui/semaphore",
+    "website": "https://semaphoreui.com",
+    "docs": "https://semaphoreui.com"
+  },
+  "tags": [
+    "development"
+  ]
+}

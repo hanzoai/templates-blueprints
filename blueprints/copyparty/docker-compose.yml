@@ -1,0 +1,12 @@
+services:
+  copyparty:
+    image: icewhaletech/copyparty:1.20.13
+    expose:
+      - "3923"
+    volumes:
+      - copyparty-w:/w
+      - copyparty-cfg:/cfg
+    restart: unless-stopped
+volumes:
+  copyparty-w: {}
+  copyparty-cfg: {}

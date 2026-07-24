@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+conduit-version = "v0.6.0"
+conduit-server-name = "${main_domain}"
+conduit-allow-registration = "false"
+conduit-allow-federation = "true"
+conduit-max-request-size = "20000000"
+conduit-max-concurrent-requests = "100"
+
+[config]
+
+[[config.domains]]
+serviceName = "matrix-conduit"
+port = 6167
+host = "${main_domain}"
+
+[config.env]
+CONDUIT_VERSION = "${conduit-version}"
+CONDUIT_SERVER_NAME = "${conduit-server-name}"
+CONDUIT_ALLOW_REGISTRATION = "${conduit-allow-registration}"
+CONDUIT_ALLOW_FEDERATION = "${conduit-allow-federation}"
+CONDUIT_MAX_REQUEST_SIZE = "${conduit-max-request-size}"
+CONDUIT_MAX_CONCURRENT_REQUESTS = "${conduit-max-concurrent-requests}"

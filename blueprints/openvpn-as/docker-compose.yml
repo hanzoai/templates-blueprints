@@ -1,0 +1,18 @@
+services:
+  openvpn-as:
+    image: linuxserver/openvpn-as:${OPENVPN_VERSION}
+    environment:
+      PUID: ${OPENVPN_PUID}
+      PGID: ${OPENVPN_GUID}
+      TZ: ${OPENVPN_TZ}
+      INTERFACE: ${OPENVPN_INTERFACE}
+    volumes:
+      - openvpn-as:/config
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - ${OPENVPN_PORT_TCP}:${OPENVPN_PORT_TCP}
+      - ${OPENVPN_PORT_UDP}:${OPENVPN_PORT_UDP}
+    restart: always
+volumes:
+  openvpn-as: {}

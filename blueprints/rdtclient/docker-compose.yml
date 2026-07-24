@@ -1,0 +1,18 @@
+services:
+  rdtclient:
+    image: rogerfar/rdtclient:2.0.136
+    command: []
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+      UMASK: "002"
+    expose:
+      - "6500"
+    volumes:
+      - rdtclient-downloads:/data/downloads
+      - rdtclient-db:/data/db
+    restart: unless-stopped
+volumes:
+  rdtclient-downloads: {}
+  rdtclient-db: {}

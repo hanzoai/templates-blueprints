@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "fizzy"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_FIZZY = "${password:32}"
+SERVICE_PASSWORD_64_MASTERKEY = "${base64:64}"

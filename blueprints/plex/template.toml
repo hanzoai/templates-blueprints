@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "plex"
+port = 32400
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_PLEX = "https://${main_domain}"

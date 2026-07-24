@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "gowa"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_GOWA = "${username}"
+SERVICE_PASSWORD_GOWA = "${password:32}"

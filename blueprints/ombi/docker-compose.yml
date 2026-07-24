@@ -1,0 +1,14 @@
+services:
+  ombi:
+    image: linuxserver/ombi:${OMBI_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: "1000"
+      PGID: "1000"
+    volumes:
+      - ombi-config:/config
+    expose:
+      - "3579"
+    restart: unless-stopped
+volumes:
+  ombi-config: {}

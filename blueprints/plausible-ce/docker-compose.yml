@@ -1,0 +1,65 @@
+services:
+  plausible-ce:
+    image: ghcr.io/plausible/community-edition:v2.1.5
+    command: sh -c 'sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run'
+    environment:
+      BASE_URL: ${APP_PROTOCOL:-http}://${APP_DOMAIN}
+      SECRET_KEY_BASE: ${PLAUSIBLE_SECRET_KEY_BASE}
+      DATABASE_URL: postgres://tipi:${PLAUSIBLE_DB_PASSWORD}@plausible-db:5432/plausible-db
+      CLICKHOUSE_DATABASE_URL: http://plausible-events-db:8123/plausible_events_db
+      DISABLE_REGISTRATION: ${PLAUSIBLE_DISABLE_REGISTRATION:-invite-only}
+      ENABLE_EMAIL_VERIFICATION: ${PLAUSIBLE_ENABLE_EMAIL_VERIFICATION:-false}
+      TOTP_VAULT_KEY: ${PLAUSIBLE_TOTP_VAULT_KEY}
+      GOOGLE_CLIENT_ID: ${PLAUSIBLE_GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${PLAUSIBLE_GOOGLE_CLIENT_SECRET}
+      MAXMIND_LICENSE_KEY: ${PLAUSIBLE_MAXMIND_LICENSE_KEY}
+      MAXMIND_EDITION: ${PLAUSIBLE_MAXMIND_EDITION:-GeoLite2-City}
+      MAILER_ADAPTER: ${PLAUSIBLE_MAILER_ADAPTER:-Bamboo.SMTPAdapter}
+      MAILER_EMAIL: ${PLAUSIBLE_MAILER_EMAIL:-plausible@${APP_DOMAIN}}
+      MAILER_NAME: ${PLAUSIBLE_MAILER_NAME:-Plausible}
+      SMTP_HOST_ADDR: ${PLAUSIBLE_SMTP_HOST_ADDR}
+      SMTP_HOST_PORT: ${PLAUSIBLE_SMTP_HOST_PORT}
+      SMTP_USER_NAME: ${PLAUSIBLE_SMTP_USER_NAME}
+      SMTP_USER_PWD: ${PLAUSIBLE_SMTP_USER_PWD}
+      SMTP_HOST_SSL_ENABLED: ${PLAUSIBLE_SMTP_HOST_SSL_ENABLED:-false}
+      SMTP_RETRIES: ${PLAUSIBLE_SMTP_RETRIES:-2}
+      POSTMARK_API_KEY: ${PLAUSIBLE_POSTMARK_API_KEY}
+      MAILGUN_API_KEY: ${PLAUSIBLE_MAILGUN_API_KEY}
+      MAILGUN_DOMAIN: ${PLAUSIBLE_MAILGUN_DOMAIN}
+      MAILGUN_BASE_URI: ${PLAUSIBLE_MAILGUN_BASE_URI:-https://api.mailgun.net/v3}
+      MANDRILL_API_KEY: ${PLAUSIBLE_MANDRILL_API_KEY}
+      SENDGRID_API_KEY: ${PLAUSIBLE_SENDGRID_API_KEY}
+    depends_on:
+      plausible-db:
+        condition: service_healthy
+      plausible-events-db:
+        condition: service_started
+    expose:
+      - "8000"
+    restart: always
+  plausible-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: plausible-db
+      POSTGRES_USER: tipi
+      POSTGRES_PASSWORD: ${PLAUSIBLE_DB_PASSWORD}
+    volumes:
+      - plausible-ce-data:/var/lib/postgresql/data
+    restart: always
+  plausible-events-db:
+    image: clickhouse/clickhouse-server:26.7.1.1315-alpine
+    environment:
+      POSTGRES_DB: plausible-db
+      POSTGRES_USER: tipi
+      POSTGRES_PASSWORD: ${PLAUSIBLE_DB_PASSWORD}
+    volumes:
+      - plausible-ce-clickhouse:/var/lib/clickhouse
+      - plausible-ce-clickhouse-server:/var/log/clickhouse-server
+      - plausible-ce-logging-xml:/etc/clickhouse-server/config.d/logging.xml
+      - plausible-ce-logging-xml:/etc/clickhouse-server/users.d/logging.xml
+    restart: always
+volumes:
+  plausible-ce-data: {}
+  plausible-ce-clickhouse: {}
+  plausible-ce-clickhouse-server: {}
+  plausible-ce-logging-xml: {}

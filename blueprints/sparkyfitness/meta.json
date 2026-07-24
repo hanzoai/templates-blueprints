@@ -1,0 +1,20 @@
+{
+  "id": "sparkyfitness",
+  "name": "sparkyfitness",
+  "description": "SparkyFitness is a comprehensive fitness tracking and management application designed to help users monitor their nutrition, exercise, and body measurements. It provides tools for daily progress tracking, goal setting, and insightful reports to support a healthy lifestyle.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://codewithcj.github.io/SparkyFitness/",
+    "docs": "https://codewithcj.github.io/SparkyFitness/"
+  },
+  "tags": [
+    "sparkyfitness",
+    "fitness",
+    "health",
+    "nutrition",
+    "exercise",
+    "body-measurements"
+  ]
+}

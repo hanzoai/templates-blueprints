@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+version = "2.4.0p22"
+
+[config]
+
+[[config.domains]]
+serviceName = "checkmk"
+port = 5000
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"

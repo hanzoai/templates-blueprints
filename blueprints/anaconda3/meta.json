@@ -1,0 +1,15 @@
+{
+  "id": "anaconda3",
+  "name": "Anaconda3",
+  "description": "Your machine learning Env work with Jupyter Lab",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/anaconda/docker-images",
+    "website": "https://www.anaconda.com",
+    "docs": "https://docs.anaconda.com/anaconda/"
+  },
+  "tags": [
+    "ai"
+  ]
+}

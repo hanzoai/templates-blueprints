@@ -1,0 +1,11 @@
+services:
+  kiwix-serve:
+    image: ghcr.io/kiwix/kiwix-serve:3.7.0-2
+    command: "*.zim"
+    volumes:
+      - kiwix-serve-data:/data
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  kiwix-serve-data: {}

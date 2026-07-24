@@ -1,0 +1,16 @@
+{
+  "id": "the-lounge",
+  "name": "The Lounge",
+  "description": "The Lounge is a self-hosted web IRC client with modern features, persistent connections, and multi-user support.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://thelounge.chat/docs/install-and-upgrade#docker",
+    "docs": "https://thelounge.chat/docs/install-and-upgrade#docker"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

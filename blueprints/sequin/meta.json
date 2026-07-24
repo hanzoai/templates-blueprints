@@ -1,0 +1,18 @@
+{
+  "id": "sequin",
+  "name": "sequin",
+  "description": "The fastest Postgres change data capture",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://sequinstream.com/docs/",
+    "docs": "https://sequinstream.com/docs/"
+  },
+  "tags": [
+    "postgres",
+    "sync",
+    "data",
+    "analytics"
+  ]
+}

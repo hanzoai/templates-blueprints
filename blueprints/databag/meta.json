@@ -1,0 +1,16 @@
+{
+  "id": "databag",
+  "name": "Databag",
+  "description": "Databag is a federated chat app for selfhosting that focuses on privacy and security; the service includes clients for the browser as well as F-Droid, iOS and Android.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/balzack/databag",
+    "website": "",
+    "docs": "https://github.com/balzack/databag"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

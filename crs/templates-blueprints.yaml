@@ -1,0 +1,45 @@
+# Operator App CR for the Hanzo PaaS deploy-template catalog (templates.hanzo.ai).
+#
+# Served by hanzoai/static (scratch + Go binary), NOT nginx. The catalog image
+# ghcr.io/hanzoai/templates-blueprints is built + pushed by the repo's own CI on
+# the hanzo-build-linux-amd64 arc pool; this CR owns the rollout onto
+# do-sfo3-hanzo-k8s.
+#
+# LAND THIS via hanzoai/universe (infra/k8s/operator/crs/templates-blueprints.yaml)
+# — do NOT apply it by hand. Universe is mid-rewrite; the main session lands it.
+apiVersion: hanzo.ai/v1
+kind: App
+metadata:
+  name: templates-blueprints
+  namespace: hanzo
+spec:
+  image:
+    repository: ghcr.io/hanzoai/templates-blueprints
+    # Pin the immutable tag CI produced for the first build (see the repo's
+    # Actions run / GHCR package). Bump on each release; never :latest on-cluster.
+    # (The repo file is pinned to the first CI build in the follow-up commit; the
+    # authoritative pin lives in the universe copy of this CR.)
+    tag: "sha-PINME-amd64"
+    pullPolicy: IfNotPresent
+  replicas: 2
+  ports:
+    # hanzoai/static listens on :3000; the Service maps servicePort 80 -> 3000.
+    - name: http
+      containerPort: 3000
+      servicePort: 80
+  resources:
+    requests:
+      cpu: 25m
+      memory: 32Mi
+    limits:
+      cpu: 250m
+      memory: 128Mi
+  ingress:
+    enabled: true
+    hosts:
+      - templates.hanzo.ai
+    tls: true
+  imagePullSecrets:
+    - name: ghcr-secret
+  partOf: platform
+  component: templates

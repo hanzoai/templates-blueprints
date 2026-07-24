@@ -1,0 +1,16 @@
+{
+  "id": "peertube",
+  "name": "PeerTube",
+  "description": "PeerTube is a decentralized video hosting network, based on free/libre software.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/Chocobozzz/PeerTube/blob/develop/support/docker/production/docker-compose.yml",
+    "website": "",
+    "docs": "https://github.com/Chocobozzz/PeerTube/blob/develop/support/docker/production/docker-compose.yml"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

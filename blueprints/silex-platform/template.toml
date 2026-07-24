@@ -1,0 +1,28 @@
+[variables]
+main_domain = "${domain}"
+version = "v1.0.162"
+storage-connector = "gitlab"
+hosting-connector = "gitlab,download"
+gitlab-client-id = ""
+gitlab-client-secret = ""
+gitlab2-domain = "${main_domain}"
+gitlab2-client-id = ""
+gitlab2-client-secret = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "silex-platform"
+port = 6805
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+STORAGE_CONNECTOR = "${storage-connector}"
+HOSTING_CONNECTOR = "${hosting-connector}"
+GITLAB_CLIENT_ID = "${gitlab-client-id}"
+GITLAB_CLIENT_SECRET = "${gitlab-client-secret}"
+GITLAB2_DOMAIN = "${gitlab2-domain}"
+GITLAB2_CLIENT_ID = "${gitlab2-client-id}"
+GITLAB2_CLIENT_SECRET = "${gitlab2-client-secret}"
+ROOT_DOMAIN = "${main_domain}"

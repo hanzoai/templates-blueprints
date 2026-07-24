@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "gotosocial"
+port = 8188
+host = "${main_domain}"
+
+[config.env]
+APP_DOMAIN = "${main_domain}"
+GTS_DB_PASSWORD = "${hash:32}"
+GTS_ACCOUNTS_REGISTRATION_OPEN = ""
+GTS_SMTP_HOST = ""
+GTS_SMTP_PORT = ""
+GTS_SMTP_USERNAME = ""
+GTS_SMTP_PASSWORD = "${password:32}"
+GTS_SMTP_FROM = ""

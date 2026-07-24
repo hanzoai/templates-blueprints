@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+tubesync-version = "v0.12.0"
+username = "admin"
+password = "${password:16}"
+timezone = "America/Chicago"
+puid = "1000"
+pgid = "1000"
+
+[config]
+
+[[config.domains]]
+serviceName = "tubesync"
+port = 4848
+host = "${main_domain}"
+
+[config.env]
+TUBESYNC_VERSION = "${tubesync-version}"
+USERNAME = "${username}"
+PASSWORD = "${password}"
+TIMEZONE = "${timezone}"
+PUID = "${puid}"
+PGID = "${pgid}"

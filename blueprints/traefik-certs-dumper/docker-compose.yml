@@ -1,0 +1,12 @@
+services:
+  traefik-certs-dumper:
+    image: humenius/traefik-certs-dumper:1.6.1-alpine
+    environment:
+      ACME_FILE_PATH: /traefik/acme.json
+    volumes:
+      - traefik-certs-dumper-acme-json:/traefik/acme.json
+      - traefik-certs-dumper-output:/output
+    restart: always
+volumes:
+  traefik-certs-dumper-acme-json: {}
+  traefik-certs-dumper-output: {}

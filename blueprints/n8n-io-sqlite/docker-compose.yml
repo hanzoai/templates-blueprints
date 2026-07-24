@@ -1,0 +1,26 @@
+services:
+  n8n-io-sqlite:
+    image: n8nio/n8n:${N8N_VERSION}
+    environment:
+      GENERIC_TIMEZONE: ${N8N_TIMEZONE}
+      TZ: ${N8N_TIMEZONE}
+      NODE_ENV: ${N8N_ENVIRONMENT}
+      N8N_PROTOCOL: https
+      N8N_HOST: n8n-io-sqlite.${ROOT_DOMAIN}
+      N8N_DIAGNOSTICS_ENABLED: ${N8N_DIAGNOSTICS_ENABLED}
+      N8N_EMAIL_MODE: smtp
+      N8N_SMTP_HOST: ${N8N_SMTP_HOST}
+      N8N_SMTP_PORT: ${N8N_SMTP_PORT}
+      N8N_SMTP_USER: ${N8N_SMTP_USER}
+      N8N_SMTP_PASS: ${N8N_SMTP_PASS}
+      N8N_SMTP_SENDER: ${N8N_SMTP_SENDER}
+      N8N_SMTP_SSL: ${N8N_SMTP_SSL}
+      WEBHOOK_URL: https://n8n-io-sqlite.${ROOT_DOMAIN}
+      N8N_EDITOR_BASE_URL: https://n8n-io-sqlite.${ROOT_DOMAIN}
+    volumes:
+      - n8n-io-sqlite:/home/node/.n8n
+    expose:
+      - "5678"
+    restart: always
+volumes:
+  n8n-io-sqlite: {}

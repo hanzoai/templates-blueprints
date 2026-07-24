@@ -1,0 +1,8 @@
+services:
+  index-tts-nvidia:
+    image: icewhaletech/index-tts:2.0
+    environment:
+      NVIDIA_VISIBLE_DEVICES: all
+    expose:
+      - "7860"
+    restart: unless-stopped

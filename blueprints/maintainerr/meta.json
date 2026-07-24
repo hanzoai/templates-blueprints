@@ -1,0 +1,16 @@
+{
+  "id": "maintainerr",
+  "name": "Maintainerr",
+  "description": "Maintainerr will manage the storage space on your plex server, launching automated actions to delete your files.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Maintainerr/Maintainerr",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media",
+    "utilities"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "moodle",
+  "name": "moodle",
+  "description": "Moodle is the world’s most customisable and trusted eLearning solution that empowers educators to improve our world.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://moodle.org",
+    "docs": "https://moodle.org"
+  },
+  "tags": [
+    "moodle",
+    "elearning",
+    "education",
+    "lms",
+    "cms",
+    "open",
+    "source",
+    "low",
+    "code"
+  ]
+}

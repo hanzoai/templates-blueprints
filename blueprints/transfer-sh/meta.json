@@ -1,0 +1,16 @@
+{
+  "id": "transfer-sh",
+  "name": "Transfer.sh",
+  "description": "Transfer.sh allows you to upload and download files from the command-line",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/dutchcoders/transfer.sh",
+    "docs": "https://hub.docker.com/r/dutchcoders/transfer.sh"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

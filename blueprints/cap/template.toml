@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "cap-web"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_MYSQL = "${username}"
+SERVICE_PASSWORD_MYSQL = "${password:32}"
+SERVICE_URL_CAP = "https://${main_domain}"
+SERVICE_PASSWORD_64_DATABASEENCRYPTIONKEY = "${base64:64}"
+SERVICE_PASSWORD_64_NEXTAUTHSECRET = "${base64:64}"
+SERVICE_PASSWORD_MYSQLROOT = "${password:32}"

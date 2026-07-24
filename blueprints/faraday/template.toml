@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "faraday"
+port = 5985
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"
+SERVICE_USER_POSTGRESQL = "${username}"

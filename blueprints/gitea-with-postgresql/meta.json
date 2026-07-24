@@ -1,0 +1,21 @@
+{
+  "id": "gitea-with-postgresql",
+  "name": "gitea-with-postgresql",
+  "description": "Gitea is a self-hosted, lightweight Git service, offering version control, collaboration, and code hosting.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.gitea.com",
+    "docs": "https://docs.gitea.com"
+  },
+  "tags": [
+    "version-control",
+    "collaboration",
+    "code",
+    "hosting",
+    "lightweight",
+    "postgresql",
+    "git"
+  ]
+}

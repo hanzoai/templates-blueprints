@@ -1,0 +1,16 @@
+{
+  "id": "kanboard-sqlite",
+  "name": "Kanboard SQLite",
+  "description": "Kanboard is a free and open source Kanban project management software.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://kanboard.org/",
+    "docs": "https://kanboard.org/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

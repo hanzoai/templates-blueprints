@@ -1,0 +1,48 @@
+services:
+  directus-mysql-redis-mysql:
+    image: mysql:${MYSQL_TAG}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE_NAME}
+    volumes:
+      - directus-mysql-redis-data:/var/lib/mysql
+    restart: always
+  directus-mysql-redis-redis:
+    image: redis:${REDIS_TAG}
+    restart: always
+  directus-mysql-redis:
+    image: directus/directus:${DIRECTUS_TAG}
+    environment:
+      KEY: ${DIRECTUS_AUTH_PUBLIC_KEY}
+      SECRET: ${DIRECTUS_AUTH_SECRET_KEY}
+      PUBLIC_URL: https://directus-mysql-redis.${ROOT_DOMAIN}
+      DB_CLIENT: mysql
+      DB_HOST: directus-mysql-redis-mysql
+      DB_PORT: "3306"
+      DB_DATABASE: ${MYSQL_DATABASE_NAME}
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      CACHE_ENABLED: "true"
+      CACHE_STORE: redis
+      CACHE_AUTO_PURGE: ${REDIS_AUTO_PURGE}
+      CACHE_TTL: ${REDIS_TTL}
+      CACHE_REDIS: redis://directus-mysql-redis-redis:6379
+      REDIS: redis://directus-mysql-redis-redis:6379
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      TELEMETRY: "false"
+    volumes:
+      - directus-mysql-redis-uploads:/directus/uploads
+      - directus-mysql-redis-extensions:/directus/extensions
+    depends_on:
+      - directus-mysql-redis-mysql
+      - directus-mysql-redis-redis
+    expose:
+      - "8055"
+    restart: always
+volumes:
+  directus-mysql-redis-data: {}
+  directus-mysql-redis-uploads: {}
+  directus-mysql-redis-extensions: {}

@@ -1,0 +1,18 @@
+{
+  "id": "mosquitto",
+  "name": "mosquitto",
+  "description": "Mosquitto is lightweight and suitable for use on all devices, from low-power single-board computers to full servers.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://mosquitto.org/documentation/",
+    "docs": "https://mosquitto.org/documentation/"
+  },
+  "tags": [
+    "mosquitto",
+    "mqtt",
+    "open-source",
+    "messaging"
+  ]
+}

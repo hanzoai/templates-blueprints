@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "tandoor"
+port = 8341
+host = "${main_domain}"
+
+[config.env]
+TANDOOR_SECRET_KEY = "${hash:32}"
+TANDOOR_POSTGRESS_PASSWORD = "${hash:32}"

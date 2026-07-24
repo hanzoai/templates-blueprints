@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "semaphore"
+port = 8526
+host = "${main_domain}"
+
+[config.env]
+SEMAPHORE_DB_PASSWORD = "${hash:32}"
+SEMAPHORE_ADMIN_PASSWORD = "${password:32}"
+SEMAPHORE_ADMIN_NAME = ""
+SEMAPHORE_ADMIN_EMAIL = ""
+SEMAPHORE_ACCESS_KEY_ENCRYPTION = "${hash:32}"
+TZ = ""

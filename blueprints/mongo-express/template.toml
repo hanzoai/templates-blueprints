@@ -1,0 +1,27 @@
+[variables]
+main_domain = "${domain}"
+mongoexpress-version = "0.54"
+me-server-address = ""
+me-server-port = "27017"
+me-server-admin-username = ""
+me-server-admin-password = ""
+me-dashboard-username = "admin"
+me-dashboard-password = ""
+gensec16 = "${password:16}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mongo-express"
+port = 8081
+host = "${main_domain}"
+
+[config.env]
+MONGOEXPRESS_VERSION = "${mongoexpress-version}"
+ME_SERVER_ADDRESS = "${me-server-address}"
+ME_SERVER_PORT = "${me-server-port}"
+ME_SERVER_ADMIN_USERNAME = "${me-server-admin-username}"
+ME_SERVER_ADMIN_PASSWORD = "${me-server-admin-password}"
+ME_DASHBOARD_USERNAME = "${me-dashboard-username}"
+ME_DASHBOARD_PASSWORD = "${me-dashboard-password}"
+GENSEC16 = "${gensec16}"

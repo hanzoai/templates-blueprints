@@ -1,0 +1,16 @@
+{
+  "id": "guacamole",
+  "name": "Guacamole",
+  "description": "An HTML5 remote access application.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/christopher-kapic/caprover-guacamole",
+    "website": "https://guacamole.apache.org/",
+    "docs": "https://guacamole.apache.org/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+projectsend-version = "version-r1295"
+tz = "Asia/Kolkata"
+max-upload = "5000"
+
+[config]
+
+[[config.domains]]
+serviceName = "projectsend"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+PROJECTSEND_VERSION = "${projectsend-version}"
+TZ = "${tz}"
+MAX_UPLOAD = "${max-upload}"

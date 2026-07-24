@@ -1,0 +1,21 @@
+{
+  "id": "triliumnext",
+  "name": "triliumnext",
+  "description": "Build your personal knowledge base with TriliumNext Notes.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/TriliumNext/Trilium",
+    "website": "",
+    "docs": "https://github.com/TriliumNext/Trilium"
+  },
+  "tags": [
+    "self-hosted",
+    "notes",
+    "todo",
+    "organize",
+    "markdown",
+    "wiki",
+    "productivity"
+  ]
+}

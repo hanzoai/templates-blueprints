@@ -1,0 +1,28 @@
+services:
+  pydio:
+    image: pydio/cells:${PYDIO_VERSION}
+    environment:
+      CELLS_LOG_LEVEL: production
+      CELLS_BIND: :8811
+      CELLS_NO_TLS: "1"
+      CELLS_EXTERNAL: https://pydio.${ROOT_DOMAIN}
+    volumes:
+      - pydio-data:/var/cells/data
+      - pydio-cellsdir:/var/cells
+    expose:
+      - "8811"
+    restart: always
+  pydio-mariadb:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+      MYSQL_DATABASE: ${MARIADB_DB}
+      MYSQL_USER: ${MARIADB_USER}
+      MYSQL_PASSWORD: ${MARIADB_PASS}
+    volumes:
+      - pydio-mariadb-data:/var/lib/mysql
+    restart: always
+volumes:
+  pydio-data: {}
+  pydio-cellsdir: {}
+  pydio-mariadb-data: {}

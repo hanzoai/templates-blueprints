@@ -1,0 +1,16 @@
+{
+  "id": "airflow",
+  "name": "Airflow",
+  "description": "A tool to express and execute workflows as directed acyclic graphs (DAGs).",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/bitnami/bitnami-docker-airflow#readme",
+    "website": "",
+    "docs": "https://github.com/bitnami/bitnami-docker-airflow#readme"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

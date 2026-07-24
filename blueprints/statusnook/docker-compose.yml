@@ -1,0 +1,15 @@
+services:
+  statusnook:
+    volumes:
+      - statusnook-data:/app/statusnook-data
+    image: goksan/statusnook
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - -q
+        - --spider
+        - http://127.0.0.1:8000
+      interval: 2s
+      timeout: 10s
+      retries: 15

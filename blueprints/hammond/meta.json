@@ -1,0 +1,15 @@
+{
+  "id": "hammond",
+  "name": "Hammond",
+  "description": "Self hosted vehicle and expense management system. Like Clarkson, but better",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/alfhou/hammond",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

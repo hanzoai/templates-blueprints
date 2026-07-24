@@ -1,0 +1,18 @@
+services:
+  postfix-relay:
+    image: simenduev/postfix-relay:1.4.0
+    environment:
+      ACCEPTED_NETWORKS: ${RELAY_ACCEPTED_NETWORKS}
+      SMTP_HOST: ${RELAY_SMTP_HOST}
+      SMTP_LOGIN: ${RELAY_SMTP_LOGIN}
+      SMTP_PASSWORD: ${RELAY_SMTP_PASSWORD}
+      SMTP_PORT: ${RELAY_SMTP_PORT}
+      TLS_VERIFY: ${RELAY_TLS_VERIFY}
+      USE_TLS: ${RELAY_USE_TLS}
+    volumes:
+      - postfix-relay-config:/root/config
+    expose:
+      - "25"
+    restart: always
+volumes:
+  postfix-relay-config: {}

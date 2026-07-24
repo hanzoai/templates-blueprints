@@ -1,0 +1,21 @@
+{
+  "id": "forgejo-with-postgresql",
+  "name": "forgejo-with-postgresql",
+  "description": "Forgejo is a self-hosted lightweight software forge. Easy to install and low maintenance, it just does the job.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://forgejo.org/docs",
+    "docs": "https://forgejo.org/docs"
+  },
+  "tags": [
+    "version-control",
+    "collaboration",
+    "code",
+    "hosting",
+    "lightweight",
+    "postgresql",
+    "git"
+  ]
+}

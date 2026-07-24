@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+photoview-version = "2.3.9"
+photos-path = ""
+mapbox-token = ""
+mariadb-version = "10.5"
+mariadb-db = "photoview"
+mariadb-user = "photoview"
+mariadb-pass = "${password:16}"
+
+[config]
+
+[[config.domains]]
+serviceName = "photoview"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+PHOTOVIEW_VERSION = "${photoview-version}"
+PHOTOS_PATH = "${photos-path}"
+MAPBOX_TOKEN = "${mapbox-token}"
+MARIADB_VERSION = "${mariadb-version}"
+MARIADB_DB = "${mariadb-db}"
+MARIADB_USER = "${mariadb-user}"
+MARIADB_PASS = "${mariadb-pass}"

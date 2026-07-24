@@ -1,0 +1,15 @@
+{
+  "id": "whoami",
+  "name": "Whoami",
+  "description": "Tiny Go server that prints os information and HTTP request to output.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/traefik/whoami",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

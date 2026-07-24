@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "tasks-md"
+port = 8157
+host = "${main_domain}"
+
+[config.env]
+TASKS_MD_TITLE = ""

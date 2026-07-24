@@ -1,0 +1,10 @@
+services:
+  chatbot-ui:
+    image: ghcr.io/mckaywrigley/chatbot-ui:main
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+    expose:
+      - "3000"
+    restart: unless-stopped

@@ -1,0 +1,16 @@
+{
+  "id": "seafile-nomemcached",
+  "name": "Seafile (no memcached)",
+  "description": "Reliable and Performant File Sync and Share Solution",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://manual.seafile.com/",
+    "docs": "https://manual.seafile.com/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

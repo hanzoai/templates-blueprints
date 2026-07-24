@@ -1,0 +1,13 @@
+services:
+  wg-easy:
+    image: ghcr.io/wg-easy/wg-easy:15.3.0
+    environment:
+      INSECURE: ${WIREGUARD_INSECURE}
+      DISABLE_IPV6: ${WIREGUARD_DISABLE_IPV6}
+    volumes:
+      - wg-easy-1-wireguard:/etc/wireguard
+    expose:
+      - "51821"
+    restart: always
+volumes:
+  wg-easy-1-wireguard: {}

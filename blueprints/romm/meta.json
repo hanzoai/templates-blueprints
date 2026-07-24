@@ -1,0 +1,15 @@
+{
+  "id": "romm",
+  "name": "RomM",
+  "description": "RomM is a self-hosted ROM manager for managing and playing game collections.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/rommapp/romm",
+    "website": "https://romm.app",
+    "docs": "https://docs.romm.app/"
+  },
+  "tags": [
+    "media"
+  ]
+}

@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+apprise-version = "v0.7.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "apprise"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+APPRISE_VERSION = "${apprise-version}"

@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "healthchecks"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_64_HEALTHCHECKS = "${base64:64}"
+SERVICE_URL_HEALTHCHECKS = "https://${main_domain}"

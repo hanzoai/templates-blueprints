@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "forgejo"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_FORGEJO = "https://${main_domain}"
+SERVICE_USER_MYSQL = "${username}"
+SERVICE_PASSWORD_MYSQL = "${password:32}"
+SERVICE_PASSWORD_MYSQLROOT = "${password:32}"

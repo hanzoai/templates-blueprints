@@ -1,0 +1,15 @@
+{
+  "id": "alist-sync",
+  "name": "Alist-Sync",
+  "description": "An Alist storage synchronization tool based on the Web interface.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/xjxjin/alist-sync",
+    "website": "",
+    "docs": "https://github.com/xjxjin/alist-sync#readme"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

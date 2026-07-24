@@ -1,0 +1,12 @@
+services:
+  cloudflareddns:
+    image: oznu/cloudflare-ddns:latest
+    environment:
+      API_KEY: ${API_KEY}
+      ZONE: ${ZONE}
+      SUBDOMAIN: ${SUBDOMAIN}
+      PROXIED: ${PROXIED}
+      RRTYPE: ${RRTYPE}
+      DNS_SERVER: ${DNS_SERVER}
+      CRON: ${CRON}
+    restart: always

@@ -1,0 +1,29 @@
+[variables]
+main_domain = "${domain}"
+version = "v2"
+volume-to-backup = ""
+aws-access-key-id = ""
+aws-secret-access-key = ""
+aws-s3-bucket-name = ""
+aws-endpoint = ""
+backup-filename = "backup-%Y-%m-%dT%H-%M-%S.tar.gz"
+backup-cron-expression = "@daily"
+backup-retention-days = "14"
+
+[config]
+
+[[config.domains]]
+serviceName = "offen-docker-backup"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+VOLUME_TO_BACKUP = "${volume-to-backup}"
+AWS_ACCESS_KEY_ID = "${aws-access-key-id}"
+AWS_SECRET_ACCESS_KEY = "${aws-secret-access-key}"
+AWS_S3_BUCKET_NAME = "${aws-s3-bucket-name}"
+AWS_ENDPOINT = "${aws-endpoint}"
+BACKUP_FILENAME = "${backup-filename}"
+BACKUP_CRON_EXPRESSION = "${backup-cron-expression}"
+BACKUP_RETENTION_DAYS = "${backup-retention-days}"

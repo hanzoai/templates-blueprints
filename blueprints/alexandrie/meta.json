@@ -1,0 +1,19 @@
+{
+  "id": "alexandrie",
+  "name": "alexandrie",
+  "description": "A powerful Markdown workspace designed for speed, clarity, and creativity.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Smaug6739/Alexandrie/tree/main/docs",
+    "website": "",
+    "docs": "https://github.com/Smaug6739/Alexandrie/tree/main/docs"
+  },
+  "tags": [
+    "note-taking",
+    "markdown",
+    "knowledge-management",
+    "personal-wiki",
+    "productivity"
+  ]
+}

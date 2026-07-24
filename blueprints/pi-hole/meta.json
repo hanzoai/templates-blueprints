@@ -1,0 +1,20 @@
+{
+  "id": "pi-hole",
+  "name": "pi-hole",
+  "description": "Network-wide Ad Blocking",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://pi-hole.net/",
+    "docs": "https://pi-hole.net/"
+  },
+  "tags": [
+    "ad-block",
+    "dns",
+    "sinkhole",
+    "ntp",
+    "dhcp",
+    "proxy"
+  ]
+}

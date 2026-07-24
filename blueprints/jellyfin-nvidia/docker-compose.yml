@@ -1,0 +1,29 @@
+services:
+  jellyfin:
+    image: linuxserver/jellyfin:10.10.6
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+      CPU_FALLBACK: "true"
+      NVIDIA_VISIBLE_DEVICES: all
+    devices:
+      - /dev/dri:/dev/dri
+      - /dev/vcsm:/dev/vcsm
+      - /dev/vchiq:/dev/vchiq
+      - /dev/video10:/dev/video10
+      - /dev/video11:/dev/video11
+      - /dev/video12:/dev/video12
+    expose:
+      - "8096"
+      - "8920"
+      - "7359"
+      - "1900"
+    volumes:
+      - jellyfin-nvidia-config:/config
+      - jellyfin-nvidia-media:/Media
+      - /opt/vc/lib:/opt/vc/lib
+    restart: unless-stopped
+volumes:
+  jellyfin-nvidia-config: {}
+  jellyfin-nvidia-media: {}

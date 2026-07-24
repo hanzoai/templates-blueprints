@@ -1,0 +1,18 @@
+services:
+  mealie-1:
+    image: ghcr.io/mealie-recipes/mealie:v3.20.1
+    environment:
+      ALLOW_SIGNUP: ${MEALIE_ALLOW_SIGNUP}
+      PUID: "1000"
+      PGID: "1000"
+      TZ: ${TZ}
+      MAX_WORKERS: "1"
+      WEB_CONCURRENCY: "1"
+      BASE_URL: ${APP_PROTOCOL:-http}://${APP_DOMAIN}
+    volumes:
+      - mealie-1-data:/app/data
+    expose:
+      - "9000"
+    restart: always
+volumes:
+  mealie-1-data: {}

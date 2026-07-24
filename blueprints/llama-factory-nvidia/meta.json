@@ -1,0 +1,15 @@
+{
+  "id": "llama-factory-nvidia",
+  "name": "LLaMA Factory(Nvidia GPU)",
+  "description": "Unified LLM Fine-Tuning with 100+ Models",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/hiyouga/LLaMA-Factory",
+    "website": "https://llamafactory.readthedocs.io/",
+    "docs": "https://llamafactory.readthedocs.io/"
+  },
+  "tags": [
+    "ai"
+  ]
+}

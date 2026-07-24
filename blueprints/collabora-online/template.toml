@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+admin-user = "admin"
+admin-pass = "${password:10}"
+collabora-version = "25.04.2.1.1"
+wopihost-domain = "${main_domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "collabora-online"
+port = 9980
+host = "${main_domain}"
+
+[config.env]
+ADMIN_USER = "${admin-user}"
+ADMIN_PASS = "${admin-pass}"
+COLLABORA_VERSION = "${collabora-version}"
+WOPIHOST_DOMAIN = "${wopihost-domain}"
+ROOT_DOMAIN = "${main_domain}"

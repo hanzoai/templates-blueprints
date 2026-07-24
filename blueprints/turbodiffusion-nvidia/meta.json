@@ -1,0 +1,15 @@
+{
+  "id": "turbodiffusion-nvidia",
+  "name": "TurboDiffusion(Nvidia GPU)",
+  "description": "An accelerated video generation framework that speeds up end-to-end diffusion while preserving video quality",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/thu-ml/TurboDiffusion",
+    "website": "",
+    "docs": "https://github.com/thu-ml/TurboDiffusion#readme"
+  },
+  "tags": [
+    "ai"
+  ]
+}

@@ -1,0 +1,46 @@
+services:
+  parse-mongodb:
+    image: mongo:${MONGO_VERSION}
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - parse-db-data:/data/db
+      - parse-db-config:/data/configdb
+    restart: always
+  parse-parse:
+    image: parseplatform/parse-server:${PARSE_VERSION}
+    environment:
+      PORT: "8080"
+      PARSE_SERVER_APPLICATION_ID: ${APP_ID}
+      PARSE_SERVER_MASTER_KEY: ${MASTER_KEY}
+      PARSE_SERVER_DATABASE_URI: mongodb://root:${MONGO_PASSWORD}@parse-mongodb:27017/parse?authSource=admin
+    volumes:
+      - parse-parse-cloud:/parse-server/cloud
+      - parse-parse-config:/parse-server/config
+    depends_on:
+      - parse-mongodb
+    expose:
+      - "8080"
+    restart: always
+  parse-parse-dashboard:
+    image: parseplatform/parse-dashboard:${PARSE_DASHBOARD_VERSION}
+    environment:
+      PORT: "4040"
+      PARSE_DASHBOARD_SERVER_URL: https://parse-parse.${ROOT_DOMAIN}/parse
+      PARSE_DASHBOARD_MASTER_KEY: ${MASTER_KEY}
+      PARSE_DASHBOARD_APP_ID: ${APP_ID}
+      PARSE_DASHBOARD_APP_NAME: parse-parse
+      PARSE_DASHBOARD_USER_ID: caprover
+      PARSE_DASHBOARD_ALLOW_INSECURE_HTTP: "true"
+      PARSE_DASHBOARD_USER_PASSWORD: ${PARSE_DASHBOARD_PASSWORD}
+    depends_on:
+      - parse-parse
+    expose:
+      - "4040"
+    restart: always
+volumes:
+  parse-db-data: {}
+  parse-db-config: {}
+  parse-parse-cloud: {}
+  parse-parse-config: {}

@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "invoice-ninja"
+port = 9000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_INVOICENINJA = "https://${main_domain}"
+SERVICE_REALBASE64_INVOICENINJA = "${base64:32}"
+SERVICE_PASSWORD_REDIS = "${password:32}"
+SERVICE_USER_MARIADB = "${username}"
+SERVICE_PASSWORD_MARIADB = "${password:32}"
+SERVICE_PASSWORD_INVOICENINJAUSER = "${password:32}"
+SERVICE_PASSWORD_MARIADBROOT = "${password:32}"

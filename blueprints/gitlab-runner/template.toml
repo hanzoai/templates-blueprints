@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+gitlab-runner-version = "v11.11.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "gitlab-runner"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+GITLAB_RUNNER_VERSION = "${gitlab-runner-version}"

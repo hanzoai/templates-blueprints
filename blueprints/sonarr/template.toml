@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "sonarr"
+port = 8989
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_SONARR = "https://${main_domain}"

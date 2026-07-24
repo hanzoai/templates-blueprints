@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "bitmagnet"
+port = 3335
+host = "${main_domain}"
+
+[config.env]
+BITMAGNENT_DB_PASSWORD = "${hash:32}"

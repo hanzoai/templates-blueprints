@@ -1,0 +1,16 @@
+{
+  "id": "lychee",
+  "name": "Lychee",
+  "description": "A great looking and easy-to-use photo-management-system.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/lycheeorg/lychee",
+    "website": "",
+    "docs": "https://github.com/lycheeorg/lychee"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

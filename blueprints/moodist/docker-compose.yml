@@ -1,0 +1,10 @@
+services:
+  moodist:
+    image: ghcr.io/remvze/moodist:v2.6.1
+    volumes:
+      - moodist-localtime:/etc/localtime
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  moodist-localtime: {}

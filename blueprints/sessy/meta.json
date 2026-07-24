@@ -1,0 +1,18 @@
+{
+  "id": "sessy",
+  "name": "sessy",
+  "description": "Email observability platform for monitoring and analyzing email systems.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/marckohlbrugge/sessy/blob/main/docs/docker-deployment.md",
+    "website": "",
+    "docs": "https://github.com/marckohlbrugge/sessy/blob/main/docs/docker-deployment.md"
+  },
+  "tags": [
+    "email",
+    "observability",
+    "monitoring",
+    "analytics"
+  ]
+}

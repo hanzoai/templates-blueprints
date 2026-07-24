@@ -1,0 +1,16 @@
+{
+  "id": "ghost-dev",
+  "name": "Ghost Development",
+  "description": "Ghost - Turn your audience into a business.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/TryGhost/Ghost",
+    "website": "https://ghost.org",
+    "docs": "https://ghost.org"
+  },
+  "tags": [
+    "social",
+    "media"
+  ]
+}

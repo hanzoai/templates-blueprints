@@ -1,0 +1,16 @@
+{
+  "id": "claper",
+  "name": "Claper",
+  "description": "Claper turns your presentations into an interactive, engaging and exciting experience.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://claper.co/",
+    "docs": "https://claper.co/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

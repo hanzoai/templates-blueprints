@@ -1,0 +1,16 @@
+{
+  "id": "phpldapadmin",
+  "name": "OpenLDAP + phpLDAPadmin",
+  "description": "OpenLDAP with administration interface",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/osixia/docker-openldap",
+    "website": "",
+    "docs": "https://github.com/osixia/docker-openldap"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

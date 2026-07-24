@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "index-tts-nvidia"
+port = 7867
+host = "${main_domain}"

@@ -1,0 +1,7 @@
+services:
+  nginx-reverse-proxy:
+    image: caprover/nginx-reverse-proxy:${VERSION}
+    environment:
+      UPSTREAM_HTTP_ADDRESS: ${UPSTREAM_HTTP_ADDRESS}
+      CLIENT_MAX_BODY_SIZE: ${MAX_BODY_SIZE}
+    restart: always

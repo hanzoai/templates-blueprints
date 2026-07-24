@@ -1,0 +1,25 @@
+services:
+  onlyoffice-documentserver:
+    image: onlyoffice/documentserver:${APP_VERSION}
+    environment:
+      JWT_ENABLED: ${SECRET_ENABLE}
+      JWT_SECRET: ${SECRET_PASS}
+      JWT_HEADER: ${HEADER}
+      JWT_IN_BODY: ${BODY}
+    volumes:
+      - onlyoffice-documentserver-logs:/var/log/onlyoffice
+      - onlyoffice-documentserver-data:/var/www/onlyoffice/Data
+      - onlyoffice-documentserver-lib:/var/lib/onlyoffice
+      - onlyoffice-documentserver-rabbitmq:/var/lib/rabbitmq
+      - onlyoffice-documentserver-redis:/var/lib/redis
+      - onlyoffice-documentserver-postgresql:/var/lib/postgresql
+      - onlyoffice-documentserver-fonts:/usr/share/fonts/truetype/custom
+    restart: always
+volumes:
+  onlyoffice-documentserver-logs: {}
+  onlyoffice-documentserver-data: {}
+  onlyoffice-documentserver-lib: {}
+  onlyoffice-documentserver-rabbitmq: {}
+  onlyoffice-documentserver-redis: {}
+  onlyoffice-documentserver-postgresql: {}
+  onlyoffice-documentserver-fonts: {}

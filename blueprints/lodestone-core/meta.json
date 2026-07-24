@@ -1,0 +1,15 @@
+{
+  "id": "lodestone-core",
+  "name": "Lodestone Core",
+  "description": "Server hosting tool for Minecraft and other multiplayers.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Lodestone-Team/lodestone_core",
+    "website": "https://lodestone.cc",
+    "docs": "https://lodestone.cc"
+  },
+  "tags": [
+    "gaming"
+  ]
+}

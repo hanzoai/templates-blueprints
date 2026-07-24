@@ -1,0 +1,32 @@
+[variables]
+main_domain = "${domain}"
+n8n-version = "1.77.0"
+n8n-timezone = "UTC"
+n8n-environment = "production"
+n8n-diagnostics-enabled = "false"
+n8n-smtp-host = "${main_domain}"
+n8n-smtp-port = ""
+n8n-smtp-user = ""
+n8n-smtp-pass = ""
+n8n-smtp-sender = ""
+n8n-smtp-ssl = "true"
+
+[config]
+
+[[config.domains]]
+serviceName = "n8n-io-sqlite"
+port = 5678
+host = "${main_domain}"
+
+[config.env]
+N8N_VERSION = "${n8n-version}"
+N8N_TIMEZONE = "${n8n-timezone}"
+N8N_ENVIRONMENT = "${n8n-environment}"
+N8N_DIAGNOSTICS_ENABLED = "${n8n-diagnostics-enabled}"
+N8N_SMTP_HOST = "${n8n-smtp-host}"
+N8N_SMTP_PORT = "${n8n-smtp-port}"
+N8N_SMTP_USER = "${n8n-smtp-user}"
+N8N_SMTP_PASS = "${n8n-smtp-pass}"
+N8N_SMTP_SENDER = "${n8n-smtp-sender}"
+N8N_SMTP_SSL = "${n8n-smtp-ssl}"
+ROOT_DOMAIN = "${main_domain}"

@@ -1,0 +1,16 @@
+services:
+  pihole:
+    image: pihole/pihole:${VERSION}
+    environment:
+      TZ: ${TZ}
+      WEBPASSWORD: ${WEBPASSWORD}
+      VIRTUAL_HOST: pihole.${ROOT_DOMAIN}
+    volumes:
+      - pihole-pihole:/etc/pihole
+      - pihole-dnsmasq:/etc/dnsmasq.d
+    ports:
+      - 53:53
+    restart: always
+volumes:
+  pihole-pihole: {}
+  pihole-dnsmasq: {}

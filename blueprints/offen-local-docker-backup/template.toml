@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+version = "v2"
+volume-to-backup = ""
+backup-path = "/backups"
+backup-filename = "backup-%Y-%m-%dT%H-%M-%S.tar.gz"
+backup-cron-expression = "@daily"
+backup-retention-days = "14"
+
+[config]
+
+[[config.domains]]
+serviceName = "offen-local-docker-backup"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+VOLUME_TO_BACKUP = "${volume-to-backup}"
+BACKUP_PATH = "${backup-path}"
+BACKUP_FILENAME = "${backup-filename}"
+BACKUP_CRON_EXPRESSION = "${backup-cron-expression}"
+BACKUP_RETENTION_DAYS = "${backup-retention-days}"

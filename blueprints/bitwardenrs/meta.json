@@ -1,0 +1,16 @@
+{
+  "id": "bitwardenrs",
+  "name": "vaultwarden",
+  "description": "Lightweight fully featured Rust implementation of Bitwarden.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/vaultwarden/server",
+    "docs": "https://hub.docker.com/r/vaultwarden/server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

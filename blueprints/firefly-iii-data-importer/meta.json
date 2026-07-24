@@ -1,0 +1,15 @@
+{
+  "id": "firefly-iii-data-importer",
+  "name": "Firefly III Data Importer",
+  "description": "The Firefly III Data Importer can import data into Firefly III",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/firefly-iii/data-importer",
+    "website": "https://www.firefly-iii.org/",
+    "docs": "https://www.firefly-iii.org/"
+  },
+  "tags": [
+    "finance"
+  ]
+}

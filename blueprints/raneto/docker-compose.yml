@@ -1,0 +1,14 @@
+services:
+  raneto:
+    image: linuxserver/raneto:${RANETO_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: "1000"
+      GUID: "1000"
+    volumes:
+      - raneto-config:/config
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  raneto-config: {}

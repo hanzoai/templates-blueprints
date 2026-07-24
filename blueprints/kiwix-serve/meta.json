@@ -1,0 +1,15 @@
+{
+  "id": "kiwix-serve",
+  "name": "Kiwix Server",
+  "description": "Kiwix Server is a web server for hosting .zim files",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/kiwix/kiwix-tools/",
+    "website": "https://kiwix.org/",
+    "docs": "https://kiwix.org/"
+  },
+  "tags": [
+    "media"
+  ]
+}

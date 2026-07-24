@@ -1,0 +1,19 @@
+{
+  "id": "github-runner",
+  "name": "github-runner",
+  "description": "A GitHub Actions runner for Docker",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/myoung34/docker-github-actions-runner/wiki/Usage",
+    "website": "",
+    "docs": "https://github.com/myoung34/docker-github-actions-runner/wiki/Usage"
+  },
+  "tags": [
+    "github",
+    "actions",
+    "runner",
+    "docker",
+    "devtools"
+  ]
+}

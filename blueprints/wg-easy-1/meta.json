@@ -1,0 +1,15 @@
+{
+  "id": "wg-easy-1",
+  "name": "Wireguard",
+  "description": "VPN server for your homeserver.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/wg-easy/wg-easy",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "network"
+  ]
+}

@@ -1,0 +1,15 @@
+services:
+  open-webui-ollama:
+    image: ghcr.io/open-webui/open-webui:ollama
+    environment:
+      CPU_FALLBACK: "true"
+      NVIDIA_VISIBLE_DEVICES: all
+    expose:
+      - "8080"
+    volumes:
+      - open-webui-ollama-data:/app/backend/data
+      - open-webui-ollama-ollama:/root/.ollama
+    restart: always
+volumes:
+  open-webui-ollama-data: {}
+  open-webui-ollama-ollama: {}

@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "lidarr-deemix"
+port = 8186
+host = "${main_domain}"

@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "openbooks"
+port = 8152
+host = "${main_domain}"
+
+[config.env]
+OPENBOOKS_IRC_USERNAME = ""

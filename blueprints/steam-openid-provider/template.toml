@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+client-id = "steamidp"
+client-secret = "${password:16}"
+origin = "http://openid.example.com"
+api-key = ""
+redirect-uri = "http://example.com/callback"
+
+[config]
+
+[[config.domains]]
+serviceName = "steam-openid-provider"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+CLIENT_ID = "${client-id}"
+CLIENT_SECRET = "${client-secret}"
+ORIGIN = "${origin}"
+API_KEY = "${api-key}"
+REDIRECT_URI = "${redirect-uri}"

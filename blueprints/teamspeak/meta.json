@@ -1,0 +1,16 @@
+{
+  "id": "teamspeak",
+  "name": "TeamSpeak",
+  "description": "TeamSpeak is the number one choice VoIP communication system for Online Gaming.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/teamspeak",
+    "docs": "https://hub.docker.com/_/teamspeak"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

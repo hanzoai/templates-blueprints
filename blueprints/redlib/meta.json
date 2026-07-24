@@ -1,0 +1,17 @@
+{
+  "id": "redlib",
+  "name": "redlib",
+  "description": "An alternative private front-end to Reddit, with its origins in Libreddit.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/redlib-org/redlib",
+    "website": "",
+    "docs": "https://github.com/redlib-org/redlib"
+  },
+  "tags": [
+    "frontend",
+    "feed",
+    "productivity"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "librephotos",
+  "name": "LibrePhotos",
+  "description": "Complete photo management service",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/LibrePhotos/librephotos",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "photography"
+  ]
+}

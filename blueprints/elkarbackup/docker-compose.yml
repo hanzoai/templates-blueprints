@@ -1,0 +1,31 @@
+services:
+  elkarbackup:
+    image: elkarbackup/elkarbackup:${ELKAR_VERSION}
+    environment:
+      TZ: ${TZ}
+      PHP_TZ: ${TZ}
+      EB_CRON: enabled
+      SYMFONY__DATABASE__HOST: elkarbackup-mariadb
+      SYMFONY__DATABASE__USER: ${MARIADB_USER}
+      SYMFONY__DATABASE__PASSWORD: ${MARIADB_PASS}
+      SYMFONY__DATABASE__NAME: ${MARIADB_DB}
+    volumes:
+      - elkarbackup-backups:/app/backups
+      - elkarbackup-uploads:/app/uploads
+      - elkarbackup-ssh-keys:/app/.ssh
+    restart: always
+  elkarbackup-mariadb:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+      MYSQL_DATABASE: ${MARIADB_DB}
+      MYSQL_USER: ${MARIADB_USER}
+      MYSQL_PASSWORD: ${MARIADB_PASS}
+    volumes:
+      - elkarbackup-mariadb-data:/var/lib/mysql
+    restart: unless-stopped
+volumes:
+  elkarbackup-backups: {}
+  elkarbackup-uploads: {}
+  elkarbackup-ssh-keys: {}
+  elkarbackup-mariadb-data: {}

@@ -1,0 +1,22 @@
+{
+  "id": "fizzy",
+  "name": "fizzy",
+  "description": "Kanban tracking tool for issues and ideas by 37signals",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/basecamp/fizzy",
+    "website": "",
+    "docs": "https://github.com/basecamp/fizzy"
+  },
+  "tags": [
+    "kanban",
+    "project-management",
+    "issues",
+    "rails",
+    "ruby",
+    "basecamp",
+    "37signals",
+    "productivity"
+  ]
+}

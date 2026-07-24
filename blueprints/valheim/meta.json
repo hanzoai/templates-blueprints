@@ -1,0 +1,16 @@
+{
+  "id": "valheim",
+  "name": "Valheim Dedicated Server",
+  "description": "A community maintained Valheim dedicated server with automatic updates and world backups",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/lloesche/valheim-server-docker",
+    "website": "",
+    "docs": "https://github.com/lloesche/valheim-server-docker"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

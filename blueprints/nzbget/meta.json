@@ -1,0 +1,15 @@
+{
+  "id": "nzbget",
+  "name": "Nzbget",
+  "description": "Efficient Usenet downloader",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/nzbgetcom/nzbget",
+    "website": "https://nzbget.com",
+    "docs": "https://nzbget.com/documentation"
+  },
+  "tags": [
+    "media"
+  ]
+}

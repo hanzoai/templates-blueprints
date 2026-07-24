@@ -1,0 +1,10 @@
+services:
+  mysql-db:
+    image: mysql:${MYSQL_VERSION}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+    volumes:
+      - mysql-db-data:/var/lib/mysql
+    restart: always
+volumes:
+  mysql-db-data: {}

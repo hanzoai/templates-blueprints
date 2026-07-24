@@ -1,0 +1,12 @@
+services:
+  resilio-sync:
+    image: resilio/sync:${VERSION}
+    volumes:
+      - resilio-sync-data:/mnt/sync
+    ports:
+      - ${PORT_SYNC}:55555
+    expose:
+      - "8888"
+    restart: always
+volumes:
+  resilio-sync-data: {}

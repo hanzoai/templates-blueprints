@@ -1,0 +1,21 @@
+{
+  "id": "cap",
+  "name": "cap",
+  "description": "Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://cap.so",
+    "docs": "https://cap.so"
+  },
+  "tags": [
+    "cap",
+    "loom",
+    "open",
+    "source",
+    "low",
+    "code",
+    "media"
+  ]
+}

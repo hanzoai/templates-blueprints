@@ -1,0 +1,22 @@
+{
+  "id": "once-campfire",
+  "name": "once-campfire",
+  "description": "Super simple group chat, without a subscription.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/basecamp/once-campfire",
+    "website": "",
+    "docs": "https://github.com/basecamp/once-campfire"
+  },
+  "tags": [
+    "campfire",
+    "chat",
+    "communication",
+    "rails",
+    "once",
+    "basecamp",
+    "37signals",
+    "messaging"
+  ]
+}

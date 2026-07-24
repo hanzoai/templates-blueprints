@@ -1,0 +1,15 @@
+{
+  "id": "bitmagnet",
+  "name": "Bitmagnet",
+  "description": "A self-hosted BitTorrent indexer.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/bitmagnet-io/bitmagnet",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media"
+  ]
+}

@@ -1,0 +1,12 @@
+services:
+  droppy:
+    image: ghcr.io/droppyjs/droppy:${DROPPY_VERSION}
+    volumes:
+      - droppy-config:/config
+      - droppy-files:/files
+    expose:
+      - "8989"
+    restart: always
+volumes:
+  droppy-config: {}
+  droppy-files: {}

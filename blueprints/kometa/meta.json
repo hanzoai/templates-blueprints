@@ -1,0 +1,16 @@
+{
+  "id": "kometa",
+  "name": "Kometa",
+  "description": "Overlays, Collections & Playlists for Plex.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Kometa-Team/Kometa",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "media"
+  ]
+}

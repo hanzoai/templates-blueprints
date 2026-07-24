@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "email-oauth2-proxy"
+port = 1999
+host = "${main_domain}"

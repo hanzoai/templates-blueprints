@@ -1,0 +1,23 @@
+services:
+  ubooquity:
+    image: lscr.io/linuxserver/ubooquity:${UBOOQUITY_VERSION}
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: ${TZ}
+      MAXMEM: ""
+    volumes:
+      - ubooquity-config:/config
+      - ubooquity-books:/books
+      - ubooquity-comics:/comics
+      - ubooquity-files:/files
+    ports:
+      - ${ADMIN_PORT}:2203
+    expose:
+      - "2202"
+    restart: always
+volumes:
+  ubooquity-config: {}
+  ubooquity-books: {}
+  ubooquity-comics: {}
+  ubooquity-files: {}

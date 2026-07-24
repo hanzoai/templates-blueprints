@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "tinyauth"
+port = 8357
+host = "${main_domain}"
+
+[config.env]
+TINYAUTH_APP_TITLE = ""
+TINYAUTH_APP_URL = "https://${main_domain}"
+TINYAUTH_USERS = ""
+TINYAUTH_GITHUB_CLIENT_ID = ""
+TINYAUTH_GITHUB_CLIENT_SECRET = "${password:32}"
+TINYAUTH_GOOGLE_CLIENT_ID = ""
+TINYAUTH_GOOGLE_CLIENT_SECRET = "${password:32}"
+TINYAUTH_OAUTH_WHITELIST = ""

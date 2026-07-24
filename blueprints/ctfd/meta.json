@@ -1,0 +1,15 @@
+{
+  "id": "ctfd",
+  "name": "CTFd",
+  "description": "Cyber Security Training made simple.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/CTFd/CTFd",
+    "website": "https://ctfd.io/",
+    "docs": "https://ctfd.io/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

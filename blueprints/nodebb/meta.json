@@ -1,0 +1,18 @@
+{
+  "id": "nodebb",
+  "name": "nodebb",
+  "description": "A next-generation discussion platform.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.nodebb.org/",
+    "docs": "https://docs.nodebb.org/"
+  },
+  "tags": [
+    "communication",
+    "forums",
+    "discussion",
+    "messaging"
+  ]
+}

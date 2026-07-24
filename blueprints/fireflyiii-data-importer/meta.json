@@ -1,0 +1,16 @@
+{
+  "id": "fireflyiii-data-importer",
+  "name": "Firefly III Data Importer",
+  "description": "Firefly III Data Importer (FIDI) is a tool to import data into Firefly III.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/fireflyiii/data-importer",
+    "docs": "https://hub.docker.com/r/fireflyiii/data-importer"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

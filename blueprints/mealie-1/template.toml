@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mealie-1"
+port = 8220
+host = "${main_domain}"
+
+[config.env]
+MEALIE_ALLOW_SIGNUP = ""
+TZ = ""
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"

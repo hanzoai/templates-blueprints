@@ -1,0 +1,14 @@
+services:
+  rss:
+    image: codeberg.org/danb/rss:v2.1.1
+    environment:
+      APP_NAME: Tipi-RSS
+      APP_FEED_UPDATE_FREQUENCY: "35"
+      APP_LOAD_POST_THUMBNAILS: "true"
+    volumes:
+      - rss-storage:/app/storage
+    expose:
+      - "80"
+    restart: always
+volumes:
+  rss-storage: {}

@@ -1,0 +1,16 @@
+{
+  "id": "parse",
+  "name": "Parse",
+  "description": "Parse Server is an open source Backend-as-a-Service(BaaS) framework initially developed by Facebook",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/parseplatform/parse-server/",
+    "docs": "https://hub.docker.com/r/parseplatform/parse-server/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

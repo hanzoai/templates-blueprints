@@ -1,0 +1,17 @@
+{
+  "id": "gramps-web",
+  "name": "gramps-web",
+  "description": "Open Source Online Genealogy System.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.grampsweb.org/install_setup/setup/",
+    "docs": "https://www.grampsweb.org/install_setup/setup/"
+  },
+  "tags": [
+    "family",
+    "genealogy",
+    "personal"
+  ]
+}

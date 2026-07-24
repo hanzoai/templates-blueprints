@@ -1,0 +1,20 @@
+{
+  "id": "ollama-with-open-webui",
+  "name": "ollama-with-open-webui",
+  "description": "Ollama with Open Web UI integrates AI model deployment with a user-friendly interface.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.openwebui.com",
+    "docs": "https://docs.openwebui.com"
+  },
+  "tags": [
+    "ollama",
+    "ai",
+    "models",
+    "deployment",
+    "open-web-ui",
+    "integration"
+  ]
+}

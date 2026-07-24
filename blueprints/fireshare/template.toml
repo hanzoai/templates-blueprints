@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "fireshare"
+port = 8140
+host = "${main_domain}"
+
+[config.env]
+FIRESHARE_USERNAME = ""
+FIRESHARE_PASSWORD = "${password:32}"
+FIRESHARE_SECRET_KEY = "${hash:32}"

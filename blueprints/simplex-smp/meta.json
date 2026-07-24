@@ -1,0 +1,15 @@
+{
+  "id": "simplex-smp",
+  "name": "SimpleX SMP",
+  "description": "A reference implementation of the SimpleX Messaging Protocol for simplex queues over public networks.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/simplex-chat/simplexmq",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "social"
+  ]
+}

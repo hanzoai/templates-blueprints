@@ -1,0 +1,16 @@
+{
+  "id": "ghostfolio",
+  "name": "Ghostfolio",
+  "description": "Open Source Wealth Management Software",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://ghostfol.io",
+    "docs": "https://ghostfol.io"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

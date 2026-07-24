@@ -1,0 +1,20 @@
+{
+  "id": "gowa",
+  "name": "gowa",
+  "description": "Golang WhatsApp - Built with Go for efficient memory use",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/aldinokemal/go-whatsapp-web-multidevice",
+    "website": "",
+    "docs": "https://github.com/aldinokemal/go-whatsapp-web-multidevice"
+  },
+  "tags": [
+    "whatsapp",
+    "golang",
+    "multidevice",
+    "api",
+    "go-whatsapp",
+    "messaging"
+  ]
+}

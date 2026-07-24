@@ -1,0 +1,15 @@
+{
+  "id": "unifi-controller",
+  "name": "Unifi-controller [legacy]",
+  "description": "The Unifi-controller software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/linuxserver/docker-unifi-controller",
+    "website": "https://ui.com",
+    "docs": "https://docs.linuxserver.io/deprecated_images/docker-unifi-controller/"
+  },
+  "tags": [
+    "networking"
+  ]
+}

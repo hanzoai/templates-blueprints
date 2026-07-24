@@ -1,0 +1,21 @@
+{
+  "id": "nitropage",
+  "name": "nitropage",
+  "description": "Nitropage is an extensible, visual website builder, offering a growing library of versatile building blocks, focal-point image cropping and sovereign font management.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://nitropage.org",
+    "docs": "https://nitropage.org"
+  },
+  "tags": [
+    "nitropage",
+    "builder",
+    "editor",
+    "wysiwyg",
+    "cms",
+    "content",
+    "management"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "bento-pdf",
+  "name": "bento-pdf",
+  "description": "Process PDFs entirely in your browser. No uploads. No servers. Complete privacy.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://bentopdf.com/docs",
+    "docs": "https://bentopdf.com/docs"
+  },
+  "tags": [
+    "pdf",
+    "manipulation",
+    "web",
+    "tool",
+    "productivity"
+  ]
+}

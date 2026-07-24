@@ -1,0 +1,18 @@
+{
+  "id": "pgbackweb",
+  "name": "pgbackweb",
+  "description": "Effortless PostgreSQL backups with a user-friendly web interface!",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/eduardolat/pgbackweb",
+    "website": "",
+    "docs": "https://github.com/eduardolat/pgbackweb"
+  },
+  "tags": [
+    "backup",
+    "postgresql",
+    "web-interface",
+    "devtools"
+  ]
+}

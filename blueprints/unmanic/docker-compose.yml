@@ -1,0 +1,17 @@
+services:
+  unmanic:
+    image: josh5/unmanic:staging
+    environment:
+      PUID: ${TIPI_UID}
+      PGID: ${TIPI_GID}
+    volumes:
+      - unmanic-config:/config
+      - unmanic-library:/library
+      - unmanic-unmanic:/tmp/unmanic
+    expose:
+      - "8888"
+    restart: always
+volumes:
+  unmanic-config: {}
+  unmanic-library: {}
+  unmanic-unmanic: {}

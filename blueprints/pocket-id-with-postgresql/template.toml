@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "pocket-id"
+port = 1411
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_POCKETID = "https://${main_domain}"
+SERVICE_USER_POSTGRESQL = "${username}"
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"
+SERVICE_PASSWORD_64_POCKETID = "${base64:64}"

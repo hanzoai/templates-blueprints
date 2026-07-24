@@ -1,0 +1,16 @@
+{
+  "id": "request-baskets",
+  "name": "Request Baskets",
+  "description": "Request Baskets is a web service to collect arbitrary HTTP requests, similar to RequestBin or Webhook.site",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/darklynx/request-baskets/",
+    "website": "",
+    "docs": "https://github.com/darklynx/request-baskets/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

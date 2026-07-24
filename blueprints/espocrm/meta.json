@@ -1,0 +1,21 @@
+{
+  "id": "espocrm",
+  "name": "espocrm",
+  "description": "EspoCRM is a free and open-source CRM platform.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.espocrm.com",
+    "docs": "https://docs.espocrm.com"
+  },
+  "tags": [
+    "crm",
+    "self-hosted",
+    "open-source",
+    "workflow",
+    "automation",
+    "project-management",
+    "productivity"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "logzio-collector",
+  "name": "Logzio Logs Collector",
+  "description": "With Logz.io you can have the open source monitoring tools on a fully managed cloud service.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://app.logz.io/#/dashboard/send-your-data/log-sources/docker-swarm",
+    "docs": "https://app.logz.io/#/dashboard/send-your-data/log-sources/docker-swarm"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

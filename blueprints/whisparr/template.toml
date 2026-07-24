@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "whisparr"
+port = 6969
+host = "${main_domain}"
+
+[config.env]
+WHISPARR_PUID = ""
+WHISPARR_PGID = ""
+WHISPARR_UMASK = ""
+TZ = ""

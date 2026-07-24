@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "dailytxt"
+port = 8156
+host = "${main_domain}"
+
+[config.env]
+DAILYTXT_SECRET_KEY = "${hash:32}"
+DAILYTXT_ALLOW_REGISTRATION = ""
+DAILYTXT_ADMIN_PASSWORD = "${password:32}"

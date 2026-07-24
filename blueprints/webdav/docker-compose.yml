@@ -1,0 +1,15 @@
+services:
+  webdav:
+    image: ugeek/webdav:amd64
+    command: []
+    environment:
+      - GID=1000
+      - PASSWORD=casaos
+      - TZ=Europe/Madrid
+      - UDI=1000
+      - USERNAME=casaos
+    expose:
+      - "80"
+    volumes:
+      - /media/ZimaOS-HD/Media:/media
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+{
+  "id": "seedsync",
+  "name": "SeedSync",
+  "description": "SeedSync is a tool to sync the files on a remote Linux server.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/ipsingh06/seedsync",
+    "website": "https://ipsingh06.github.io/seedsync/",
+    "docs": "https://ipsingh06.github.io/seedsync/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

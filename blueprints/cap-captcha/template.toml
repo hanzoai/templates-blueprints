@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "cap"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_ADMIN = "${password:32}"

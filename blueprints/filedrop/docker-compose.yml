@@ -1,0 +1,14 @@
+services:
+  filedrop:
+    image: noecl/filedrop:1.0.1
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+    expose:
+      - "8000"
+    volumes:
+      - filedrop-file-drop-files:/var/file_drop_files
+    restart: unless-stopped
+volumes:
+  filedrop-file-drop-files: {}

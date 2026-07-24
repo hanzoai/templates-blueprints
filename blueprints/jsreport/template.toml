@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+jsreport-version = "2.4.0-full"
+jsreport-adminusername = "admin"
+jsreport-password = ""
+jsreport-secret = "long-secret"
+
+[config]
+
+[[config.domains]]
+serviceName = "jsreport"
+port = 5488
+host = "${main_domain}"
+
+[config.env]
+JSREPORT_VERSION = "${jsreport-version}"
+JSREPORT_ADMINUSERNAME = "${jsreport-adminusername}"
+JSREPORT_PASSWORD = "${jsreport-password}"
+JSREPORT_SECRET = "${jsreport-secret}"

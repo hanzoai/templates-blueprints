@@ -1,0 +1,17 @@
+services:
+  virt-manager:
+    image: mber5/virt-manager:latest
+    environment:
+      DARK_MODE: "false"
+      HOSTS: "['qemu:///system']"
+    devices:
+      - /dev/kvm:/dev/kvm
+    expose:
+      - "80"
+    volumes:
+      - /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock
+      - /var/lib/libvirt:/var/lib/libvirt
+      - virt-manager-downloads:/DATA/Downloads
+    restart: always
+volumes:
+  virt-manager-downloads: {}

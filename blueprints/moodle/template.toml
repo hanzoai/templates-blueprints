@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "moodle"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_ROOT = "${password:32}"
+SERVICE_USER_MARIADB = "${username}"
+SERVICE_PASSWORD_MARIADB = "${password:32}"
+SERVICE_PASSWORD_MOODLE = "${password:32}"

@@ -1,0 +1,52 @@
+services:
+  trudesk:
+    image: polonel/trudesk:${TRUDESK_VERSION}
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      TRUDESK_DOCKER: "true"
+      TD_MONGODB_SERVER: trudesk-mongodb
+      TD_MONGODB_PORT: ${APPNAME_MONGODB_PORT}
+      TD_MONGODB_USERNAME: root
+      TD_MONGODB_PASSWORD: ${MONGO_PASSWORD}
+      TD_MONGODB_DATABASE: trudesk
+      TD_MONGODB_URI: mongodb://root:${MONGO_PASSWORD}@trudesk-mongodb:27017/trudesk?authSource=admin
+      ELATICSEARCH_URI: http://trudesk-elasticsearch:9200
+      USE_XFORWARDIP: "true"
+    volumes:
+      - trudesk-data:/usr/src/trudesk/public/uploads
+      - trudesk-plugins:/usr/src/trudesk/plugins
+      - trudesk-backups:/usr/src/trudesk/backups
+    depends_on:
+      - trudesk-mongodb
+      - trudesk-elasticsearch
+    expose:
+      - "8118"
+    restart: always
+  trudesk-mongodb:
+    image: mongo:${MONGODB_VERSION}
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - trudesk-db-data:/data/db
+      - trudesk-db-config:/var/lib/mongo
+    restart: always
+  trudesk-elasticsearch:
+    image: elasticsearch:${ELASTICSEARCH_VERSION}
+    environment:
+      xpack.security.enabled: ${ELASTICSEARCH_SECURITY_ENABLED}
+      xpack.security.http.ssl.enabled: ${ELASTICSEARCH_SECURITY_ENABLED}
+      discovery.type: single-node
+      node.name: estrudesk01
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    volumes:
+      - trudesk-elasticsearch-data:/usr/share/elasticsearch/data
+    restart: always
+volumes:
+  trudesk-data: {}
+  trudesk-plugins: {}
+  trudesk-backups: {}
+  trudesk-db-data: {}
+  trudesk-db-config: {}
+  trudesk-elasticsearch-data: {}

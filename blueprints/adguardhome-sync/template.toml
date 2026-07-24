@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "adguardhome-sync"
+port = 8436
+host = "${main_domain}"

@@ -1,0 +1,31 @@
+services:
+  invidious-db:
+    image: postgres:$$db_version
+    environment:
+      POSTGRES_DB: invidious
+      POSTGRES_PASSWORD: kemal
+      POSTGRES_USER: kemal
+    volumes:
+      - invidious-data:/var/lib/postgresql/data
+    restart: always
+  invidious:
+    image: quay.io/invidious/invidious${VERSION}
+    environment:
+      INVIDIOUS_CONFIG: |
+        channel_threads: 1
+        check_tables: true
+        feed_threads: 1
+        db:
+          user: kemal
+          password: kemal
+          host: invidious-db
+          port: 5432
+          dbname: invidious
+        full_refresh: false
+        https_only: false
+        domain:
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  invidious-data: {}

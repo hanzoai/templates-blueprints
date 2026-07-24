@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+sshd-public-key = ""
+sshd-username = "caprover"
+sshd-port = "4646"
+
+[config]
+
+[[config.domains]]
+serviceName = "sshd"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SSHD_PUBLIC_KEY = "${sshd-public-key}"
+SSHD_USERNAME = "${sshd-username}"
+SSHD_PORT = "${sshd-port}"

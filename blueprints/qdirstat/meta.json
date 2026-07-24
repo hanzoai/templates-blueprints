@@ -1,0 +1,15 @@
+{
+  "id": "qdirstat",
+  "name": "qDirStat",
+  "description": "A graphical disk usage analyzer",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/linuxserver/docker-qdirstat",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

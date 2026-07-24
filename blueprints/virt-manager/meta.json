@@ -1,0 +1,15 @@
+{
+  "id": "virt-manager",
+  "name": "Virtual Machine Manager",
+  "description": "A GTK Broadway web UI for libvirt and virt-manager.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/m-bers/docker-virt-manager",
+    "website": "https://virt-manager.org",
+    "docs": "https://github.com/m-bers/docker-virt-manager#readme"
+  },
+  "tags": [
+    "developer"
+  ]
+}

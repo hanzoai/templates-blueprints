@@ -1,0 +1,19 @@
+{
+  "id": "soketi-app-manager",
+  "name": "soketi-app-manager",
+  "description": "Manage soketi websocket server and apps with ease.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/rahulhaque/soketi-app-manager-filament",
+    "website": "",
+    "docs": "https://github.com/rahulhaque/soketi-app-manager-filament"
+  },
+  "tags": [
+    "soketi",
+    "websockets",
+    "app-manager",
+    "dashboard",
+    "devtools"
+  ]
+}

@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "gandi-livedns"
+port = 8134
+host = "${main_domain}"
+
+[config.env]
+GANDI_LIVEDNS_PAT = ""
+GANDI_LIVEDNS_RECORD_LIST = ""
+GANDI_LIVEDNS_DOMAIN = ""
+GANDI_LIVEDNS_REFRESH_INTERVAL = ""
+GANDI_LIVEDNS_TTL = ""
+GANDI_LIVEDNS_SET_IPV4 = ""
+GANDI_LIVEDNS_SET_IPV6 = ""
+GANDI_LIVEDNS_FORCE_IPV4 = ""
+GANDI_LIVEDNS_FORCE_IPV6 = ""

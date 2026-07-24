@@ -1,0 +1,14 @@
+services:
+  vvveb-only-vvveb:
+    image: vvveb/vvvebcms:${VVVEB_VERSION}
+    environment:
+      DB_ENGINE: ${DB_TYPE}
+      DB_HOST: ${DB_HOST}
+      DB_DATABASE: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASS}
+    volumes:
+      - vvveb-only-vvveb-data:/var/www/html
+    restart: always
+volumes:
+  vvveb-only-vvveb-data: {}

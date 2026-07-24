@@ -1,0 +1,45 @@
+services:
+  fusionauth-db:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: fusionauth
+    volumes:
+      - fusionauth-db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+  fusionauth-elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTICSEARCH_VERSION}
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+      cluster.name: ${ELASTICSEARCH_CLUSTER_NAME}
+      http.port: ${CONTAINER_SEARCH_PORT}
+      node.master: ${ELASTICSEARCH_NODE_MASTER}
+      node.data: ${ELASTICSEARCH_NODE_DATA}
+      discovery.type: single-node
+      discovery.zen.minimum_master_nodes: ${ELASTICSEARCH_MINIMUM_MASTER_NODES}
+      discovery.zen.ping.unicast.hosts: ${ELASTICSEARCH_UNICAST_HOSTS}
+    volumes:
+      - fusionauth-elasticsearch-data:/usr/share/elasticsearch/data
+    restart: always
+  fusionauth-fusionauth:
+    image: fusionauth/fusionauth-app:${FUSIONAUTH_VERSION}
+    environment:
+      DATABASE_URL: jdbc:postgresql://fusionauth-db:5432/fusionauth
+      DATABASE_ROOT_USER: ${DB_USER}
+      DATABASE_ROOT_PASSWORD: ${DB_PASS}
+      DATABASE_USER: ${DB_USER}
+      DATABASE_PASSWORD: ${DB_PASS}
+      FUSIONAUTH_MEMORY: ${FUSION_MEMORY}
+      FUSIONAUTH_SEARCH_SERVERS: http://fusionauth-elasticsearch:9200
+      FUSIONAUTH_URL: http://fusionauth-fusionauth:9011
+    volumes:
+      - fusionauth-fusionauth-config:/usr/local/fusionauth/config
+    depends_on:
+      - fusionauth-db
+      - fusionauth-elasticsearch
+    restart: unless-stopped
+volumes:
+  fusionauth-db-data: {}
+  fusionauth-elasticsearch-data: {}
+  fusionauth-fusionauth-config: {}

@@ -1,0 +1,20 @@
+services:
+  lidarr-deemix:
+    image: youegraillot/lidarr-on-steroids:1.5.2
+    volumes:
+      - lidarr-deemix-config:/config
+      - lidarr-deemix-config-deemix:/config_deemix
+      - lidarr-deemix-downloads:/downloads
+      - lidarr-deemix-music:/music
+      - lidarr-deemix-completed:/downloads/completed
+      - lidarr-deemix-media:/media
+    expose:
+      - "8686"
+    restart: always
+volumes:
+  lidarr-deemix-config: {}
+  lidarr-deemix-config-deemix: {}
+  lidarr-deemix-downloads: {}
+  lidarr-deemix-music: {}
+  lidarr-deemix-completed: {}
+  lidarr-deemix-media: {}

@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "electrs"
+port = 3006
+host = "${main_domain}"
+
+[config.env]
+INTERNAL_IP = ""
+BITCOIND_HOST = ""

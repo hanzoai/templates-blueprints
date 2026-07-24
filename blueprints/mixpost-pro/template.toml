@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mixpost-pro"
+port = 8191
+host = "${main_domain}"
+
+[config.env]
+MIXPOST_LICENSE_KEY = ""
+MIXPOST_APP_KEY = "${hash:32}"
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"
+MIXPOST_MYSQL_PASSWORD = "${hash:32}"
+MIXPOST_REDIS_PASSWORD = "${hash:32}"

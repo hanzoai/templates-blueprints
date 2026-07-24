@@ -1,0 +1,13 @@
+services:
+  mongodb:
+    image: mongo:${MONGO_VERSION}
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - mongodb-db-data:/data/db
+      - mongodb-db-config:/data/configdb
+    restart: always
+volumes:
+  mongodb-db-data: {}
+  mongodb-db-config: {}

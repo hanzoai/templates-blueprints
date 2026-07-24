@@ -1,0 +1,36 @@
+services:
+  lychee:
+    image: lycheeorg/lychee:${LYCHEE_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: ${PUID}
+      PGID: ${GUID}
+      DB_CONNECTION: mysql
+      DB_HOST: lychee-mariadb
+      DB_PORT: "3306"
+      DB_DATABASE: ${MARIADB_DB}
+      DB_USERNAME: ${MARIADB_USER}
+      DB_PASSWORD: ${MARIADB_PASSWORD}
+      STARTUP_DELAY: "30"
+    volumes:
+      - lychee-conf:/conf
+      - lychee-uploads:/uploads
+      - lychee-sym:/sym
+    depends_on:
+      - lychee-mariadb
+    restart: unless-stopped
+  lychee-mariadb:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+      MYSQL_DATABASE: ${MARIADB_DB}
+      MYSQL_USER: ${MARIADB_USER}
+      MYSQL_PASSWORD: ${MARIADB_PASSWORD}
+    volumes:
+      - lychee-db-data:/var/lib/mysql
+    restart: unless-stopped
+volumes:
+  lychee-conf: {}
+  lychee-uploads: {}
+  lychee-sym: {}
+  lychee-db-data: {}

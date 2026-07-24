@@ -1,0 +1,15 @@
+{
+  "id": "koillection",
+  "name": "Koillection",
+  "description": "Koillection allow you to manage any kind of collections.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/benjaminjonard/koillection",
+    "website": "https://koillection.github.io/",
+    "docs": "https://koillection.github.io/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

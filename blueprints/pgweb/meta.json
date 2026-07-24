@@ -1,0 +1,16 @@
+{
+  "id": "pgweb",
+  "name": "pgweb",
+  "description": "Pgweb is a web-based database browser for PostgreSQL, written in Go",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/sosedoff/pgweb",
+    "docs": "https://hub.docker.com/r/sosedoff/pgweb"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,18 @@
+services:
+  mylar3:
+    image: linuxserver/mylar3:0.9.0
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+    expose:
+      - "8090"
+    volumes:
+      - mylar3-config:/config
+      - mylar3-comics:/comics
+      - mylar3-downloads:/downloads
+    restart: unless-stopped
+volumes:
+  mylar3-config: {}
+  mylar3-comics: {}
+  mylar3-downloads: {}

@@ -1,0 +1,11 @@
+services:
+  vsts:
+    image: microsoft/vsts-agent:${VSTS_VERSION}
+    environment:
+      VSTS_ACCOUNT: ${VSTS_ACCOUNT}
+      VSTS_TOKEN: ${VSTS_TOKEN}
+      VSTS_AGENT: ${VSTS_NAME}
+      VSTS_POOL: ${VSTS_POOL}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always

@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "recyclarr"
+port = 1111
+host = "${main_domain}"
+
+[config.env]
+TIPI_UID = ""
+TIPI_GID = ""
+RECYCLARR_CREATE_CONFIG = ""
+TZ = ""

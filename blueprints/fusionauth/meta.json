@@ -1,0 +1,16 @@
+{
+  "id": "fusionauth",
+  "name": "FusionAuth",
+  "description": "FusionAuth is a scalable, identity and user management platform built for devs",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/FusionAuth/fusionauth-containers",
+    "website": "",
+    "docs": "https://github.com/FusionAuth/fusionauth-containers"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

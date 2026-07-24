@@ -1,0 +1,19 @@
+{
+  "id": "affine",
+  "name": "affine",
+  "description": "Affine is an open-source, all-in-one workspace and OS for knowledge management, a Notion/Miro alternative.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.affine.pro/docs/self-host-affine",
+    "docs": "https://docs.affine.pro/docs/self-host-affine"
+  },
+  "tags": [
+    "knowledge-management",
+    "notion",
+    "miro",
+    "workspace",
+    "productivity"
+  ]
+}

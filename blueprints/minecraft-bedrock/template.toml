@@ -1,0 +1,35 @@
+[variables]
+main_domain = "${domain}"
+eula = ""
+version = "2022.1.0"
+bs-version = "LATEST"
+bs-name = ""
+port = "19132"
+bs-ops = ""
+bs-gamemode = "survival"
+bs-difficulty = "normal"
+bs-allowlist = "true"
+bs-allowlist-users = "some_user_name"
+bs-idle = "0"
+bs-cheats = "true"
+
+[config]
+
+[[config.domains]]
+serviceName = "minecraft-bedrock"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+EULA = "${eula}"
+VERSION = "${version}"
+BS_VERSION = "${bs-version}"
+BS_NAME = "${bs-name}"
+PORT = "${port}"
+BS_OPS = "${bs-ops}"
+BS_GAMEMODE = "${bs-gamemode}"
+BS_DIFFICULTY = "${bs-difficulty}"
+BS_ALLOWLIST = "${bs-allowlist}"
+BS_ALLOWLIST_USERS = "${bs-allowlist-users}"
+BS_IDLE = "${bs-idle}"
+BS_CHEATS = "${bs-cheats}"

@@ -1,0 +1,18 @@
+services:
+  albyhub:
+    image: ghcr.io/getalby/hub:v1.22.2
+    command: []
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+      UMASK: "002"
+      WORK_DIR: /data/albyhub
+      LOG_EVENTS: true
+    expose:
+      - "8080"
+    volumes:
+      - albyhub-data:/data
+    restart: on-failure
+volumes:
+  albyhub-data: {}

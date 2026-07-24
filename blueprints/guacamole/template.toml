@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+db-pass = ""
+guacamole-version = "1.3.0"
+guacd-version = "1.3.0"
+mysql-version = "8.0.26"
+
+[config]
+
+[[config.domains]]
+serviceName = "guacamole"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+DB_PASS = "${db-pass}"
+GUACAMOLE_VERSION = "${guacamole-version}"
+GUACD_VERSION = "${guacd-version}"
+MYSQL_VERSION = "${mysql-version}"

@@ -1,0 +1,15 @@
+{
+  "id": "tandoor",
+  "name": "Tandoor",
+  "description": "Recipe collection manager.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/TandoorRecipes/recipes",
+    "website": "https://tandoor.dev/",
+    "docs": "https://tandoor.dev/"
+  },
+  "tags": [
+    "data"
+  ]
+}

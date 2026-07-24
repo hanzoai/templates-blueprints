@@ -1,0 +1,16 @@
+{
+  "id": "minecraft",
+  "name": "minecraft",
+  "description": "Minecraft Server that will automatically download selected version at startup.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/itzg/docker-minecraft-server",
+    "website": "",
+    "docs": "https://github.com/itzg/docker-minecraft-server"
+  },
+  "tags": [
+    "minecraft",
+    "games"
+  ]
+}

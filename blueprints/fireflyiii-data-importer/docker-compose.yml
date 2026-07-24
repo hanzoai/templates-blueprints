@@ -1,0 +1,13 @@
+services:
+  fireflyiii-data-importer:
+    image: fireflyiii/data-importer:${FIDI_VERSION}
+    environment:
+      FIREFLY_III_ACCESS_TOKEN: ${FF_TOKEN}
+      FIREFLY_III_URL: ${FF_URL}
+      NORDIGEN_ID: ${NORDIGEN_ID}
+      NORDIGEN_KEY: ${NORDIGEN_KEY}
+      SPECTRE_APP_ID: ${SPECTRE_APP_ID}
+      SPECTRE_SECRET: ${SPECTRE_SECRET}
+    expose:
+      - "8080"
+    restart: always

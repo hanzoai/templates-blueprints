@@ -1,0 +1,19 @@
+{
+  "id": "netbird-client",
+  "name": "netbird-client",
+  "description": "Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.netbird.io/how-to/examples#net-bird-client-in-docker",
+    "docs": "https://docs.netbird.io/how-to/examples#net-bird-client-in-docker"
+  },
+  "tags": [
+    "wireguard",
+    "mesh-networks",
+    "vpn",
+    "zero-trust-network-access",
+    "open-source"
+  ]
+}

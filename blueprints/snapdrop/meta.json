@@ -1,0 +1,21 @@
+{
+  "id": "snapdrop",
+  "name": "snapdrop",
+  "description": "A self-hosted file-sharing service for secure and convenient file transfers, whether on a local network or the internet.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/RobinLinus/snapdrop",
+    "website": "",
+    "docs": "https://github.com/RobinLinus/snapdrop"
+  },
+  "tags": [
+    "file",
+    "sharing",
+    "transfer",
+    "local",
+    "network",
+    "internet",
+    "productivity"
+  ]
+}

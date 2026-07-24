@@ -1,0 +1,15 @@
+{
+  "id": "swingmusic",
+  "name": "Swing Music",
+  "description": "Swing Music is a beautifully designed, self-hosted music streaming server. Like a cooler Spotify ... but bring your own music.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/swing-opensource/swingmusic",
+    "website": "https://swingmx.com",
+    "docs": "https://github.com/swing-opensource/swingmusic#readme"
+  },
+  "tags": [
+    "media"
+  ]
+}

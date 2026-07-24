@@ -1,0 +1,15 @@
+{
+  "id": "wizarr",
+  "name": "Wizarr",
+  "description": "Wizarr is an automatic user invitation system for Plex and Jellyfin.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Wizarrrr/wizarr",
+    "website": "https://docs.wizarr.dev/",
+    "docs": "https://docs.wizarr.dev/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

@@ -1,0 +1,13 @@
+services:
+  watchyourlan:
+    image: aceberg/watchyourlan:2.1.4
+    environment:
+      TZ: ${TZ}
+      IFACES: ${WATCHYOURLAN_IFACES}
+    volumes:
+      - watchyourlan-watchyourlan:/data/WatchYourLAN
+    expose:
+      - "8840"
+    restart: always
+volumes:
+  watchyourlan-watchyourlan: {}

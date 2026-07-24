@@ -1,0 +1,6 @@
+services:
+  request-baskets:
+    image: darklynx/request-baskets:${VERSION}
+    expose:
+      - "55555"
+    restart: always

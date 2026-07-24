@@ -1,0 +1,16 @@
+{
+  "id": "zigbee2mqtt",
+  "name": "Zigbee2MQTT",
+  "description": "Zigbee to MQTT bridge",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Koenkk/zigbee2mqtt",
+    "website": "https://www.zigbee2mqtt.io/",
+    "docs": "https://www.zigbee2mqtt.io/"
+  },
+  "tags": [
+    "utilities",
+    "automation"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "rdtclient",
+  "name": "Real-Debrid Torrent Client",
+  "description": "Real-Debrid Torrent Client (CasaOS app)",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/rogerfar/rdt-client",
+    "website": "",
+    "docs": "https://github.com/rogerfar/rdt-client/wiki"
+  },
+  "tags": [
+    "media"
+  ]
+}

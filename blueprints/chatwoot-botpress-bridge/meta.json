@@ -1,0 +1,16 @@
+{
+  "id": "chatwoot-botpress-bridge",
+  "name": "Chatwoot Botpress Bridge",
+  "description": "Bridge to connect chatwoot and botpress.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/douglara/chatwoot-botpress-bridge",
+    "website": "",
+    "docs": "https://github.com/douglara/chatwoot-botpress-bridge"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

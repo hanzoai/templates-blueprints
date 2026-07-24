@@ -1,0 +1,16 @@
+services:
+  mongodb4:
+    image: mongo:4.4.22
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    expose:
+      - "27017"
+    volumes:
+      - mongodb4-configdb:/data/configdb
+      - mongodb4-db:/data/db
+    restart: unless-stopped
+volumes:
+  mongodb4-configdb: {}
+  mongodb4-db: {}

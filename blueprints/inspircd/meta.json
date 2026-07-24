@@ -1,0 +1,15 @@
+{
+  "id": "inspircd",
+  "name": "Inspircd",
+  "description": "A modular C++ IRC server.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/inspircd/inspircd",
+    "website": "https://www.inspircd.org",
+    "docs": "https://www.inspircd.org"
+  },
+  "tags": [
+    "social"
+  ]
+}

@@ -1,0 +1,16 @@
+services:
+  downtify:
+    image: ghcr.io/henriquesebastiao/downtify:2.7.0
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+    expose:
+      - "8000"
+    volumes:
+      - downtify-downloads:/downloads
+      - downtify-data:/data
+    restart: unless-stopped
+volumes:
+  downtify-downloads: {}
+  downtify-data: {}

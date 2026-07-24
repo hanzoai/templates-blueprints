@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+image-tag = "2.1.12.1"
+
+[config]
+
+[[config.domains]]
+serviceName = "radicale"
+port = 5232
+host = "${main_domain}"
+
+[config.env]
+IMAGE_TAG = "${image-tag}"

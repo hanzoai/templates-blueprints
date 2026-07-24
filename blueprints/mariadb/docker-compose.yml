@@ -1,0 +1,19 @@
+services:
+  mariadb:
+    image: linuxserver/mariadb:11.4.8
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      MYSQL_ROOT_PASSWORD: casaos
+      MYSQL_DATABASE: casaos
+      MYSQL_USER: casaos
+      MYSQL_PASSWORD: casaos
+      REMOTE_SQL: ""
+    expose:
+      - "3306"
+    volumes:
+      - mariadb-config:/config
+    restart: unless-stopped
+volumes:
+  mariadb-config: {}

@@ -1,0 +1,16 @@
+{
+  "id": "openvpn-as",
+  "name": "OpenVPN Access Server",
+  "description": "Full featured secure network tunneling VPN software.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://openvpn.net/index.php/access-server/overview.html",
+    "docs": "https://openvpn.net/index.php/access-server/overview.html"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

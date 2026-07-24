@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+eula = ""
+version = "sha256:b968685fadb79e6dacca8efc030ee53f695441b8d6dfde4b86e027ba1f6796db"
+port = "25565"
+spigot-version = "latest"
+maxmem = "1g"
+minmem = "512m"
+autorestart = "yes"
+
+[config]
+
+[[config.domains]]
+serviceName = "spigot"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+EULA = "${eula}"
+VERSION = "${version}"
+PORT = "${port}"
+SPIGOT_VERSION = "${spigot-version}"
+MAXMEM = "${maxmem}"
+MINMEM = "${minmem}"
+AUTORESTART = "${autorestart}"

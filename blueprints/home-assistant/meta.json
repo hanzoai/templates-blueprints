@@ -1,0 +1,22 @@
+{
+  "id": "home-assistant",
+  "name": "home-assistant",
+  "description": "Open source home automation that puts local control and privacy first.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.home-assistant.io/installation/linux#docker-compose",
+    "docs": "https://www.home-assistant.io/installation/linux#docker-compose"
+  },
+  "tags": [
+    "home-automation",
+    "iot",
+    "smart-home",
+    "automation",
+    "domotics",
+    "mqtt",
+    "zigbee",
+    "zwave"
+  ]
+}

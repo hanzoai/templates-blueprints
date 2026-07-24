@@ -1,0 +1,26 @@
+{
+  "id": "unstructured",
+  "name": "unstructured",
+  "description": "Unstructured provides a platform and tools to ingest and process unstructured documents for Retrieval Augmented Generation (RAG) and model fine-tuning.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Unstructured-IO/unstructured-api?tab=readme-ov-file#--general-pre-processing-pipeline-for-documents",
+    "website": "",
+    "docs": "https://github.com/Unstructured-IO/unstructured-api?tab=readme-ov-file#--general-pre-processing-pipeline-for-documents"
+  },
+  "tags": [
+    "workflow",
+    "orchestration",
+    "data-pipeline",
+    "python",
+    "data",
+    "machine-learning",
+    "data-science",
+    "nlp",
+    "unstructured",
+    "ocr",
+    "data-extraction",
+    "ai"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "droppy",
+  "name": "droppy",
+  "description": "droppy is a self-hosted file storage server with a web interface",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/droppyjs/droppy",
+    "website": "",
+    "docs": "https://github.com/droppyjs/droppy"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

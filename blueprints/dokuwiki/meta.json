@@ -1,0 +1,19 @@
+{
+  "id": "dokuwiki",
+  "name": "dokuwiki",
+  "description": "A lightweight and easy-to-use wiki platform for creating and managing documentation and knowledge bases.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.dokuwiki.org/",
+    "docs": "https://www.dokuwiki.org/"
+  },
+  "tags": [
+    "wiki",
+    "documentation",
+    "knowledge",
+    "base",
+    "cms"
+  ]
+}

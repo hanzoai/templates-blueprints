@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+fz-version = "3.51.0-r1-ls6"
+tz = "Asia/Kolkata"
+
+[config]
+
+[[config.domains]]
+serviceName = "filezilla"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+FZ_VERSION = "${fz-version}"
+TZ = "${tz}"

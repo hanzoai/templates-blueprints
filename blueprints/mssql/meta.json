@@ -1,0 +1,16 @@
+{
+  "id": "mssql",
+  "name": "Microsoft SQL",
+  "description": "Microsoft SQL Server is a relational database management system developed by Microsoft",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/microsoft-mssql-server",
+    "docs": "https://hub.docker.com/_/microsoft-mssql-server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,10 @@
+services:
+  homer:
+    image: b4bz/homer:v26.4.2
+    volumes:
+      - homer-assets:/www/assets
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  homer-assets: {}

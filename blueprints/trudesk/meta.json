@@ -1,0 +1,16 @@
+{
+  "id": "trudesk",
+  "name": "Trudesk",
+  "description": "Trudesk is an open-source help desk/ticketing solution.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://trudesk.io/docs",
+    "docs": "https://trudesk.io/docs"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

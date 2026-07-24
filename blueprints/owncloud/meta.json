@@ -1,0 +1,20 @@
+{
+  "id": "owncloud",
+  "name": "owncloud",
+  "description": "OwnCloud with Open Web UI integrates file management with a powerful, user-friendly interface.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://owncloud.com/docs-guides/",
+    "docs": "https://owncloud.com/docs-guides/"
+  },
+  "tags": [
+    "owncloud",
+    "file-management",
+    "open-web-ui",
+    "integration",
+    "cloud",
+    "storage"
+  ]
+}

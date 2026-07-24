@@ -1,0 +1,16 @@
+services:
+  cross-seed:
+    image: ghcr.io/cross-seed/cross-seed:6.13.7
+    command: daemon
+    user: 1000:1000
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - cross-seed-config:/config
+      - cross-seed-torrents:/torrents
+      - cross-seed-cross-seeds:/cross-seeds
+    restart: always
+volumes:
+  cross-seed-config: {}
+  cross-seed-torrents: {}
+  cross-seed-cross-seeds: {}

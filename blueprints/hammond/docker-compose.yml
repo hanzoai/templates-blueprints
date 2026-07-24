@@ -1,0 +1,18 @@
+services:
+  hammond:
+    image: alfhou/hammond:v0.0.24
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - hammond-config:/config
+      - hammond-assets:/assets
+      - hammond-timezone:/etc/timezone
+      - hammond-localtime:/etc/localtime
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  hammond-config: {}
+  hammond-assets: {}
+  hammond-timezone: {}
+  hammond-localtime: {}

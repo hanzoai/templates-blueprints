@@ -1,0 +1,16 @@
+{
+  "id": "cloudflareddns",
+  "name": "CloudFlare DDNS",
+  "description": "This small image will allow you to use the free CloudFlare DNS Service as a Dynamic DNS Provider (DDNS).",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/oznu/docker-cloudflare-ddns",
+    "website": "",
+    "docs": "https://github.com/oznu/docker-cloudflare-ddns"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

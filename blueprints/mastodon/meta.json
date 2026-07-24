@@ -1,0 +1,15 @@
+{
+  "id": "mastodon",
+  "name": "Mastodon",
+  "description": "Your self-hosted, globally interconnected microblogging community",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/mastodon/mastodon",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "social"
+  ]
+}

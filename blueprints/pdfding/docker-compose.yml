@@ -1,0 +1,18 @@
+services:
+  pdfding:
+    image: mrmn/pdfding:v1.7.2
+    environment:
+      - HOST_NAME=*
+      - SECRET_KEY=your_secret_key_here
+      - CSRF_COOKIE_SECURE=FALSE
+      - SESSION_COOKIE_SECURE=FALSE
+      - DEBUG=FALSE
+    expose:
+      - "8000"
+    volumes:
+      - pdfding-db:/home/nonroot/pdfding/db
+      - pdfding-media:/home/nonroot/pdfding/media
+    restart: unless-stopped
+volumes:
+  pdfding-db: {}
+  pdfding-media: {}

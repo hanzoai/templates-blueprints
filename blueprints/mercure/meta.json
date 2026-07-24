@@ -1,0 +1,16 @@
+{
+  "id": "mercure",
+  "name": "Mercure",
+  "description": "Mercure is a protocol allowing to push data updates to web browsers and other HTTP clients.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://mercure.rocks/docs/hub/install",
+    "docs": "https://mercure.rocks/docs/hub/install"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

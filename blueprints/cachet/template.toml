@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+db-pass = "${password:16}"
+cachet-version = "2.3.15"
+gensec32 = "${password:32}"
+
+[config]
+
+[[config.domains]]
+serviceName = "cachet"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+DB_PASS = "${db-pass}"
+CACHET_VERSION = "${cachet-version}"
+GENSEC32 = "${gensec32}"

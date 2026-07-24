@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+rstudio-version = "4.0.4"
+rstudio-username = "rstudio"
+rstudio-password = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "rstudio"
+port = 8787
+host = "${main_domain}"
+
+[config.env]
+RSTUDIO_VERSION = "${rstudio-version}"
+RSTUDIO_USERNAME = "${rstudio-username}"
+RSTUDIO_PASSWORD = "${rstudio-password}"

@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+postgres-version = "18.1-alpine"
+umami-version = "3.0.3"
+postgres-pass = "${password:16}"
+pg-initdb-args = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "umami-postgresql"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+POSTGRES_VERSION = "${postgres-version}"
+UMAMI_VERSION = "${umami-version}"
+POSTGRES_PASS = "${postgres-pass}"
+PG_INITDB_ARGS = "${pg-initdb-args}"

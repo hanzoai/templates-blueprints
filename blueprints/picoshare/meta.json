@@ -1,0 +1,16 @@
+{
+  "id": "picoshare",
+  "name": "PicoShare",
+  "description": "A minimalist, easy-to-host service for sharing images and other files",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/mtlynch/picoshare/releases",
+    "website": "",
+    "docs": "https://github.com/mtlynch/picoshare/releases"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

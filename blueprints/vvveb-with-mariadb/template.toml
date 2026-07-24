@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "vvveb"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_VVVEB = "${username}"
+SERVICE_PASSWORD_VVVEB = "${password:32}"
+SERVICE_PASSWORD_ROOT = "${password:32}"

@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mc"
+port = 25565
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_RCON = "${password:32}"

@@ -1,0 +1,16 @@
+{
+  "id": "offen-docker-backup",
+  "name": "Offen Docker Backup (S3)",
+  "description": "Backup Docker volumes to any S3 compatible storage",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/offen/docker-volume-backup",
+    "website": "",
+    "docs": "https://github.com/offen/docker-volume-backup"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

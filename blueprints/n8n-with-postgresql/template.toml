@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "n8n"
+port = 5678
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_N8N = "https://${main_domain}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_PASSWORD_N8N = "${password:32}"

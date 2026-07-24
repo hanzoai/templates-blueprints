@@ -1,0 +1,44 @@
+services:
+  romm:
+    image: rommapp/romm:4.8.1
+    environment:
+      - DB_HOST=romm-db
+      - DB_NAME=romm
+      - DB_USER=romm-user
+      - DB_PASSWD=casaos
+      - ROMM_AUTH_SECRET_KEY=""
+      - IGDB_CLIENT_ID=""
+      - IGDB_CLIENT_SECRET=""
+      - SCREENSCRAPER_USER=""
+      - SCREENSCRAPER_PASSWORD=""
+      - STEAMGRIDDB_API_KEY=""
+    depends_on:
+      romm-db:
+        condition: service_healthy
+        restart: true
+    expose:
+      - "8080"
+    volumes:
+      - romm-resources:/romm/resources
+      - romm-redis-data:/redis-data
+      - romm-library:/romm/library
+      - romm-assets:/romm/assets
+      - romm-config:/romm/config
+    restart: unless-stopped
+  romm-db:
+    image: mariadb:11.8.2
+    environment:
+      - MARIADB_ROOT_PASSWORD=casaos
+      - MARIADB_DATABASE=romm
+      - MARIADB_USER=romm-user
+      - MARIADB_PASSWORD=casaos
+    volumes:
+      - romm-mysql:/var/lib/mysql
+    restart: unless-stopped
+volumes:
+  romm-resources: {}
+  romm-redis-data: {}
+  romm-library: {}
+  romm-assets: {}
+  romm-config: {}
+  romm-mysql: {}

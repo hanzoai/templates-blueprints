@@ -1,0 +1,16 @@
+{
+  "id": "mstream",
+  "name": "mStream Music",
+  "description": "The easiest music streaming server available",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/IrosTheBeggar/mStream",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "music",
+    "media"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "umami-postgresql",
+  "name": "umami-postgresql",
+  "description": "umami is a simple, easy to use, self-hosted web analytics solution. The goal is to provide you with a friendly privacy-focused alternative to Google Analytics.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/umami-software/umami/pkgs/container/umami",
+    "website": "https://umami.is/docs/install",
+    "docs": "https://umami.is/docs/install"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

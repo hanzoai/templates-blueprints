@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "watchyourlan"
+port = 8840
+host = "${main_domain}"
+
+[config.env]
+TZ = ""
+WATCHYOURLAN_IFACES = ""

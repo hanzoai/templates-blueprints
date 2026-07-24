@@ -1,0 +1,24 @@
+{
+  "id": "matrix-synapse-with-postgresql",
+  "name": "matrix-synapse-with-postgresql",
+  "description": "Chat securely with your family, friends, community, or build great apps with Matrix!",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://element-hq.github.io/synapse/latest/welcome_and_overview.html",
+    "docs": "https://element-hq.github.io/synapse/latest/welcome_and_overview.html"
+  },
+  "tags": [
+    "chat",
+    "slack",
+    "discord",
+    "voip",
+    "video",
+    "call",
+    "matrix",
+    "synapse",
+    "postgresql",
+    "messaging"
+  ]
+}

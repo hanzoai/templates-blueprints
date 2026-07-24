@@ -1,0 +1,16 @@
+{
+  "id": "projectsend",
+  "name": "Project Send",
+  "description": "ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself!",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/linuxserver/projectsend",
+    "docs": "https://hub.docker.com/r/linuxserver/projectsend"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

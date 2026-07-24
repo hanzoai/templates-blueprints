@@ -1,0 +1,38 @@
+services:
+  forge-minecraft:
+    image: itzg/minecraft-server:$$java_version
+    environment:
+      EULA: "true"
+      TYPE: $$server_type
+      VERSION: ${MINECRAFT_VERSION}
+      FORGE_VERSION: ${FORGE_VERSION}
+      MAX_PLAYERS: ${MAX_PLAYERS}
+      MODE: ${GAME_MODE}
+      MAX_MEMORY: ${MAX_RAM}G
+      SERVER_NAME: ${DISPLAY_NAME}
+      MOTD: ${DISPLAY_DESCRIPTION}
+      ONLINE_MODE: ${ONLINE_MODE}
+      RCON_PASSWORD: ${RCON_PASSWORD}
+      CF_API_KEY: ${CF_API_KEY}
+      CF_PAGE_URL: ${CF_PAGE_URL}
+      DISABLE_HEALTHCHECK: ${DISABLE_HEALTHCHECK}
+    volumes:
+      - forge-minecraft-data:/data
+    ports:
+      - ${MC_PORT}:25565
+    restart: unless-stopped
+  forge-minecraft-web:
+    image: itzg/rcon:multiarch
+    environment:
+      RWA_USERNAME: ${WEB_USERNAME}
+      RWA_PASSWORD: ${WEB_PASSWORD}
+      RWA_ADMIN: "TRUE"
+      RWA_RCON_HOST: forge-minecraft
+      RWA_RCON_PASSWORD: ${RCON_PASSWORD}
+    ports:
+      - 4327:4327
+    expose:
+      - "4326"
+    restart: always
+volumes:
+  forge-minecraft-data: {}

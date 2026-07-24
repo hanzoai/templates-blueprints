@@ -1,0 +1,15 @@
+{
+  "id": "gotosocial",
+  "name": "GoToSocial",
+  "description": "Fast, fun, ActivityPub server, powered by Go.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/superseriousbusiness/gotosocial",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "social"
+  ]
+}

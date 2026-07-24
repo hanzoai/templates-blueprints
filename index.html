@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hanzo Deploy Templates</title>
+  <link rel="stylesheet" href="/catalog.css" />
+</head>
+<body>
+  <main>
+    <h1>Hanzo Deploy Templates</h1>
+    <p class="lead">The one-click deploy catalog for the Hanzo PaaS
+      (<a href="https://platform.hanzo.ai">platform.hanzo.ai</a>). Every entry is
+      a ready-to-run <code>docker-compose</code> stack with a Hanzo deploy
+      descriptor.</p>
+    <h2>Catalog API</h2>
+    <ul>
+      <li><a href="/meta.json"><code>/meta.json</code></a> — the full catalog as a JSON array.</li>
+      <li><code>/blueprints/&lt;id&gt;/template.toml</code> — a template's variables, domains and env.</li>
+      <li><code>/blueprints/&lt;id&gt;/docker-compose.yml</code> — the compose stack.</li>
+      <li><code>/blueprints/&lt;id&gt;/&lt;logo&gt;</code> — the app logo.</li>
+    </ul>
+    <p>Deploy any of these from the Templates tab in the Hanzo PaaS. Sourced from
+      the open-source Dokploy, Coolify, CapRover, CasaOS and Runtipi catalogs;
+      each app keeps its upstream license and attribution — see
+      <a href="https://github.com/hanzoai/templates-blueprints">the repository</a>.</p>
+  </main>
+</body>
+</html>

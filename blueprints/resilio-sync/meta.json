@@ -1,0 +1,16 @@
+{
+  "id": "resilio-sync",
+  "name": "Resilio Sync",
+  "description": "File synchronization and sharing solution based on BitTorrent technology.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/resilio/sync",
+    "docs": "https://hub.docker.com/r/resilio/sync"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

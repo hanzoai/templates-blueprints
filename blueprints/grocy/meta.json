@@ -1,0 +1,20 @@
+{
+  "id": "grocy",
+  "name": "grocy",
+  "description": "Grocy is a web-based household management and grocery list application.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/grocy/grocy",
+    "website": "",
+    "docs": "https://github.com/grocy/grocy"
+  },
+  "tags": [
+    "groceries",
+    "household",
+    "management",
+    "grocery",
+    "shopping",
+    "productivity"
+  ]
+}

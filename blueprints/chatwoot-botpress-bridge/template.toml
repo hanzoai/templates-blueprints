@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+version = "1"
+secret-key-base = ""
+chatwoot-endpoint = ""
+chatwoot-bot-token = ""
+botpress-endpoint = ""
+botpress-bot-id = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "chatwoot-botpress-bridge"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+SECRET_KEY_BASE = "${secret-key-base}"
+CHATWOOT_ENDPOINT = "${chatwoot-endpoint}"
+CHATWOOT_BOT_TOKEN = "${chatwoot-bot-token}"
+BOTPRESS_ENDPOINT = "${botpress-endpoint}"
+BOTPRESS_BOT_ID = "${botpress-bot-id}"

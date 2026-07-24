@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "siyuan"
+port = 6806
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_SIYUAN = "${password:32}"

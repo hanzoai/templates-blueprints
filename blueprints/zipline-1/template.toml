@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "zipline"
+port = 9318
+host = "${main_domain}"
+
+[config.env]
+ZIPLINE_CORE_SECRET = "${hash:32}"
+ZIPLINE_DB_PASSWORD = "${hash:32}"

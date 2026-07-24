@@ -1,0 +1,16 @@
+{
+  "id": "traefik-certs-dumper",
+  "name": "Traefik Certs Dumper",
+  "description": "Dumps Let's Encrypt certificates of a specified domain which Traefik stores in acme.json.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/kereis/traefik-certs-dumper",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "security"
+  ]
+}

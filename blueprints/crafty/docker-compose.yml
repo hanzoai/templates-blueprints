@@ -1,0 +1,23 @@
+services:
+  crafty:
+    image: registry.gitlab.com/crafty-controller/crafty-4:4.10.4
+    environment:
+      - TZ=Etc/UTC
+    expose:
+      - "8443"
+      - "8123"
+      - "19132"
+      - 25500-25600
+    volumes:
+      - crafty-backups:/crafty/backups
+      - crafty-logs:/crafty/logs
+      - crafty-servers:/crafty/servers
+      - crafty-config:/crafty/app/config
+      - crafty-import:/crafty/import
+    restart: always
+volumes:
+  crafty-backups: {}
+  crafty-logs: {}
+  crafty-servers: {}
+  crafty-config: {}
+  crafty-import: {}

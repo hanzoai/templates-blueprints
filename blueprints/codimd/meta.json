@@ -1,0 +1,22 @@
+{
+  "id": "codimd",
+  "name": "codimd",
+  "description": "Realtime collaborative markdown notes on all platforms",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://hackmd.io/c/codimd-documentation",
+    "docs": "https://hackmd.io/c/codimd-documentation"
+  },
+  "tags": [
+    "markdown",
+    "md",
+    "editor",
+    "opensource",
+    "collaborative",
+    "realtime-collaboration",
+    "notes",
+    "productivity"
+  ]
+}

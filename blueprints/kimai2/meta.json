@@ -1,0 +1,16 @@
+{
+  "id": "kimai2",
+  "name": "Kimai",
+  "description": "With Kimai, the boring process of feeding spreadsheets with your working hours is not only simplified, it also offers dozens of other exciting features that you don't even know you're missing!",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.kimai.org/documentation/",
+    "docs": "https://www.kimai.org/documentation/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

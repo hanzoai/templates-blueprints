@@ -1,0 +1,15 @@
+{
+  "id": "mongodb4",
+  "name": "MongoDB 4",
+  "description": "A free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/mongodb/mongo",
+    "website": "https://www.mongodb.com/",
+    "docs": "https://www.mongodb.com/docs/v4.4/"
+  },
+  "tags": [
+    "developer"
+  ]
+}

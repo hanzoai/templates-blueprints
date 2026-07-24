@@ -1,0 +1,20 @@
+{
+  "id": "electricsql",
+  "name": "electricsql",
+  "description": "Sync shape-based subsets of your Postgres data over HTTP.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://electric-sql.com/docs/guides/deployment",
+    "docs": "https://electric-sql.com/docs/guides/deployment"
+  },
+  "tags": [
+    "electric",
+    "electricsql",
+    "realtime",
+    "sync",
+    "postgresql",
+    "backend"
+  ]
+}

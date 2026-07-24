@@ -1,0 +1,28 @@
+[variables]
+main_domain = "${domain}"
+db-pass = "${password:16}"
+lemmy-version = "0.19.13"
+lemmy-ui-version = "0.19.13"
+smtp-server = "smtp.gmail.com:587"
+smtp-login = "user@example.com"
+smtp-pass = ""
+smtp-from = "no-reply@example.com"
+smtp-tls = "starttls"
+
+[config]
+
+[[config.domains]]
+serviceName = "lemmy"
+port = 1234
+host = "${main_domain}"
+
+[config.env]
+DB_PASS = "${db-pass}"
+LEMMY_VERSION = "${lemmy-version}"
+LEMMY_UI_VERSION = "${lemmy-ui-version}"
+SMTP_SERVER = "${smtp-server}"
+SMTP_LOGIN = "${smtp-login}"
+SMTP_PASS = "${smtp-pass}"
+SMTP_FROM = "${smtp-from}"
+SMTP_TLS = "${smtp-tls}"
+ROOT_DOMAIN = "${main_domain}"

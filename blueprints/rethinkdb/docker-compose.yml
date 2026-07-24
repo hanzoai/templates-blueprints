@@ -1,0 +1,10 @@
+services:
+  rethinkdb:
+    image: rethinkdb:2.3.6
+    volumes:
+      - rethinkdb-data:/data/rethinkdb_data/
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  rethinkdb-data: {}

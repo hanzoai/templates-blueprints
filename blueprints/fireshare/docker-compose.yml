@@ -1,0 +1,23 @@
+services:
+  fireshare:
+    image: shaneisrael/fireshare:1.7.3
+    environment:
+      ADMIN_USERNAME: ${FIRESHARE_USERNAME}
+      ADMIN_PASSWORD: ${FIRESHARE_PASSWORD}
+      SECRET_KEY: ${FIRESHARE_SECRET_KEY}
+      MINUTES_BETWEEN_VIDEO_SCANS: "5"
+      PUID: "1000"
+      PGID: "1000"
+    volumes:
+      - fireshare-data:/data
+      - fireshare-processed:/processed
+      - fireshare-videos:/videos
+      - fireshare-images:/images
+    expose:
+      - "80"
+    restart: always
+volumes:
+  fireshare-data: {}
+  fireshare-processed: {}
+  fireshare-videos: {}
+  fireshare-images: {}

@@ -1,0 +1,16 @@
+{
+  "id": "papermerge",
+  "name": "Papermerge",
+  "description": "Papermerge is an open source document management system (DMS) primarily designed for archiving and retrieving your digital documents.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/linuxserver/papermerge",
+    "docs": "https://hub.docker.com/r/linuxserver/papermerge"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

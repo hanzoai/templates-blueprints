@@ -1,0 +1,15 @@
+services:
+  firefox:
+    image: jlesage/firefox
+    volumes:
+      - firefox_config:/config
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - -q
+        - --spider
+        - http://127.0.0.1:5800/
+      interval: 5s
+      timeout: 20s
+      retries: 10

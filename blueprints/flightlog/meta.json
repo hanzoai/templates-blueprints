@@ -1,0 +1,16 @@
+{
+  "id": "flightlog",
+  "name": "Flightlog",
+  "description": "Flightlog, a web application that keeps track of your personal flight history",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/perdian/flightlog/",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "data"
+  ]
+}

@@ -1,0 +1,12 @@
+services:
+  mqttx:
+    image: emqx/mqttx-web:v1.13.0
+    volumes:
+      - mqttx-data:/app/data
+      - mqttx-localtime:/etc/localtime
+    expose:
+      - "80"
+    restart: always
+volumes:
+  mqttx-data: {}
+  mqttx-localtime: {}

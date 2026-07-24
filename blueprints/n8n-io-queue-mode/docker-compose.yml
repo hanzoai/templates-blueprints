@@ -1,0 +1,148 @@
+services:
+  n8n-io-queue-mode-editor:
+    image: n8nio/n8n:${N8N_VERSION}
+    environment:
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: n8n-io-queue-mode-postgres
+      DB_POSTGRESDB_DATABASE: ${POSTGRES_DB}
+      DB_POSTGRESDB_USER: ${POSTGRES_USER}
+      DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
+      GENERIC_TIMEZONE: ${N8N_TIMEZONE}
+      TZ: ${N8N_TIMEZONE}
+      NODE_ENV: ${N8N_ENVIRONMENT}
+      N8N_PROTOCOL: https
+      N8N_HOST: n8n-io-queue-mode-editor.${ROOT_DOMAIN}
+      N8N_DIAGNOSTICS_ENABLED: ${N8N_DIAGNOSTICS_ENABLED}
+      N8N_EMAIL_MODE: smtp
+      N8N_SMTP_HOST: ${N8N_SMTP_HOST}
+      N8N_SMTP_PORT: ${N8N_SMTP_PORT}
+      N8N_SMTP_USER: ${N8N_SMTP_USER}
+      N8N_SMTP_PASS: ${N8N_SMTP_PASS}
+      N8N_SMTP_SENDER: ${N8N_SMTP_SENDER}
+      N8N_SMTP_SSL: ${N8N_SMTP_SSL}
+      WEBHOOK_URL: https://n8n-io-queue-mode-webhooks.${ROOT_DOMAIN}
+      N8N_EDITOR_BASE_URL: https://n8n-io-queue-mode-editor.${ROOT_DOMAIN}
+      N8N_RUNNERS_ENABLED: "true"
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      N8N_DEFAULT_LOCALE: ${N8N_DEFAULT_LOCALE}
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY}
+      EXECUTIONS_MODE: queue
+      QUEUE_BULL_REDIS_HOST: n8n-io-queue-mode-redis
+      QUEUE_BULL_REDIS_PORT: "6379"
+      N8N_CONCURRENCY_PRODUCTION_LIMIT: ${N8N_CONCURRENCY_PRODUCTION_LIMIT}
+      OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS: "true"
+    volumes:
+      - n8n-io-queue-mode-data:/home/node/.n8n
+      - n8n-io-queue-mode-files:/files
+    depends_on:
+      - n8n-io-queue-mode-postgres
+      - n8n-io-queue-mode-redis
+    expose:
+      - "5678"
+    restart: always
+  n8n-io-queue-mode-workers:
+    image: n8nio/n8n:${N8N_VERSION}
+    command:
+      - n8n
+      - worker
+    environment:
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: n8n-io-queue-mode-postgres
+      DB_POSTGRESDB_DATABASE: ${POSTGRES_DB}
+      DB_POSTGRESDB_USER: ${POSTGRES_USER}
+      DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
+      GENERIC_TIMEZONE: ${N8N_TIMEZONE}
+      TZ: ${N8N_TIMEZONE}
+      NODE_ENV: ${N8N_ENVIRONMENT}
+      N8N_PROTOCOL: https
+      N8N_HOST: n8n-io-queue-mode-editor.${ROOT_DOMAIN}
+      N8N_DIAGNOSTICS_ENABLED: ${N8N_DIAGNOSTICS_ENABLED}
+      N8N_EMAIL_MODE: smtp
+      N8N_SMTP_HOST: ${N8N_SMTP_HOST}
+      N8N_SMTP_PORT: ${N8N_SMTP_PORT}
+      N8N_SMTP_USER: ${N8N_SMTP_USER}
+      N8N_SMTP_PASS: ${N8N_SMTP_PASS}
+      N8N_SMTP_SENDER: ${N8N_SMTP_SENDER}
+      N8N_SMTP_SSL: ${N8N_SMTP_SSL}
+      WEBHOOK_URL: https://n8n-io-queue-mode-webhooks.${ROOT_DOMAIN}
+      N8N_EDITOR_BASE_URL: https://n8n-io-queue-mode-editor.${ROOT_DOMAIN}
+      N8N_RUNNERS_ENABLED: "true"
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      N8N_DEFAULT_LOCALE: ${N8N_DEFAULT_LOCALE}
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY}
+      EXECUTIONS_MODE: queue
+      QUEUE_BULL_REDIS_HOST: n8n-io-queue-mode-redis
+      QUEUE_BULL_REDIS_PORT: "6379"
+      N8N_CONCURRENCY_PRODUCTION_LIMIT: ${N8N_CONCURRENCY_PRODUCTION_LIMIT}
+      OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS: "true"
+    volumes:
+      - n8n-io-queue-mode-data:/home/node/.n8n
+      - n8n-io-queue-mode-files:/files
+    depends_on:
+      - n8n-io-queue-mode-postgres
+      - n8n-io-queue-mode-redis
+    restart: always
+  n8n-io-queue-mode-webhooks:
+    image: n8nio/n8n:${N8N_VERSION}
+    command:
+      - n8n
+      - webhook
+    environment:
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: n8n-io-queue-mode-postgres
+      DB_POSTGRESDB_DATABASE: ${POSTGRES_DB}
+      DB_POSTGRESDB_USER: ${POSTGRES_USER}
+      DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
+      GENERIC_TIMEZONE: ${N8N_TIMEZONE}
+      TZ: ${N8N_TIMEZONE}
+      NODE_ENV: ${N8N_ENVIRONMENT}
+      N8N_PROTOCOL: https
+      N8N_HOST: n8n-io-queue-mode-editor.${ROOT_DOMAIN}
+      N8N_DIAGNOSTICS_ENABLED: ${N8N_DIAGNOSTICS_ENABLED}
+      N8N_EMAIL_MODE: smtp
+      N8N_SMTP_HOST: ${N8N_SMTP_HOST}
+      N8N_SMTP_PORT: ${N8N_SMTP_PORT}
+      N8N_SMTP_USER: ${N8N_SMTP_USER}
+      N8N_SMTP_PASS: ${N8N_SMTP_PASS}
+      N8N_SMTP_SENDER: ${N8N_SMTP_SENDER}
+      N8N_SMTP_SSL: ${N8N_SMTP_SSL}
+      WEBHOOK_URL: https://n8n-io-queue-mode-webhooks.${ROOT_DOMAIN}
+      N8N_EDITOR_BASE_URL: https://n8n-io-queue-mode-editor.${ROOT_DOMAIN}
+      N8N_RUNNERS_ENABLED: "true"
+      N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
+      N8N_DEFAULT_LOCALE: ${N8N_DEFAULT_LOCALE}
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY}
+      EXECUTIONS_MODE: queue
+      QUEUE_BULL_REDIS_HOST: n8n-io-queue-mode-redis
+      QUEUE_BULL_REDIS_PORT: "6379"
+      N8N_CONCURRENCY_PRODUCTION_LIMIT: ${N8N_CONCURRENCY_PRODUCTION_LIMIT}
+      OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS: "true"
+    volumes:
+      - n8n-io-queue-mode-data:/home/node/.n8n
+      - n8n-io-queue-mode-files:/files
+    depends_on:
+      - n8n-io-queue-mode-postgres
+      - n8n-io-queue-mode-redis
+    expose:
+      - "5678"
+    restart: always
+  n8n-io-queue-mode-postgres:
+    image: pgvector/pgvector:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      TZ: ${N8N_TIMEZONE}
+    volumes:
+      - n8n-io-queue-mode-postgres-data:/var/lib/postgresql/data
+    restart: always
+  n8n-io-queue-mode-redis:
+    image: redis:${REDIS_VERSION}
+    volumes:
+      - n8n-io-queue-mode-redis-data:/data
+    restart: always
+volumes:
+  n8n-io-queue-mode-data: {}
+  n8n-io-queue-mode-files: {}
+  n8n-io-queue-mode-postgres-data: {}
+  n8n-io-queue-mode-redis-data: {}

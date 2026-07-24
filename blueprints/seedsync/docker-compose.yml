@@ -1,0 +1,15 @@
+services:
+  seedsync:
+    image: ipsingh06/seedsync:0.8.6
+    user: ${SEEDSYNC_PUID:-1000}:${SEEDSYNC_PGID:-1000}
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - seedsync-config:/config
+      - seedsync-downloads:/downloads
+    expose:
+      - "8800"
+    restart: always
+volumes:
+  seedsync-config: {}
+  seedsync-downloads: {}

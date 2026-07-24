@@ -1,0 +1,35 @@
+[variables]
+main_domain = "${domain}"
+drone-version = "1.9.0"
+drone-runner-version = "1.5.1"
+drone-gitea-server = "https://git.your.server"
+drone-gitea-always-auth = "false"
+drone-runner-capacity = "4"
+drone-server-proto = "https"
+drone-server-host = "${main_domain}"
+drone-server-port = "80"
+drone-tls-autocert = "false"
+drone-secret = ""
+drone-gitea-client-id = ""
+drone-gitea-client-secret = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "drone-gitea"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+DRONE_VERSION = "${drone-version}"
+DRONE_RUNNER_VERSION = "${drone-runner-version}"
+DRONE_GITEA_SERVER = "${drone-gitea-server}"
+DRONE_GITEA_ALWAYS_AUTH = "${drone-gitea-always-auth}"
+DRONE_RUNNER_CAPACITY = "${drone-runner-capacity}"
+DRONE_SERVER_PROTO = "${drone-server-proto}"
+DRONE_SERVER_HOST = "${drone-server-host}"
+DRONE_SERVER_PORT = "${drone-server-port}"
+DRONE_TLS_AUTOCERT = "${drone-tls-autocert}"
+DRONE_SECRET = "${drone-secret}"
+DRONE_GITEA_CLIENT_ID = "${drone-gitea-client-id}"
+DRONE_GITEA_CLIENT_SECRET = "${drone-gitea-client-secret}"

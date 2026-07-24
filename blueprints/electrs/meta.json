@@ -1,0 +1,15 @@
+{
+  "id": "electrs",
+  "name": "Electrs",
+  "description": "Electrum server",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/romanz/electrs",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "finance"
+  ]
+}

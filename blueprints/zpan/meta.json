@@ -1,0 +1,16 @@
+{
+  "id": "zpan",
+  "name": "ZPan",
+  "description": "Open-source file hosting for S3-compatible storage with web drive, sharing, WebDAV, image hosting, and downloader workflows.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/saltbo/zpan",
+    "website": "",
+    "docs": "https://github.com/saltbo/zpan"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

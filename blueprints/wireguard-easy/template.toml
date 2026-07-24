@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "wg-easy"
+port = 51821
+host = "${main_domain}"
+
+[config.env]
+SERVICE_FQDN_WIREGUARDEASY = "${main_domain}"
+SERVICE_PASSWORD_ADMIN = "${password:32}"

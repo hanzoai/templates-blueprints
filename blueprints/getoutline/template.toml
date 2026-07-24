@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "outline"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_HEX_64_OUTLINE = "${hash:64}"
+SERVICE_PASSWORD_64_OUTLINE = "${base64:64}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_64_POSTGRES = "${base64:64}"
+SERVICE_PASSWORD_64_REDIS = "${base64:64}"
+SERVICE_URL_OUTLINE = "https://${main_domain}"

@@ -1,0 +1,34 @@
+[variables]
+main_domain = "${domain}"
+squidex-version = "4.6.0"
+mongo-version = "4"
+mongo-password = ""
+admin-email = ""
+admin-password = ""
+microsoft-client = ""
+microsoft-secret = ""
+github-client = ""
+github-secret = ""
+google-client = ""
+google-secret = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "squidex"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SQUIDEX_VERSION = "${squidex-version}"
+MONGO_VERSION = "${mongo-version}"
+MONGO_PASSWORD = "${mongo-password}"
+ADMIN_EMAIL = "${admin-email}"
+ADMIN_PASSWORD = "${admin-password}"
+MICROSOFT_CLIENT = "${microsoft-client}"
+MICROSOFT_SECRET = "${microsoft-secret}"
+GITHUB_CLIENT = "${github-client}"
+GITHUB_SECRET = "${github-secret}"
+GOOGLE_CLIENT = "${google-client}"
+GOOGLE_SECRET = "${google-secret}"
+ROOT_DOMAIN = "${main_domain}"

@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "rdtclient"
+port = 6500
+host = "${main_domain}"
+
+[config.env]
+PGID = ""
+PUID = ""
+TZ = ""

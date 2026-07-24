@@ -1,0 +1,16 @@
+{
+  "id": "linkding-plus",
+  "name": "linkding-plus",
+  "description": "A self-hosted bookmark manager designed to be minimal, fast, and easy to set up. (Includes feature for archiving websites as HTML snapshots)",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://linkding.link/",
+    "docs": "https://linkding.link/"
+  },
+  "tags": [
+    "rss",
+    "feed"
+  ]
+}

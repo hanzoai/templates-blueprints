@@ -1,0 +1,16 @@
+{
+  "id": "prerender",
+  "name": "Prerender",
+  "description": "Prerender uses Headless Chrome to render HTML, screenshots, PDFs, and HAR files out of any web page, in order to serve them to crawlers.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/tvanro/prerender-alpine",
+    "docs": "https://hub.docker.com/r/tvanro/prerender-alpine"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

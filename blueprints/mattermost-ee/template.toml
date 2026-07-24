@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+mattermost-version = "release-6.7"
+postgres-version = "14.3"
+pg-pass = "${password:32}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mattermost-ee"
+port = 8065
+host = "${main_domain}"
+
+[config.env]
+MATTERMOST_VERSION = "${mattermost-version}"
+POSTGRES_VERSION = "${postgres-version}"
+PG_PASS = "${pg-pass}"
+ROOT_DOMAIN = "${main_domain}"

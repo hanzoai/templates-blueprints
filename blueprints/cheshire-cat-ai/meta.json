@@ -1,0 +1,15 @@
+{
+  "id": "cheshire-cat-ai",
+  "name": "Cheshire Cat AI",
+  "description": "A production-ready AI framework to develop AI agents.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/cheshire-cat-ai/core",
+    "website": "https://cheshirecat.ai",
+    "docs": "https://cheshirecat.ai"
+  },
+  "tags": [
+    "ai"
+  ]
+}

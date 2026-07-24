@@ -1,0 +1,16 @@
+{
+  "id": "photoview",
+  "name": "Photoview",
+  "description": "Photo gallery for self-hosted personal servers.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/photoview/photoview/blob/master/docker-compose.example.yml",
+    "website": "",
+    "docs": "https://github.com/photoview/photoview/blob/master/docker-compose.example.yml"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

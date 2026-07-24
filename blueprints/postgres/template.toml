@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+postgres-version = "14.5"
+pg-user = "postgres"
+pg-pass = "${password:16}"
+pg-db = "postgres"
+pg-initdb-args = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "postgres"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+POSTGRES_VERSION = "${postgres-version}"
+PG_USER = "${pg-user}"
+PG_PASS = "${pg-pass}"
+PG_DB = "${pg-db}"
+PG_INITDB_ARGS = "${pg-initdb-args}"

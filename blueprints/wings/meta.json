@@ -1,0 +1,20 @@
+{
+  "id": "wings",
+  "name": "wings",
+  "description": "The server control plane for Pterodactyl Panel. Written from the ground-up with security, speed, and stability in mind.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://pterodactyl.io/",
+    "docs": "https://pterodactyl.io/"
+  },
+  "tags": [
+    "game",
+    "game-server",
+    "management",
+    "panel",
+    "minecraft",
+    "devtools"
+  ]
+}

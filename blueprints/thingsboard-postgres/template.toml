@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+version = "3.2.2"
+
+[config]
+
+[[config.domains]]
+serviceName = "thingsboard-postgres"
+port = 9090
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"

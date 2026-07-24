@@ -1,0 +1,24 @@
+{
+  "id": "kuzzle",
+  "name": "kuzzle",
+  "description": "Kuzzle is a generic backend offering the basic building blocks common to every application.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://kuzzle.io",
+    "docs": "https://kuzzle.io"
+  },
+  "tags": [
+    "backend",
+    "api",
+    "realtime",
+    "websocket",
+    "mqtt",
+    "rest",
+    "sdk",
+    "iot",
+    "geofencing",
+    "low-code"
+  ]
+}

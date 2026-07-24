@@ -1,0 +1,15 @@
+{
+  "id": "jdownloader2",
+  "name": "JDownloader2",
+  "description": "Free & open-source download management tool",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "",
+    "docs": "https://support.jdownloader.org/"
+  },
+  "tags": [
+    "media"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cap-captcha",
+  "name": "cap-captcha",
+  "description": "The self-hosted CAPTCHA for the modern web.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://capjs.js.org/guide/",
+    "docs": "https://capjs.js.org/guide/"
+  },
+  "tags": [
+    "captcha",
+    "security",
+    "privacy",
+    "proof-of-work"
+  ]
+}

@@ -1,0 +1,6 @@
+services:
+  index-tts:
+    image: icewhaletech/index-tts:2.0
+    expose:
+      - "7860"
+    restart: unless-stopped

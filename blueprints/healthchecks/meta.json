@@ -1,0 +1,21 @@
+{
+  "id": "healthchecks",
+  "name": "healthchecks",
+  "description": "Healthchecks is a cron job monitoring service. It listens for HTTP requests and email messages from your cron jobs and scheduled tasks.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://healthchecks.io/docs",
+    "docs": "https://healthchecks.io/docs"
+  },
+  "tags": [
+    "monitoring",
+    "status",
+    "performance",
+    "web",
+    "services",
+    "applications",
+    "real-time"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "freshrss-with-postgresql",
+  "name": "freshrss-with-postgresql",
+  "description": "A free, self-hostable feed aggregator.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://freshrss.org/index.html",
+    "docs": "https://freshrss.org/index.html"
+  },
+  "tags": [
+    "rss",
+    "feed"
+  ]
+}

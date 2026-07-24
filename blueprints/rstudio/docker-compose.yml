@@ -1,0 +1,13 @@
+services:
+  rstudio:
+    image: rocker/rstudio:${RSTUDIO_VERSION}
+    environment:
+      PASSWORD: ${RSTUDIO_PASSWORD}
+      USER: ${RSTUDIO_USERNAME}
+    volumes:
+      - rstudio-code:/home/rstudio
+    expose:
+      - "8787"
+    restart: always
+volumes:
+  rstudio-code: {}

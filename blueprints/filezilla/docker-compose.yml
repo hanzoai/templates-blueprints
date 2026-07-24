@@ -1,0 +1,14 @@
+services:
+  filezilla:
+    image: linuxserver/filezilla:${FZ_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: "1000"
+      PGID: "1000"
+    volumes:
+      - filezilla-config:/config
+    expose:
+      - "3000"
+    restart: unless-stopped
+volumes:
+  filezilla-config: {}

@@ -1,0 +1,19 @@
+services:
+  matrix-conduit:
+    image: matrixconduit/matrix-conduit:${CONDUIT_VERSION}
+    environment:
+      CONDUIT_SERVER_NAME: ${CONDUIT_SERVER_NAME}
+      CONDUIT_DATABASE_BACKEND: rocksdb
+      CONDUIT_ALLOW_REGISTRATION: ${CONDUIT_ALLOW_REGISTRATION}
+      CONDUIT_ALLOW_FEDERATION: ${CONDUIT_ALLOW_FEDERATION}
+      CONDUIT_MAX_REQUEST_SIZE: ${CONDUIT_MAX_REQUEST_SIZE}
+      CONDUIT_TRUSTED_SERVERS: '["matrix.org"]'
+      CONDUIT_MAX_CONCURRENT_REQUESTS: ${CONDUIT_MAX_CONCURRENT_REQUESTS}
+      CONDUIT_LOG: info,rocket=off,_=off,sled=off
+    volumes:
+      - matrix-conduit-data:/var/lib/matrix-conduit
+    expose:
+      - "6167"
+    restart: unless-stopped
+volumes:
+  matrix-conduit-data: {}

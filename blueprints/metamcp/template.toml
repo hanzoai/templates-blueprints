@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "app"
+port = 12008
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_URL_METAMCP = "https://${main_domain}"
+SERVICE_PASSWORD_AUTH = "${password:32}"

@@ -1,0 +1,16 @@
+{
+  "id": "jsreport",
+  "name": "jsreport",
+  "description": "jsreport is an open source reporting platform where reports are designed using popular JavaScript templating engines",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/jsreport/jsreport/",
+    "docs": "https://hub.docker.com/r/jsreport/jsreport/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "traccar",
+  "name": "traccar",
+  "description": "Traccar is a free and open source modern GPS tracking system.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.traccar.org/documentation/",
+    "docs": "https://www.traccar.org/documentation/"
+  },
+  "tags": [
+    "traccar",
+    "gps",
+    "tracking",
+    "open",
+    "source",
+    "monitoring"
+  ]
+}

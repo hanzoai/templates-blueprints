@@ -1,0 +1,38 @@
+services:
+  squidex:
+    image: squidex/squidex:${SQUIDEX_VERSION}
+    environment:
+      URLS__BASEURL: https://squidex.${ROOT_DOMAIN}
+      URLS__ENFORCEHTTPS: "True"
+      EVENTSTORE__MONGODB__CONFIGURATION: mongodb://root:${MONGO_PASSWORD}@squidex-db
+      STORE__MONGODB__CONFIGURATION: mongodb://root:${MONGO_PASSWORD}@squidex-db
+      IDENTITY__ADMINEMAIL: ${ADMIN_EMAIL}
+      IDENTITY__ADMINPASSWORD: ${ADMIN_PASSWORD}
+      IDENTITY__GOOGLECLIENT: ${GOOGLE_CLIENT}
+      IDENTITY__GOOGLESECRET: ${GOOGLE_SECRET}
+      IDENTITY__GITHUBCLIENT: ${GITHUB_CLIENT}
+      IDENTITY__GITHUBSECRET: ${GITHUB_SECRET}
+      IDENTITY__MICROSOFTCLIENT: ${MICROSOFT_CLIENT}
+      IDENTITY__MICROSOFTSECRET: ${MICROSOFT_SECRET}
+      LETSENCRYPT_HOST: squidex.${ROOT_DOMAIN}
+      LETSENCRYPT_EMAIL: ${ADMIN_EMAIL}
+      VIRTUAL_HOST: squidex.${ROOT_DOMAIN}
+    volumes:
+      - squidex-data:/app/Assets
+    depends_on:
+      - squidex-db
+    restart: always
+  squidex-db:
+    image: mongo:${MONGO_VERSION}
+    environment:
+      MONGO_INITDB_DATABASE: squidex
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - squidex-db-data:/data/db
+      - squidex-db-config:/data/configdb
+    restart: always
+volumes:
+  squidex-data: {}
+  squidex-db-data: {}
+  squidex-db-config: {}

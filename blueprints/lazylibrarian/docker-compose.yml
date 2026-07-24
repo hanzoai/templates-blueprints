@@ -1,0 +1,19 @@
+services:
+  lazylibrarian:
+    image: linuxserver/lazylibrarian:version-169e669f
+    environment:
+      DOCKER_MODS: linuxserver/calibre-web:calibre|linuxserver/mods:lazylibrarian-ffmpeg
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+    expose:
+      - "5299"
+    volumes:
+      - lazylibrarian-downloads:/downloads
+      - lazylibrarian-books:/books
+      - lazylibrarian-config:/config
+    restart: unless-stopped
+volumes:
+  lazylibrarian-downloads: {}
+  lazylibrarian-books: {}
+  lazylibrarian-config: {}

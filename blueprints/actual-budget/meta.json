@@ -1,0 +1,15 @@
+{
+  "id": "actual-budget",
+  "name": "Actual Budget",
+  "description": "Local-first OpenSource Budget tool",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/actualbudget/actual",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "finance"
+  ]
+}

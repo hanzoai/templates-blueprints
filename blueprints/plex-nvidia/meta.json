@@ -1,0 +1,15 @@
+{
+  "id": "plex-nvidia",
+  "name": "Plex(Nvidia GPU)",
+  "description": "Stream Movies & TV Shows",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/linuxserver/docker-plex",
+    "website": "https://www.plex.tv",
+    "docs": "https://support.plex.tv"
+  },
+  "tags": [
+    "media"
+  ]
+}

@@ -1,0 +1,28 @@
+services:
+  monica:
+    image: monica:${MONICA_VERSION}
+    environment:
+      APP_KEY: ${GENSEC32}
+      DB_HOST: monica-mariadb
+      DB_DATABASE: ${MARIADB_DB}
+      DB_USERNAME: ${MARIADB_USER}
+      DB_PASSWORD: ${MARIADB_PASS}
+      APP_ENV: production
+    volumes:
+      - monica-storage:/var/www/html/storage
+    depends_on:
+      - monica-mariadb
+    restart: always
+  monica-mariadb:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+      MYSQL_DATABASE: ${MARIADB_DB}
+      MYSQL_USER: ${MARIADB_USER}
+      MYSQL_PASSWORD: ${MARIADB_PASS}
+    volumes:
+      - monica-mariadb-data:/var/lib/mysql
+    restart: unless-stopped
+volumes:
+  monica-storage: {}
+  monica-mariadb-data: {}

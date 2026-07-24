@@ -1,0 +1,16 @@
+services:
+  spigot:
+    image: nimmis/spigot@${VERSION}
+    environment:
+      EULA: ${EULA}
+      SPIGOT_VER: ${SPIGOT_VERSION}
+      MC_MAXMEM: ${MAXMEM}
+      MC_MINMEM: ${MINMEM}
+      SPIGOT_AUTORESTART: ${AUTORESTART}
+    volumes:
+      - spigot-data:/minecraft
+    ports:
+      - ${PORT}:25565
+    restart: always
+volumes:
+  spigot-data: {}

@@ -1,0 +1,19 @@
+{
+  "id": "invoice-ninja",
+  "name": "invoice-ninja",
+  "description": "The leading open-source invoicing platform",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://invoiceninja.github.io/selfhost.html",
+    "docs": "https://invoiceninja.github.io/selfhost.html"
+  },
+  "tags": [
+    "invoicing",
+    "billing",
+    "accounting",
+    "finance",
+    "self-hosted"
+  ]
+}

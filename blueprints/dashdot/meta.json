@@ -1,0 +1,15 @@
+{
+  "id": "dashdot",
+  "name": "Dash.",
+  "description": "A simple, modern server dashboard, primarily used by smaller private server",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/MauriceNino/dashdot",
+    "website": "https://getdashdot.com/",
+    "docs": "https://getdashdot.com/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

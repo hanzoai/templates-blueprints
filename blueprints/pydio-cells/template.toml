@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "cells"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_CELLS = "https://${main_domain}"
+SERVICE_PASSWORD_MYSQLROOT = "${password:32}"
+SERVICE_USER_MYSQL = "${username}"
+SERVICE_PASSWORD_MYSQL = "${password:32}"

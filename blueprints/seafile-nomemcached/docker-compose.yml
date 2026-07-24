@@ -1,0 +1,26 @@
+services:
+  seafile-nomemcached-db:
+    image: mariadb:${MARIADB_VERSION}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MARIADB_ROOT_PSWD}
+      MYSQL_LOG_CONSOLE: "true"
+    volumes:
+      - seafile-nomemcached-db-data:/var/lib/mysql
+    restart: always
+  seafile-nomemcached:
+    image: seafileltd/seafile-mc:${SEAFILE_VERSION}
+    environment:
+      DB_HOST: seafile-nomemcached-db
+      DB_ROOT_PASSWD: ${MARIADB_ROOT_PSWD}
+      TIME_ZONE: ${TIMEZONE}
+      SEAFILE_ADMIN_EMAIL: ${ADMIN_EMAIL}
+      SEAFILE_ADMIN_PASSWORD: ${ADMIN_PSWD}
+      SEAFILE_SERVER_HOSTNAME: ${SEAFILE_HOSTNAME}
+    volumes:
+      - seafile-nomemcached-data:/shared
+    depends_on:
+      - seafile-nomemcached-db
+    restart: always
+volumes:
+  seafile-nomemcached-db-data: {}
+  seafile-nomemcached-data: {}

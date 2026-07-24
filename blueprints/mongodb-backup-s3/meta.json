@@ -1,0 +1,16 @@
+{
+  "id": "mongodb-backup-s3",
+  "name": "MongoDB Backup Amazon S3",
+  "description": "Runs mongodump to backup data using cronjob to an Amazon S3 bucket",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/halvves/mongodb-backup-s3",
+    "website": "",
+    "docs": "https://github.com/halvves/mongodb-backup-s3"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

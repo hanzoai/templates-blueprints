@@ -1,0 +1,16 @@
+services:
+  termix:
+    image: ghcr.io/lukegus/termix:${TERMIX_VERSION}
+    environment:
+      PORT: "8080"
+      GUACD_HOST: termix-guacd
+    volumes:
+      - termix-data:/app/data
+    expose:
+      - "8080"
+    restart: always
+  termix-guacd:
+    image: guacamole/guacd:${GUACD_VERSION}
+    restart: always
+volumes:
+  termix-data: {}

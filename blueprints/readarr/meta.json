@@ -1,0 +1,16 @@
+{
+  "id": "readarr",
+  "name": "Readarr",
+  "description": "Readarr - An ebook collection manager for Usenet and BitTorrent users.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://readarr.com/",
+    "docs": "https://readarr.com/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

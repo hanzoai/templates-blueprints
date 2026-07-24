@@ -1,0 +1,16 @@
+{
+  "id": "email-oauth2-proxy",
+  "name": "Email OAuth2 Proxy",
+  "description": "OAuth Proxy for IMAP/POP/SMTP.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/simonrob/email-oauth2-proxy",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "security"
+  ]
+}

@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "campfire"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_64_CAMPFIRE = "${base64:64}"
