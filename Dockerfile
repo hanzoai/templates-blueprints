@@ -22,6 +22,7 @@ COPY meta.json /public/meta.json
 COPY blueprints /public/blueprints
 COPY index.html /public/index.html
 COPY catalog.css /public/catalog.css
+COPY app.js /public/app.js
 
 EXPOSE 3000
 ENTRYPOINT ["/static", "-port", "3000", "-root", "/public"]
