@@ -19,7 +19,7 @@ spec:
     # Actions run / GHCR package). Bump on each release; never :latest on-cluster.
     # (The repo file is pinned to the first CI build in the follow-up commit; the
     # authoritative pin lives in the universe copy of this CR.)
-    tag: "sha-PINME-amd64"
+    tag: "sha-ca2c738-amd64"
     pullPolicy: IfNotPresent
   replicas: 2
   ports:
