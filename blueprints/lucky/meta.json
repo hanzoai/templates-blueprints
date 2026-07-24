@@ -1,0 +1,15 @@
+{
+  "id": "lucky",
+  "name": "Lucky",
+  "description": "Powerful networking tool",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/gdy666/lucky",
+    "website": "https://lucky666.cn/",
+    "docs": "https://lucky666.cn/docs/"
+  },
+  "tags": [
+    "networking"
+  ]
+}

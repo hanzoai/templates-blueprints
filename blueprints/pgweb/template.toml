@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+pgweb-version = "0.11.2"
+
+[config]
+
+[[config.domains]]
+serviceName = "pgweb"
+port = 8081
+host = "${main_domain}"
+
+[config.env]
+PGWEB_VERSION = "${pgweb-version}"

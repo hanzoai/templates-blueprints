@@ -1,0 +1,19 @@
+{
+  "id": "readeck",
+  "name": "readeck",
+  "description": "Simple web application that lets you save the precious readable content of web pages you like and want to keep forever.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://readeck.org/en/docs/",
+    "docs": "https://readeck.org/en/docs/"
+  },
+  "tags": [
+    "read-it-later",
+    "pocket-alternative",
+    "omnivore-alternative",
+    "instapaper-alternative",
+    "productivity"
+  ]
+}

@@ -1,0 +1,19 @@
+services:
+  ferretdb-db:
+    image: ghcr.io/ferretdb/postgres-documentdb:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - ferretdb-db-data:/var/lib/postgresql/data
+    restart: on-failure
+  ferretdb:
+    image: ghcr.io/ferretdb/ferretdb:${FERRETDB_VERSION}
+    environment:
+      FERRETDB_POSTGRESQL_URL: postgres://${DB_USER}:${DB_PASS}@ferretdb-db:5432/${DB_NAME}
+    depends_on:
+      - ferretdb-db
+    restart: on-failure
+volumes:
+  ferretdb-db-data: {}

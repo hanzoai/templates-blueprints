@@ -1,0 +1,10 @@
+services:
+  v2raya:
+    image: mzz2017/v2raya:v2.2.7.5
+    volumes:
+      - /lib/modules:/lib/modules:ro
+      - /etc/resolv.conf:/etc/resolv.conf
+      - v2raya-v2raya:/etc/v2raya
+    restart: unless-stopped
+volumes:
+  v2raya-v2raya: {}

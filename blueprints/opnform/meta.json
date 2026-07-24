@@ -1,0 +1,24 @@
+{
+  "id": "opnform",
+  "name": "opnform",
+  "description": "OpnForm is an open-source form builder that lets you create beautiful forms and share them anywhere. It's super fast, you don't need to know how to code",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.opnform.com/introduction",
+    "docs": "https://docs.opnform.com/introduction"
+  },
+  "tags": [
+    "opnform",
+    "form",
+    "survey",
+    "cloud",
+    "open-source",
+    "self-hosted",
+    "docker",
+    "no-code",
+    "embeddable",
+    "productivity"
+  ]
+}

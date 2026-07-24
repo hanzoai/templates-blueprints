@@ -1,0 +1,12 @@
+services:
+  swingmusic:
+    image: ghcr.io/swingmx/swingmusic:v2.1.4
+    expose:
+      - "1970"
+    volumes:
+      - swingmusic-config:/config
+      - swingmusic-music:/music
+    restart: unless-stopped
+volumes:
+  swingmusic-config: {}
+  swingmusic-music: {}

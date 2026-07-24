@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+webtop-version = "ubuntu-xfce"
+webtop-tz = "Etc/UTC"
+webtop-puid = "1000"
+webtop-pgid = "1000"
+webtop-custom-user = "abc"
+webtop-password = "${password:16}"
+webtop-title = "KasmVNC Client"
+
+[config]
+
+[[config.domains]]
+serviceName = "webtop"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+WEBTOP_VERSION = "${webtop-version}"
+WEBTOP_TZ = "${webtop-tz}"
+WEBTOP_PUID = "${webtop-puid}"
+WEBTOP_PGID = "${webtop-pgid}"
+WEBTOP_CUSTOM_USER = "${webtop-custom-user}"
+WEBTOP_PASSWORD = "${webtop-password}"
+WEBTOP_TITLE = "${webtop-title}"

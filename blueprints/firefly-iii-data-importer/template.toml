@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "firefly-iii-data-importer"
+port = 8150
+host = "${main_domain}"
+
+[config.env]
+FIREFLY_III_URL = "https://${main_domain}"
+FIREFLY_III_ACCESS_TOKEN = ""
+FIREFLY_III_CLIENT_ID = ""
+TZ = ""

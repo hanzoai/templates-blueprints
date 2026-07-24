@@ -1,0 +1,14 @@
+services:
+  jsreport:
+    image: jsreport/jsreport:${JSREPORT_VERSION}
+    environment:
+      extensions_authentication_admin_username: ${JSREPORT_ADMINUSERNAME}
+      extensions_authentication_admin_password: ${JSREPORT_PASSWORD}
+      extensions_authentication_cookieSession_secret: ${JSREPORT_SECRET}
+    volumes:
+      - jsreport-data:/jsreport
+    expose:
+      - "5488"
+    restart: always
+volumes:
+  jsreport-data: {}

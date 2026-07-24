@@ -1,0 +1,15 @@
+{
+  "id": "holoplay",
+  "name": "HoloPlay",
+  "description": "A web app to listen Youtube audio source.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/stephane-r/HoloPlay",
+    "website": "",
+    "docs": "https://github.com/stephane-r/HoloPlay#readme"
+  },
+  "tags": [
+    "media"
+  ]
+}

@@ -1,0 +1,18 @@
+services:
+  maildev:
+    image: maildev/maildev:${MAILDEV_VERSION}
+    environment:
+      MAILDEV_SMTP_PORT: ${MAILDEV_SMTP_PORT}
+      MAILDEV_MAIL_DIRECTORY: /data
+      MAILDEV_WEB_USER: ${MAILDEV_WEB_USER}
+      MAILDEV_WEB_PASS: ${MAILDEV_WEB_PASS}
+      MAILDEV_IP: "::"
+    volumes:
+      - maildev-data:/data
+    ports:
+      - ${MAILDEV_SMTP_PORT}:1025
+    expose:
+      - "1080"
+    restart: always
+volumes:
+  maildev-data: {}

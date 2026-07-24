@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "flowise"
+port = 3001
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_FLOWISE = "${username}"
+SERVICE_PASSWORD_FLOWISE = "${password:32}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE__API_KEY = "${password:32}"
+SERVICE_PASSWORD_QDRANTAPIKEY = "${password:32}"

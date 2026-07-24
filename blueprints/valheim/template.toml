@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+version = "sha-951992b"
+server-name = "My Valheim Server"
+world-name = "Midgard"
+server-pass = "${password:10}"
+timezone = "UTC"
+
+[config]
+
+[[config.domains]]
+serviceName = "valheim"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+SERVER_NAME = "${server-name}"
+WORLD_NAME = "${world-name}"
+SERVER_PASS = "${server-pass}"
+TIMEZONE = "${timezone}"

@@ -1,0 +1,24 @@
+{
+  "id": "pocket-id-with-postgresql",
+  "name": "pocket-id-with-postgresql",
+  "description": "A simple and secure OIDC provider with passkey authentication",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://pocket-id.org/docs/setup/installation",
+    "docs": "https://pocket-id.org/docs/setup/installation"
+  },
+  "tags": [
+    "identity",
+    "oidc",
+    "oauth",
+    "passkey",
+    "webauthn",
+    "authentication",
+    "sso",
+    "openid",
+    "postgresql",
+    "auth"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "termix",
+  "name": "Termix",
+  "description": "Self-hosted SSH and remote desktop management.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

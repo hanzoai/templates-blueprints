@@ -1,0 +1,15 @@
+{
+  "id": "homeassistant-1",
+  "name": "Home Assistant",
+  "description": "Open source home automation that puts local control and privacy first",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/home-assistant/core",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "automation"
+  ]
+}

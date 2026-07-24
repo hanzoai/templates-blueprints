@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "foundryvtt"
+port = 30000
+host = "${main_domain}"

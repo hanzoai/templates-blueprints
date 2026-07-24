@@ -1,0 +1,15 @@
+{
+  "id": "stremio",
+  "name": "Stremio",
+  "description": "Stremio is a modern media center that gives you the freedom to watch everything you want.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/tsaridas/stremio-docker",
+    "website": "https://www.stremio.com",
+    "docs": "https://github.com/tsaridas/stremio-docker#readme"
+  },
+  "tags": [
+    "media"
+  ]
+}

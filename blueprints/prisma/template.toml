@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+prisma-version = "1.29"
+mysql-version = "5.7"
+db-pass = ""
+management-secret = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "prisma"
+port = 4466
+host = "${main_domain}"
+
+[config.env]
+PRISMA_VERSION = "${prisma-version}"
+MYSQL_VERSION = "${mysql-version}"
+DB_PASS = "${db-pass}"
+MANAGEMENT_SECRET = "${management-secret}"

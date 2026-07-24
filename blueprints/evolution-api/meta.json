@@ -1,0 +1,22 @@
+{
+  "id": "evolution-api",
+  "name": "evolution-api",
+  "description": "Multi-platform messaging (whatsapp and more) integration API",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://doc.evolution-api.com/v2/en/get-started/introduction",
+    "docs": "https://doc.evolution-api.com/v2/en/get-started/introduction"
+  },
+  "tags": [
+    "evolution-api",
+    "evo-api",
+    "evolution",
+    "whatsapp",
+    "api",
+    "postgres",
+    "redis",
+    "backend"
+  ]
+}

@@ -1,0 +1,15 @@
+services:
+  bitwardenrs:
+    image: vaultwarden/server:${BITWARDENRS_VERSION}
+    environment:
+      DOMAIN: https://bitwardenrs.${ROOT_DOMAIN}
+      WEBSOCKET_ENABLED: "true"
+      SIGNUPS_ALLOWED: ${REGISTER_ENABLED}
+      ADMIN_TOKEN: ${ADMIN_TOKEN}
+    volumes:
+      - bitwardenrs-data:/data
+    ports:
+      - 3012:3012
+    restart: unless-stopped
+volumes:
+  bitwardenrs-data: {}

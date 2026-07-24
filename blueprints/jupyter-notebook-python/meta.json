@@ -1,0 +1,19 @@
+{
+  "id": "jupyter-notebook-python",
+  "name": "jupyter-notebook-python",
+  "description": "Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://jupyter.org/",
+    "docs": "https://jupyter.org/"
+  },
+  "tags": [
+    "notebook",
+    "python",
+    "data",
+    "analysis",
+    "devtools"
+  ]
+}

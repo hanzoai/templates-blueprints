@@ -1,0 +1,17 @@
+services:
+  webtop:
+    image: lscr.io/linuxserver/webtop:${WEBTOP_VERSION}
+    environment:
+      TZ: ${WEBTOP_TZ}
+      PUID: ${WEBTOP_PUID}
+      PGID: ${WEBTOP_PGID}
+      CUSTOM_USER: ${WEBTOP_CUSTOM_USER}
+      PASSWORD: ${WEBTOP_PASSWORD}
+      TITLE: ${WEBTOP_TITLE}
+    volumes:
+      - webtop-config:/config
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  webtop-config: {}

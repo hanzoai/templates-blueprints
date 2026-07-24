@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+davos-version = "2.2.1"
+davos-puid = "1000"
+davos-pgid = "1000"
+
+[config]
+
+[[config.domains]]
+serviceName = "davos-davos"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+DAVOS_VERSION = "${davos-version}"
+DAVOS_PUID = "${davos-puid}"
+DAVOS_PGID = "${davos-pgid}"

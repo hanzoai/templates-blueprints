@@ -1,0 +1,15 @@
+{
+  "id": "mempool",
+  "name": "Mempool",
+  "description": "Bitcoin mempool visualizer and blockchain explorer",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/mempool/mempool",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "finance"
+  ]
+}

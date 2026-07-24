@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "matter-server"
+port = 9997
+host = "${main_domain}"

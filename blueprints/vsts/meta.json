@@ -1,0 +1,16 @@
+{
+  "id": "vsts",
+  "name": "VSTS",
+  "description": "VSTS is an integrated development environment (IDE) developed as a software product by Microsoft Corp",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/microsoft/vsts-agent/",
+    "docs": "https://hub.docker.com/r/microsoft/vsts-agent/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

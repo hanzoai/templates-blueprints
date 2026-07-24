@@ -1,0 +1,10 @@
+services:
+  ddns-go:
+    image: jeessy/ddns-go:v6.17.1
+    expose:
+      - "9876"
+    volumes:
+      - ddns-go-root:/root
+    restart: unless-stopped
+volumes:
+  ddns-go-root: {}

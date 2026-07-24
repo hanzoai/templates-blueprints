@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+maildev-version = "2.1.0"
+maildev-smtp-port = "1025"
+maildev-web-user = "admin"
+maildev-web-pass = "${password:8}"
+
+[config]
+
+[[config.domains]]
+serviceName = "maildev"
+port = 1080
+host = "${main_domain}"
+
+[config.env]
+MAILDEV_VERSION = "${maildev-version}"
+MAILDEV_SMTP_PORT = "${maildev-smtp-port}"
+MAILDEV_WEB_USER = "${maildev-web-user}"
+MAILDEV_WEB_PASS = "${maildev-web-pass}"

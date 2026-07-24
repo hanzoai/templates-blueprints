@@ -1,0 +1,20 @@
+{
+  "id": "swetrix",
+  "name": "swetrix",
+  "description": "Privacy-friendly and cookieless European web analytics alternative to Google Analytics.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.swetrix.com/selfhosting/how-to",
+    "docs": "https://docs.swetrix.com/selfhosting/how-to"
+  },
+  "tags": [
+    "analytics",
+    "privacy",
+    "monitoring",
+    "open-source",
+    "clickhouse",
+    "redis"
+  ]
+}

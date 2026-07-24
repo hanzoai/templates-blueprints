@@ -1,0 +1,11 @@
+services:
+  prerender:
+    image: tvanro/prerender-alpine:6.4.0
+    environment:
+      MEMORY_CACHE: ${MEMORY_CACHE}
+      CACHE_MAXSIZE: ${CACHE_MAX_SIZE}
+      CACHE_TTL: ${CACHE_TTL}
+      BLACKLISTED_DOMAINS: ${BLACKLISTED_DOMAINS}
+    expose:
+      - "3000"
+    restart: always

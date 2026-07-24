@@ -1,0 +1,37 @@
+services:
+  mattermost-team-db:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: mmuser
+      POSTGRES_PASSWORD: ${PG_PASS}
+      POSTGRES_DB: mattermost
+    volumes:
+      - mattermost-team-db-data:/var/lib/postgresql/data
+    restart: always
+  mattermost-team:
+    image: mattermost/mattermost-team-edition:${MATTERMOST_VERSION}
+    environment:
+      MM_USERNAME: mmuser
+      MM_PASSWORD: ${PG_PASS}
+      MM_DBNAME: mattermost
+      DB_HOST: mattermost-team-db
+      MM_SERVICESETTINGS_SITEURL: https://mattermost-team.${ROOT_DOMAIN}
+      MM_SQLSETTINGS_DATASOURCE: postgres://mmuser:${PG_PASS}@mattermost-team-db:5432/mattermost?sslmode=disable&connect_timeout=10
+    volumes:
+      - mattermost-team-data:/mattermost/data
+      - mattermost-team-logs:/mattermost/logs
+      - mattermost-team-config:/mattermost/config
+      - mattermost-team-plugins:/mattermost/plugins
+      - mattermost-team-clientplugins:/mattermost/client/plugins
+    depends_on:
+      - mattermost-team-db
+    expose:
+      - "8065"
+    restart: always
+volumes:
+  mattermost-team-db-data: {}
+  mattermost-team-data: {}
+  mattermost-team-logs: {}
+  mattermost-team-config: {}
+  mattermost-team-plugins: {}
+  mattermost-team-clientplugins: {}

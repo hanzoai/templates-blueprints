@@ -1,0 +1,15 @@
+{
+  "id": "planning-poker",
+  "name": "Planning Poker",
+  "description": "Online planning poker for scrum master.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/axeleroy/self-host-planning-poker",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "development"
+  ]
+}

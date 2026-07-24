@@ -1,0 +1,18 @@
+{
+  "id": "grimmory",
+  "name": "grimmory",
+  "description": "Grimmory is a self-hosted application for managing your entire book collection in one place. Organize, read, annotate, sync across devices, and share without relying on third-party services.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/grimmory-tools/grimmory",
+    "website": "",
+    "docs": "https://github.com/grimmory-tools/grimmory"
+  },
+  "tags": [
+    "books",
+    "ebooks",
+    "library",
+    "reader"
+  ]
+}

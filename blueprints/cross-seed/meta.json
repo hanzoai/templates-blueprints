@@ -1,0 +1,16 @@
+{
+  "id": "cross-seed",
+  "name": "Cross-Seed",
+  "description": "Fully-automatic cross-seeding with Torznab.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/cross-seed/cross-seed",
+    "website": "https://www.cross-seed.org",
+    "docs": "https://www.cross-seed.org"
+  },
+  "tags": [
+    "media",
+    "utilities"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "splitpro",
+  "name": "SplitPro",
+  "description": "Open-source expense sharing app (Splitwise alternative) running with PostgreSQL.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/ossapps/splitpro",
+    "docs": "https://hub.docker.com/r/ossapps/splitpro"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

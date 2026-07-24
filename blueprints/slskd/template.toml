@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "slskd"
+port = 5030
+host = "${main_domain}"
+
+[config.env]
+SLSKD_WEB_USER = ""
+SLSKD_WEB_PASSWORD = "${password:32}"
+SLSKD_USER = ""
+SLSKD_PASSWORD = "${password:32}"
+SLSKD_REMOTE_CONFIGURATION = ""

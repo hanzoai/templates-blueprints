@@ -1,0 +1,16 @@
+{
+  "id": "halo",
+  "name": "Halo",
+  "description": "Halo - Open source website building tool.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/halo-dev/halo",
+    "website": "https://halo.run",
+    "docs": "https://halo.run"
+  },
+  "tags": [
+    "social",
+    "media"
+  ]
+}

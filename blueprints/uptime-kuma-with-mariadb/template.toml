@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "uptime-kuma"
+port = 3001
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_MARIADB = "${username}"
+SERVICE_PASSWORD_MARIADB = "${password:32}"
+SERVICE_PASSWORD_ROOT = "${password:32}"

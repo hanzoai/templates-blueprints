@@ -1,0 +1,21 @@
+services:
+  turbodiffusion:
+    image: icewhaletech/turbodiffusion:20260312
+    command:
+      - python
+      - turbodiffusion/app_gradio.py
+    environment:
+      MODEL_PATHS: /workspace/TurboDiffusion/checkpoints_host,/workspace/TurboDiffusion/checkpoints
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility,video
+      CUDA_HOME: /usr/local/cuda
+      PYTHONPATH: /workspace/TurboDiffusion/turbodiffusion
+    expose:
+      - "7860"
+    volumes:
+      - turbodiffusion-nvidia-checkpoints-host:/workspace/TurboDiffusion/checkpoints_host
+      - turbodiffusion-nvidia-outputs:/workspace/TurboDiffusion/outputs
+    restart: unless-stopped
+volumes:
+  turbodiffusion-nvidia-checkpoints-host: {}
+  turbodiffusion-nvidia-outputs: {}

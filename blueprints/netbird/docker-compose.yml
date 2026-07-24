@@ -1,0 +1,18 @@
+services:
+  netbird:
+    image: netbirdio/netbird:0.62.3
+    environment:
+      NB_SETUP_KEY: ""
+      NB_MANAGEMENT_URL: ""
+      NB_HOSTNAME: Zima
+      NB_ENABLE_SSH_ROOT: "true"
+      NB_ALLOW_SERVER_SSH: "true"
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_RESOURCE
+    volumes:
+      - netbird-netbird:/var/lib/netbird
+    restart: unless-stopped
+volumes:
+  netbird-netbird: {}

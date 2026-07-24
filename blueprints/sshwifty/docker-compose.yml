@@ -1,0 +1,6 @@
+services:
+  sshwifty:
+    image: niruix/sshwifty:0.4.8-beta-release
+    expose:
+      - "8182"
+    restart: always

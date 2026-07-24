@@ -1,0 +1,18 @@
+{
+  "id": "wireguard-easy",
+  "name": "wireguard-easy",
+  "description": "The easiest way to run WireGuard VPN + Web-based Admin UI.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/wg-easy/wg-easy",
+    "website": "",
+    "docs": "https://github.com/wg-easy/wg-easy"
+  },
+  "tags": [
+    "wireguard",
+    "vpn",
+    "web",
+    "admin"
+  ]
+}

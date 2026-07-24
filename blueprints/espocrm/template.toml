@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "espocrm"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_ADMIN = "${password:32}"
+SERVICE_USER_MARIADB = "${username}"
+SERVICE_PASSWORD_MARIADB = "${password:32}"
+SERVICE_URL_ESPOCRM = "https://${main_domain}"
+SERVICE_URL_ESPOCRM_WEBSOCKET_8080 = "https://${main_domain}"
+SERVICE_URL_ESPOCRM_WEBSOCKET = "https://${main_domain}"
+SERVICE_PASSWORD_ROOT = "${password:32}"

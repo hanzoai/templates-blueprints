@@ -1,0 +1,15 @@
+{
+  "id": "tubearchivist",
+  "name": "Tube Archivist",
+  "description": "Your self-hosted YouTube media server",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/tubearchivist/tubearchivist",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media"
+  ]
+}

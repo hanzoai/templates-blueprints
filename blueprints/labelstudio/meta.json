@@ -1,0 +1,28 @@
+{
+  "id": "labelstudio",
+  "name": "labelstudio",
+  "description": "Label Studio is a multi-type data labeling and annotation tool with standardized output format",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://labelstud.io/guide/",
+    "docs": "https://labelstud.io/guide/"
+  },
+  "tags": [
+    "workflow",
+    "orchestration",
+    "data-pipeline",
+    "python",
+    "labelstudio",
+    "ai",
+    "elasticsearch",
+    "datasets",
+    "data",
+    "machine-learning",
+    "data-science",
+    "nlp",
+    "images",
+    "vision"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "tailscale-client",
+  "name": "tailscale-client",
+  "description": "Tailscale securely connects your devices over the internet using WireGuard.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://tailscale.com/kb",
+    "docs": "https://tailscale.com/kb"
+  },
+  "tags": [
+    "vpn",
+    "wireguard",
+    "remote-access",
+    "networking"
+  ]
+}

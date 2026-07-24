@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+neo4j-version = "4.1.9"
+db-user = "neo4j"
+db-pass = "${password:10}"
+
+[config]
+
+[[config.domains]]
+serviceName = "neo4j-db"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+NEO4J_VERSION = "${neo4j-version}"
+DB_USER = "${db-user}"
+DB_PASS = "${db-pass}"

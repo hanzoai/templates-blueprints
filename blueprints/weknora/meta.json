@@ -1,0 +1,15 @@
+{
+  "id": "weknora",
+  "name": "WeKnora",
+  "description": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval, especially for handling complex, heterogeneous documents.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Tencent/WeKnora",
+    "website": "https://weknora.weixin.qq.com",
+    "docs": "https://github.com/Tencent/WeKnora#readme"
+  },
+  "tags": [
+    "ai"
+  ]
+}

@@ -1,0 +1,17 @@
+services:
+  proxypool-redis:
+    image: redis:${REDIS_VERSION}
+    volumes:
+      - proxypool-cache-data:/app/data
+    restart: always
+  proxypool:
+    image: jhao104/proxy_pool:${APP_VERSION}
+    environment:
+      DB_CONN: redis://proxypool-redis:6379/0
+    depends_on:
+      - proxypool-redis
+    expose:
+      - "5010"
+    restart: always
+volumes:
+  proxypool-cache-data: {}

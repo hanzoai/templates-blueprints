@@ -1,0 +1,26 @@
+[variables]
+main_domain = "${domain}"
+mariadb-version = "10.5.4"
+mariadb-password = ""
+redis-version = "alpine3.12"
+mongo-version = "4.4.0-rc11"
+mailtrain-version = "latest"
+mailtrain-sandbox-appname = "sdbx"
+mailtrain-lists-appname = "lists"
+
+[config]
+
+[[config.domains]]
+serviceName = "mailtrain"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+MARIADB_VERSION = "${mariadb-version}"
+MARIADB_PASSWORD = "${mariadb-password}"
+REDIS_VERSION = "${redis-version}"
+MONGO_VERSION = "${mongo-version}"
+MAILTRAIN_VERSION = "${mailtrain-version}"
+MAILTRAIN_SANDBOX_APPNAME = "${mailtrain-sandbox-appname}"
+MAILTRAIN_LISTS_APPNAME = "${mailtrain-lists-appname}"
+ROOT_DOMAIN = "${main_domain}"

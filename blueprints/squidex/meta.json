@@ -1,0 +1,16 @@
+{
+  "id": "squidex",
+  "name": "Squidex",
+  "description": "Squidex is an open source headless CMS and content management hub.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/Squidex/squidex-docker/blob/master/standalone/docker-compose.yml",
+    "website": "",
+    "docs": "https://github.com/Squidex/squidex-docker/blob/master/standalone/docker-compose.yml"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "kasm-workspaces"
+port = 8744
+host = "${main_domain}"
+
+[config.env]
+APP_PORT = "80"

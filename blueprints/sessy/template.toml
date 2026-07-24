@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "sessy"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_HEX_64_SESSYSECRET = "${hash:64}"
+SERVICE_USER_SESSY = "${username}"
+SERVICE_PASSWORD_SESSY = "${password:32}"

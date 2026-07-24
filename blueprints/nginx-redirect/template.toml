@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+redirect-url = "${main_domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "nginx-redirect"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+REDIRECT_URL = "${redirect-url}"

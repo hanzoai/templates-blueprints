@@ -1,0 +1,18 @@
+services:
+  sabnzbd:
+    image: linuxserver/sabnzbd:5.0.3
+    environment:
+      PGID: "1000"
+      PUID: "1000"
+      TZ: Europe/London
+    expose:
+      - "8080"
+    volumes:
+      - sabnzbd-incomplete-downloads:/incomplete-downloads
+      - sabnzbd-config:/config
+      - sabnzbd-downloads:/downloads
+    restart: unless-stopped
+volumes:
+  sabnzbd-incomplete-downloads: {}
+  sabnzbd-config: {}
+  sabnzbd-downloads: {}

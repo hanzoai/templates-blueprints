@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "deepseek-ocr-frontend"
+port = 23000
+host = "${main_domain}"

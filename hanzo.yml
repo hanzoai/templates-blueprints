@@ -1,0 +1,19 @@
+# CI/CD descriptor for hanzoai/templates-blueprints, read by platform.hanzo.ai
+# (apps board) for discoverability.
+#
+# ONE image: the deploy-template catalog served by hanzoai/static. The build is
+# self-contained in .github/workflows/cicd.yml (regenerate meta.json + validate,
+# then buildx build+push on the hanzo-build-linux-amd64 arc pool). GHCR push uses
+# the job's automatic GITHUB_TOKEN — no PAT.
+#
+# NO `deploy:` block: the rollout onto do-sfo3-hanzo-k8s is owned by the operator
+# App CR (universe: infra/k8s/operator/crs/templates-blueprints.yaml), not this
+# repo. CI only builds + pushes the immutable image
+# ghcr.io/hanzoai/templates-blueprints:sha-<short>-amd64. Public host:
+# templates.hanzo.ai.
+
+images:
+  - name: templates-blueprints
+    context: .
+    dockerfile: Dockerfile
+    repo: ghcr.io/hanzoai/templates-blueprints

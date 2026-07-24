@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "redisinsight"
+port = 5540
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_RI_ENCRYPTION_KEY = "${password:32}"

@@ -1,0 +1,15 @@
+services:
+  obsidian:
+    image: lscr.io/linuxserver/obsidian:1.12.7
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: $TZ
+    expose:
+      - "3000"
+      - "3001"
+    volumes:
+      - obsidian-config:/config
+    restart: unless-stopped
+volumes:
+  obsidian-config: {}

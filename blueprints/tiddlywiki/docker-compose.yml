@@ -1,0 +1,14 @@
+services:
+  tiddlywiki:
+    image: nicolaw/tiddlywiki
+    environment:
+      TW_USERNAME: ${WIKUSERNAME}
+      TW_PASSWORD: ${WIKIPASSWORD}
+      NODE_MEM: ${NODEMEM}
+    volumes:
+      - tiddlywiki-data:/var/lib/tiddlywiki
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  tiddlywiki-data: {}

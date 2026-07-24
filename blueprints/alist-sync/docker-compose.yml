@@ -1,0 +1,12 @@
+services:
+  alist-sync:
+    image: xjxjin/alist-sync:1.1.5
+    environment:
+      - TZ=Asia/Shanghai
+    expose:
+      - "52441"
+    volumes:
+      - alist-sync-data:/app/data
+    restart: unless-stopped
+volumes:
+  alist-sync-data: {}

@@ -1,0 +1,30 @@
+services:
+  guacamole-db:
+    image: mysql:${MYSQL_VERSION}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+      MYSQL_DATABASE: guacamole
+      MYSQL_USER: guacamole
+      MYSQL_PASSWORD: ${DB_PASS}
+    volumes:
+      - guacamole-db-data:/var/lib/mysql
+    restart: always
+  guacamole-guacd:
+    image: guacamole/guacd:${GUACD_VERSION}
+    restart: always
+  guacamole:
+    image: guacamole/guacamole:${GUACAMOLE_VERSION}
+    environment:
+      GUACD_HOSTNAME: guacamole-guacd
+      MYSQL_HOSTNAME: guacamole-db
+      MYSQL_DATABASE: guacamole
+      MYSQL_USER: guacamole
+      MYSQL_PASSWORD: ${DB_PASS}
+    depends_on:
+      - guacamole-db
+      - guacamole-guacd
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  guacamole-db-data: {}

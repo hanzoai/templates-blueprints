@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "romm"
+port = 8285
+host = "${main_domain}"

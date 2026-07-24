@@ -1,0 +1,15 @@
+{
+  "id": "opodsync",
+  "name": "oPodSync",
+  "description": "Podcast synchronization service",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/kd2org/oPodSync",
+    "website": "https://fossil.kd2.org/opodsync/",
+    "docs": "https://github.com/kd2org/oPodSync#readme"
+  },
+  "tags": [
+    "media"
+  ]
+}

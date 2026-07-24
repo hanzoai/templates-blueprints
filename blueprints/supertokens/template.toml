@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+supertokens-version = "7.0"
+supertokens-api-keys = "${password:64}"
+postgres-version = "15-alpine"
+pg-user = "supertokens"
+postgres-password = "${password:16}"
+pg-db = "supertokens"
+
+[config]
+
+[[config.domains]]
+serviceName = "supertokens"
+port = 3567
+host = "${main_domain}"
+
+[config.env]
+SUPERTOKENS_VERSION = "${supertokens-version}"
+SUPERTOKENS_API_KEYS = "${supertokens-api-keys}"
+POSTGRES_VERSION = "${postgres-version}"
+PG_USER = "${pg-user}"
+POSTGRES_PASSWORD = "${postgres-password}"
+PG_DB = "${pg-db}"

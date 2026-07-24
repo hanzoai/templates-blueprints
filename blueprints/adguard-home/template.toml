@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+adguard-version = "v0.107.29"
+
+[config]
+
+[[config.domains]]
+serviceName = "adguard-home"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+ADGUARD_VERSION = "${adguard-version}"

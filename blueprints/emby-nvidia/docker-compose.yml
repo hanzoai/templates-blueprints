@@ -1,0 +1,27 @@
+services:
+  emby:
+    image: linuxserver/emby:4.9.1
+    environment:
+      PGID: "1000"
+      PUID: "1000"
+      TZ: $TZ
+      CPU_FALLBACK: "true"
+      NVIDIA_VISIBLE_DEVICES: all
+    devices:
+      - /dev/dri:/dev/dri
+      - /dev/vchiq:/dev/vchiq
+      - /dev/video10:/dev/video10
+      - /dev/video11:/dev/video11
+      - /dev/video12:/dev/video12
+    expose:
+      - "8096"
+      - "8920"
+    volumes:
+      - emby-nvidia-config:/config
+      - emby-nvidia-tvshows:/data/tvshows
+      - emby-nvidia-movies:/data/movies
+    restart: unless-stopped
+volumes:
+  emby-nvidia-config: {}
+  emby-nvidia-tvshows: {}
+  emby-nvidia-movies: {}

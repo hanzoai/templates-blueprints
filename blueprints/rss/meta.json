@@ -1,0 +1,16 @@
+{
+  "id": "rss",
+  "name": "RSS",
+  "description": "A simple, opinionated, RSS feed aggregator.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/ssddanbrown/rss",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "media"
+  ]
+}

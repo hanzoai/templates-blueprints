@@ -1,0 +1,18 @@
+services:
+  silex-platform:
+    image: silexlabs/silex-platform:${VERSION}
+    environment:
+      SILEX_URL: https://silex-platform.${ROOT_DOMAIN}
+      STORAGE_CONNECTORS: ${STORAGE_CONNECTOR}
+      HOSTING_CONNECTORS: ${HOSTING_CONNECTOR}
+      GITLAB_DOMAIN: https://gitlab.com
+      GITLAB_CLIENT_ID: ${GITLAB_CLIENT_ID}
+      GITLAB_CLIENT_SECRET: ${GITLAB_CLIENT_SECRET}
+      GITLAB2_DOMAIN: ${GITLAB2_DOMAIN}
+      GITLAB2_CLIENT_ID: ${GITLAB2_CLIENT_ID}
+      GITLAB2_CLIENT_SECRET: ${GITLAB2_CLIENT_SECRET}
+      GITLAB_SCOPE: api read_user
+      GITLAB_TIMEOUT: "5000"
+    expose:
+      - "6805"
+    restart: always

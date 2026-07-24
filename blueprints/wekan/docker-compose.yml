@@ -1,0 +1,23 @@
+services:
+  wekan-db:
+    image: mongo:6
+    volumes:
+      - wekan-mongo:/data/db
+      - wekan-db-data-dump:/dump
+    restart: always
+  wekan:
+    image: wekanteam/wekan:${MYAPP_VERSION}
+    environment:
+      ROOT_URL: https://wekan.${ROOT_DOMAIN}
+      MONGO_URL: mongodb://wekan-db:27017/wekan
+    volumes:
+      - wekan-data:/data
+    depends_on:
+      - wekan-db
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  wekan-mongo: {}
+  wekan-db-data-dump: {}
+  wekan-data: {}

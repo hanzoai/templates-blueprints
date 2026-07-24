@@ -1,0 +1,14 @@
+services:
+  classicpress:
+    image: classicpress/classicpress:latest
+    volumes:
+      - classicpress-files:/var/www/html
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://127.0.0.1
+      interval: 2s
+      timeout: 10s
+      retries: 10

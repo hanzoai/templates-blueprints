@@ -1,0 +1,19 @@
+{
+  "id": "next-image-transformation",
+  "name": "next-image-transformation",
+  "description": "Drop-in replacement for Vercel's Nextjs image optimization service.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/coollabsio/next-image-transformation",
+    "website": "",
+    "docs": "https://github.com/coollabsio/next-image-transformation"
+  },
+  "tags": [
+    "nextjs",
+    "image",
+    "transformation",
+    "service",
+    "media"
+  ]
+}

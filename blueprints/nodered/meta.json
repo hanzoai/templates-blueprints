@@ -1,0 +1,15 @@
+{
+  "id": "nodered",
+  "name": "Node-RED",
+  "description": "Low-code programming for event-driven applications",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/node-red/node-red",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "automation"
+  ]
+}

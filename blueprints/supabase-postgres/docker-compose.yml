@@ -1,0 +1,21 @@
+services:
+  supabase-postgres-db:
+    image: bitnamilegacy/supabase-postgres-archived:${APP_VERSION}
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_PASSWORD: ${PG_PASS}
+      POSTGRES_PORT_NUMBER: ${PG_PORT}
+      POSTGRES_INITDB_ARGS: ${PG_INITDB_ARGS}
+      POSTGRES_REPLICATION_USER: ${PG_REPL_USER}
+      POSTGRES_REPLICATION_MODE: ${PG_REPL_MODE}
+      POSTGRES_REPLICATION_PASSWORD: ${PG_REPL_PASS}
+      POSTGRES_MASTER_HOST: ${PG_MASTER_HOST}
+      POSTGRES_MASTER_PORT_NUMBER: ${PG_MASTER_PORT}
+      POSTGRES_NUM_SYNCHRONOUS_REPLICAS: ${PG_NUM_SYNC_REPL}
+      POSTGRES_SYNCHRONOUS_COMMIT_MODE: ${PG_SYNC_COMMIT_MODE}
+    volumes:
+      - supabase-postgres-db-persistence:/bitnami/postgresql
+    restart: always
+volumes:
+  supabase-postgres-db-persistence: {}

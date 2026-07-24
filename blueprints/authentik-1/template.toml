@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "authentik-1"
+port = 9000
+host = "${main_domain}"
+
+[config.env]
+AUTHENTIK_DB_PASSWORD = "${hash:32}"
+AUTHENTIK_SECRET_KEY = "${hash:32}"

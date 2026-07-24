@@ -1,0 +1,18 @@
+services:
+  lidarr:
+    image: linuxserver/lidarr:3.1.0
+    environment:
+      PGID: "1000"
+      PUID: "1000"
+      TZ: Europe/London
+    expose:
+      - "8686"
+    volumes:
+      - lidarr-config:/config
+      - lidarr-music:/music
+      - lidarr-downloads:/downloads
+    restart: unless-stopped
+volumes:
+  lidarr-config: {}
+  lidarr-music: {}
+  lidarr-downloads: {}

@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+myapp-version = "v7.60"
+
+[config]
+
+[[config.domains]]
+serviceName = "wekan"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+MYAPP_VERSION = "${myapp-version}"
+ROOT_DOMAIN = "${main_domain}"

@@ -1,0 +1,10 @@
+services:
+  rainloop:
+    image: hardware/rainloop:${RAINLOOP_VERSION}
+    volumes:
+      - rainloop-data:/rainloop/data
+    expose:
+      - "8888"
+    restart: always
+volumes:
+  rainloop-data: {}

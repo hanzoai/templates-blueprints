@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "chatgpt-ui"
+port = 8200
+host = "${main_domain}"
+
+[config.env]
+INTERNAL_IP = ""
+CHATGPT_UI_DB_PASSWORD = "${hash:32}"
+CHATGPT_UI_SUPERUSER_USERNAME = ""
+CHATGPT_UI_SUPERUSER_PASSWORD = "${password:32}"
+CHATGPT_UI_SUPERUSER_EMAIL = ""

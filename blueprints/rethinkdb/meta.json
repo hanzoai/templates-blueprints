@@ -1,0 +1,16 @@
+{
+  "id": "rethinkdb",
+  "name": "RethinkDB",
+  "description": "RethinkDB pushes JSON to your apps in realtime",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/rethinkdb",
+    "docs": "https://hub.docker.com/_/rethinkdb"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

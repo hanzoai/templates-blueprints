@@ -1,0 +1,10 @@
+services:
+  lucky:
+    image: gdy666/lucky:2.27.2
+    environment:
+      TZ: $TZ
+    volumes:
+      - lucky-goodluck:/goodluck
+    restart: unless-stopped
+volumes:
+  lucky-goodluck: {}

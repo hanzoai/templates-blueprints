@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+mongo-version = "4"
+mongo-username = "root"
+mongo-password = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "mongodb"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+MONGO_VERSION = "${mongo-version}"
+MONGO_USERNAME = "${mongo-username}"
+MONGO_PASSWORD = "${mongo-password}"

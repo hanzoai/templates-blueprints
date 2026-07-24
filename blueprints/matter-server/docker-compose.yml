@@ -1,0 +1,10 @@
+services:
+  matter-server:
+    image: ghcr.io/home-assistant-libs/python-matter-server:8.1.0
+    volumes:
+      - matter-server-dbus:/run/dbus
+      - matter-server-data:/data
+    restart: always
+volumes:
+  matter-server-dbus: {}
+  matter-server-data: {}

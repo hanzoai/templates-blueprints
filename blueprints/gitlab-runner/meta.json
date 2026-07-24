@@ -1,0 +1,16 @@
+{
+  "id": "gitlab-runner",
+  "name": "Gitlab (runner)",
+  "description": "Runner version of GitLab for CI/CD pipeline",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://docs.gitlab.com/runner/install/docker.html",
+    "docs": "https://docs.gitlab.com/runner/install/docker.html"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

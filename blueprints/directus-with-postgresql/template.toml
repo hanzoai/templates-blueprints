@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "directus"
+port = 8055
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_64_KEY = "${base64:64}"
+SERVICE_BASE64_64_SECRET = "${base64:64}"
+SERVICE_PASSWORD_ADMIN = "${password:32}"
+SERVICE_USER_POSTGRESQL = "${username}"
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"

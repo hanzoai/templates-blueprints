@@ -1,0 +1,34 @@
+[variables]
+main_domain = "${domain}"
+kimai-version = "fpm-1.15.2-prod"
+mariadb-version = "10"
+nginx-version = "1.21.3"
+kimai-adminmail = "admin@admin.local"
+kimai-adminpass = "${password:32}"
+kimai-mailerurl = "smtp://localhost:25?encryption=&auth_mode="
+kimai-mailerfrom = "kimai@admin.local"
+mariadb-db = "kimai"
+mariadb-user = "kimaiuser"
+mariadb-pass = "${password:32}"
+mariadb-rootpass = "${password:32}"
+
+[config]
+
+[[config.domains]]
+serviceName = "kimai2"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+KIMAI_VERSION = "${kimai-version}"
+MARIADB_VERSION = "${mariadb-version}"
+NGINX_VERSION = "${nginx-version}"
+KIMAI_ADMINMAIL = "${kimai-adminmail}"
+KIMAI_ADMINPASS = "${kimai-adminpass}"
+KIMAI_MAILERURL = "${kimai-mailerurl}"
+KIMAI_MAILERFROM = "${kimai-mailerfrom}"
+MARIADB_DB = "${mariadb-db}"
+MARIADB_USER = "${mariadb-user}"
+MARIADB_PASS = "${mariadb-pass}"
+MARIADB_ROOTPASS = "${mariadb-rootpass}"
+ROOT_DOMAIN = "${main_domain}"

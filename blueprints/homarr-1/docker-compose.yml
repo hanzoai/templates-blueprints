@@ -1,0 +1,15 @@
+services:
+  homarr:
+    image: ghcr.io/homarr-labs/homarr:v1.71.0
+    environment:
+      TZ: ${TZ}
+      SECRET_ENCRYPTION_KEY: ${HOMARR_SECRET_ENCRYPTION_KEY}
+    volumes:
+      - homarr-1-appdata:/appdata
+      - homarr-1-docker-sock:/var/run/docker.sock
+    expose:
+      - "7575"
+    restart: always
+volumes:
+  homarr-1-appdata: {}
+  homarr-1-docker-sock: {}

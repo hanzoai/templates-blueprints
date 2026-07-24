@@ -1,0 +1,14 @@
+services:
+  tautulli:
+    image: tautulli/tautulli:${VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: ${PUID}
+      PGID: ${GUID}
+    volumes:
+      - tautulli-config:/config
+    expose:
+      - "8181"
+    restart: always
+volumes:
+  tautulli-config: {}

@@ -1,0 +1,15 @@
+{
+  "id": "chatbot-ui",
+  "name": "Chatbot UI",
+  "description": "Open source chat UI for AI models",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/mckaywrigley/chatbot-ui",
+    "website": "https://www.chatbotui.com",
+    "docs": "https://github.com/mckaywrigley/chatbot-ui#readme"
+  },
+  "tags": [
+    "ai"
+  ]
+}

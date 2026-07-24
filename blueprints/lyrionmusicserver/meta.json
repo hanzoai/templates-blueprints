@@ -1,0 +1,15 @@
+{
+  "id": "lyrionmusicserver",
+  "name": "LyrionMusicServer",
+  "description": "Lyrion Music Server is a streaming audio server for Squeezebox audio players.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/lms-community/slimserver",
+    "website": "https://www.lyrion.org",
+    "docs": "https://lyrion.org/getting-started/"
+  },
+  "tags": [
+    "media"
+  ]
+}

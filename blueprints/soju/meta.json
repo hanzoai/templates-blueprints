@@ -1,0 +1,20 @@
+{
+  "id": "soju",
+  "name": "soju",
+  "description": "A user-friendly IRC bouncer with a modern web interface",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://soju.im/",
+    "docs": "https://soju.im/"
+  },
+  "tags": [
+    "irc",
+    "bouncer",
+    "chat",
+    "messaging",
+    "relay",
+    "communication"
+  ]
+}

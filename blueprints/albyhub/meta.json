@@ -1,0 +1,15 @@
+{
+  "id": "albyhub",
+  "name": "Alby Hub ✨",
+  "description": "Self-custodial Bitcoin Lightning wallet with integrated node and app connections.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/getAlby/hub",
+    "website": "https://albyhub.com/",
+    "docs": "https://guides.getalby.com/user-guide/alby-hub"
+  },
+  "tags": [
+    "finance"
+  ]
+}

@@ -1,0 +1,12 @@
+services:
+  flightlog:
+    image: perdian/flightlog:v2.1.13
+    environment:
+      FLIGHTLOG_SERVER_CONTEXT_PATH: /
+    volumes:
+      - flightlog-database:/var/flightlog/database
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  flightlog-database: {}

@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+db-host = "${main_domain}"
+db-name = "wordpress"
+db-prefix = "WP_"
+db-user = "wordpressuser"
+db-pass = "${password:16}"
+wp-version = "5.4.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "wordpress-only-wordpress"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+DB_HOST = "${db-host}"
+DB_NAME = "${db-name}"
+DB_PREFIX = "${db-prefix}"
+DB_USER = "${db-user}"
+DB_PASS = "${db-pass}"
+WP_VERSION = "${wp-version}"

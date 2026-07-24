@@ -1,0 +1,16 @@
+{
+  "id": "apprise",
+  "name": "Apprise",
+  "description": "Apprise API was designed to easily fit into existing (and new) eco-systems that are looking for a simple notification solution.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/caronc/apprise-api",
+    "website": "",
+    "docs": "https://github.com/caronc/apprise-api"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

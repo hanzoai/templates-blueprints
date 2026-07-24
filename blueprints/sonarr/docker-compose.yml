@@ -1,0 +1,19 @@
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    environment:
+      - _APP_URL=$SERVICE_URL_SONARR
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-America/Toronto}
+    volumes:
+      - sonarr-config:/config
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:8989/ping
+      interval: 2s
+      timeout: 10s
+      retries: 15

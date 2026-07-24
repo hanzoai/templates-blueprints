@@ -1,0 +1,28 @@
+services:
+  invoiceplane-db:
+    image: mysql:5.7.32
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PWD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+    volumes:
+      - invoiceplane-mysql-data:/var/lib/mysql
+    restart: always
+  invoiceplane:
+    image: thomascenni/alpine-invoiceplane:v1.5.11
+    environment:
+      IP_URL: http://invoiceplane.${ROOT_DOMAIN}
+      DB_HOSTNAME: invoiceplane-db
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_PORT: "3306"
+    volumes:
+      - invoiceplane-storage:/storage
+      - invoiceplane-config:/config
+    restart: always
+volumes:
+  invoiceplane-mysql-data: {}
+  invoiceplane-storage: {}
+  invoiceplane-config: {}

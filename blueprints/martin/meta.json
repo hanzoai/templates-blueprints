@@ -1,0 +1,18 @@
+{
+  "id": "martin",
+  "name": "martin",
+  "description": "Martin is a tile server able to generate and serve vector tiles on the fly from large PostGIS databases, PMTiles (local or remote), and MBTiles files, allowing multiple tile sources to be dynamically combined into one.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://maplibre.org/martin/introduction.html/",
+    "docs": "https://maplibre.org/martin/introduction.html/"
+  },
+  "tags": [
+    "postgis",
+    "vector",
+    "tiles",
+    "backend"
+  ]
+}

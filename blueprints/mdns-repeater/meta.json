@@ -1,0 +1,16 @@
+{
+  "id": "mdns-repeater",
+  "name": "MDNS Repeater",
+  "description": "Re-broadcast mDNS packets.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/angelnu/docker-mdns_repeater",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities",
+    "automation"
+  ]
+}

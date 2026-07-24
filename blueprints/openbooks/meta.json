@@ -1,0 +1,16 @@
+{
+  "id": "openbooks",
+  "name": "openbooks",
+  "description": "Search and Download eBooks",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/evan-buss/openbooks",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media",
+    "books"
+  ]
+}

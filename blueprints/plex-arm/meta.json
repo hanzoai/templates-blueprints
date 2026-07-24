@@ -1,0 +1,16 @@
+{
+  "id": "plex-arm",
+  "name": "Plex Media Server (ARM)",
+  "description": "Plex organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/linuxserver/plex",
+    "docs": "https://hub.docker.com/r/linuxserver/plex"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

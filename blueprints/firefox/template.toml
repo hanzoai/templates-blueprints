@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "firefox"
+port = 5800
+host = "${main_domain}"

@@ -1,0 +1,12 @@
+services:
+  gopeed:
+    image: liwei2633/gopeed:v1.9.3
+    expose:
+      - "9999"
+    volumes:
+      - gopeed-storage:/app/storage
+      - gopeed-downloads:/app/Downloads
+    restart: unless-stopped
+volumes:
+  gopeed-storage: {}
+  gopeed-downloads: {}

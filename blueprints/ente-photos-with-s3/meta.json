@@ -1,0 +1,23 @@
+{
+  "id": "ente-photos-with-s3",
+  "name": "ente-photos-with-s3",
+  "description": "Ente Photos is a fully open source, End to End Encrypted alternative to Google Photos and Apple Photos.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://help.ente.io/self-hosting/installation/compose",
+    "docs": "https://help.ente.io/self-hosting/installation/compose"
+  },
+  "tags": [
+    "photos",
+    "gallery",
+    "backup",
+    "encryption",
+    "privacy",
+    "self-hosted",
+    "google-photos",
+    "alternative",
+    "media"
+  ]
+}

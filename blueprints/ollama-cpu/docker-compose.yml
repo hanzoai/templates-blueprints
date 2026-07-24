@@ -1,0 +1,10 @@
+services:
+  ollama-cpu:
+    image: ollama/ollama:0.32.1
+    volumes:
+      - ollama-cpu-ollama:/root/.ollama
+    expose:
+      - "11434"
+    restart: always
+volumes:
+  ollama-cpu-ollama: {}

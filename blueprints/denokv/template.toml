@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "denokv"
+port = 4512
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_DENOKV = "${password:32}"

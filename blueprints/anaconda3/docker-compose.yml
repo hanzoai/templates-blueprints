@@ -1,0 +1,18 @@
+services:
+  anaconda3:
+    image: continuumio/anaconda3:2024.10-1
+    command:
+      - /bin/bash
+      - -c
+      - conda install -c conda-forge jupyterlab -y --quiet && jupyter lab --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root
+    environment:
+      - LANG=C.UTF-8
+      - LC_ALL=C.UTF-8
+      - PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    expose:
+      - "8888"
+    volumes:
+      - anaconda3-notebooks:/opt/notebooks
+    restart: unless-stopped
+volumes:
+  anaconda3-notebooks: {}

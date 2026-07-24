@@ -1,0 +1,16 @@
+{
+  "id": "grampsweb",
+  "name": "Gramps Web",
+  "description": "Web frontend for the Gramps genealogical research system.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/gramps-project/gramps-web-docs/blob/main/examples/docker-compose-base/docker-compose.yml",
+    "website": "",
+    "docs": "https://github.com/gramps-project/gramps-web-docs/blob/main/examples/docker-compose-base/docker-compose.yml"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

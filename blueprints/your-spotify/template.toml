@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "your-spotify"
+port = 8103
+host = "${main_domain}"
+
+[config.env]
+INTERNAL_IP = ""
+APP_PORT = "80"
+SPOTIFY_PUBLIC = ""
+SPOTIFY_SECRET = "${password:32}"

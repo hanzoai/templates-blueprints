@@ -1,0 +1,34 @@
+[variables]
+main_domain = "${domain}"
+ghostfolio-version = "1.205.1"
+postgres-version = "15.0-alpine"
+redis-version = "7.0-alpine"
+node-env = "production"
+access-token-salt = "${password:32}"
+base-currency = "USD"
+jwt-secret-key = "${password:32}"
+postgres-db = "ghostfolio"
+postgres-user = "ghostfolio"
+postgres-password = "${password:32}"
+postgres-root-password = "${password:32}"
+
+[config]
+
+[[config.domains]]
+serviceName = "ghostfolio"
+port = 3333
+host = "${main_domain}"
+
+[config.env]
+GHOSTFOLIO_VERSION = "${ghostfolio-version}"
+POSTGRES_VERSION = "${postgres-version}"
+REDIS_VERSION = "${redis-version}"
+NODE_ENV = "${node-env}"
+ACCESS_TOKEN_SALT = "${access-token-salt}"
+BASE_CURRENCY = "${base-currency}"
+JWT_SECRET_KEY = "${jwt-secret-key}"
+POSTGRES_DB = "${postgres-db}"
+POSTGRES_USER = "${postgres-user}"
+POSTGRES_PASSWORD = "${postgres-password}"
+POSTGRES_ROOT_PASSWORD = "${postgres-root-password}"
+ROOT_DOMAIN = "${main_domain}"

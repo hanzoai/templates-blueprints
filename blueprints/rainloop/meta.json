@@ -1,0 +1,16 @@
+{
+  "id": "rainloop",
+  "name": "RainLoop",
+  "description": "RainLoop Webmail - Simple, modern & fast web-based email client",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/hardware/rainloop",
+    "docs": "https://hub.docker.com/r/hardware/rainloop"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

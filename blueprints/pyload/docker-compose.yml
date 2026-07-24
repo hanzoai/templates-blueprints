@@ -1,0 +1,17 @@
+services:
+  pyload:
+    image: lscr.io/linuxserver/pyload-ng:${PYLOAD_VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: ${PUID}
+      PGID: ${GUID}
+    volumes:
+      - pyload-config:/config
+      - ${PATH_TO_DOWNLOADS}:/downloads
+    ports:
+      - 9666:9666
+    expose:
+      - "8000"
+    restart: always
+volumes:
+  pyload-config: {}

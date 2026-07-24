@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+container-version = "3.2.2"
+
+[config]
+
+[[config.domains]]
+serviceName = "sourcegraph"
+port = 7080
+host = "${main_domain}"
+
+[config.env]
+CONTAINER_VERSION = "${container-version}"

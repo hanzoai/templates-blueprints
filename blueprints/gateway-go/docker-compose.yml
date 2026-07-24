@@ -1,0 +1,10 @@
+services:
+  gateway-go:
+    image: openiothub/gateway-go:v2.0.12
+    expose:
+      - "34323"
+    volumes:
+      - gateway-go-root:/root
+    restart: unless-stopped
+volumes:
+  gateway-go-root: {}

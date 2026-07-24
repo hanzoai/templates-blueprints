@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mempool"
+port = 2200
+host = "${main_domain}"
+
+[config.env]
+ELECTRUM_HOST = ""
+ELECTRUM_PORT = ""
+CORE_RPC_HOST = ""
+MEMPOOL_DB_PASSWORD = "${hash:32}"

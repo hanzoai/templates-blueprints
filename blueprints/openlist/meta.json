@@ -1,0 +1,15 @@
+{
+  "id": "openlist",
+  "name": "OpenList",
+  "description": "Mount your cloud drive on your home NAS",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/OpenListTeam/OpenList",
+    "website": "https://oplist.org/",
+    "docs": "https://doc.oplist.org/"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

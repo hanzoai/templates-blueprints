@@ -1,0 +1,13 @@
+services:
+  eclipse-mosquitto:
+    image: eclipse-mosquitto:${ECLIPSE_VERSION}
+    volumes:
+      - eclipse-mosquitto-eclipse-config:/mosquitto/config/
+      - eclipse-mosquitto-eclipse-data:/mosquitto/data/
+      - eclipse-mosquitto-eclipse-log:/mosquitto/log/
+    ports: []
+    restart: always
+volumes:
+  eclipse-mosquitto-eclipse-config: {}
+  eclipse-mosquitto-eclipse-data: {}
+  eclipse-mosquitto-eclipse-log: {}

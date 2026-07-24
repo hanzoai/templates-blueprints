@@ -1,0 +1,15 @@
+services:
+  email-oauth2-proxy:
+    image: ghcr.io/blacktirion/email-oauth2-proxy-docker:2026.01.06
+    environment:
+      DEBUG: "true"
+      CACHE_STORE: /config/credstore.config
+      LOGFILE: "true"
+      LOCAL_SERVER_AUTH: "true"
+    volumes:
+      - email-oauth2-proxy-config:/config
+    expose:
+      - "80"
+    restart: always
+volumes:
+  email-oauth2-proxy-config: {}

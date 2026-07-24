@@ -1,0 +1,16 @@
+{
+  "id": "onlyoffice-documentserver",
+  "name": "ONLYOFFICE Document Server",
+  "description": "Online office suite comprising viewers and editors for texts, spreadsheets and presentations",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/ONLYOFFICE/Docker-DocumentServer",
+    "website": "",
+    "docs": "https://github.com/ONLYOFFICE/Docker-DocumentServer"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

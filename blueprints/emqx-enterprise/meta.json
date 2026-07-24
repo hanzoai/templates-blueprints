@@ -1,0 +1,21 @@
+{
+  "id": "emqx-enterprise",
+  "name": "emqx-enterprise",
+  "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.emqx.io/docs/en/latest/deploy/install-docker.html",
+    "docs": "https://www.emqx.io/docs/en/latest/deploy/install-docker.html"
+  },
+  "tags": [
+    "mqtt",
+    "broker",
+    "iot",
+    "messaging",
+    "emqx",
+    "iiot",
+    "networking"
+  ]
+}

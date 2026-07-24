@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+statping-version = "v0.90.74"
+db-user = "statping"
+db-name = "statping"
+db-pass = "${password:16}"
+admin-user = ""
+admin-pass = ""
+admin-email = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "statping"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+STATPING_VERSION = "${statping-version}"
+DB_USER = "${db-user}"
+DB_NAME = "${db-name}"
+DB_PASS = "${db-pass}"
+ADMIN_USER = "${admin-user}"
+ADMIN_PASS = "${admin-pass}"
+ADMIN_EMAIL = "${admin-email}"

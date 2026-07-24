@@ -1,0 +1,16 @@
+{
+  "id": "atuin",
+  "name": "Atuin Server",
+  "description": "Magical Shell History",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/atuinsh/atuin",
+    "website": "https://atuin.sh",
+    "docs": "https://atuin.sh"
+  },
+  "tags": [
+    "utilities",
+    "development"
+  ]
+}

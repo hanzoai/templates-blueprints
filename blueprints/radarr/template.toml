@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "radarr"
+port = 7878
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_RADARR = "https://${main_domain}"

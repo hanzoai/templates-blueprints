@@ -1,0 +1,64 @@
+services:
+  librephotos:
+    image: reallibrephotos/librephotos-proxy:2023w48
+    depends_on:
+      - librephotos-backend
+      - librephotos-frontend
+    volumes:
+      - librephotos-data:/data
+      - librephotos-protected-media:/protected_media
+      - librephotos-nginx-conf:/etc/nginx/nginx.conf
+    expose:
+      - "80"
+    restart: always
+  librephotos-db:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: ${LIBREPHOTOS_DB_PASSWORD}
+      POSTGRES_USER: tipi
+      POSTGRES_DB: librephotos
+    volumes:
+      - librephotos-data:/var/lib/postgresql/data
+    restart: always
+  librephotos-frontend:
+    image: reallibrephotos/librephotos-frontend:2023w48
+    depends_on:
+      - librephotos-backend
+    restart: always
+  librephotos-backend:
+    image: reallibrephotos/librephotos:2023w48
+    environment:
+      SECRET_KEY: ${LIBREPHOTOS_SECRET_KEY}
+      BACKEND_HOST: librephotos-backend
+      ADMIN_EMAIL: ${LIBREPHOTOS_EMAIL}
+      ADMIN_USERNAME: ${LIBREPHOTOS_USERNAME}
+      ADMIN_PASSWORD: ${LIBREPHOTOS_PASSWORD}
+      DB_BACKEND: postgresql
+      DB_NAME: librephotos
+      DB_USER: tipi
+      DB_PASS: ${LIBREPHOTOS_DB_PASSWORD}
+      DB_HOST: librephotos-db
+      DB_PORT: "5432"
+      REDIS_HOST: librephotos-redis
+      REDIS_PORT: "6379"
+      ALLOW_UPLOAD: "true"
+      DEBUG: "0"
+      CSRF_TRUSTED_ORIGINS: ${APP_PROTOCOL:-http}://${APP_DOMAIN},http://${INTERNAL_IP}:${APP_PORT}
+    depends_on:
+      librephotos-db:
+        condition: service_healthy
+    volumes:
+      - librephotos-data:/data
+      - librephotos-protected-media:/protected_media
+      - librephotos-logs:/logs
+      - librephotos-cache:/root/.cache
+    restart: always
+  librephotos-redis:
+    image: redis:6
+    restart: always
+volumes:
+  librephotos-data: {}
+  librephotos-protected-media: {}
+  librephotos-nginx-conf: {}
+  librephotos-logs: {}
+  librephotos-cache: {}

@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "seedsync"
+port = 8800
+host = "${main_domain}"
+
+[config.env]
+SEEDSYNC_PUID = ""
+SEEDSYNC_PGID = ""
+TZ = ""

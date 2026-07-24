@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "supertokens"
+port = 3567
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_POSTGRESQL = "${username}"
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"

@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+cb-version = "community-6.6.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "couchbase-db"
+port = 8091
+host = "${main_domain}"
+
+[config.env]
+CB_VERSION = "${cb-version}"

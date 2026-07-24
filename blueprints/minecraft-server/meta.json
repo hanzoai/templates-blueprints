@@ -1,0 +1,15 @@
+{
+  "id": "minecraft-server",
+  "name": "Minecraft Server",
+  "description": "Run a minecraft server",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/itzg/docker-minecraft-server",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "gaming"
+  ]
+}

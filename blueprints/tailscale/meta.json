@@ -1,0 +1,15 @@
+{
+  "id": "tailscale",
+  "name": "Tailscale",
+  "description": "Connect your devices and users together in your own secure virtual private network.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/tailscale/tailscale",
+    "website": "https://tailscale.com",
+    "docs": "https://tailscale.com/docs"
+  },
+  "tags": [
+    "networking"
+  ]
+}

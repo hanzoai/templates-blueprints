@@ -1,0 +1,15 @@
+{
+  "id": "lidarr-deemix",
+  "name": "Lidarr on Steroids",
+  "description": "Lidarr with some muscles thanks to deemix",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/youegraillot/lidarr-on-steroids",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media"
+  ]
+}

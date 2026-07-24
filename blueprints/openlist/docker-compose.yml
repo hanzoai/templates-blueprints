@@ -1,0 +1,14 @@
+services:
+  openlist:
+    image: openlistteam/openlist:v4.2.2
+    user: 999:1000
+    environment:
+      UMASK: "022"
+      OPENLIST_ADMIN_PASSWORD: casaos
+    expose:
+      - "5244"
+    volumes:
+      - openlist-data:/opt/openlist/data
+    restart: unless-stopped
+volumes:
+  openlist-data: {}

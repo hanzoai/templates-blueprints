@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "kiwix-serve"
+port = 8169
+host = "${main_domain}"

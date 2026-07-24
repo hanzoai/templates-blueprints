@@ -1,0 +1,42 @@
+services:
+  keila:
+    image: pentacent/keila:${KEILA_VERSION}
+    environment:
+      DB_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@keila-db/${POSTGRES_DATABASE}
+      DB_ENABLE_SSL: ${KEILA_DB_ENABLE_SSL}
+      KEILA_USER: ${KEILA_USER}
+      KEILA_PASSWORD: ${KEILA_PASSWORD}
+      URL_HOST: keila.${ROOT_DOMAIN}
+      URL_PATH: ${KEILA_URL_PATH}
+      URL_SCHEMA: ${KEILA_URL_SCHEMA}
+      URL_PORT: ${KEILA_URL_PORT}
+      PORT: ${KEILA_PORT}
+      SECRET_KEY_BASE: ${KEILA_SECRET_KEY_BASE}
+      DISABLE_REGISTRATION: ${KEILA_DISABLE_REGISTRATION}
+      DISABLE_PRECEDENCE_HEADER: ${KEILA_DISABLE_PRECEDENCE_HEADER}
+      MAILER_TYPE: ${KEILA_MAILER_TYPE}
+      MAILER_SMTP_HOST: ${KEILA_MAILER_SMTP_HOST}
+      MAILER_SMTP_PORT: ${KEILA_MAILER_SMTP_PORT}
+      MAILER_SMTP_USER: ${KEILA_MAILER_SMTP_USER}
+      MAILER_SMTP_PASSWORD: ${KEILA_MAILER_SMTP_PASSWORD}
+      CAPTCHA_PROVIDER: ${KEILA_CAPTCHA_PROVIDER}
+      CAPTCHA_SITE_KEY: ${KEILA_CAPTCHA_SITE_KEY}
+      CAPTCHA_SECRET_KEY: ${KEILA_CAPTCHA_SECRET_KEY}
+      CAPTCHA_URL: ${KEILA_CAPTCHA_URL}
+    volumes:
+      - keila-upload:/opt/app/uploads
+    depends_on:
+      - keila-db
+    restart: always
+  keila-db:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DATABASE}
+    volumes:
+      - keila-db:/var/lib/postgresql/data
+    restart: always
+volumes:
+  keila-upload: {}
+  keila-db: {}

@@ -1,0 +1,12 @@
+services:
+  psitransfer:
+    image: psitrax/psitransfer:v2.4.1
+    environment:
+      PSITRANSFER_ADMIN_PASS: secret
+    expose:
+      - "3000"
+    volumes:
+      - psitransfer-data:/data
+    restart: unless-stopped
+volumes:
+  psitransfer-data: {}

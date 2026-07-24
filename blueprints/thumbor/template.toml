@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+thumbor-version = "6.7.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "thumbor"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+THUMBOR_VERSION = "${thumbor-version}"

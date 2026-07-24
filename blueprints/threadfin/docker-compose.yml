@@ -1,0 +1,15 @@
+services:
+  threadfin:
+    image: fyb3roptik/threadfin:1.2.37
+    environment:
+      - THREADFIN_BRANCH=main
+      - THREADFIN_DEBUG=0
+    expose:
+      - "34400"
+    volumes:
+      - threadfin-data:/home/threadfin/conf/data
+      - threadfin-backup:/home/threadfin/conf/backup
+    restart: unless-stopped
+volumes:
+  threadfin-data: {}
+  threadfin-backup: {}

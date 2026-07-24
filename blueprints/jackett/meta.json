@@ -1,0 +1,15 @@
+{
+  "id": "jackett",
+  "name": "Jackett",
+  "description": "Jackett works as a proxy server",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Jackett/Jackett",
+    "website": "",
+    "docs": "https://github.com/Jackett/Jackett#readme"
+  },
+  "tags": [
+    "media"
+  ]
+}

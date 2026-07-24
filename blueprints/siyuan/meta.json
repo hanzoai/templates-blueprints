@@ -1,0 +1,18 @@
+{
+  "id": "siyuan",
+  "name": "siyuan",
+  "description": "A privacy-first, self-hosted, fully open source personal knowledge management software, written in typescript and golang.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/siyuan-note/siyuan",
+    "website": "",
+    "docs": "https://github.com/siyuan-note/siyuan"
+  },
+  "tags": [
+    "note-taking",
+    "markdown",
+    "pkm",
+    "documentation"
+  ]
+}

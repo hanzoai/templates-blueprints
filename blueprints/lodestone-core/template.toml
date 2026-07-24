@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "lodestone-core"
+port = 16662
+host = "${main_domain}"

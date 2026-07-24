@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+imagor-version = "0.8.11"
+env-imagor-unsafe = "1"
+env-imagor-secret = "${password:32}"
+
+[config]
+
+[[config.domains]]
+serviceName = "imagor-local"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+IMAGOR_VERSION = "${imagor-version}"
+ENV_IMAGOR_UNSAFE = "${env-imagor-unsafe}"
+ENV_IMAGOR_SECRET = "${env-imagor-secret}"

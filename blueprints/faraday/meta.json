@@ -1,0 +1,18 @@
+{
+  "id": "faraday",
+  "name": "faraday",
+  "description": "Faraday is a powerful, open-source, web-based vulnerability management tool.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://faradaysec.com/",
+    "docs": "https://faradaysec.com/"
+  },
+  "tags": [
+    "vulnerability",
+    "management",
+    "tool",
+    "security"
+  ]
+}

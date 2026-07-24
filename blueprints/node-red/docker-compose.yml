@@ -1,0 +1,12 @@
+services:
+  node-red:
+    image: nodered/node-red:${NODE_RED_VERSION}
+    environment:
+      TZ: ${NODE_RED_TIMEZONE}
+    volumes:
+      - node-red-data:/data
+    expose:
+      - "1880"
+    restart: always
+volumes:
+  node-red-data: {}

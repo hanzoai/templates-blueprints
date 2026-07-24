@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "nextcloud-mini"
+port = 8564
+host = "${main_domain}"
+
+[config.env]
+NEXTCLOUD_MINI_DB_PASSWORD = "${hash:32}"
+NEXTCLOUD_MINI_ADMIN_PASSWORD = "${password:32}"
+NEXTCLOUD_MINI_ADMIN_USER = ""
+NEXTCLOUD_MINI_TRUSTED_DOMAINS = ""

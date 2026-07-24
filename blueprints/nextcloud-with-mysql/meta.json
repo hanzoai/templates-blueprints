@@ -1,0 +1,20 @@
+{
+  "id": "nextcloud-with-mysql",
+  "name": "nextcloud-with-mysql",
+  "description": "NextCloud is a self-hosted, open-source platform that provides file storage, collaboration, and communication tools for seamless data management.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.nextcloud.com",
+    "docs": "https://docs.nextcloud.com"
+  },
+  "tags": [
+    "cloud",
+    "collaboration",
+    "communication",
+    "filestorage",
+    "data",
+    "storage"
+  ]
+}

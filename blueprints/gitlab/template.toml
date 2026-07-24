@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "gitlab"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_GITLAB = "${password:32}"
+SERVICE_URL_GITLAB = "https://${main_domain}"

@@ -1,0 +1,20 @@
+{
+  "id": "unleash-with-postgresql",
+  "name": "unleash-with-postgresql",
+  "description": "Open source feature flag management for enterprises.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.getunleash.io",
+    "docs": "https://docs.getunleash.io"
+  },
+  "tags": [
+    "unleash",
+    "feature-flags",
+    "feature-toggles",
+    "ab-testing",
+    "open-source",
+    "devtools"
+  ]
+}

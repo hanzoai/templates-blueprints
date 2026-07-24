@@ -1,0 +1,16 @@
+{
+  "id": "influxdb2",
+  "name": "InfluxDb2",
+  "description": "InfluxDB2 is a time series database. It stores large amounts of timestamped data, including DevOps monitoring, application metrics, IoT sensor data, and real-time analytics.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/influxdb",
+    "docs": "https://hub.docker.com/_/influxdb"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

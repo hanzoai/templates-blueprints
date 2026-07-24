@@ -1,0 +1,16 @@
+{
+  "id": "boxy-hq-only",
+  "name": "BoxyHQ Jackson (SAML to OAuht) - No Database",
+  "description": "This will create a BoxyHQ Jackson only. You will need to create and configure the database information manually. Intended for advanced users.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/boxyhq/jackson/",
+    "docs": "https://hub.docker.com/r/boxyhq/jackson/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

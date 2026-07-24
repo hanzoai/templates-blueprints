@@ -1,0 +1,15 @@
+services:
+  mssql-db:
+    image: mcr.microsoft.com/mssql/server:${SERVER_VERSION}
+    environment:
+      ACCEPT_EULA: ${ACCEPT_EULA}
+      MSSQL_PID: ${PID}
+      MSSQL_SA_PASSWORD: ${SA_PASS}
+      MSSQL_TCP_PORT: ${CONTAINER_PORT}
+    volumes:
+      - mssql-db-data:/var/opt/mssql
+    ports:
+      - ${HOST_PORT}:${CONTAINER_PORT}
+    restart: always
+volumes:
+  mssql-db-data: {}

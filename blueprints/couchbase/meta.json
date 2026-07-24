@@ -1,0 +1,16 @@
+{
+  "id": "couchbase",
+  "name": "CouchBase",
+  "description": "Couchbase is an open-source, distributed multi-model NoSQL document-oriented database software",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://registry.hub.docker.com/_/couchbase",
+    "docs": "https://registry.hub.docker.com/_/couchbase"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

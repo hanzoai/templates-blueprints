@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "prowlarr"
+port = 9696
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_PROWLARR = "https://${main_domain}"

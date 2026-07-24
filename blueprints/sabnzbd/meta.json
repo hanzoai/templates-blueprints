@@ -1,0 +1,15 @@
+{
+  "id": "sabnzbd",
+  "name": "Sabnzbd",
+  "description": "Free and easy binary newsreader",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/sabnzbd/sabnzbd",
+    "website": "https://sabnzbd.org",
+    "docs": "https://sabnzbd.org/wiki/"
+  },
+  "tags": [
+    "media"
+  ]
+}

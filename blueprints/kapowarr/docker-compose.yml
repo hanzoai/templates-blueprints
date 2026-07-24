@@ -1,0 +1,16 @@
+services:
+  kapowarr:
+    image: mrcas/kapowarr:v1.3.1
+    volumes:
+      - kapowarr-localtime:/etc/localtime
+      - kapowarr-db:/app/db
+      - kapowarr-temp-downloads:/app/temp_downloads
+      - kapowarr-media:/media
+    expose:
+      - "5656"
+    restart: always
+volumes:
+  kapowarr-localtime: {}
+  kapowarr-db: {}
+  kapowarr-temp-downloads: {}
+  kapowarr-media: {}

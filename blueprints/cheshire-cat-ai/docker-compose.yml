@@ -1,0 +1,17 @@
+services:
+  cheshire-cat-ai:
+    image: ghcr.io/cheshire-cat-ai/core:1.9.2
+    environment:
+      PYTHONUNBUFFERED: "1"
+      WATCHFILES_FORCE_POLLING: "true"
+    volumes:
+      - cheshire-cat-ai-static:/app/cat/static
+      - cheshire-cat-ai-plugins:/app/cat/plugins
+      - cheshire-cat-ai-data:/app/cat/data
+    expose:
+      - "80"
+    restart: always
+volumes:
+  cheshire-cat-ai-static: {}
+  cheshire-cat-ai-plugins: {}
+  cheshire-cat-ai-data: {}

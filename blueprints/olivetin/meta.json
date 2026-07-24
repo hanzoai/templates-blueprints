@@ -1,0 +1,15 @@
+{
+  "id": "olivetin",
+  "name": "Olivetin",
+  "description": "Give safe and simple access to predefined shell commands from a web interface.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/OliveTin/OliveTin",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

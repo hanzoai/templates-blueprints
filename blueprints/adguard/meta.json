@@ -1,0 +1,16 @@
+{
+  "id": "adguard",
+  "name": "Adguard",
+  "description": "World's most advanced adblocker!",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/AdguardTeam",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "network",
+    "security"
+  ]
+}

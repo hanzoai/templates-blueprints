@@ -1,0 +1,19 @@
+{
+  "id": "drupal-with-postgresql",
+  "name": "drupal-with-postgresql",
+  "description": "Drupal is a free and open-source web content management system written in PHP and distributed under the GNU General Public License.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.drupal.org/about",
+    "docs": "https://www.drupal.org/about"
+  },
+  "tags": [
+    "cms",
+    "blog",
+    "content",
+    "management",
+    "postgresql"
+  ]
+}

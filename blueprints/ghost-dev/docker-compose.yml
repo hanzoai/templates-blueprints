@@ -1,0 +1,13 @@
+services:
+  ghost-dev:
+    image: ghost:5.130.6
+    environment:
+      database__connection__filename: /var/lib/ghost/content/data/ghost.db
+      NODE_ENV: development
+    volumes:
+      - ghost-dev-content:/var/lib/ghost/content
+    expose:
+      - "2368"
+    restart: always
+volumes:
+  ghost-dev-content: {}

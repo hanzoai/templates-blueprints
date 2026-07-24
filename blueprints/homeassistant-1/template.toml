@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "homeassistant-1"
+port = 8209
+host = "${main_domain}"
+
+[config.env]
+TZ = ""

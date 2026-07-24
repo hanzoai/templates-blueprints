@@ -1,0 +1,15 @@
+{
+  "id": "write-freely",
+  "name": "Write-Freely",
+  "description": "Markdown-based publishing platform.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "",
+    "website": "https://writefreely.org/",
+    "docs": "https://writefreely.org/"
+  },
+  "tags": [
+    "social"
+  ]
+}

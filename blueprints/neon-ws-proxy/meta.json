@@ -1,0 +1,17 @@
+{
+  "id": "neon-ws-proxy",
+  "name": "neon-ws-proxy",
+  "description": "The database you love, on a serverless platform designed to help you build reliable and scalable applications faster.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://neon.tech",
+    "docs": "https://neon.tech"
+  },
+  "tags": [
+    "proxy",
+    "neon",
+    "postgresql"
+  ]
+}

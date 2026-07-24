@@ -1,0 +1,15 @@
+{
+  "id": "hugo",
+  "name": "Hugo",
+  "description": "The world's fastest framework for building websites",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/gohugoio/hugo",
+    "website": "https://gohugo.io/",
+    "docs": "https://gohugo.io/documentation/"
+  },
+  "tags": [
+    "developer"
+  ]
+}

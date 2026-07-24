@@ -1,0 +1,15 @@
+{
+  "id": "smallweb",
+  "name": "Smallweb",
+  "description": "Your internet folder",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/pomdtr/smallweb",
+    "website": "https://smallweb.run",
+    "docs": "https://smallweb.run"
+  },
+  "tags": [
+    "development"
+  ]
+}

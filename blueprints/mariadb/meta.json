@@ -1,0 +1,15 @@
+{
+  "id": "mariadb",
+  "name": "MariaDB",
+  "description": "MariaDB Server is one of the most popular database servers in the world. It's made by the original developers of MySQL and guaranteed to stay open source.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/MariaDB/server",
+    "website": "https://mariadb.org/",
+    "docs": "https://mariadb.com/kb/en/documentation/"
+  },
+  "tags": [
+    "developer"
+  ]
+}

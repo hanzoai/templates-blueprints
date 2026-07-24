@@ -1,0 +1,16 @@
+{
+  "id": "lemmy",
+  "name": "Lemmy",
+  "description": "Self-hosted Lemmy with persistent config volume auto-populated by a sidecar",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://join-lemmy.org/docs/en/administration/administration.html",
+    "docs": "https://join-lemmy.org/docs/en/administration/administration.html"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

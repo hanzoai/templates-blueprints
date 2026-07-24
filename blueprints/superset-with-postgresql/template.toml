@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "superset"
+port = 8088
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_64_SUPERSETSECRETKEY = "${base64:64}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_PASSWORD_REDIS = "${password:32}"

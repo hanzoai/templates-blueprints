@@ -1,0 +1,17 @@
+{
+  "id": "getoutline",
+  "name": "getoutline",
+  "description": "Your team’s knowledge base",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.getoutline.com/s/hosting/doc/hosting-outline-nipGaCRBDu",
+    "docs": "https://docs.getoutline.com/s/hosting/doc/hosting-outline-nipGaCRBDu"
+  },
+  "tags": [
+    "knowledge-base",
+    "documentation",
+    "productivity"
+  ]
+}

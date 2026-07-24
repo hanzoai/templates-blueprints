@@ -1,0 +1,10 @@
+services:
+  opodsync:
+    image: ganeshlab/opodsync:latest
+    expose:
+      - "8080"
+    volumes:
+      - opodsync-data:/var/www/server/data
+    restart: always
+volumes:
+  opodsync-data: {}

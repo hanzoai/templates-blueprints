@@ -1,0 +1,9 @@
+services:
+  llama-factory-nvidia:
+    image: hiyouga/llamafactory:0.9.4
+    command:
+      - llamafactory-cli
+      - webui
+    expose:
+      - "7860"
+    restart: unless-stopped

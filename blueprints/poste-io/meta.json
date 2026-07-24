@@ -1,0 +1,16 @@
+{
+  "id": "poste-io",
+  "name": "Poste.io",
+  "description": "Complete mail server built in one container",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://poste.io/doc",
+    "docs": "https://poste.io/doc"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

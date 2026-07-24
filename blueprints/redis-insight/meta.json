@@ -1,0 +1,20 @@
+{
+  "id": "redis-insight",
+  "name": "redis-insight",
+  "description": "Redis Insight lets you do both GUI- and CLI-based interactions in a fully-featured desktop GUI client.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://redis.io/docs/latest/operate/redisinsight/",
+    "docs": "https://redis.io/docs/latest/operate/redisinsight/"
+  },
+  "tags": [
+    "redis",
+    "gui",
+    "database",
+    "monitoring",
+    "analytics",
+    "database-observability-developer-tools"
+  ]
+}

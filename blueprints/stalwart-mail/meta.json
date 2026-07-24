@@ -1,0 +1,17 @@
+{
+  "id": "stalwart-mail",
+  "name": "Stalwart Mail",
+  "description": "Open-source mail server solution with JMAP, IMAP4, and SMTP support",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/stalwartlabs",
+    "website": "https://stalw.art",
+    "docs": "https://stalw.art"
+  },
+  "tags": [
+    "media",
+    "network",
+    "utilities"
+  ]
+}

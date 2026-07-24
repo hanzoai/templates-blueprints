@@ -1,0 +1,42 @@
+[variables]
+main_domain = "${domain}"
+db-user = "peertubeuser"
+db-pass = "${password:32}"
+postgres-version = "13.10-alpine"
+redis-version = "6.2.11-alpine"
+peertube-version = "v5.1.0-bullseye"
+smtp-username = ""
+smtp-from = ""
+smtp-password = ""
+smtp-hostname = ""
+smtp-port = ""
+smtp-tls = "false"
+smtp-starttls = "false"
+admin-email = ""
+admin-password = "${password:10}"
+secret = "${password:32}"
+
+[config]
+
+[[config.domains]]
+serviceName = "peertube"
+port = 9000
+host = "${main_domain}"
+
+[config.env]
+DB_USER = "${db-user}"
+DB_PASS = "${db-pass}"
+POSTGRES_VERSION = "${postgres-version}"
+REDIS_VERSION = "${redis-version}"
+PEERTUBE_VERSION = "${peertube-version}"
+SMTP_USERNAME = "${smtp-username}"
+SMTP_FROM = "${smtp-from}"
+SMTP_PASSWORD = "${smtp-password}"
+SMTP_HOSTNAME = "${smtp-hostname}"
+SMTP_PORT = "${smtp-port}"
+SMTP_TLS = "${smtp-tls}"
+SMTP_STARTTLS = "${smtp-starttls}"
+ADMIN_EMAIL = "${admin-email}"
+ADMIN_PASSWORD = "${admin-password}"
+SECRET = "${secret}"
+ROOT_DOMAIN = "${main_domain}"

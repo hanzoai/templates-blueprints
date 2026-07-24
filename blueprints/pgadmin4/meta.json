@@ -1,0 +1,16 @@
+{
+  "id": "pgadmin4",
+  "name": "pgAdmin",
+  "description": "pgAdmin 4 is a complete rewrite of pgAdmin, built using Python and Javascript/jQuery",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html",
+    "docs": "https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

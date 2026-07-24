@@ -1,0 +1,16 @@
+{
+  "id": "hasura-only",
+  "name": "Hasura - No Database",
+  "description": "Instant realtime GraphQL APIs on any Postgres application, existing or new",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

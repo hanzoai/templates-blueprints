@@ -1,0 +1,15 @@
+services:
+  triliumnext:
+    image: ghcr.io/triliumnext/trilium:stable
+    platform: linux/amd64
+    environment:
+      - TZ=${TZ:-Europe/Berlin}
+    volumes:
+      - triliumnext_data:/home/node/trilium-data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget --quiet --tries=1 --spider http://127.0.0.1:8080/api/health-check || exit 1
+      interval: 5s
+      timeout: 20s
+      retries: 10

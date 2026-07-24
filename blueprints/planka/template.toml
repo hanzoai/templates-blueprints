@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "planka"
+port = 8016
+host = "${main_domain}"
+
+[config.env]
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"
+PLANKA_SECRET_KEY = "${hash:32}"
+PLANKA_ADMIN_EMAIL = ""
+PLANKA_ADMIN_NAME = ""
+PLANKA_ADMIN_USERNAME = ""
+PLANKA_ADMIN_PASSWORD = "${password:32}"

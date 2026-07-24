@@ -1,0 +1,6 @@
+services:
+  holoplay:
+    image: spout8301/holoplay:1.12.3
+    expose:
+      - "3000"
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+redis-version = "6-alpine"
+app-version = "2.2.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "proxypool"
+port = 5010
+host = "${main_domain}"
+
+[config.env]
+REDIS_VERSION = "${redis-version}"
+APP_VERSION = "${app-version}"

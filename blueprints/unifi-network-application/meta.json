@@ -1,0 +1,15 @@
+{
+  "id": "unifi-network-application",
+  "name": "Unifi Network Application",
+  "description": "The Unifi network application software is a powerful, enterprise wireless software engine ideal for high-density client deployments requiring low latency and high uptime performance.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/linuxserver/docker-unifi-network-application",
+    "website": "https://ui.com",
+    "docs": "https://docs.linuxserver.io/images/docker-unifi-network-application/#ports-p"
+  },
+  "tags": [
+    "networking"
+  ]
+}

@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+signing-secret = "${password:32}"
+talk-version = "6"
+
+[config]
+
+[[config.domains]]
+serviceName = "coral-talk"
+port = 5000
+host = "${main_domain}"
+
+[config.env]
+SIGNING_SECRET = "${signing-secret}"
+TALK_VERSION = "${talk-version}"

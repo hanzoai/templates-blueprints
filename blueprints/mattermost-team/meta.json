@@ -1,0 +1,16 @@
+{
+  "id": "mattermost-team",
+  "name": "Mattermost Team Edition",
+  "description": "Mattermost Team Edition open source collaboration/chat software",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/mattermost/mattermost-docker",
+    "website": "",
+    "docs": "https://github.com/mattermost/mattermost-docker"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

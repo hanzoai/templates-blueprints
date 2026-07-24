@@ -1,0 +1,15 @@
+{
+  "id": "moodist",
+  "name": "Moodist",
+  "description": "Ambient sounds for focus and calm.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/remvze/moodist",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media"
+  ]
+}

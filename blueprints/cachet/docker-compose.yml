@@ -1,0 +1,29 @@
+services:
+  cachet-postgres:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASS}
+    volumes:
+      - cachet-postgres-data:/var/lib/postgresql/data
+    restart: always
+  cachet:
+    image: cachethq/docker:${CACHET_VERSION}
+    environment:
+      DB_DRIVER: pgsql
+      DB_HOST: cachet-postgres
+      DB_PORT: "5432"
+      DB_DATABASE: postgres
+      DB_USERNAME: postgres
+      DB_PASSWORD: ${DB_PASS}
+      DB_PREFIX: chq_
+      APP_KEY: ${GENSEC32}
+      APP_LOG: errorlog
+      APP_ENV: production
+      APP_DEBUG: "false"
+      DEBUG: "false"
+    expose:
+      - "8000"
+    restart: always
+volumes:
+  cachet-postgres-data: {}

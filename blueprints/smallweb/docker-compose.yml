@@ -1,0 +1,10 @@
+services:
+  smallweb:
+    image: ghcr.io/pomdtr/smallweb:0.28.4
+    volumes:
+      - smallweb-smallweb:/smallweb
+    expose:
+      - "7777"
+    restart: always
+volumes:
+  smallweb-smallweb: {}

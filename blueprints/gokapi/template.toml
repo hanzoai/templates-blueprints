@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+gokapi-version = "v2.2.1"
+
+[config]
+
+[[config.domains]]
+serviceName = "gokapi"
+port = 53842
+host = "${main_domain}"
+
+[config.env]
+GOKAPI_VERSION = "${gokapi-version}"

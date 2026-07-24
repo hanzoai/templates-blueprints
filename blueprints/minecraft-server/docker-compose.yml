@@ -1,0 +1,13 @@
+services:
+  minecraft-server:
+    image: itzg/minecraft-server:latest
+    environment:
+      EULA: "TRUE"
+      VERSION: ${MC_VERSION:-LATEST}
+    volumes:
+      - minecraft-server-data:/data
+    expose:
+      - "25565"
+    restart: always
+volumes:
+  minecraft-server-data: {}

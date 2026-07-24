@@ -1,0 +1,23 @@
+services:
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - USER=${SERVICE_USER_ADMIN}
+      - PASS=${SERVICE_PASSWORD_ADMIN}
+    volumes:
+      - transmission-config:/config
+      - transmission-downloads:/downloads
+      - transmission-watch:/watch
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -sSfL
+        - -u
+        - ${SERVICE_USER_ADMIN}:${SERVICE_PASSWORD_ADMIN}
+        - http://localhost:9091/
+      interval: 30s
+      timeout: 10s
+      retries: 3

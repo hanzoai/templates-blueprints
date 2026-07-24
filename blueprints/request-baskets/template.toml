@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+version = "v1.1.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "request-baskets"
+port = 55555
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"

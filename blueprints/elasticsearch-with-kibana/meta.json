@@ -1,0 +1,25 @@
+{
+  "id": "elasticsearch-with-kibana",
+  "name": "elasticsearch-with-kibana",
+  "description": "Elastic + Kibana is a Free and Open Source Search, Monitoring, and Visualization Stack",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-kibana-with-docker",
+    "docs": "https://www.elastic.co/docs/deploy-manage/deploy/self-managed/install-kibana-with-docker"
+  },
+  "tags": [
+    "elastic",
+    "kibana",
+    "elasticsearch",
+    "search",
+    "visualization",
+    "logging",
+    "monitoring",
+    "observability",
+    "analytics",
+    "stack",
+    "devops"
+  ]
+}

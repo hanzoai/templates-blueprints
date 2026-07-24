@@ -1,0 +1,16 @@
+{
+  "id": "docuseal-with-postgres",
+  "name": "docuseal-with-postgres",
+  "description": "Document Signing for Everyone free forever for individuals, extensible for businesses and developers. Open Source Alternative to DocuSign, PandaDoc and more.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.docuseal.co/",
+    "docs": "https://www.docuseal.co/"
+  },
+  "tags": [
+    "documentation",
+    "productivity"
+  ]
+}

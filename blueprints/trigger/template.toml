@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "trigger"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_TRIGGER_3000 = "https://${main_domain}"
+SERVICE_PASSWORD_64_SESSION = "${base64:64}"
+SERVICE_PASSWORD_64_MAGICLINK = "${base64:64}"
+SERVICE_PASSWORD_ENCRYPTIONKEY = "${password:32}"
+SERVICE_PASSWORD_64_WORKERSECRET = "${base64:64}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_USER_CLICKHOUSE = "${username}"
+SERVICE_PASSWORD_64_CLICKHOUSE = "${base64:64}"
+SERVICE_PASSWORD_64_ELECTRIC = "${base64:64}"

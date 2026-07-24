@@ -1,0 +1,19 @@
+{
+  "id": "heimdall",
+  "name": "heimdall",
+  "description": "Heimdall is a dashboard for managing and organizing your server applications.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/linuxserver/Heimdall",
+    "website": "",
+    "docs": "https://github.com/linuxserver/Heimdall"
+  },
+  "tags": [
+    "dashboard",
+    "server",
+    "applications",
+    "interface",
+    "productivity"
+  ]
+}

@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+db-type = "mysqli"
+db-host = "${main_domain}"
+db-name = "vvveb"
+db-user = "vvvebuser"
+db-pass = "${password:16}"
+vvveb-version = "php8.3-fpm-alpine"
+
+[config]
+
+[[config.domains]]
+serviceName = "vvveb-only-vvveb"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+DB_TYPE = "${db-type}"
+DB_HOST = "${db-host}"
+DB_NAME = "${db-name}"
+DB_USER = "${db-user}"
+DB_PASS = "${db-pass}"
+VVVEB_VERSION = "${vvveb-version}"

@@ -1,0 +1,20 @@
+{
+  "id": "superset-with-postgresql",
+  "name": "superset-with-postgresql",
+  "description": "Modern data exploration and visualization platform (unofficial community docker image)",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/amancevice/docker-superset",
+    "website": "",
+    "docs": "https://github.com/amancevice/docker-superset"
+  },
+  "tags": [
+    "analytics",
+    "bi",
+    "dashboard",
+    "database",
+    "sql",
+    "unofficial"
+  ]
+}

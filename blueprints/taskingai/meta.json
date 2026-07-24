@@ -1,0 +1,15 @@
+{
+  "id": "taskingai",
+  "name": "TaskingAI",
+  "description": "The developer-friendly cloud platform for building and running LLM agents for AI-native applications.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/TaskingAI/TaskingAI",
+    "website": "https://docs.tasking.ai/",
+    "docs": "https://docs.tasking.ai/"
+  },
+  "tags": [
+    "ai"
+  ]
+}

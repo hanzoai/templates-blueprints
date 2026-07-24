@@ -1,0 +1,16 @@
+{
+  "id": "n8n-io-sqlite",
+  "name": "n8n.io (SQLite)",
+  "description": "Node based workflow automation tool",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

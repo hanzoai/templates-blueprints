@@ -1,0 +1,9 @@
+services:
+  gitlab-runner:
+    image: gitlab/gitlab-runner:${GITLAB_RUNNER_VERSION}
+    volumes:
+      - gitlab-runner-data:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+volumes:
+  gitlab-runner-data: {}

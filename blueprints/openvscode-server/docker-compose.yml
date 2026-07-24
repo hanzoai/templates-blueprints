@@ -1,0 +1,18 @@
+services:
+  openvscode-server:
+    image: lscr.io/linuxserver/openvscode-server:${OPENVSCODE_SERVER_VERSION}
+    environment:
+      TZ: ${OPENVSCODE_SERVER_TIMEZONE}
+      PUID: ${OPENVSCODE_SERVER_USER_ID}
+      PGID: ${OPENVSCODE_SERVER_GROUP_ID}
+      CONNECTION_TOKEN: ${OPENVSCODE_SERVER_CONNECTION_TOKEN}
+      CONNECTION_SECRET: ${OPENVSCODE_SERVER_CONNECTION_SECRET}
+      SUDO_PASSWORD: ${OPENVSCODE_SERVER_SUDO_PASSWORD}
+      SUDO_PASSWORD_HASH: ${OPENVSCODE_SERVER_SUDO_HASH}
+    volumes:
+      - openvscode-server-config:/config
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  openvscode-server-config: {}

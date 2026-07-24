@@ -1,0 +1,19 @@
+{
+  "id": "imgcompress",
+  "name": "imgcompress",
+  "description": "Offline image compression, conversion, and AI background removal for Docker homelabs.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://imgcompress.karimzouine.com",
+    "docs": "https://imgcompress.karimzouine.com"
+  },
+  "tags": [
+    "compress",
+    "photo",
+    "server",
+    "metadata",
+    "media"
+  ]
+}

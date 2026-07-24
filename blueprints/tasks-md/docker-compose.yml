@@ -1,0 +1,16 @@
+services:
+  tasks-md:
+    image: baldissaramatheus/tasks.md:3.3.0
+    environment:
+      TITLE: ${TASKS_MD_TITLE}
+    volumes:
+      - tasks-md-tasks:/tasks/
+      - tasks-md-config:/config/
+      - tasks-md-stylesheets:/usr/share/nginx/html/stylesheets/
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  tasks-md-tasks: {}
+  tasks-md-config: {}
+  tasks-md-stylesheets: {}

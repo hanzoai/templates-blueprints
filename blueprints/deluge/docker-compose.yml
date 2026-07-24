@@ -1,0 +1,16 @@
+services:
+  deluge:
+    image: linuxserver/deluge:${VERSION}
+    environment:
+      TZ: ${TZ}
+      PUID: ${PUID}
+      PGID: ${PGID}
+    volumes:
+      - deluge-config:/config
+      - ${APPNAME_DOWNLOADS}:/downloads
+      - ${APPNAME_WATCH}:/watch
+    expose:
+      - "8112"
+    restart: always
+volumes:
+  deluge-config: {}

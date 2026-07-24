@@ -1,0 +1,22 @@
+{
+  "id": "hermes-agent-with-webui",
+  "name": "hermes-agent-with-webui",
+  "description": "Hermes Agent — autonomous AI agent with persistent memory, scheduling, and a self-hosted web chat UI.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/nesquena/hermes-webui",
+    "website": "",
+    "docs": "https://github.com/nesquena/hermes-webui"
+  },
+  "tags": [
+    "ai",
+    "agent",
+    "llm",
+    "chatbot",
+    "hermes",
+    "openrouter",
+    "anthropic",
+    "openai"
+  ]
+}

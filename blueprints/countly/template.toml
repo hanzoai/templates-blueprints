@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+countly-version = "19.08.1"
+
+[config]
+
+[[config.domains]]
+serviceName = "countly"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+COUNTLY_VERSION = "${countly-version}"

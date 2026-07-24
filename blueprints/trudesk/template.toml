@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+trudesk-version = "1.2.10"
+mongodb-version = "5.0.26"
+appname-mongodb-port = "27017"
+elasticsearch-version = "8.13.0"
+elasticsearch-security-enabled = "false"
+node-env = "production"
+mongo-password = "${password:16}"
+
+[config]
+
+[[config.domains]]
+serviceName = "trudesk"
+port = 8118
+host = "${main_domain}"
+
+[config.env]
+TRUDESK_VERSION = "${trudesk-version}"
+MONGODB_VERSION = "${mongodb-version}"
+APPNAME_MONGODB_PORT = "${appname-mongodb-port}"
+ELASTICSEARCH_VERSION = "${elasticsearch-version}"
+ELASTICSEARCH_SECURITY_ENABLED = "${elasticsearch-security-enabled}"
+NODE_ENV = "${node-env}"
+MONGO_PASSWORD = "${mongo-password}"

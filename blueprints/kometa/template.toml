@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "kometa"
+port = 9996
+host = "${main_domain}"
+
+[config.env]
+TZ = ""
+CONF_KOMETA_TIME = ""
+CONF_KOMETA_RUN = ""
+CONF_KOMETA_TEST = ""
+CONF_KOMETA_DEBUG = ""
+CONF_KOMETA_TRACE = ""
+CONF_KOMETA_LOG_REQUESTS = ""
+CONF_KOMETA_TIMEOUT = ""
+CONF_KOMETA_NO_VERIFY_SSL = ""

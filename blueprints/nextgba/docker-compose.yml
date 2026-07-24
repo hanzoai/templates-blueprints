@@ -1,0 +1,12 @@
+services:
+  nextgba:
+    image: ghcr.io/nicotsx/nextgba:v0.1.0
+    environment:
+      NODE_ENV: production
+    volumes:
+      - nextgba-games:/data/games
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  nextgba-games: {}

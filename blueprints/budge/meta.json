@@ -1,0 +1,18 @@
+{
+  "id": "budge",
+  "name": "budge",
+  "description": "A budgeting personal finance app.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/linuxserver/budge",
+    "website": "",
+    "docs": "https://github.com/linuxserver/budge"
+  },
+  "tags": [
+    "personal-finance",
+    "budgeting",
+    "expense-tracking",
+    "finance"
+  ]
+}

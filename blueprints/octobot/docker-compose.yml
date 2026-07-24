@@ -1,0 +1,16 @@
+services:
+  octobot:
+    image: drakkarsoftware/octobot:2.1.13
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - octobot-user:/octobot/user
+      - octobot-tentacles:/octobot/tentacles
+      - octobot-logs:/octobot/logs
+    expose:
+      - "5001"
+    restart: always
+volumes:
+  octobot-user: {}
+  octobot-tentacles: {}
+  octobot-logs: {}

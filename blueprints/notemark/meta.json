@@ -1,0 +1,15 @@
+{
+  "id": "notemark",
+  "name": "Notemark",
+  "description": "Lighting fast web-based Markdown notes app.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/enchant97/note-mark/",
+    "website": "https://notemark.docs.enchantedcode.co.uk/",
+    "docs": "https://notemark.docs.enchantedcode.co.uk/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

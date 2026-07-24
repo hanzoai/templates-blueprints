@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+version = "1.4.4"
+ps-shared-secret = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "picoshare"
+port = 4001
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+PS_SHARED_SECRET = "${ps-shared-secret}"

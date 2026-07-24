@@ -1,0 +1,26 @@
+[variables]
+main_domain = "${domain}"
+mongo-version = "4"
+mongo-password = ""
+parse-dashboard-version = "2.0.5"
+parse-dashboard-password = ""
+parse-version = "3.1.3"
+app-id = ""
+master-key = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "parse-parse"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+MONGO_VERSION = "${mongo-version}"
+MONGO_PASSWORD = "${mongo-password}"
+PARSE_DASHBOARD_VERSION = "${parse-dashboard-version}"
+PARSE_DASHBOARD_PASSWORD = "${parse-dashboard-password}"
+PARSE_VERSION = "${parse-version}"
+APP_ID = "${app-id}"
+MASTER_KEY = "${master-key}"
+ROOT_DOMAIN = "${main_domain}"

@@ -1,0 +1,9 @@
+services:
+  node-exporter:
+    image: prom/node-exporter:${VERSION}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /sys:/host/sys
+      - /proc:/host/proc
+      - /:/rootfs
+    restart: always

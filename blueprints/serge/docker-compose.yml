@@ -1,0 +1,12 @@
+services:
+  serge:
+    image: ghcr.io/serge-chat/serge:0.9.0
+    volumes:
+      - serge-weights:/usr/src/app/weights
+      - serge-db:/data/db/
+    expose:
+      - "8008"
+    restart: always
+volumes:
+  serge-weights: {}
+  serge-db: {}

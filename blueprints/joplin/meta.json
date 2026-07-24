@@ -1,0 +1,16 @@
+{
+  "id": "joplin",
+  "name": "joplin",
+  "description": "Self-hosted sync server for Joplin",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/laurent22/joplin/blob/dev/packages/server/README.md",
+    "website": "",
+    "docs": "https://github.com/laurent22/joplin/blob/dev/packages/server/README.md"
+  },
+  "tags": [
+    "joplin",
+    "productivity"
+  ]
+}

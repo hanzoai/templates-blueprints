@@ -1,0 +1,13 @@
+services:
+  collabora-online:
+    image: collabora/code:${COLLABORA_VERSION}
+    environment:
+      domain: ${WOPIHOST_DOMAIN}
+      cert_domain: collabora-online.${ROOT_DOMAIN}
+      server_name: collabora-online.${ROOT_DOMAIN}
+      extra_params: --o:ssl.enable=false --o:ssl.termination=true
+      username: ${ADMIN_USER}
+      password: ${ADMIN_PASS}
+    expose:
+      - "9980"
+    restart: always

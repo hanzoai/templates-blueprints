@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "grafana"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_GRAFANA = "https://${main_domain}"
+SERVICE_FQDN_GRAFANA = "${main_domain}"
+SERVICE_PASSWORD_GRAFANA = "${password:32}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"

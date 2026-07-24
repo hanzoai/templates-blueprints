@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "museum"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_USER_MINIO = "${username}"
+SERVICE_PASSWORD_MINIO = "${password:32}"
+SERVICE_FQDN_MINIO_9000 = "${main_domain}"
+SERVICE_REALBASE64_ENCRYPTION = "${base64:32}"
+SERVICE_REALBASE64_64_HASH = "${base64:64}"
+SERVICE_REALBASE64_JWT = "${base64:32}"
+SERVICE_URL_MUSEUM = "https://${main_domain}"
+SERVICE_URL_WEB = "https://${main_domain}"

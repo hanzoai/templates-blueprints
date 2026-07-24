@@ -1,0 +1,19 @@
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    environment:
+      - _APP_URL=$SERVICE_URL_RADARR
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-America/Toronto}
+    volumes:
+      - radarr-config:/config
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:7878/ping
+      interval: 2s
+      timeout: 10s
+      retries: 15

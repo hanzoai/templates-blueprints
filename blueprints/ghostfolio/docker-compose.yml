@@ -1,0 +1,33 @@
+services:
+  ghostfolio:
+    image: ghostfolio/ghostfolio:${GHOSTFOLIO_VERSION}
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      ACCESS_TOKEN_SALT: ${ACCESS_TOKEN_SALT}
+      BASE_CURRENCY: ${BASE_CURRENCY}
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@ghostfolio-db:5432/${POSTGRES_DB}?sslmode=prefer
+      HOST: ghostfolio.${ROOT_DOMAIN}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      REDIS_HOST: ghostfolio-cache
+      REDIS_PORT: "6379"
+    expose:
+      - "3333"
+    restart: always
+  ghostfolio-db:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_ROOT_PASSWORD: ${POSTGRES_ROOT_PASSWORD}
+    volumes:
+      - ghostfolio-db:/var/lib/postgresql/data
+    restart: always
+  ghostfolio-cache:
+    image: redis:${REDIS_VERSION}
+    restart: always
+volumes:
+  ghostfolio-db: {}

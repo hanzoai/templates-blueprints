@@ -1,0 +1,8 @@
+services:
+  telegraf:
+    image: telegraf:${VERSION}
+    volumes:
+      - telegraf-config:/etc/telegraf
+    restart: always
+volumes:
+  telegraf-config: {}

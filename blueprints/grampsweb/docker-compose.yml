@@ -1,0 +1,56 @@
+services:
+  grampsweb-redis:
+    image: redis:${REDIS_VERSION}
+    volumes:
+      - grampsweb-redis-data:/data
+    restart: always
+  grampsweb:
+    image: ghcr.io/gramps-project/grampsweb:${VERSION}
+    environment:
+      GRAMPSWEB_TREE: Gramps Web
+      GRAMPSWEB_CELERY_CONFIG__broker_url: redis://grampsweb-redis:6379/0
+      GRAMPSWEB_CELERY_CONFIG__result_backend: redis://grampsweb-redis:6379/0
+      GRAMPSWEB_RATELIMIT_STORAGE_URI: redis://grampsweb-redis:6379/1
+    volumes:
+      - grampsweb-users:/app/users
+      - grampsweb-index:/app/indexdir
+      - grampsweb-thumbcache:/app/thumbnail_cache
+      - grampsweb-secret:/app/secret
+      - grampsweb-db:/root/.gramps/grampsdb
+      - grampsweb-media:/app/media
+      - grampsweb-tmp:/tmp
+    depends_on:
+      - grampsweb-redis
+    expose:
+      - "5000"
+    restart: always
+  grampsweb-celery:
+    image: ghcr.io/gramps-project/grampsweb:${VERSION}
+    command: celery -A gramps_webapi.celery worker --loglevel=INFO
+    environment:
+      GRAMPSWEB_SECRET_KEY: ${SECRET_KEY}
+      GRAMPSWEB_TREE: Gramps Web
+      GRAMPSWEB_CELERY_CONFIG__broker_url: redis://grampsweb-redis:6379/0
+      GRAMPSWEB_CELERY_CONFIG__result_backend: redis://grampsweb-redis:6379/0
+      GRAMPSWEB_RATELIMIT_STORAGE_URI: redis://grampsweb-redis:6379/1
+    volumes:
+      - grampsweb-users:/app/users
+      - grampsweb-index:/app/indexdir
+      - grampsweb-thumbcache:/app/thumbnail_cache
+      - grampsweb-secret:/app/secret
+      - grampsweb-db:/root/.gramps/grampsdb
+      - grampsweb-media:/app/media
+      - grampsweb-tmp:/tmp
+    depends_on:
+      - grampsweb-redis
+    ports: []
+    restart: always
+volumes:
+  grampsweb-redis-data: {}
+  grampsweb-users: {}
+  grampsweb-index: {}
+  grampsweb-thumbcache: {}
+  grampsweb-secret: {}
+  grampsweb-db: {}
+  grampsweb-media: {}
+  grampsweb-tmp: {}

@@ -1,0 +1,16 @@
+{
+  "id": "silex-platform",
+  "name": "silex-platform",
+  "description": "Silex is an online tool for visually creating static sites with dynamic data. With the free/libre spirit of internet, together.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/silexlabs/silex-platform",
+    "website": "https://silex.me/resources/",
+    "docs": "https://silex.me/resources/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

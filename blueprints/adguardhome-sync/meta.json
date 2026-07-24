@@ -1,0 +1,16 @@
+{
+  "id": "adguardhome-sync",
+  "name": "Adguard Home Sync",
+  "description": "Synchronize AdGuard Home config to replicas",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/bakito/adguardhome-sync",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "network",
+    "utilities"
+  ]
+}

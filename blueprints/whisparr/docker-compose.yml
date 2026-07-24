@@ -1,0 +1,21 @@
+services:
+  whisparr:
+    image: ghcr.io/hotio/whisparr:nightly-2.0.0.548
+    environment:
+      PUID: ${WHISPARR_PUID-1000}
+      PGID: ${WHISPARR_PGID-1000}
+      UMASK: ${WHISPARR_UMASK-002}
+      TZ: ${TZ}
+    volumes:
+      - whisparr-localtime:/etc/localtime
+      - whisparr-timezone:/etc/timezone
+      - whisparr-config:/config
+      - whisparr-media:/media
+    expose:
+      - "6969"
+    restart: always
+volumes:
+  whisparr-localtime: {}
+  whisparr-timezone: {}
+  whisparr-config: {}
+  whisparr-media: {}

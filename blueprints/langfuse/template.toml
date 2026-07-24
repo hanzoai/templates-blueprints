@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "langfuse"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_LANGFUSE = "https://${main_domain}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_PASSWORD_SALT = "${password:32}"
+SERVICE_PASSWORD_64_LANGFUSE = "${base64:64}"
+SERVICE_USER_CLICKHOUSE = "${username}"
+SERVICE_PASSWORD_CLICKHOUSE = "${password:32}"
+SERVICE_PASSWORD_REDIS = "${password:32}"
+SERVICE_BASE64_NEXTAUTHSECRET = "${base64:32}"
+SERVICE_USER_LANGFUSE = "${username}"
+SERVICE_PASSWORD_LANGFUSE = "${password:32}"
+SERVICE_URL_LANGFUSE_3000 = "https://${main_domain}"

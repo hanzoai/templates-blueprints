@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "tubearchivist"
+port = 8120
+host = "${main_domain}"
+
+[config.env]
+TA_USER = ""
+TA_PASSWORD = "${password:32}"
+APP_DOMAIN = "${main_domain}"
+ELASTIC_PASSWORD = "${hash:32}"

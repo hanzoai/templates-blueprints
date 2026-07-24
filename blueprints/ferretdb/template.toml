@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+ferretdb-version = "2.2.0"
+postgres-version = "17-0.103.0-ferretdb-2.2.0"
+db-user = "username"
+db-pass = "${password:16}"
+db-name = "postgres"
+
+[config]
+
+[[config.domains]]
+serviceName = "ferretdb"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+FERRETDB_VERSION = "${ferretdb-version}"
+POSTGRES_VERSION = "${postgres-version}"
+DB_USER = "${db-user}"
+DB_PASS = "${db-pass}"
+DB_NAME = "${db-name}"

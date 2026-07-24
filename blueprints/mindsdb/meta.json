@@ -1,0 +1,18 @@
+{
+  "id": "mindsdb",
+  "name": "mindsdb",
+  "description": "MindsDB is the platform for building AI from enterprise data, enabling smarter organizations.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.mindsdb.com/what-is-mindsdb",
+    "docs": "https://docs.mindsdb.com/what-is-mindsdb"
+  },
+  "tags": [
+    "mysql",
+    "postgresdb",
+    "machine-learning",
+    "ai"
+  ]
+}

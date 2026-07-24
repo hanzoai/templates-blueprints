@@ -1,0 +1,18 @@
+services:
+  nitropage:
+    image: nitropage/nitropage:sqlite
+    environment:
+      - NP_AUTH_SALT=${SERVICE_BASE64_SALT}
+      - NP_AUTH_PASSWORD=${SERVICE_PASSWORD_64_SESSION}
+      - DATABASE_URL=file:../.data/dev.db
+    volumes:
+      - nitropage-data:/app/.data
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://127.0.0.1:3000/admin
+      interval: 2s
+      timeout: 10s
+      retries: 15

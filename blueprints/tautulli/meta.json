@@ -1,0 +1,16 @@
+{
+  "id": "tautulli",
+  "name": "Tautulli",
+  "description": "A python based web application for monitoring, analytics and notifications for Plex Media Server.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/Tautulli/Tautulli",
+    "website": "https://hub.docker.com/r/tautulli/tautulli",
+    "docs": "https://hub.docker.com/r/tautulli/tautulli"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

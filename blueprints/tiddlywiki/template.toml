@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+wikusername = "anonymous"
+wikipassword = ""
+nodemem = "400"
+
+[config]
+
+[[config.domains]]
+serviceName = "tiddlywiki"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+WIKUSERNAME = "${wikusername}"
+WIKIPASSWORD = "${wikipassword}"
+NODEMEM = "${nodemem}"

@@ -1,0 +1,27 @@
+{
+  "id": "langfuse",
+  "name": "langfuse",
+  "description": "Langfuse is an open-source LLM engineering platform that helps teams collaboratively debug, analyze, and iterate on their LLM applications.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://langfuse.com/docs",
+    "docs": "https://langfuse.com/docs"
+  },
+  "tags": [
+    "ai",
+    "qdrant",
+    "weaviate",
+    "langchain",
+    "openai",
+    "gpt",
+    "llm",
+    "lmops",
+    "langfuse",
+    "llmops",
+    "tracing",
+    "observation",
+    "metrics"
+  ]
+}

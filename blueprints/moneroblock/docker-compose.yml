@@ -1,0 +1,9 @@
+services:
+  moneroblock:
+    image: sethsimmons/moneroblock:v0.1.2
+    command:
+      - --daemon
+      - ${DAEMON_ADDRESS:-node.sethforprivacy.com:18089}
+    expose:
+      - "31312"
+    restart: always

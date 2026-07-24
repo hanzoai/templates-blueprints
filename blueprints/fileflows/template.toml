@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "fileflows"
+port = 5000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_FILE_FLOWS = "https://${main_domain}"

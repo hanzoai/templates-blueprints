@@ -1,0 +1,17 @@
+{
+  "id": "proxyscotch",
+  "name": "proxyscotch",
+  "description": "A simple proxy server created for https://hoppscotch.io - CORS proxy",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/hoppscotch/proxyscotch",
+    "website": "",
+    "docs": "https://github.com/hoppscotch/proxyscotch"
+  },
+  "tags": [
+    "proxy",
+    "hoppscotch",
+    "cors"
+  ]
+}

@@ -1,0 +1,23 @@
+services:
+  supertokens-postgres:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${PG_DB}
+    volumes:
+      - supertokens-postgres-data:/var/lib/postgresql/data
+    restart: always
+  supertokens:
+    image: supertokens/supertokens-postgresql:${SUPERTOKENS_VERSION}
+    environment:
+      API_KEYS: ${SUPERTOKENS_API_KEYS}
+      DISABLE_TELEMETRY: "true"
+      POSTGRESQL_CONNECTION_URI: postgresql://${PG_USER}:${POSTGRES_PASSWORD}@supertokens-postgres:5432/${PG_DB}
+    depends_on:
+      - supertokens-postgres
+    expose:
+      - "3567"
+    restart: always
+volumes:
+  supertokens-postgres-data: {}

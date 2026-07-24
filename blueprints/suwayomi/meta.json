@@ -1,0 +1,16 @@
+{
+  "id": "suwayomi",
+  "name": "Suwayomi",
+  "description": "An open-source manga reader server with bundled Web UI",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Suwayomi/docker-tachidesk",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "books",
+    "media"
+  ]
+}

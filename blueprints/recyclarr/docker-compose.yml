@@ -1,0 +1,12 @@
+services:
+  recyclarr:
+    image: ghcr.io/recyclarr/recyclarr:8.7.0
+    user: ${TIPI_UID}:${TIPI_GID}
+    environment:
+      RECYCLARR_CREATE_CONFIG: ${RECYCLARR_CREATE_CONFIG-true}
+      TZ: ${TZ}
+    volumes:
+      - recyclarr-config:/config
+    restart: always
+volumes:
+  recyclarr-config: {}

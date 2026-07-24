@@ -1,0 +1,43 @@
+services:
+  tubearchivist:
+    image: bbilly1/tubearchivist:v0.5.10
+    environment:
+      ES_URL: http://tubearchivist-es:9200
+      REDIS_CON: redis://tubearchivist-redis:6379
+      HOST_UID: "1000"
+      HOST_GID: "1000"
+      TA_USERNAME: ${TA_USER}
+      TA_PASSWORD: ${TA_PASSWORD}
+      TA_HOST: ${APP_DOMAIN}
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
+    depends_on:
+      - tubearchivist-es
+      - tubearchivist-redis
+    volumes:
+      - tubearchivist-youtube:/youtube
+      - tubearchivist-cache:/cache
+    expose:
+      - "8000"
+    restart: always
+  tubearchivist-redis:
+    image: redislabs/rejson:latest
+    depends_on:
+      - tubearchivist-es
+    volumes:
+      - tubearchivist-data:/data
+    restart: always
+  tubearchivist-es:
+    image: elasticsearch:8.17.2
+    environment:
+      xpack.security.enabled: "true"
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
+      discovery.type: single-node
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+      path.repo: /usr/share/elasticsearch/data/snapshot
+    volumes:
+      - tubearchivist-data:/usr/share/elasticsearch/data
+    restart: always
+volumes:
+  tubearchivist-youtube: {}
+  tubearchivist-cache: {}
+  tubearchivist-data: {}

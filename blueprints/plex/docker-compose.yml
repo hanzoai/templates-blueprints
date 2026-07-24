@@ -1,0 +1,22 @@
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    environment:
+      - _APP_URL=$SERVICE_URL_PLEX
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ:-America/Toronto}
+      - PLEX_CLAIM=${PLEX_CLAIM}
+    volumes:
+      - plex-config:/config
+      - plex-tv:/tv
+      - plex-movies:/movies
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://localhost:32400/identity
+      interval: 2s
+      timeout: 10s
+      retries: 15

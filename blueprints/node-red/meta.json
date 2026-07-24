@@ -1,0 +1,16 @@
+{
+  "id": "node-red",
+  "name": "Node-Red",
+  "description": "Low-code programming for event-driven applications",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://nodered.org/docs/",
+    "docs": "https://nodered.org/docs/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

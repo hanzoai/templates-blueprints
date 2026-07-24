@@ -1,0 +1,16 @@
+{
+  "id": "mcp-context-forge",
+  "name": "MCP Context Forge",
+  "description": "A gateway for managing context in applications.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/ibm/mcp-context-forge",
+    "website": "",
+    "docs": "https://github.com/ibm/mcp-context-forge"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

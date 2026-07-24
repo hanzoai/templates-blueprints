@@ -1,0 +1,16 @@
+{
+  "id": "humhub",
+  "name": "HumHub",
+  "description": "A open source social media network",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/humhub/humhub",
+    "website": "",
+    "docs": "https://github.com/humhub/humhub"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

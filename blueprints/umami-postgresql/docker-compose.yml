@@ -1,0 +1,22 @@
+services:
+  umami-postgresql:
+    image: ghcr.io/umami-software/umami:${UMAMI_VERSION}
+    environment:
+      DATABASE_URL: postgresql://umami:${POSTGRES_PASS}@umami-postgresql-postgres/umami
+    depends_on:
+      - umami-postgresql-postgres
+    expose:
+      - "3000"
+    restart: always
+  umami-postgresql-postgres:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: ${POSTGRES_PASS}
+      POSTGRES_INITDB_ARGS: ${PG_INITDB_ARGS}
+    volumes:
+      - umami-postgresql-postgres-data:/var/lib/postgresql
+    restart: always
+volumes:
+  umami-postgresql-postgres-data: {}

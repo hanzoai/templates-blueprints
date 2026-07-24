@@ -1,0 +1,21 @@
+services:
+  gitea:
+    image: gitea/gitea:latest
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    ports:
+      - 22222:22
+    volumes:
+      - gitea-data:/data
+      - gitea-timezone:/etc/timezone:ro
+      - gitea-localtime:/etc/localtime:ro
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - -f
+        - http://127.0.0.1:3000
+      interval: 2s
+      timeout: 10s
+      retries: 15

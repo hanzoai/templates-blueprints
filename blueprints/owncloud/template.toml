@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "owncloud"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_FQDN_OWNCLOUD = "${main_domain}"
+SERVICE_USER_MARIADB = "${username}"
+SERVICE_PASSWORD_MARIADB = "${password:32}"
+SERVICE_USER_OWNCLOUD = "${username}"
+SERVICE_PASSWORD_OWNCLOUD = "${password:32}"
+SERVICE_PASSWORD_MARIADBROOT = "${password:32}"

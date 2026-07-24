@@ -1,0 +1,25 @@
+services:
+  claper-postgres:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: claper
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWD}
+    volumes:
+      - claper-postgres-data:/var/lib/postgresql/data
+    restart: always
+  claper:
+    image: ghcr.io/claperco/claper:${CLAPER_VER}
+    environment:
+      DATABASE_URL: postgres://claper:${POSTGRES_PASSWD}@claper-postgres:5432/claper
+      MAIL_TRANSPORT: local
+      ENDPOINT_HOST: claper.${ROOT_DOMAIN}
+      ENDPOINT_PORT: "443"
+      SECRET_KEY_BASE: ${GENSEC64}
+    volumes:
+      - claper-uploads:/app/priv/static/uploads
+    expose:
+      - "4000"
+    restart: always
+volumes:
+  claper-postgres-data: {}
+  claper-uploads: {}

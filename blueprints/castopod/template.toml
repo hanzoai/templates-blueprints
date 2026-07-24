@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "castopod"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_MYSQL = "${username}"
+SERVICE_PASSWORD_MYSQL = "${password:32}"
+SERVICE_URL_CASTOPOD = "https://${main_domain}"
+SERVICE_REALBASE64_64_SALT = "${base64:64}"
+SERVICE_PASSWORD_REDIS = "${password:32}"

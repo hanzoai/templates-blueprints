@@ -1,0 +1,27 @@
+{
+  "id": "chaskiq",
+  "name": "chaskiq",
+  "description": "Chaskiq is an messaging platform for marketing, support & sales",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://chaskiq.io",
+    "docs": "https://chaskiq.io"
+  },
+  "tags": [
+    "chaskiq",
+    "messaging",
+    "chat",
+    "marketing",
+    "support",
+    "sales",
+    "open",
+    "source",
+    "rails",
+    "redis",
+    "postgresql",
+    "sidekiq",
+    "helpdesk"
+  ]
+}

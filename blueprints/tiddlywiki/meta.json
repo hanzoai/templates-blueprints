@@ -1,0 +1,16 @@
+{
+  "id": "tiddlywiki",
+  "name": "TiddlyWiki",
+  "description": "TiddlyWiki is a personal wiki and a non-linear notebook for organising and sharing complex information",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/nicolaw/tiddlywiki",
+    "docs": "https://hub.docker.com/r/nicolaw/tiddlywiki"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

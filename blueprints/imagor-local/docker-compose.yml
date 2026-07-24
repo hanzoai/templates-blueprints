@@ -1,0 +1,15 @@
+services:
+  imagor-local:
+    image: shumc/imagor:${IMAGOR_VERSION}
+    environment:
+      PORT: "80"
+      IMAGOR_UNSAFE: ${ENV_IMAGOR_UNSAFE}
+      IMAGOR_SECRET: ${ENV_IMAGOR_SECRET}
+      FILE_LOADER_BASE_DIR: /mnt/data
+      FILE_STORAGE_BASE_DIR: /mnt/data
+      FILE_RESULT_STORAGE_BASE_DIR: /mnt/data/result
+    volumes:
+      - imagor-local-data:/mnt/data
+    restart: always
+volumes:
+  imagor-local-data: {}

@@ -1,0 +1,15 @@
+{
+  "id": "lidarr",
+  "name": "Lidarr",
+  "description": "Music collection manager for Usenet and BitTorrent users",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Lidarr/Lidarr",
+    "website": "https://lidarr.audio/",
+    "docs": "https://wiki.servarr.com/lidarr"
+  },
+  "tags": [
+    "media"
+  ]
+}

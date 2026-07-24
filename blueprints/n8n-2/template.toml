@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "n8n-2"
+port = 5678
+host = "${main_domain}"
+
+[config.env]
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"
+N8N_NR_DB_PASSWORD = "${hash:32}"
+N8N_DB_PASSWORD = "${hash:32}"

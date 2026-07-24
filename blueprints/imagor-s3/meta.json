@@ -1,0 +1,16 @@
+{
+  "id": "imagor-s3",
+  "name": "Imagor (S3 storage)",
+  "description": "Imagor is a fast, Docker-ready image processing server written in Go. (Stores images in S3 bucket)",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/cshum/imagor",
+    "website": "",
+    "docs": "https://github.com/cshum/imagor"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

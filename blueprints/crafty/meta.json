@@ -1,0 +1,15 @@
+{
+  "id": "crafty",
+  "name": "Crafty",
+  "description": "Take control of your Minecraft servers.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://craftycontrol.com",
+    "docs": "https://docs.craftycontrol.com"
+  },
+  "tags": [
+    "media"
+  ]
+}

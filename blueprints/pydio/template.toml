@@ -1,0 +1,22 @@
+[variables]
+main_domain = "${domain}"
+pydio-version = "2.2.8"
+mariadb-version = "10.6.1"
+mariadb-db = "cells"
+mariadb-user = "pydio"
+mariadb-pass = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "pydio"
+port = 8811
+host = "${main_domain}"
+
+[config.env]
+PYDIO_VERSION = "${pydio-version}"
+MARIADB_VERSION = "${mariadb-version}"
+MARIADB_DB = "${mariadb-db}"
+MARIADB_USER = "${mariadb-user}"
+MARIADB_PASS = "${mariadb-pass}"
+ROOT_DOMAIN = "${main_domain}"

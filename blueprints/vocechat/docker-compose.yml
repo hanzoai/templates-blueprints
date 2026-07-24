@@ -1,0 +1,12 @@
+services:
+  vocechat:
+    image: privoce/vocechat-server:v0.5.17
+    environment:
+      TZ: $TZ
+    expose:
+      - "3000"
+    volumes:
+      - vocechat-data:/home/vocechat-server/data
+    restart: unless-stopped
+volumes:
+  vocechat-data: {}

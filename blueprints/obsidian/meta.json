@@ -1,0 +1,15 @@
+{
+  "id": "obsidian",
+  "name": "Obsidian",
+  "description": "Obsidian is a knowledge management app for creating, linking, and visually organizing Markdown notes.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/obsidianmd/obsidian-releases",
+    "website": "https://obsidian.md",
+    "docs": "https://help.obsidian.md"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

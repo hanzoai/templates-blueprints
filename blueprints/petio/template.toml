@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "petio"
+port = 7777
+host = "${main_domain}"
+
+[config.env]
+PUID = ""
+PGID = ""
+TZ = ""

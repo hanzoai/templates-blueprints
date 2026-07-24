@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_PASSWORD: ${PG_PASS}
+      POSTGRES_DB: ${PG_DB}
+      POSTGRES_INITDB_ARGS: ${PG_INITDB_ARGS}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  postgres-data: {}

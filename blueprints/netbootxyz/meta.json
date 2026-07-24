@@ -1,0 +1,15 @@
+{
+  "id": "netbootxyz",
+  "name": "Netboot.xyz",
+  "description": "Your favorite operating systems in one place.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/netbootxyz/netboot.xyz",
+    "website": "https://netboot.xyz/",
+    "docs": "https://netboot.xyz/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

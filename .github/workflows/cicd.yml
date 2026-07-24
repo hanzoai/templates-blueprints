@@ -1,0 +1,66 @@
+name: CI/CD
+
+# Build + push the templates.hanzo.ai catalog image (hanzoai/static serving the
+# blueprint catalog) to GHCR on our self-hosted arc pool. The rollout onto
+# do-sfo3-hanzo-k8s is owned by the operator App CR (universe:
+# infra/k8s/operator/crs/templates-blueprints.yaml), NOT this repo — CI only
+# produces the immutable image.
+#
+# Self-contained (mirrors hanzoai/sensei.group's proven workflow): the exact
+# `docker login` + `docker buildx build --push` steps, tag shape
+# sha-<short>-amd64 + latest. GHCR auth = the job's automatic GITHUB_TOKEN.
+# Before the build we REGENERATE meta.json from blueprints/ and VALIDATE the
+# whole catalog (every template.toml parses with `toml`, every compose parses as
+# YAML, meta.json is the array the platform expects) so a broken blueprint can
+# never reach a running pod.
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    # hanzo-build-linux-amd64 = the warm-floor arc pool (minRunners:1), proven
+    # active (hanzoai/world + sensei.group build here in ~2 min).
+    runs-on: hanzo-build-linux-amd64
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate meta.json + validate catalog
+        run: |
+          cd scripts
+          npm ci --no-audit --no-fund
+          node generate-meta.mjs ../blueprints ../meta.json
+          node validate.mjs ..
+
+      - name: Image tag (immutable sha-<short>-amd64)
+        id: tag
+        run: echo "tag=sha-$(echo ${{ github.sha }} | cut -c1-7)-amd64" >> "$GITHUB_OUTPUT"
+
+      - name: Log in to GHCR
+        if: github.event_name != 'pull_request'
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+
+      - name: Build & push image
+        if: github.event_name != 'pull_request'
+        run: |
+          docker buildx build --platform linux/amd64 --push \
+            -t ghcr.io/hanzoai/templates-blueprints:${{ steps.tag.outputs.tag }} \
+            -t ghcr.io/hanzoai/templates-blueprints:latest \
+            -f Dockerfile .
+          echo "pushed ghcr.io/hanzoai/templates-blueprints:${{ steps.tag.outputs.tag }}"
+
+      - name: Build image (PR, no push)
+        if: github.event_name == 'pull_request'
+        run: docker buildx build --platform linux/amd64 -f Dockerfile -t templates-blueprints:pr .

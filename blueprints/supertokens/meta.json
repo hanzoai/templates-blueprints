@@ -1,0 +1,16 @@
+{
+  "id": "supertokens",
+  "name": "SuperTokens",
+  "description": "Auth Provider solution alternative to Auth0 / Firebase Auth / AWS Cognito",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/supertokens/supertokens-docker-postgresql",
+    "website": "https://supertokens.com/docs/guides",
+    "docs": "https://supertokens.com/docs/guides"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

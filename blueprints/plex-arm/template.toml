@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+plex-version = "1.25.8"
+plex-token = ""
+tz = "Europe/Copenhagen"
+
+[config]
+
+[[config.domains]]
+serviceName = "plex-arm"
+port = 32400
+host = "${main_domain}"
+
+[config.env]
+PLEX_VERSION = "${plex-version}"
+PLEX_TOKEN = "${plex-token}"
+TZ = "${tz}"
+ROOT_DOMAIN = "${main_domain}"

@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+percona-version = "ps-8.0"
+db-pass = "${password:12}"
+charset = "utf8mb4"
+collation = "utf8mb4_unicode_ci"
+
+[config]
+
+[[config.domains]]
+serviceName = "percona"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+PERCONA_VERSION = "${percona-version}"
+DB_PASS = "${db-pass}"
+CHARSET = "${charset}"
+COLLATION = "${collation}"

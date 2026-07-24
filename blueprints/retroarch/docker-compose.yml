@@ -1,0 +1,8 @@
+services:
+  retroarch:
+    image: inglebard/retroarch-web:latest
+    environment:
+      - ROOT_WWW_PATH="/var/www/html"
+    expose:
+      - "80"
+    restart: unless-stopped

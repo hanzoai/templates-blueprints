@@ -1,0 +1,16 @@
+{
+  "id": "sourcegraph",
+  "name": "Sourcegraph",
+  "description": "Sourcegraph is a free, self-hosted code search and intelligence server that helps developers find, review, understand, and debug code",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/sourcegraph/server/",
+    "docs": "https://hub.docker.com/r/sourcegraph/server/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

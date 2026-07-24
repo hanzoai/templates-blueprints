@@ -1,0 +1,11 @@
+services:
+  hasura-only:
+    image: hasura/graphql-engine:${HASURA_VERSION}
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: ${DATABASE_URL}
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+      HASURA_GRAPHQL_ADMIN_SECRET: ${ADMIN_SECRET}
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+    expose:
+      - "8080"
+    restart: always

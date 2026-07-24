@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+version = "@sha256:38d9630df74d77e9b704c0dbac10c626ef0f8ccb75fa0457e546018e7227b215"
+
+[config]
+
+[[config.domains]]
+serviceName = "invidious"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"

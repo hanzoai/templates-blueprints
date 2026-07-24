@@ -1,0 +1,15 @@
+{
+  "id": "zipline-1",
+  "name": "Zipline",
+  "description": "A ShareX/file upload server that is easy to use, packed with features, and with an easy setup!",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/diced/zipline",
+    "website": "https://zipline.diced.sh",
+    "docs": "https://zipline.diced.sh"
+  },
+  "tags": [
+    "media"
+  ]
+}

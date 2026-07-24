@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "weaviate"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_APIKEYS = "${password:32}"

@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "zerotier"
+port = 9993
+host = "${main_domain}"
+
+[config.env]
+NETWORK_ID = ""

@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "swetrix"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_SWETRIXAPI = "https://${main_domain}"
+SERVICE_BASE64_64_SECRETKEYBASE = "${base64:64}"
+SERVICE_PASSWORD_CLICKHOUSE = "${password:32}"
+SERVICE_PASSWORD_REDIS = "${password:32}"

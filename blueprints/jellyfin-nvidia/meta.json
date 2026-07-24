@@ -1,0 +1,15 @@
+{
+  "id": "jellyfin-nvidia",
+  "name": "Jellyfin(Nvidia GPU)",
+  "description": "The personal Media System",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/jellyfin/jellyfin",
+    "website": "https://jellyfin.org/",
+    "docs": "https://jellyfin.org/docs/"
+  },
+  "tags": [
+    "media"
+  ]
+}

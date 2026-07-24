@@ -1,0 +1,16 @@
+{
+  "id": "percona",
+  "name": "Percona Server",
+  "description": "Percona Server for MySQL is a fork of the MySQL relational database management system created by Percona.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.percona.com/software/mysql-database/percona-server",
+    "docs": "https://www.percona.com/software/mysql-database/percona-server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "calibre-web-automated-book-downloader",
+  "name": "calibre-web-automated-book-downloader",
+  "description": "An intuitive web interface for searching and requesting book downloads, designed to work seamlessly with Calibre-Web-Automated.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/calibrain/calibre-web-automated-book-downloader",
+    "website": "",
+    "docs": "https://github.com/calibrain/calibre-web-automated-book-downloader"
+  },
+  "tags": [
+    "calibre",
+    "calibre-web",
+    "ebook",
+    "library",
+    "epub",
+    "ereader",
+    "kindle",
+    "book",
+    "reader",
+    "download",
+    "downloader",
+    "media"
+  ]
+}

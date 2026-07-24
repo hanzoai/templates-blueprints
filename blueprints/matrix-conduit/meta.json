@@ -1,0 +1,16 @@
+{
+  "id": "matrix-conduit",
+  "name": "Matrix Conduit",
+  "description": "Server for the matrix protocol, written in Rust",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://gitlab.com/famedly/conduit/-/blob/next/README.md",
+    "docs": "https://gitlab.com/famedly/conduit/-/blob/next/README.md"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

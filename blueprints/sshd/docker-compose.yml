@@ -1,0 +1,17 @@
+services:
+  sshd:
+    image: lscr.io/linuxserver/openssh-server:version-9.7_p1-r4
+    environment:
+      PUID: "1001"
+      PGID: "1001"
+      TZ: Europe/London
+      PUBLIC_KEY: ${SSHD_PUBLIC_KEY}
+      DOCKER_MODS: linuxserver/mods:openssh-server-ssh-tunnel
+      USER_NAME: ${SSHD_USERNAME}
+    volumes:
+      - sshd-config:/config
+    ports:
+      - ${SSHD_PORT}:2222
+    restart: always
+volumes:
+  sshd-config: {}

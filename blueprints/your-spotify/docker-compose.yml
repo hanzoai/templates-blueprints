@@ -1,0 +1,29 @@
+services:
+  your-spotify:
+    image: yooooomi/your_spotify_client:1.20.0
+    environment:
+      API_ENDPOINT: http://${INTERNAL_IP}:32500
+    depends_on:
+      - your-spotify-server
+    expose:
+      - "3000"
+    restart: always
+  your-spotify-server:
+    image: yooooomi/your_spotify_server
+    environment:
+      API_ENDPOINT: http://${INTERNAL_IP}:32500
+      CLIENT_ENDPOINT: http://${INTERNAL_IP}:${APP_PORT}
+      SPOTIFY_PUBLIC: ${SPOTIFY_PUBLIC}
+      SPOTIFY_SECRET: ${SPOTIFY_SECRET}
+      MONGO_ENDPOINT: mongodb://your-spotify-db:27017/your_spotify
+      CORS: i-want-a-security-vulnerability-and-want-to-allow-all-origins
+    depends_on:
+      - your-spotify-db
+    restart: always
+  your-spotify-db:
+    image: mongo:4.4.30
+    volumes:
+      - your-spotify-db:/data/db
+    restart: always
+volumes:
+  your-spotify-db: {}

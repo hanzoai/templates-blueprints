@@ -1,0 +1,13 @@
+services:
+  mcp-context-forge:
+    image: ghcr.io/ibm/mcp-context-forge:0.2.0
+    environment:
+      HOST: 0.0.0.0
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      BASIC_AUTH_USER: ${BASIC_AUTH_USER}
+      BASIC_AUTH_PASSWORD: ${BASIC_AUTH_PASSWORD}
+      AUTH_REQUIRED: "true"
+      DATABASE_URL: sqlite:///./mcp.db
+    expose:
+      - "4444"
+    restart: always

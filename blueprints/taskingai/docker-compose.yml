@@ -1,0 +1,102 @@
+services:
+  frontend:
+    image: taskingai/taskingai-console:v0.3.0
+    depends_on:
+      - backend-web
+      - backend-api
+    restart: always
+  backend-inference:
+    image: taskingai/taskingai-inference:v0.2.14
+    environment:
+      AES_ENCRYPTION_KEY: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+      ICON_URL_PREFIX: http://nginx:3080
+      PROJECT_ID: taskingai
+    restart: always
+  backend-plugin:
+    image: taskingai/taskingai-plugin:v0.2.10
+    environment:
+      AES_ENCRYPTION_KEY: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+      ICON_URL_PREFIX: http://nginx:3080
+      OBJECT_STORAGE_TYPE: local
+      HOST_URL: http://nginx:3080
+      PATH_TO_VOLUME: /var/lib/data
+      PROJECT_ID: taskingai
+    volumes:
+      - taskingai-data:/var/lib/data
+    restart: always
+  backend-api:
+    image: taskingai/taskingai-server:v0.3.0
+    environment:
+      POSTGRES_URL: postgres://postgres:TaskingAI321@db:5432/taskingai
+      REDIS_URL: redis://:TaskingAI321@cache:6379/0
+      TASKINGAI_INFERENCE_URL: http://backend-inference:8000
+      TASKINGAI_PLUGIN_URL: http://backend-plugin:8000
+      AES_ENCRYPTION_KEY: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+      OBJECT_STORAGE_TYPE: local
+      HOST_URL: http://nginx:3080
+      PATH_TO_VOLUME: /var/lib/data
+      PROJECT_ID: taskingai
+    depends_on:
+      - db
+      - cache
+      - backend-inference
+      - backend-plugin
+    volumes:
+      - taskingai-data:/var/lib/data
+    restart: always
+  backend-web:
+    image: taskingai/taskingai-server:v0.3.0
+    environment:
+      POSTGRES_URL: postgres://postgres:TaskingAI321@db:5432/taskingai
+      REDIS_URL: redis://:TaskingAI321@cache:6379/0
+      TASKINGAI_INFERENCE_URL: http://backend-inference:8000
+      TASKINGAI_PLUGIN_URL: http://backend-plugin:8000
+      AES_ENCRYPTION_KEY: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+      JWT_SECRET_KEY: dbefe42f34473990a3fa903a6a3283acdc3a910beb1ae271a6463ffa5a926bfb
+      PURPOSE: WEB
+      DEFAULT_ADMIN_USERNAME: admin
+      DEFAULT_ADMIN_PASSWORD: TaskingAI321
+      OBJECT_STORAGE_TYPE: local
+      HOST_URL: http://nginx:3080
+      PATH_TO_VOLUME: /var/lib/data
+      PROJECT_ID: taskingai
+    depends_on:
+      - db
+      - cache
+      - backend-inference
+      - backend-plugin
+    volumes:
+      - taskingai-data:/var/lib/data
+    restart: always
+  db:
+    image: ankane/pgvector:v0.5.1
+    environment:
+      POSTGRES_DB: taskingai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: TaskingAI321
+    volumes:
+      - taskingai-data:/var/lib/postgresql/data
+    restart: always
+  cache:
+    image: redis:7-alpine
+    command:
+      - redis-server
+      - --requirepass
+      - TaskingAI321
+    volumes:
+      - taskingai-data:/data
+    restart: always
+  nginx:
+    image: nginx:1.24
+    depends_on:
+      - frontend
+      - backend-web
+      - backend-api
+    expose:
+      - "80"
+    volumes:
+      - taskingai-nginx:/var/cache/nginx
+    restart: always
+volumes:
+  taskingai-data: {}
+  taskingai-nginx: {}

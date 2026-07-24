@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+raneto-version = "0.17.0-ls49"
+tz = "Europe/Brussels"
+
+[config]
+
+[[config.domains]]
+serviceName = "raneto"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+RANETO_VERSION = "${raneto-version}"
+TZ = "${tz}"

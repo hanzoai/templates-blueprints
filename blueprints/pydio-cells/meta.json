@@ -1,0 +1,15 @@
+{
+  "id": "pydio-cells",
+  "name": "pydio-cells",
+  "description": "High-performance large file sharing, native no-code automation, and a collaboration-centric architecture that simplifies access control without compromising security or compliance.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.pydio.com/",
+    "docs": "https://docs.pydio.com/"
+  },
+  "tags": [
+    "storage"
+  ]
+}

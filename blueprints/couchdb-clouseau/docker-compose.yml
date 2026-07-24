@@ -1,0 +1,15 @@
+services:
+  couchdb-clouseau:
+    image: ibmcom/couchdb3:${COUCHDB_VERSION}
+    environment:
+      COUCHDB_USER: ${COUCHDB_USER}
+      COUCHDB_PASSWORD: ${COUCHDB_PASSWORD}
+    volumes:
+      - couchdb-clouseau-db-data:/opt/couchdb/data
+      - couchdb-clouseau-db-etc:/opt/couchdb/etc
+    expose:
+      - "5984"
+    restart: always
+volumes:
+  couchdb-clouseau-db-data: {}
+  couchdb-clouseau-db-etc: {}

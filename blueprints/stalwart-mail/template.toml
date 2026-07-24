@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "stalwart-mail"
+port = 8677
+host = "${main_domain}"

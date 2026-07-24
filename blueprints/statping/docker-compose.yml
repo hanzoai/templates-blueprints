@@ -1,0 +1,31 @@
+services:
+  statping:
+    image: statping/statping:${STATPING_VERSION}
+    environment:
+      ADMIN_USER: ${ADMIN_USER}
+      ADMIN_PASSWORD: ${ADMIN_PASS}
+      ADMIN_EMAIL: ${ADMIN_EMAIL}
+      DB_CONN: postgres
+      DB_HOST: statping-postgres
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_DATABASE: ${DB_NAME}
+    volumes:
+      - statping-app:/app
+    depends_on:
+      - statping-postgres
+    expose:
+      - "8080"
+    restart: always
+  statping-postgres:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - statping-postgres-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  statping-app: {}
+  statping-postgres-data: {}

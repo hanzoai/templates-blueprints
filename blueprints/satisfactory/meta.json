@@ -1,0 +1,21 @@
+{
+  "id": "satisfactory",
+  "name": "satisfactory",
+  "description": "Satisfactory Dedicated Server for hosting your own Satisfactory game sessions.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/wolveix/satisfactory-server",
+    "website": "",
+    "docs": "https://github.com/wolveix/satisfactory-server"
+  },
+  "tags": [
+    "satisfactory",
+    "game-server",
+    "dedicated-server",
+    "steam",
+    "self-hosted",
+    "gaming",
+    "games"
+  ]
+}

@@ -1,0 +1,14 @@
+services:
+  redis:
+    image: redis:${REDIS_VERSION}
+    command:
+      - sh
+      - -c
+      - redis-server --requirepass $REDIS_PASSWORD
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    volumes:
+      - redis-redis-data:/data
+    restart: always
+volumes:
+  redis-redis-data: {}

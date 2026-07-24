@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+mercure-version = "v0.13"
+mercure-publisher-jwt-key = "!ChangeMe!"
+mercure-subscriber-jwt-key = "!ChangeMe!"
+mercure-extra-directives = "subscriptions demo anonymous cors_origins * publish_origins *"
+
+[config]
+
+[[config.domains]]
+serviceName = "mercure"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+MERCURE_VERSION = "${mercure-version}"
+MERCURE_PUBLISHER_JWT_KEY = "${mercure-publisher-jwt-key}"
+MERCURE_SUBSCRIBER_JWT_KEY = "${mercure-subscriber-jwt-key}"
+MERCURE_EXTRA_DIRECTIVES = "${mercure-extra-directives}"

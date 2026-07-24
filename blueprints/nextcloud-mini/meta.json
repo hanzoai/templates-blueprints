@@ -1,0 +1,15 @@
+{
+  "id": "nextcloud-mini",
+  "name": "Nextcloud Mini",
+  "description": "A safe home for all your data.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/nextcloud/server",
+    "website": "https://nextcloud.com",
+    "docs": "https://nextcloud.com"
+  },
+  "tags": [
+    "data"
+  ]
+}

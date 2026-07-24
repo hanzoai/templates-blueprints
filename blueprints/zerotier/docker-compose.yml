@@ -1,0 +1,5 @@
+services:
+  zerotier:
+    image: zerotier/zerotier:1.14.2
+    command: ${NETWORK_ID}
+    restart: always

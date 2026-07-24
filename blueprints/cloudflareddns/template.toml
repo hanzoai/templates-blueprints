@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+api-key = ""
+zone = "$$cap_root_domain"
+subdomain = "*"
+proxied = "false"
+rrtype = "A"
+dns-server = "1.1.1.1"
+cron = "*/5 * * * *"
+
+[config]
+
+[[config.domains]]
+serviceName = "cloudflareddns"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+API_KEY = "${api-key}"
+ZONE = "${zone}"
+SUBDOMAIN = "${subdomain}"
+PROXIED = "${proxied}"
+RRTYPE = "${rrtype}"
+DNS_SERVER = "${dns-server}"
+CRON = "${cron}"

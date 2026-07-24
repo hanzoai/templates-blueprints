@@ -1,0 +1,10 @@
+services:
+  stalwart-mail:
+    image: ghcr.io/stalwartlabs/stalwart:v0.16.14
+    volumes:
+      - stalwart-mail-stalwart-mail:/opt/stalwart-mail
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  stalwart-mail-stalwart-mail: {}

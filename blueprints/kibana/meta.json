@@ -1,0 +1,16 @@
+{
+  "id": "kibana",
+  "name": "kibana",
+  "description": "Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.elastic.co/guide/en/kibana/current/docker.html",
+    "docs": "https://www.elastic.co/guide/en/kibana/current/docker.html"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

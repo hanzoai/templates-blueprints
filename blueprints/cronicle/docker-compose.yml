@@ -1,0 +1,16 @@
+services:
+  cronicle:
+    image: soulteary/cronicle:${VERSION}
+    environment:
+      TZ: ${TIMEZONE}
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
+      - cronicle:/opt/cronicle/data
+      - cronicle-plugins:/opt/cronicle/plugins
+    expose:
+      - "3012"
+    restart: always
+volumes:
+  cronicle: {}
+  cronicle-plugins: {}

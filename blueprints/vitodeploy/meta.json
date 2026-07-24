@@ -1,0 +1,16 @@
+{
+  "id": "vitodeploy",
+  "name": "VitoDeploy",
+  "description": "VitoDeploy is a self-hosted, agentless server management and deployment tool for provisioning servers and deploying custom websites.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://vitodeploy.com/docs/getting-started/installation",
+    "docs": "https://vitodeploy.com/docs/getting-started/installation"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

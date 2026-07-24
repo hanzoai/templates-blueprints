@@ -1,0 +1,6 @@
+services:
+  apprise:
+    image: caronc/apprise:${APPRISE_VERSION}
+    expose:
+      - "8000"
+    restart: always

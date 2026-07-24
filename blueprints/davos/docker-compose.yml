@@ -1,0 +1,15 @@
+services:
+  davos-davos:
+    image: lscr.io/linuxserver/davos:${DAVOS_VERSION}
+    environment:
+      PGID: ${DAVOS_PGID}
+      PUID: ${DAVOS_PUID}
+    volumes:
+      - davos-config:/config
+      - davos-download:/download
+    expose:
+      - "8080"
+    restart: unless-stopped
+volumes:
+  davos-config: {}
+  davos-download: {}

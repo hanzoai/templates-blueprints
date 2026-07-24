@@ -1,0 +1,16 @@
+services:
+  hugo:
+    image: ghcr.io/gohugoio/hugo:v0.161.1
+    command:
+      - server
+      - --bind=0.0.0.0
+    user: 0:0
+    expose:
+      - "1313"
+    volumes:
+      - hugo-project:/project
+      - hugo-cache:/cache
+    restart: unless-stopped
+volumes:
+  hugo-project: {}
+  hugo-cache: {}

@@ -1,0 +1,26 @@
+services:
+  splitpro:
+    image: ossapps/splitpro:${SPLITPRO_VERSION}
+    environment:
+      PORT: "3000"
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD}@splitpro-db:5432/splitpro
+      NEXTAUTH_URL: https://splitpro.${ROOT_DOMAIN}
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+    depends_on:
+      - splitpro-db
+    expose:
+      - "3000"
+    restart: always
+  splitpro-db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: splitpro
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - splitpro-db-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  splitpro-db-data: {}

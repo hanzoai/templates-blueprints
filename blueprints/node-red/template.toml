@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+node-red-version = "3.1.8-18-minimal"
+node-red-timezone = "Europe/Berlin"
+
+[config]
+
+[[config.domains]]
+serviceName = "node-red"
+port = 1880
+host = "${main_domain}"
+
+[config.env]
+NODE_RED_VERSION = "${node-red-version}"
+NODE_RED_TIMEZONE = "${node-red-timezone}"

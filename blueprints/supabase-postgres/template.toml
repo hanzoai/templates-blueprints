@@ -1,0 +1,37 @@
+[variables]
+main_domain = "${domain}"
+app-version = "15.1.0"
+pg-user = "postgres"
+pg-db = "postgres"
+pg-pass = "${password:32}"
+pg-port = "5432"
+pg-initdb-args = ""
+pg-repl-user = ""
+pg-repl-mode = ""
+pg-repl-pass = ""
+pg-master-host = "${main_domain}"
+pg-master-port = ""
+pg-num-sync-repl = ""
+pg-sync-commit-mode = "on"
+
+[config]
+
+[[config.domains]]
+serviceName = "supabase-postgres-db"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+APP_VERSION = "${app-version}"
+PG_USER = "${pg-user}"
+PG_DB = "${pg-db}"
+PG_PASS = "${pg-pass}"
+PG_PORT = "${pg-port}"
+PG_INITDB_ARGS = "${pg-initdb-args}"
+PG_REPL_USER = "${pg-repl-user}"
+PG_REPL_MODE = "${pg-repl-mode}"
+PG_REPL_PASS = "${pg-repl-pass}"
+PG_MASTER_HOST = "${pg-master-host}"
+PG_MASTER_PORT = "${pg-master-port}"
+PG_NUM_SYNC_REPL = "${pg-num-sync-repl}"
+PG_SYNC_COMMIT_MODE = "${pg-sync-commit-mode}"

@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+readarr-version = "0.3.12-nightly"
+tz = "America/Chicago"
+puid = "1000"
+guid = "1000"
+
+[config]
+
+[[config.domains]]
+serviceName = "readarr"
+port = 8787
+host = "${main_domain}"
+
+[config.env]
+READARR_VERSION = "${readarr-version}"
+TZ = "${tz}"
+PUID = "${puid}"
+GUID = "${guid}"

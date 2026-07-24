@@ -1,0 +1,37 @@
+[variables]
+main_domain = "${domain}"
+db-user = "fusion"
+db-pass = ""
+fusionauth-version = "1.7.2"
+fusion-memory = "256M"
+postgres-version = "9.6"
+container-port = "9011"
+container-search-port = "9200"
+elasticsearch-version = "6.7.1"
+elasticsearch-cluster-name = "elasticsearch-cluster"
+elasticsearch-unicast-hosts = "false"
+elasticsearch-node-data = "true"
+elasticsearch-node-master = "true"
+elasticsearch-minimum-master-nodes = "1"
+
+[config]
+
+[[config.domains]]
+serviceName = "fusionauth-db"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+DB_USER = "${db-user}"
+DB_PASS = "${db-pass}"
+FUSIONAUTH_VERSION = "${fusionauth-version}"
+FUSION_MEMORY = "${fusion-memory}"
+POSTGRES_VERSION = "${postgres-version}"
+CONTAINER_PORT = "${container-port}"
+CONTAINER_SEARCH_PORT = "${container-search-port}"
+ELASTICSEARCH_VERSION = "${elasticsearch-version}"
+ELASTICSEARCH_CLUSTER_NAME = "${elasticsearch-cluster-name}"
+ELASTICSEARCH_UNICAST_HOSTS = "${elasticsearch-unicast-hosts}"
+ELASTICSEARCH_NODE_DATA = "${elasticsearch-node-data}"
+ELASTICSEARCH_NODE_MASTER = "${elasticsearch-node-master}"
+ELASTICSEARCH_MINIMUM_MASTER_NODES = "${elasticsearch-minimum-master-nodes}"

@@ -1,0 +1,21 @@
+{
+  "id": "nexus-arm",
+  "name": "nexus-arm",
+  "description": "Open source Universal Repository Manager (ARM version, community edition), default credentials: admin/admin123",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://help.sonatype.com/en/sonatype-nexus-repository.html",
+    "docs": "https://help.sonatype.com/en/sonatype-nexus-repository.html"
+  },
+  "tags": [
+    "repository",
+    "manager",
+    "open-source",
+    "docker",
+    "registry",
+    "container",
+    "devtools"
+  ]
+}

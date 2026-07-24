@@ -1,0 +1,13 @@
+services:
+  suwayomi:
+    image: ghcr.io/suwayomi/tachidesk:v2.3.2243
+    environment:
+      TZ: ${TZ}
+      BIND_IP: 0.0.0.0
+    volumes:
+      - suwayomi-tachidesk:/home/suwayomi/.local/share/Tachidesk
+    expose:
+      - "4567"
+    restart: always
+volumes:
+  suwayomi-tachidesk: {}

@@ -1,0 +1,16 @@
+services:
+  komga:
+    image: gotson/komga:1.24.4
+    environment:
+      PGID: "1000"
+      PUID: "1000"
+    expose:
+      - "25600"
+    volumes:
+      - komga-config:/config
+      - komga-data:/data
+      - /etc/timezone:/etc/timezone
+    restart: unless-stopped
+volumes:
+  komga-config: {}
+  komga-data: {}

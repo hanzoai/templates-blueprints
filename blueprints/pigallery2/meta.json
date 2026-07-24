@@ -1,0 +1,16 @@
+{
+  "id": "pigallery2",
+  "name": "PiGallery2",
+  "description": "A fast directory-first photo gallery website, with rich UI, optimized for running on low resource servers (especially on raspberry pi)",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/bpatrik/pigallery2/blob/master/docker/docker-compose/pigallery2-only/docker-compose.yml",
+    "website": "",
+    "docs": "https://github.com/bpatrik/pigallery2/blob/master/docker/docker-compose/pigallery2-only/docker-compose.yml"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

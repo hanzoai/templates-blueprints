@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "sparkyfitness-frontend"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_PASSWORD_64_SERVERAPIENCRYPTIONKEY = "${base64:64}"
+SERVICE_PASSWORD_64_SERVERJWTSECRET = "${base64:64}"
+SERVICE_URL_SPARKYFITNESS_80 = "https://${main_domain}"

@@ -1,0 +1,11 @@
+services:
+  lodestone-core:
+    image: ghcr.io/lodestone-team/lodestone_core:0.5.1
+    user: 0:0
+    volumes:
+      - lodestone-core-lodestone:/root/.lodestone
+    expose:
+      - "16662"
+    restart: always
+volumes:
+  lodestone-core-lodestone: {}

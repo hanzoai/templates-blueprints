@@ -1,0 +1,15 @@
+{
+  "id": "mqttx",
+  "name": "MQTTX",
+  "description": "MQTT websocket browser client tool",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/emqx/MQTTX/",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

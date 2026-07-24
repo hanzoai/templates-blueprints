@@ -1,0 +1,24 @@
+services:
+  wiki-js-postgres:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_DB: wiki
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_USER: wikijs
+    volumes:
+      - wiki-js-db-data:/var/lib/postgresql/data
+    restart: always
+  wiki-js:
+    image: requarks/wiki:${VERSION}
+    environment:
+      DB_TYPE: postgres
+      DB_HOST: wiki-js-postgres
+      DB_PORT: "5432"
+      DB_USER: wikijs
+      DB_PASS: ${DB_PASS}
+      DB_NAME: wiki
+    expose:
+      - "3000"
+    restart: always
+volumes:
+  wiki-js-db-data: {}

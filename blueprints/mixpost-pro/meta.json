@@ -1,0 +1,16 @@
+{
+  "id": "mixpost-pro",
+  "name": "Mixpost Pro",
+  "description": "Self-hosted social media management. Schedule and organize your social content.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/inovector/mixpost",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "social",
+    "utilities"
+  ]
+}

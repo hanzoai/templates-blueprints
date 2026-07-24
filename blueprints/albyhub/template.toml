@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "albyhub"
+port = 58000
+host = "${main_domain}"
+
+[config.env]
+PGID = ""
+PUID = ""
+TZ = ""

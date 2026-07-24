@@ -1,0 +1,19 @@
+[variables]
+main_domain = "${domain}"
+memory-cache = "1"
+cache-max-size = "10000"
+cache-ttl = "7200"
+blacklisted-domains = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "prerender"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+MEMORY_CACHE = "${memory-cache}"
+CACHE_MAX_SIZE = "${cache-max-size}"
+CACHE_TTL = "${cache-ttl}"
+BLACKLISTED_DOMAINS = "${blacklisted-domains}"

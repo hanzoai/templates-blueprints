@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "send"
+port = 8126
+host = "${main_domain}"
+
+[config.env]
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"

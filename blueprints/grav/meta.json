@@ -1,0 +1,16 @@
+{
+  "id": "grav",
+  "name": "Grav",
+  "description": "Grav is a Fast, Simple, and Flexible, file-based Web-platform.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/getgrav/grav",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "social",
+    "media"
+  ]
+}

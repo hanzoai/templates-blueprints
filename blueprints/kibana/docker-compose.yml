@@ -1,0 +1,12 @@
+services:
+  kibana:
+    image: docker.elastic.co/kibana/kibana:${VERSION}
+    environment:
+      SERVER_NAME: kibana
+      KIBANA_DEFAULTAPPID: ${KIBANA_DEFAULTAPPID}
+      MONITORING_ENABLED: ${MONITORING_ENABLED}
+      ELASTICSEARCH_HOSTS: ${ELASTICSEARCH_HOSTS}
+      SERVER_PUBLICBASEURL: ${SERVER_PUBLICBASEURL}
+    expose:
+      - "5601"
+    restart: always

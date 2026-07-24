@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+poste-version = "2"
+poste-tz = "UTC"
+poste-disable-clamav = ""
+poste-disable-rspamd = ""
+poste-disable-roundcube = ""
+poste-hostname = ""
+poste-https = "OFF"
+
+[config]
+
+[[config.domains]]
+serviceName = "poste-io"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+POSTE_VERSION = "${poste-version}"
+POSTE_TZ = "${poste-tz}"
+POSTE_DISABLE_CLAMAV = "${poste-disable-clamav}"
+POSTE_DISABLE_RSPAMD = "${poste-disable-rspamd}"
+POSTE_DISABLE_ROUNDCUBE = "${poste-disable-roundcube}"
+POSTE_HOSTNAME = "${poste-hostname}"
+POSTE_HTTPS = "${poste-https}"

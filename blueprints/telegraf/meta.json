@@ -1,0 +1,16 @@
+{
+  "id": "telegraf",
+  "name": "Telegraf",
+  "description": "Telegraf is an open source agent written in Go for collecting metrics.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/docker-library/docs/tree/master/telegraf#using-a-custom-config-file",
+    "website": "https://hub.docker.com/_/telegraf",
+    "docs": "https://hub.docker.com/_/telegraf"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

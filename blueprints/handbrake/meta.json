@@ -1,0 +1,15 @@
+{
+  "id": "handbrake",
+  "name": "handbrake",
+  "description": "Liberate your videos and unleash infinite possibilities.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/jlesage/docker-handbrake",
+    "website": "https://handbrake.fr",
+    "docs": "https://github.com/jlesage/docker-handbrake#readme"
+  },
+  "tags": [
+    "media"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "kanboard",
+  "name": "Kanboard",
+  "description": "Open Source Kanban Board",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/kanboard/kanboard",
+    "website": "https://kanboard.org/",
+    "docs": "https://kanboard.org/"
+  },
+  "tags": [
+    "development"
+  ]
+}

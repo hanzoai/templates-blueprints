@@ -1,0 +1,27 @@
+services:
+  corteza:
+    image: cortezaproject/corteza:$$corteza_version
+    environment:
+      VIRTUAL_HOST: corteza.${ROOT_DOMAIN}
+      DB_DSN: postgres://${POSTGRE_USERNAME}:${POSTGRE_PASSWORD}@corteza-db:5432/${POSTGRE_DB_NAME}?sslmode=disable
+      HTTP_WEBAPP_ENABLED: "true"
+      DOMAIN: corteza.${ROOT_DOMAIN}
+      VERSION: $$corteza_version
+      LETSENCRYPT_HOST: ${LETS_ENCRYPT}
+    volumes:
+      - corteza-data:/data
+    depends_on:
+      - corteza-db
+    restart: always
+  corteza-db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${POSTGRE_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRE_PASSWORD}
+      POSTGRES_DB: ${POSTGRE_DB_NAME}
+    volumes:
+      - corteza-postgres-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  corteza-data: {}
+  corteza-postgres-data: {}

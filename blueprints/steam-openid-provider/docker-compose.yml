@@ -1,0 +1,12 @@
+services:
+  steam-openid-provider:
+    image: ghcr.io/byo-software/steam-openid-connect-provider:sha-c8305ce
+    environment:
+      OpenID__RedirectUri: ${REDIRECT_URI}
+      OpenID__ClientID: ${CLIENT_ID}
+      OpenID__ClientSecret: ${CLIENT_SECRET}
+      Hosting__PublicOrigin: ${ORIGIN}
+      Steam__ApplicationKey: ${API_KEY}
+    expose:
+      - "80"
+    restart: always

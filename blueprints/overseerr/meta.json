@@ -1,0 +1,19 @@
+{
+  "id": "overseerr",
+  "name": "overseerr",
+  "description": "Overseerr is a request management and media discovery tool built to work with your existing Plex ecosystem.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.overseerr.dev/getting-started/installation#docker",
+    "docs": "https://docs.overseerr.dev/getting-started/installation#docker"
+  },
+  "tags": [
+    "media",
+    "request",
+    "plex",
+    "sonarr",
+    "radarr"
+  ]
+}

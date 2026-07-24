@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+redis-version = "7.2.4"
+redis-password = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "redis"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+REDIS_VERSION = "${redis-version}"
+REDIS_PASSWORD = "${redis-password}"

@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+termix-version = "release-2.5.0"
+guacd-version = "1.6.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "termix"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+TERMIX_VERSION = "${termix-version}"
+GUACD_VERSION = "${guacd-version}"

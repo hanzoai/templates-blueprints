@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+mysql-root-pwd = "${password:20}"
+db-username = "invoiceplane"
+db-password = "${password:16}"
+db-database = "invoiceplane"
+
+[config]
+
+[[config.domains]]
+serviceName = "invoiceplane"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+MYSQL_ROOT_PWD = "${mysql-root-pwd}"
+DB_USERNAME = "${db-username}"
+DB_PASSWORD = "${db-password}"
+DB_DATABASE = "${db-database}"
+ROOT_DOMAIN = "${main_domain}"

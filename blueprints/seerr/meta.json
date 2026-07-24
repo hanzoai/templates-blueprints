@@ -1,0 +1,16 @@
+{
+  "id": "seerr",
+  "name": "Seerr",
+  "description": "Managing requests for your media library",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/seerr-team/seerr",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media",
+    "utilities"
+  ]
+}

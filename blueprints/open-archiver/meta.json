@@ -1,0 +1,18 @@
+{
+  "id": "open-archiver",
+  "name": "open-archiver",
+  "description": "A self-hosted, open-source email archiving solution with full-text search capability.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.openarchiver.com/",
+    "docs": "https://docs.openarchiver.com/"
+  },
+  "tags": [
+    "email-archiving",
+    "email",
+    "compliance",
+    "search"
+  ]
+}

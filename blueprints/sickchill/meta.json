@@ -1,0 +1,15 @@
+{
+  "id": "sickchill",
+  "name": "Sickchill",
+  "description": "Automatic video library manager for TV Shows",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/SickChill/SickChill",
+    "website": "https://sickchill.github.io",
+    "docs": "https://github.com/SickChill/SickChill/wiki"
+  },
+  "tags": [
+    "media"
+  ]
+}

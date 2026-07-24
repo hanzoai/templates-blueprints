@@ -1,0 +1,15 @@
+{
+  "id": "gladys",
+  "name": "Gladys Assistant",
+  "description": "A privacy-first, open-source home assistant",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/gladysassistant/gladys",
+    "website": "https://gladysassistant.com/",
+    "docs": "https://gladysassistant.com/"
+  },
+  "tags": [
+    "automation"
+  ]
+}

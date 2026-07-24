@@ -1,0 +1,16 @@
+{
+  "id": "radicale",
+  "name": "Radicale",
+  "description": "Radicale lightweight CalDAV and CardDAV Server",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/tomsquest/docker-radicale/blob/master/config",
+    "website": "https://hub.docker.com/r/tomsquest/docker-radicale",
+    "docs": "https://hub.docker.com/r/tomsquest/docker-radicale"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

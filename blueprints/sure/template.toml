@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "web"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_FQDN_SURE = "${main_domain}"
+SERVICE_BASE64_BASE = "${base64:32}"
+SERVICE_USER_POSTGRESQL = "${username}"
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"

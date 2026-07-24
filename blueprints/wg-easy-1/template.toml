@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "wg-easy"
+port = 8882
+host = "${main_domain}"
+
+[config.env]
+WIREGUARD_INSECURE = ""
+WIREGUARD_DISABLE_IPV6 = ""

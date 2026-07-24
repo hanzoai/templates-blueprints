@@ -1,0 +1,8 @@
+services:
+  gogost:
+    image: gogost/gost:${GOST_VERSION}
+    volumes:
+      - gogost-data:/etc/gost
+    restart: always
+volumes:
+  gogost-data: {}

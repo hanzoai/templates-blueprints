@@ -1,0 +1,15 @@
+{
+  "id": "threadfin",
+  "name": "Threadfin",
+  "description": "M3U proxy server",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Threadfin/Threadfin",
+    "website": "",
+    "docs": "https://github.com/Threadfin/Threadfin#readme"
+  },
+  "tags": [
+    "media"
+  ]
+}

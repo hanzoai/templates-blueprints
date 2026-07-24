@@ -1,0 +1,81 @@
+services:
+  lemmy-db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: lemmy
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: lemmy
+    volumes:
+      - lemmy-db-data:/var/lib/postgresql/data
+    restart: always
+  lemmy-pictrs:
+    image: asonix/pictrs:0.5.0
+    volumes:
+      - lemmy-pictrs-data:/mnt
+    restart: always
+  lemmy-config-writer-delete-me:
+    image: alpine:3.19
+    command: |
+      sh -c '
+        CONFIG_FILE="/config/config.hjson"
+        CONFIG_CONTENT="
+        {
+          hostname: \"lemmy.${ROOT_DOMAIN}\",
+          bind: \"0.0.0.0\",
+          port: 8536,
+          database: {
+            user: \"lemmy\",
+            password: \"${DB_PASS}\",
+            host: \"lemmy-db\",
+            port: 5432,
+            database: \"lemmy\",
+            pool_size: 5
+          },
+          pictrs: {
+            url: \"http://lemmy-pictrs:8080\"
+          },
+          email: {
+            smtp_server: \"${SMTP_SERVER}\",
+            smtp_login: \"${SMTP_LOGIN}\",
+            smtp_password: \"${SMTP_PASS}\",
+            smtp_from_address: \"${SMTP_FROM}\",
+            tls_type: \"${SMTP_TLS}\"
+          }
+        }
+        ";
+        if [ ! -f \"$CONFIG_FILE\" ]; then
+          printf "%s\\n" "$CONFIG_CONTENT" > "$CONFIG_FILE" && chmod 644 "$CONFIG_FILE" && chown 1000:1000 "$CONFIG_FILE"
+        fi
+        tail -f /dev/null
+      '
+    volumes:
+      - lemmy-config:/config
+    restart: no
+  lemmy-server:
+    image: dessalines/lemmy:${LEMMY_VERSION}
+    environment:
+      RUST_LOG: warn,lemmy_server=info,lemmy_api=info
+    volumes:
+      - lemmy-config:/config
+    depends_on:
+      - lemmy-db
+      - lemmy-pictrs
+      - lemmy-config-writer-delete-me
+    expose:
+      - "8536"
+    restart: always
+  lemmy:
+    image: dessalines/lemmy-ui:${LEMMY_UI_VERSION}
+    environment:
+      LEMMY_UI_LEMMY_INTERNAL_HOST: lemmy-server:8536
+      LEMMY_UI_LEMMY_EXTERNAL_HOST: lemmy.${ROOT_DOMAIN}
+      LEMMY_UI_HTTPS: "true"
+    depends_on:
+      - lemmy-server
+    expose:
+      - "1234"
+    restart: always
+volumes:
+  lemmy-db-data: {}
+  lemmy-pictrs-data: {}
+  lemmy-config: {}

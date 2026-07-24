@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "soketi-app-manager"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_FQDN_SOKETIAPPMANAGER = "${main_domain}"

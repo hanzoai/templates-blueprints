@@ -1,0 +1,37 @@
+[variables]
+main_domain = "${domain}"
+ghost-version = "6.44.0-alpine"
+db-host = "${main_domain}"
+db-port = "3306"
+db-name = "ghost"
+db-user = "ghost"
+db-password = ""
+ghost-host = "${main_domain}"
+smtp-host = "${main_domain}"
+smtp-port = "587"
+smtp-secure = "false"
+smtp-user = "support@example.com"
+smtp-password = ""
+smtp-from = "'Ghost' <support@example.com>"
+
+[config]
+
+[[config.domains]]
+serviceName = "ghost-only"
+port = 2368
+host = "${main_domain}"
+
+[config.env]
+GHOST_VERSION = "${ghost-version}"
+DB_HOST = "${db-host}"
+DB_PORT = "${db-port}"
+DB_NAME = "${db-name}"
+DB_USER = "${db-user}"
+DB_PASSWORD = "${db-password}"
+GHOST_HOST = "${ghost-host}"
+SMTP_HOST = "${smtp-host}"
+SMTP_PORT = "${smtp-port}"
+SMTP_SECURE = "${smtp-secure}"
+SMTP_USER = "${smtp-user}"
+SMTP_PASSWORD = "${smtp-password}"
+SMTP_FROM = "${smtp-from}"

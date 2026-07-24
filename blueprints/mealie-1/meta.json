@@ -1,0 +1,15 @@
+{
+  "id": "mealie-1",
+  "name": "Mealie",
+  "description": "Mealie is a self-hosted recipe manager and meal planner.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/hay-kot/mealie",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "self-hosted"
+  ]
+}

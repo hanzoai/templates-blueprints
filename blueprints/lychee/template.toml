@@ -1,0 +1,27 @@
+[variables]
+main_domain = "${domain}"
+tz = "Europe/Brussels"
+lychee-version = "v4.0.7"
+puid = "1000"
+guid = "1000"
+mariadb-version = "10.5.6"
+mariadb-db = "lychee"
+mariadb-user = "lychee"
+mariadb-password = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "lychee"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+TZ = "${tz}"
+LYCHEE_VERSION = "${lychee-version}"
+PUID = "${puid}"
+GUID = "${guid}"
+MARIADB_VERSION = "${mariadb-version}"
+MARIADB_DB = "${mariadb-db}"
+MARIADB_USER = "${mariadb-user}"
+MARIADB_PASSWORD = "${mariadb-password}"

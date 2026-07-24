@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+version = "23.8.1-alpine"
+
+[config]
+
+[[config.domains]]
+serviceName = "actual"
+port = 5006
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"

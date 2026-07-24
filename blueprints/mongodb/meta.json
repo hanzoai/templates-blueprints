@@ -1,0 +1,16 @@
+{
+  "id": "mongodb",
+  "name": "MongoDB",
+  "description": "MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/mongo/",
+    "docs": "https://hub.docker.com/r/mongo/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

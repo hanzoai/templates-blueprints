@@ -1,0 +1,18 @@
+{
+  "id": "docker-registry",
+  "name": "docker-registry",
+  "description": "The Docker Registry lets you distribute Docker images.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://distribution.github.io/distribution/",
+    "docs": "https://distribution.github.io/distribution/"
+  },
+  "tags": [
+    "registry",
+    "images",
+    "docker",
+    "devtools"
+  ]
+}

@@ -1,0 +1,24 @@
+[variables]
+main_domain = "${domain}"
+serpbear-version = ""
+serpbear-user = "admin"
+serpbear-password = "${password:32}"
+serpbear-secret = "${password:64}"
+serpbear-apikey = "${password:64}"
+serpbear-session = "24"
+
+[config]
+
+[[config.domains]]
+serviceName = "serpbear"
+port = 3000
+host = "${main_domain}"
+
+[config.env]
+SERPBEAR_VERSION = "${serpbear-version}"
+SERPBEAR_USER = "${serpbear-user}"
+SERPBEAR_PASSWORD = "${serpbear-password}"
+SERPBEAR_SECRET = "${serpbear-secret}"
+SERPBEAR_APIKEY = "${serpbear-apikey}"
+SERPBEAR_SESSION = "${serpbear-session}"
+ROOT_DOMAIN = "${main_domain}"

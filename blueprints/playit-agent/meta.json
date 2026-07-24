@@ -1,0 +1,15 @@
+{
+  "id": "playit-agent",
+  "name": "Playit Agent",
+  "description": "A free reverse proxy for tunneling services (not self-hosted).",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/playit-cloud/playit-agent",
+    "website": "https://playit.gg",
+    "docs": "https://playit.gg/docs"
+  },
+  "tags": [
+    "networking"
+  ]
+}

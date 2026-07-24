@@ -1,0 +1,20 @@
+{
+  "id": "metamcp",
+  "name": "metamcp",
+  "description": "MCP Aggregator, Orchestrator, Middleware, Gateway in one app",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/metatool-ai/metamcp",
+    "website": "",
+    "docs": "https://github.com/metatool-ai/metamcp"
+  },
+  "tags": [
+    "mcp",
+    "ai",
+    "sse",
+    "aggregator",
+    "orchestrator",
+    "middleware"
+  ]
+}

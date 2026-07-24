@@ -1,0 +1,21 @@
+[variables]
+main_domain = "${domain}"
+mysql-backup-version = "v0.11.0"
+db-server = "srv-captain--"
+db-port = "3306"
+db-user = "root"
+db-password = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "mysql-backup-db"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+MYSQL_BACKUP_VERSION = "${mysql-backup-version}"
+DB_SERVER = "${db-server}"
+DB_PORT = "${db-port}"
+DB_USER = "${db-user}"
+DB_PASSWORD = "${db-password}"

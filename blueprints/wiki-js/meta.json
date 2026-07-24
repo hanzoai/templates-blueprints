@@ -1,0 +1,16 @@
+{
+  "id": "wiki-js",
+  "name": "wiki.js",
+  "description": "The most powerful and extensible open source Wiki software",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://docs.requarks.io/",
+    "docs": "https://docs.requarks.io/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

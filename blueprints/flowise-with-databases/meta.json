@@ -1,0 +1,28 @@
+{
+  "id": "flowise-with-databases",
+  "name": "flowise-with-databases",
+  "description": "Flowise is an open source low-code tool for developers to build customized LLM orchestration flows & AI agents. Also deploys Redis, Postgres and other services.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.flowiseai.com/",
+    "docs": "https://docs.flowiseai.com/"
+  },
+  "tags": [
+    "lowcode",
+    "nocode",
+    "ai",
+    "llm",
+    "openai",
+    "anthropic",
+    "machine-learning",
+    "rag",
+    "agents",
+    "chatbot",
+    "api",
+    "team",
+    "bot",
+    "flows"
+  ]
+}

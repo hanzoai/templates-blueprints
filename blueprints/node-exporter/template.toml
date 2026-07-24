@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+version = "v1.5.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "node-exporter"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"

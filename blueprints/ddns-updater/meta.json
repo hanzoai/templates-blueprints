@@ -1,0 +1,15 @@
+{
+  "id": "ddns-updater",
+  "name": "ddns-updater",
+  "description": "Simple and easy to use DDNS",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/qdm12/ddns-updater",
+    "website": "",
+    "docs": "https://github.com/qdm12/ddns-updater/tree/master/docs"
+  },
+  "tags": [
+    "networking"
+  ]
+}

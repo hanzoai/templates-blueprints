@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+ohmyform-email = ""
+ohmyform-user = "ohmyadmin"
+ohmyform-pass = "${password:64}"
+
+[config]
+
+[[config.domains]]
+serviceName = "ohmyform"
+port = 5000
+host = "${main_domain}"
+
+[config.env]
+OHMYFORM_EMAIL = "${ohmyform-email}"
+OHMYFORM_USER = "${ohmyform-user}"
+OHMYFORM_PASS = "${ohmyform-pass}"

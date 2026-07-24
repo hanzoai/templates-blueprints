@@ -1,0 +1,14 @@
+services:
+  siyuan-note:
+    image: b3log/siyuan:v3.6.5
+    command: --accessAuthCode=casaos --workspace=/siyuan/workspace/
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    expose:
+      - "6806"
+    volumes:
+      - siyuan-note-workspace:/siyuan/workspace
+    restart: unless-stopped
+volumes:
+  siyuan-note-workspace: {}

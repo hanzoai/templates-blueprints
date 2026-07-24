@@ -1,0 +1,6 @@
+services:
+  chatpad:
+    image: ghcr.io/deiucanta/chatpad:latest
+    expose:
+      - "80"
+    restart: always

@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "mosquitto"
+port = 1883
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_MOSQUITTO = "${username}"
+SERVICE_PASSWORD_MOSQUITTO = "${password:32}"

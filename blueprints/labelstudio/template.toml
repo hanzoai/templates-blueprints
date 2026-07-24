@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "labelstudio"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_LABELSTUDIO = "https://${main_domain}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"
+SERVICE_PASSWORD_LABELSTUDIO = "${password:32}"

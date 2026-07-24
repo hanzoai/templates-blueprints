@@ -1,0 +1,15 @@
+{
+  "id": "ragflow",
+  "name": "RagFlow",
+  "description": "RagFlow is an open-source RAG engine based on deep document understanding.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/infiniflow/ragflow",
+    "website": "https://ragflow.io",
+    "docs": "https://ragflow.io/docs/dev/"
+  },
+  "tags": [
+    "ai"
+  ]
+}

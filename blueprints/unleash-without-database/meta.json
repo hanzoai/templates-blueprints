@@ -1,0 +1,20 @@
+{
+  "id": "unleash-without-database",
+  "name": "unleash-without-database",
+  "description": "Open source feature flag management for enterprises.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.getunleash.io",
+    "docs": "https://docs.getunleash.io"
+  },
+  "tags": [
+    "unleash",
+    "feature-flags",
+    "feature-toggles",
+    "ab-testing",
+    "open-source",
+    "devtools"
+  ]
+}

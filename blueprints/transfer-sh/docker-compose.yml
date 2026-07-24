@@ -1,0 +1,11 @@
+services:
+  transfer-sh:
+    image: dutchcoders/transfer.sh:${TRANSFERSH_VERSION}
+    environment:
+      LISTENER: "8080"
+      FORCE_HTTPS: "false"
+      BASEDIR: /tmp
+      PROVIDER: local
+    expose:
+      - "8080"
+    restart: always

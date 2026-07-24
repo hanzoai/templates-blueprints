@@ -1,0 +1,13 @@
+services:
+  openbooks:
+    image: evanbuss/openbooks:4.5.0
+    command: ./openbooks server --dir /books --port 80 --persist --name ${OPENBOOKS_IRC_USERNAME}
+    environment:
+      BASE_PATH: /openbooks/
+    volumes:
+      - openbooks-books:/books
+    expose:
+      - "80"
+    restart: always
+volumes:
+  openbooks-books: {}

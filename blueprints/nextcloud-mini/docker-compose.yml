@@ -1,0 +1,28 @@
+services:
+  nextcloud-mini:
+    image: nextcloud:34.0.1
+    environment:
+      POSTGRES_HOST: nextcloud-mini-db
+      POSTGRES_DB: nextcloud
+      POSTGRES_USER: nextcloud
+      POSTGRES_PASSWORD: ${NEXTCLOUD_MINI_DB_PASSWORD}
+      NEXTCLOUD_ADMIN_PASSWORD: ${NEXTCLOUD_MINI_ADMIN_PASSWORD}
+      NEXTCLOUD_ADMIN_USER: ${NEXTCLOUD_MINI_ADMIN_USER}
+      NEXTCLOUD_TRUSTED_DOMAINS: ${NEXTCLOUD_MINI_TRUSTED_DOMAINS}
+    volumes:
+      - nextcloud-mini-html:/var/www/html
+    expose:
+      - "80"
+    restart: always
+  nextcloud-mini-db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: nextcloud
+      POSTGRES_USER: nextcloud
+      POSTGRES_PASSWORD: ${NEXTCLOUD_MINI_DB_PASSWORD}
+    volumes:
+      - nextcloud-mini-data:/var/lib/postgresql/data
+    restart: always
+volumes:
+  nextcloud-mini-html: {}
+  nextcloud-mini-data: {}

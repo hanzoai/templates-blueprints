@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+version = "0.9.17"
+timezone = "Etc/UTC"
+
+[config]
+
+[[config.domains]]
+serviceName = "cronicle"
+port = 3012
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+TIMEZONE = "${timezone}"

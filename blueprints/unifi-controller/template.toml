@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "unifi-controller"
+port = 8383
+host = "${main_domain}"

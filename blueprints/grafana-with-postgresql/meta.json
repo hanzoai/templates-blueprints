@@ -1,0 +1,18 @@
+{
+  "id": "grafana-with-postgresql",
+  "name": "grafana-with-postgresql",
+  "description": "Grafana is the open source analytics & monitoring solution for every database.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://grafana.com",
+    "docs": "https://grafana.com"
+  },
+  "tags": [
+    "grafana",
+    "analytics",
+    "monitoring",
+    "dashboard"
+  ]
+}

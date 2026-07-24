@@ -1,0 +1,19 @@
+{
+  "id": "esphome",
+  "name": "esphome",
+  "description": "Smart Home Made Simple.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://esphome.io/guides/getting_started_command_line/",
+    "docs": "https://esphome.io/guides/getting_started_command_line/"
+  },
+  "tags": [
+    "home",
+    "smart",
+    "assistant",
+    "microcontroller",
+    "automation"
+  ]
+}

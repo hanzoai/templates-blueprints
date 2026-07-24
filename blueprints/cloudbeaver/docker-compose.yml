@@ -1,0 +1,15 @@
+services:
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:24
+    volumes:
+      - cloudbeaver-data:/opt/cloudbeaver/workspace
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - -q
+        - --spider
+        - http://127.0.0.1:8978/
+      interval: 5s
+      timeout: 20s
+      retries: 10

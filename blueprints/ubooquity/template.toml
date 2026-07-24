@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+ubooquity-version = "2.1.2"
+tz = "Europe/Paris"
+admin-port = "2203"
+
+[config]
+
+[[config.domains]]
+serviceName = "ubooquity"
+port = 2202
+host = "${main_domain}"
+
+[config.env]
+UBOOQUITY_VERSION = "${ubooquity-version}"
+TZ = "${tz}"
+ADMIN_PORT = "${admin-port}"

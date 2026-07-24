@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+tz = "Europe/Brussels"
+elkar-version = "2"
+mariadb-version = "10.6.2"
+mariadb-db = "elkar"
+mariadb-user = "elkar"
+mariadb-pass = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "elkarbackup"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+TZ = "${tz}"
+ELKAR_VERSION = "${elkar-version}"
+MARIADB_VERSION = "${mariadb-version}"
+MARIADB_DB = "${mariadb-db}"
+MARIADB_USER = "${mariadb-user}"
+MARIADB_PASS = "${mariadb-pass}"

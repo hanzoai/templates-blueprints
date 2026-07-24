@@ -1,0 +1,16 @@
+{
+  "id": "invoiceplane",
+  "name": "InvoicePlane",
+  "description": "InvoicePlane is a self-hosted open source application for managing your quotes, invoices, clients and payments.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.invoiceplane.com/",
+    "docs": "https://www.invoiceplane.com/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

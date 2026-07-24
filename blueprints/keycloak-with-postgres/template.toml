@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "keycloak"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_ADMIN = "${username}"
+SERVICE_PASSWORD_ADMIN = "${password:32}"
+SERVICE_USER_DATABASE = "${username}"
+SERVICE_PASSWORD_64_DATABASE = "${base64:64}"
+SERVICE_URL_KEYCLOAK = "https://${main_domain}"

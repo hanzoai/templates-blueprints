@@ -1,0 +1,28 @@
+services:
+  formio-mongodb:
+    image: mongo:${MONGO_VERSION}
+    volumes:
+      - formio-db-data:/data/db
+    restart: always
+  formio:
+    image: calipseo/formio:${FORMIO_VERSION}
+    environment:
+      APP_URL: https://formio.${ROOT_DOMAIN}
+      API_URL: https://formio.${ROOT_DOMAIN}
+      MONGO: mongodb://formio-mongodb:27017/formio
+      ROOT_EMAIL: ${ADMIN_EMAIL}
+      ROOT_PASSWORD: ${ADMIN_PASS}
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USERNAME: ${SMTP_USER}
+      SMTP_PASSWORD: ${SMTP_PASS}
+    volumes:
+      - formio-data:/app
+    depends_on:
+      - formio-mongodb
+    expose:
+      - "3001"
+    restart: always
+volumes:
+  formio-db-data: {}
+  formio-data: {}

@@ -1,0 +1,21 @@
+{
+  "id": "penpot-with-s3",
+  "name": "penpot-with-s3",
+  "description": "Penpot is the first Open Source design and prototyping platform for product teams.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://help.penpot.app/technical-guide/getting-started/#install-with-docker",
+    "docs": "https://help.penpot.app/technical-guide/getting-started/#install-with-docker"
+  },
+  "tags": [
+    "penpot",
+    "design",
+    "prototyping",
+    "figma",
+    "open",
+    "source",
+    "productivity"
+  ]
+}

@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "traefik-certs-dumper"
+port = 9999
+host = "${main_domain}"

@@ -1,0 +1,38 @@
+[variables]
+main_domain = "${domain}"
+directus-tag = "9.22.1"
+directus-auth-secret-key = "${password:22}"
+directus-auth-public-key = "${password:22}"
+admin-email = "admin@example.com"
+admin-password = "${password:22}"
+mysql-tag = "5.7"
+mysql-root-password = "${password:22}"
+mysql-database-name = "directus"
+mysql-user = "directus"
+mysql-password = "${password:22}"
+redis-tag = "7.0-alpine"
+redis-auto-purge = "true"
+redis-ttl = "1d"
+
+[config]
+
+[[config.domains]]
+serviceName = "directus-mysql-redis"
+port = 8055
+host = "${main_domain}"
+
+[config.env]
+DIRECTUS_TAG = "${directus-tag}"
+DIRECTUS_AUTH_SECRET_KEY = "${directus-auth-secret-key}"
+DIRECTUS_AUTH_PUBLIC_KEY = "${directus-auth-public-key}"
+ADMIN_EMAIL = "${admin-email}"
+ADMIN_PASSWORD = "${admin-password}"
+MYSQL_TAG = "${mysql-tag}"
+MYSQL_ROOT_PASSWORD = "${mysql-root-password}"
+MYSQL_DATABASE_NAME = "${mysql-database-name}"
+MYSQL_USER = "${mysql-user}"
+MYSQL_PASSWORD = "${mysql-password}"
+REDIS_TAG = "${redis-tag}"
+REDIS_AUTO_PURGE = "${redis-auto-purge}"
+REDIS_TTL = "${redis-ttl}"
+ROOT_DOMAIN = "${main_domain}"

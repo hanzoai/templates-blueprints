@@ -1,0 +1,14 @@
+services:
+  offen-docker-backup:
+    image: offen/docker-volume-backup:${VERSION}
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_S3_BUCKET_NAME: ${AWS_S3_BUCKET_NAME}
+      AWS_ENDPOINT: ${AWS_ENDPOINT}
+      BACKUP_FILENAME: ${BACKUP_FILENAME}
+      BACKUP_CRON_EXPRESSION: ${BACKUP_CRON_EXPRESSION}
+      BACKUP_RETENTION_DAYS: ${BACKUP_RETENTION_DAYS}
+    volumes:
+      - ${VOLUME_TO_BACKUP}:/backup/data:ro
+    restart: always

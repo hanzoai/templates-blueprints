@@ -1,0 +1,15 @@
+{
+  "id": "homarr-1",
+  "name": "Homarr",
+  "description": "Homarr is a simple and lightweight homepage for your server, that helps you easily access all of your services in one place.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/homarr-labs/homarr",
+    "website": "https://homarr.dev",
+    "docs": "https://homarr.dev"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

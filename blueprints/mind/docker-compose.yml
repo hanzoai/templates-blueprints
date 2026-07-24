@@ -1,0 +1,12 @@
+services:
+  mind:
+    image: mrcas/mind:v1.4.1
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - mind-db:/app/db
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  mind-db: {}

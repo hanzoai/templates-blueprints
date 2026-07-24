@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+jwt-secret-key = "${password:10}"
+basic-auth-user = "admin"
+basic-auth-password = "changeme"
+
+[config]
+
+[[config.domains]]
+serviceName = "mcp-context-forge"
+port = 4444
+host = "${main_domain}"
+
+[config.env]
+JWT_SECRET_KEY = "${jwt-secret-key}"
+BASIC_AUTH_USER = "${basic-auth-user}"
+BASIC_AUTH_PASSWORD = "${basic-auth-password}"

@@ -1,0 +1,12 @@
+services:
+  2fauth:
+    image: 2fauth/2fauth:6.1.3
+    environment:
+      APP_KEY: SomeRandomStringOf32CharsExactly
+    expose:
+      - "8000"
+    volumes:
+      - 2fauth-2fauth:/2fauth
+    restart: always
+volumes:
+  2fauth-2fauth: {}

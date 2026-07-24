@@ -1,0 +1,16 @@
+{
+  "id": "etesync",
+  "name": "ETESync",
+  "description": "ETESync is a self hosted syncing solution, it is secure, end-to-end encrypted, and privacy respecting sync for your contacts, calendars and tasks.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/GRBurst/docker-etesync-server",
+    "website": "",
+    "docs": "https://github.com/GRBurst/docker-etesync-server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

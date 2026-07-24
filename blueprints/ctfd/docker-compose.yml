@@ -1,0 +1,47 @@
+services:
+  ctfd:
+    image: ctfd/ctfd:3.8.6
+    environment:
+      UPLOAD_FOLDER: /var/uploads
+      DATABASE_URL: mysql+pymysql://tipi:${CTFD_MYSQL_DB_PASSWORD}@ctfd-db/ctfd
+      REDIS_URL: redis://ctfd-redis:6379
+      WORKERS: "1"
+      LOG_FOLDER: /var/log/CTFd
+      ACCESS_LOG: "-"
+      ERROR_LOG: "-"
+      REVERSE_PROXY: "true"
+      SECRET_KEY: ${CTFD_SECRET_KEY}
+    depends_on:
+      - ctfd-db
+    volumes:
+      - ctfd-ctfd:/var/log/CTFd
+      - ctfd-uploads:/var/uploads
+    expose:
+      - "8000"
+    restart: always
+  ctfd-db:
+    image: mariadb:10.4.12
+    command:
+      - mysqld
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --wait_timeout=28800
+      - --log-warnings=0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${CTFD_MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: tipi
+      MYSQL_PASSWORD: ${CTFD_MYSQL_DB_PASSWORD}
+      MYSQL_DATABASE: ctfd
+    volumes:
+      - ctfd-mysql:/var/lib/mysql
+    restart: always
+  ctfd-redis:
+    image: redis:4
+    volumes:
+      - ctfd-data:/data
+    restart: always
+volumes:
+  ctfd-ctfd: {}
+  ctfd-uploads: {}
+  ctfd-mysql: {}
+  ctfd-data: {}

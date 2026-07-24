@@ -1,0 +1,22 @@
+{
+  "id": "castopod",
+  "name": "castopod",
+  "description": "Castopod is a free & open-source hosting platform made for podcasters who want engage and interact with their audience.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.castopod.org/main/en/",
+    "docs": "https://docs.castopod.org/main/en/"
+  },
+  "tags": [
+    "podcast",
+    "media",
+    "audio",
+    "video",
+    "streaming",
+    "hosting",
+    "platform",
+    "castopod"
+  ]
+}

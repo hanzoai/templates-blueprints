@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "cheshire-cat-ai"
+port = 1865
+host = "${main_domain}"

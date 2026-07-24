@@ -1,0 +1,17 @@
+services:
+  jackett:
+    image: linuxserver/jackett:0.24.1985
+    environment:
+      AUTO_UPDATE: "true"
+      PGID: "1000"
+      PUID: "1000"
+      TZ: Europe/London
+    expose:
+      - "9117"
+    volumes:
+      - jackett-config:/config
+      - jackett-downloads:/downloads
+    restart: unless-stopped
+volumes:
+  jackett-config: {}
+  jackett-downloads: {}

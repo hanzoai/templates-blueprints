@@ -1,0 +1,23 @@
+services:
+  minecraft-bedrock:
+    image: itzg/minecraft-bedrock-server:${VERSION}
+    environment:
+      EULA: ${EULA}
+      VERSION: ${BS_VERSION}
+      SERVER_PORT: ${PORT}
+      PACKAGE_BACKUP_KEEP: "2"
+      SERVER_NAME: ${BS_NAME}
+      OPS: ${BS_OPS}
+      GAMEMODE: ${BS_GAMEMODE}
+      DIFFICULTY: ${BS_DIFFICULTY}
+      ALLOW_LIST: ${BS_ALLOWLIST}
+      ALLOW_LIST_USERS: ${BS_ALLOWLIST_USERS}
+      PLAYER_IDLE_TIMEOUT: ${BS_IDLE}
+      ALLOW_CHEATS: ${BS_CHEATS}
+    volumes:
+      - minecraft-bedrock-data:/data
+    ports:
+      - ${PORT}:19132
+    restart: always
+volumes:
+  minecraft-bedrock-data: {}

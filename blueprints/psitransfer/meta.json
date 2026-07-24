@@ -1,0 +1,15 @@
+{
+  "id": "psitransfer",
+  "name": "PsiTransfer",
+  "description": "A simple, open-source file sharing host.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/psi-4ward/psitransfer",
+    "website": "",
+    "docs": "https://github.com/psi-4ward/psitransfer#readme"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

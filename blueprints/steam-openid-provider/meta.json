@@ -1,0 +1,16 @@
+{
+  "id": "steam-openid-provider",
+  "name": "Steam OpenID Connect Provider",
+  "description": "This server allows you to use Steam as an OpenID Connect Identity provider (OIDC IDP). This way you can use Steam logins in KeyCloak or any other OpenID Connect based authentication client.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/byo-software/steam-openid-connect-provider",
+    "website": "",
+    "docs": "https://github.com/byo-software/steam-openid-connect-provider"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

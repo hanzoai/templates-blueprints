@@ -1,0 +1,19 @@
+{
+  "id": "bitcoin-core",
+  "name": "bitcoin-core",
+  "description": "A self-hosted Bitcoin Core full node.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/ruimarinho/bitcoin-core/",
+    "docs": "https://hub.docker.com/r/ruimarinho/bitcoin-core/"
+  },
+  "tags": [
+    "cryptocurrency",
+    "node",
+    "blockchain",
+    "bitcoin",
+    "backend"
+  ]
+}

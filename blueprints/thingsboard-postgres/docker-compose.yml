@@ -1,0 +1,17 @@
+services:
+  thingsboard-postgres:
+    image: thingsboard/tb-postgres:${VERSION}
+    environment:
+      TB_QUEUE_TYPE: in-memory
+    volumes:
+      - thingsboard-postgres-data:/data
+      - thingsboard-postgres-logs:/var/log/thingsboard
+    ports:
+      - $$mqtt_port:1883
+      - $$coap_port:5683
+    expose:
+      - "9090"
+    restart: always
+volumes:
+  thingsboard-postgres-data: {}
+  thingsboard-postgres-logs: {}

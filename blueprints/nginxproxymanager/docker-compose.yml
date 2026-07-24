@@ -1,0 +1,14 @@
+services:
+  nginxproxymanager:
+    image: jc21/nginx-proxy-manager:2.13.5
+    expose:
+      - "80"
+      - "443"
+      - "81"
+    volumes:
+      - nginxproxymanager-data:/data
+      - nginxproxymanager-letsencrypt:/etc/letsencrypt
+    restart: unless-stopped
+volumes:
+  nginxproxymanager-data: {}
+  nginxproxymanager-letsencrypt: {}

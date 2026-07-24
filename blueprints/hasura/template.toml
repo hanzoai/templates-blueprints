@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+hasura-version = "v1.2.2"
+postgres-version = "12"
+admin-secret = ""
+pg-user = ""
+pg-pass = ""
+pg-db = ""
+pg-initdb-args = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "hasura"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+HASURA_VERSION = "${hasura-version}"
+POSTGRES_VERSION = "${postgres-version}"
+ADMIN_SECRET = "${admin-secret}"
+PG_USER = "${pg-user}"
+PG_PASS = "${pg-pass}"
+PG_DB = "${pg-db}"
+PG_INITDB_ARGS = "${pg-initdb-args}"

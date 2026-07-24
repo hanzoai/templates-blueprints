@@ -1,0 +1,15 @@
+{
+  "id": "uptimekuma",
+  "name": "Uptime Kuma",
+  "description": "A fancy monitoring tool",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/louislam/uptime-kuma",
+    "website": "https://uptimekuma.org",
+    "docs": "https://github.com/louislam/uptime-kuma/wiki"
+  },
+  "tags": [
+    "networking"
+  ]
+}

@@ -1,0 +1,50 @@
+services:
+  peertube-db:
+    image: postgres:${POSTGRES_VERSION}
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: peertube
+    volumes:
+      - peertube-db-data:/var/lib/postgresql/data
+    restart: always
+  peertube-redis:
+    image: redis:${REDIS_VERSION}
+    volumes:
+      - peertube-redis-data:/data
+    restart: always
+  peertube:
+    image: chocobozzz/peertube:${PEERTUBE_VERSION}
+    environment:
+      PEERTUBE_DB_USERNAME: ${DB_USER}
+      PEERTUBE_DB_PASSWORD: ${DB_PASS}
+      PEERTUBE_DB_HOSTNAME: peertube-db
+      PEERTUBE_REDIS_HOSTNAME: peertube-redis
+      PEERTUBE_WEBSERVER_HOSTNAME: peertube.${ROOT_DOMAIN}
+      PEERTUBE_WEBSERVER_PORT: "443"
+      PEERTUBE_WEBSERVER_HTTPS: "true"
+      PEERTUBE_TRUST_PROXY: '["127.0.0.1", "loopback", "10.0.0.0/16"]'
+      PEERTUBE_SMTP_USERNAME: ${SMTP_USERNAME}
+      PEERTUBE_SMTP_PASSWORD: ${SMTP_PASSWORD}
+      PEERTUBE_SMTP_HOSTNAME: ${SMTP_HOSTNAME}
+      PEERTUBE_SMTP_PORT: ${SMTP_PORT}
+      PEERTUBE_SMTP_FROM: ${SMTP_FROM}
+      PEERTUBE_SMTP_TLS: ${SMTP_TLS}
+      PEERTUBE_SMTP_DISABLE_STARTTLS: ${SMTP_STARTTLS}
+      PEERTUBE_ADMIN_EMAIL: ${ADMIN_EMAIL}
+      PT_INITIAL_ROOT_PASSWORD: ${ADMIN_PASSWORD}
+      PEERTUBE_SECRET: ${SECRET}
+    volumes:
+      - peertube-peertube-data:/data
+      - peertube-peertube-config:/config
+    depends_on:
+      - peertube-db
+      - peertube-redis
+    expose:
+      - "9000"
+    restart: always
+volumes:
+  peertube-db-data: {}
+  peertube-redis-data: {}
+  peertube-peertube-data: {}
+  peertube-peertube-config: {}

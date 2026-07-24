@@ -1,0 +1,16 @@
+{
+  "id": "keila",
+  "name": "Keila",
+  "description": "Free and open source email newsletter tool.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.keila.io/docs",
+    "docs": "https://www.keila.io/docs"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

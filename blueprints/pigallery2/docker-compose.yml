@@ -1,0 +1,15 @@
+services:
+  pigallery2:
+    image: bpatrik/pigallery2:${VERSION}
+    environment:
+      NODE_ENV: production
+    volumes:
+      - pigallery2-config:/app/data/config
+      - pigallery2-db:/app/data/db
+      - ${IMAGES}:/app/data/images
+      - pigallery2-tmp:/app/data/tmp
+    restart: always
+volumes:
+  pigallery2-config: {}
+  pigallery2-db: {}
+  pigallery2-tmp: {}

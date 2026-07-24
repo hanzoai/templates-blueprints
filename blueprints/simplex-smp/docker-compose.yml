@@ -1,0 +1,14 @@
+services:
+  simplex-smp:
+    image: simplexchat/smp-server:v6.5.2
+    environment:
+      PASS: ${SIMPLEX_SMP_PASSWORD}
+      ADDR: ${APP_DOMAIN}
+    volumes:
+      - simplex-smp-simplex:/var/opt/simplex
+      - simplex-smp-simplex:/etc/opt/simplex
+    expose:
+      - "5223"
+    restart: always
+volumes:
+  simplex-smp-simplex: {}

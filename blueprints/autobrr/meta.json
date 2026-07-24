@@ -1,0 +1,15 @@
+{
+  "id": "autobrr",
+  "name": "Autobrr",
+  "description": "Modern, easy to use download automation for torrents and usenet.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/autobrr/autobrr",
+    "website": "https://autobrr.com",
+    "docs": "https://autobrr.com"
+  },
+  "tags": [
+    "media"
+  ]
+}

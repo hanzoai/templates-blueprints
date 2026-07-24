@@ -1,0 +1,15 @@
+{
+  "id": "n8n-2",
+  "name": "n8n v2",
+  "description": "Workflow Automation Tool. Alternative to Zapier",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/n8n-io/n8n",
+    "website": "https://n8n.io/",
+    "docs": "https://n8n.io/"
+  },
+  "tags": [
+    "automation"
+  ]
+}

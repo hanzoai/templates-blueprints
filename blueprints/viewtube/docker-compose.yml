@@ -1,0 +1,29 @@
+services:
+  viewtube:
+    image: mauriceo/viewtube:0.17.0
+    environment:
+      VIEWTUBE_DATABASE_HOST: viewtube-mongodb
+      VIEWTUBE_REDIS_HOST: viewtube-redis
+      VIEWTUBE_SECURE: "true"
+      VIEWTUBE_CORS_ORIGIN: ${APP_PROTOCOL:-http}://${APP_DOMAIN}
+    depends_on:
+      - viewtube-mongodb
+      - viewtube-redis
+    volumes:
+      - viewtube-data:/data
+    expose:
+      - "8066"
+    restart: always
+  viewtube-mongodb:
+    image: mongo:5
+    volumes:
+      - viewtube-db:/data/db
+    restart: always
+  viewtube-redis:
+    image: redis:7
+    volumes:
+      - viewtube-data:/data
+    restart: always
+volumes:
+  viewtube-data: {}
+  viewtube-db: {}

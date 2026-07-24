@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "write-freely"
+port = 8574
+host = "${main_domain}"
+
+[config.env]
+TZ = ""

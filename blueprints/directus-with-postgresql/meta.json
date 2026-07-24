@@ -1,0 +1,18 @@
+{
+  "id": "directus-with-postgresql",
+  "name": "directus-with-postgresql",
+  "description": "Directus wraps databases with a dynamic API, and provides an intuitive app for managing its content.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://directus.io",
+    "docs": "https://directus.io"
+  },
+  "tags": [
+    "directus",
+    "cms",
+    "database",
+    "sql"
+  ]
+}

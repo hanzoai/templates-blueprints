@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "joplin"
+port = 22300
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_64_POSTGRES = "${base64:64}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_URL_JOPLIN = "https://${main_domain}"

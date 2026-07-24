@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "rivet-engine"
+port = 6420
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_TOKEN = "${base64:32}"

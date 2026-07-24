@@ -1,0 +1,16 @@
+{
+  "id": "cachet",
+  "name": "Cachet",
+  "description": "An open source status page system for everyone.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/CachetHQ/Cachet",
+    "website": "https://docs.cachethq.io/docs",
+    "docs": "https://docs.cachethq.io/docs"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

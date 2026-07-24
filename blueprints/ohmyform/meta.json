@@ -1,0 +1,16 @@
+{
+  "id": "ohmyform",
+  "name": "OhMyForm",
+  "description": "Create stunning embedable forms for recruiting, market research, surveys and more https://ohmyform.com/",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://ohmyform.com/docs/",
+    "docs": "https://ohmyform.com/docs/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

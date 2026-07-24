@@ -1,0 +1,15 @@
+{
+  "id": "tasks-md",
+  "name": "Tasks.md",
+  "description": "A self-hosted, file based task management board.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/BaldissaraMatheus/Tasks.md",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "development"
+  ]
+}

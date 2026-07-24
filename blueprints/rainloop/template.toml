@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+rainloop-version = "1.12.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "rainloop"
+port = 8888
+host = "${main_domain}"
+
+[config.env]
+RAINLOOP_VERSION = "${rainloop-version}"

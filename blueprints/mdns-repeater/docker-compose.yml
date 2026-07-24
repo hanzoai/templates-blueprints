@@ -1,0 +1,7 @@
+services:
+  mdns-repeater:
+    image: angelnu/mdns_repeater:latest
+    environment:
+      hostNIC: ${MDNS_HOST_NIC}
+      dockerNIC: ${MDNS_DOCKER_NIC}
+    restart: always

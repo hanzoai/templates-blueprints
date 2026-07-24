@@ -1,0 +1,10 @@
+services:
+  couchbase-db:
+    image: couchbase:${CB_VERSION}
+    volumes:
+      - couchbase-data:/opt/couchbase/var
+    expose:
+      - "8091"
+    restart: always
+volumes:
+  couchbase-data: {}

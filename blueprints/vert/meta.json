@@ -1,0 +1,21 @@
+{
+  "id": "vert",
+  "name": "vert",
+  "description": "The next-generation file converter. Open source, fully local and free forever.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/VERT-sh/VERT",
+    "website": "",
+    "docs": "https://github.com/VERT-sh/VERT"
+  },
+  "tags": [
+    "converter",
+    "file",
+    "documents",
+    "files",
+    "ffmpeg",
+    "wasm",
+    "devtools"
+  ]
+}

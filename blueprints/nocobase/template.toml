@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "nocobase"
+port = 13000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_64_APPKEY = "${base64:64}"
+SERVICE_USER_POSTGRES = "${username}"
+SERVICE_PASSWORD_POSTGRES = "${password:32}"

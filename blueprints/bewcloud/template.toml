@@ -1,0 +1,22 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "bewcloud"
+port = 8053
+host = "${main_domain}"
+
+[config.env]
+APP_PROTOCOL = "https"
+APP_DOMAIN = "${main_domain}"
+DB_PASSWORD = "${hash:32}"
+JWT_SECRET = "${hash:32}"
+PASSWORD_SALT = "${hash:32}"
+BREVO_API_KEY = "${password:32}"
+ALLOW_SIGNUPS = ""
+ENABLE_EMAIL = ""
+INTERNAL_IP = ""
+LOCAL_DOMAIN = ""
+APP_HOST = "${main_domain}"

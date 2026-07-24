@@ -1,0 +1,18 @@
+{
+  "id": "fileflows",
+  "name": "fileflows",
+  "description": "FileFlows can drastically reduce your files, up to 90%, saving you space and money. No need to buy more hard drives, just shrink your files and start saving.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://fileflows.com/docs/",
+    "docs": "https://fileflows.com/docs/"
+  },
+  "tags": [
+    "media",
+    "transcode",
+    "convert",
+    "h265"
+  ]
+}

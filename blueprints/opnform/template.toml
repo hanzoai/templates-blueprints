@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "opnform-api"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_BASE64_APIKEY = "${base64:32}"
+SERVICE_URL_NGINX = "https://${main_domain}"
+SERVICE_PASSWORD_64_REDIS = "${base64:64}"
+SERVICE_USER_POSTGRESQL = "${username}"
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"
+SERVICE_PASSWORD_JWTSECRET = "${password:32}"

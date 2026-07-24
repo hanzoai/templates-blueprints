@@ -1,0 +1,12 @@
+services:
+  kasm-workspaces:
+    image: lscr.io/linuxserver/kasm:1.120.20221218
+    environment:
+      KASM_PORT: ${APP_PORT}
+    volumes:
+      - kasm-workspaces-opt:/opt
+    expose:
+      - ${APP_PORT}
+    restart: always
+volumes:
+  kasm-workspaces-opt: {}

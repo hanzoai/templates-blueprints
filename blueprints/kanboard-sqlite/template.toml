@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+version = "v1.2.15"
+plugin-installer = "true"
+
+[config]
+
+[[config.domains]]
+serviceName = "kanboard-sqlite"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+PLUGIN_INSTALLER = "${plugin-installer}"

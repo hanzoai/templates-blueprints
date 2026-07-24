@@ -1,0 +1,15 @@
+{
+  "id": "nextgba",
+  "name": "NextGBA",
+  "description": "Gameboy in your browser",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/nicotsx/nextgba",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "gaming"
+  ]
+}

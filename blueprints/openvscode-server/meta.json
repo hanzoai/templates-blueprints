@@ -1,0 +1,16 @@
+{
+  "id": "openvscode-server",
+  "name": "OpenVSCode Server",
+  "description": "A version of VS Code that runs a server on a remote machine and allows access through a modern web browser.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/linuxserver/docker-openvscode-server",
+    "website": "",
+    "docs": "https://github.com/linuxserver/docker-openvscode-server"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

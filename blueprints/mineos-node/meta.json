@@ -1,0 +1,15 @@
+{
+  "id": "mineos-node",
+  "name": "MineOS",
+  "description": "Free and easy to use Minecraft server management tool.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/hexparrot/mineos-node",
+    "website": "https://www.mineos.net/",
+    "docs": "https://www.mineos.net/"
+  },
+  "tags": [
+    "media"
+  ]
+}

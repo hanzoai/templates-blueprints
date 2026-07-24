@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+gost-version = "3.2.6"
+gost-api-path = "api"
+gost-api-alog = "true"
+gost-api-port = "18080"
+gost-api-user = "gostguru"
+gost-api-password = "Ex@mple777"
+
+[config]
+
+[[config.domains]]
+serviceName = "gogost"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+GOST_VERSION = "${gost-version}"
+GOST_API_PATH = "${gost-api-path}"
+GOST_API_ALOG = "${gost-api-alog}"
+GOST_API_PORT = "${gost-api-port}"
+GOST_API_USER = "${gost-api-user}"
+GOST_API_PASSWORD = "${gost-api-password}"

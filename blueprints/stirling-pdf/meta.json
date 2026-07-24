@@ -1,0 +1,19 @@
+{
+  "id": "stirling-pdf",
+  "name": "stirling-pdf",
+  "description": "Stirling is a powerful web based PDF manipulation tool",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Stirling-Tools/Stirling-PDF",
+    "website": "",
+    "docs": "https://github.com/Stirling-Tools/Stirling-PDF"
+  },
+  "tags": [
+    "pdf",
+    "manipulation",
+    "web",
+    "tool",
+    "productivity"
+  ]
+}

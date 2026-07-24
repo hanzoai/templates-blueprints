@@ -1,0 +1,18 @@
+{
+  "id": "osticket",
+  "name": "osticket",
+  "description": "osTicket is a widely-used open source support ticket system.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.osticket.com/en/latest/",
+    "docs": "https://docs.osticket.com/en/latest/"
+  },
+  "tags": [
+    "helpdesk",
+    "ticketing",
+    "support",
+    "open-source"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "send",
+  "name": "Send",
+  "description": "Simple, private file sharing. https://send.vis.ee/",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "",
+    "website": "https://gitlab.com/timvisee/send",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

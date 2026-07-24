@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+ombi-version = "development-v4.0.1446-ls143"
+tz = "Asia/Kolkata"
+
+[config]
+
+[[config.domains]]
+serviceName = "ombi"
+port = 3579
+host = "${main_domain}"
+
+[config.env]
+OMBI_VERSION = "${ombi-version}"
+TZ = "${tz}"

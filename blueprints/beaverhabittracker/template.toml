@@ -1,0 +1,9 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "beaverhabittracker"
+port = 15580
+host = "${main_domain}"

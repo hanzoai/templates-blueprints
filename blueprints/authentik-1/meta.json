@@ -1,0 +1,15 @@
+{
+  "id": "authentik-1",
+  "name": "Authentik",
+  "description": "The authentication glue you need.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/goauthentik/authentik",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "development"
+  ]
+}

@@ -1,0 +1,10 @@
+# The image serves only meta.json + blueprints/ + the landing page. Everything
+# else (scripts, CI, CR, docs, git) stays out of the build context.
+.git/
+.github/
+scripts/
+crs/
+node_modules/
+*.md
+LICENSE
+hanzo.yml

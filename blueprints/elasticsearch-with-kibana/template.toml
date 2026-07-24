@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "kibana"
+port = 5601
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_ELASTICSEARCH = "${password:32}"
+SERVICE_PASSWORD_KIBANA = "${password:32}"
+SERVICE_FQDN_KIBANA = "${main_domain}"
+SERVICE_URL_KIBANA = "https://${main_domain}"
+SERVICE_PASSWORD_XPACKSECURITY = "${password:32}"
+SERVICE_PASSWORD_XPACKREPORTING = "${password:32}"
+SERVICE_PASSWORD_XPACKENCRYPTEDSAVEDOBJECTS = "${password:32}"

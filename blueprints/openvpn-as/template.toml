@@ -1,0 +1,27 @@
+[variables]
+main_domain = "${domain}"
+openvpn-version = "2.9.0-5c5bd120-Ubuntu18-ls124"
+openvpn-tz = "UTC"
+openvpn-puid = "1000"
+openvpn-guid = "1000"
+openvpn-port-admin = "943"
+openvpn-port-tcp = "9443"
+openvpn-port-udp = "1194"
+openvpn-interface = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "openvpn-as"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+OPENVPN_VERSION = "${openvpn-version}"
+OPENVPN_TZ = "${openvpn-tz}"
+OPENVPN_PUID = "${openvpn-puid}"
+OPENVPN_GUID = "${openvpn-guid}"
+OPENVPN_PORT_ADMIN = "${openvpn-port-admin}"
+OPENVPN_PORT_TCP = "${openvpn-port-tcp}"
+OPENVPN_PORT_UDP = "${openvpn-port-udp}"
+OPENVPN_INTERFACE = "${openvpn-interface}"

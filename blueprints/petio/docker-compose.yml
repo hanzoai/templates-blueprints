@@ -1,0 +1,25 @@
+services:
+  petio:
+    image: ghcr.io/petio-team/petio@sha256:1c5a9276a844f4284601cbe332905864950545ebdeaad74bacb9097ea4f4b333
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    depends_on:
+      - mongo
+    expose:
+      - "7777"
+    volumes:
+      - petio-config:/app/api/config
+      - petio-logs:/app/logs
+    restart: unless-stopped
+  mongo:
+    image: mongo:4.4.22
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    restart: unless-stopped
+volumes:
+  petio-config: {}
+  petio-logs: {}

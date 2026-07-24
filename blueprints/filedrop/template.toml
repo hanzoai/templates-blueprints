@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "filedrop"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+PGID = ""
+PUID = ""
+TZ = ""

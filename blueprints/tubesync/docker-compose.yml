@@ -1,0 +1,18 @@
+services:
+  tubesync:
+    image: ghcr.io/meeb/tubesync:${TUBESYNC_VERSION}
+    environment:
+      PUID: ${PUID}
+      PGID: ${PGID}
+      TZ: ${TIMEZONE}
+      HTTP_USER: ${USERNAME}
+      HTTP_PASS: ${PASSWORD}
+    volumes:
+      - tubesync-config:/config
+      - tubesync-downloads:/downloads
+    expose:
+      - "4848"
+    restart: always
+volumes:
+  tubesync-config: {}
+  tubesync-downloads: {}

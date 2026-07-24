@@ -1,0 +1,15 @@
+{
+  "id": "chatgpt-ui",
+  "name": "ChatGPT UI",
+  "description": "A ChatGPT web client that supports multiple users, multiple languages, and multiple database connections for persistent data storage",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/WongSaang/chatgpt-ui",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "ai"
+  ]
+}

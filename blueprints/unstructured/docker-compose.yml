@@ -1,0 +1,14 @@
+services:
+  unstructured:
+    image: downloads.unstructured.io/unstructured-io/unstructured-api:latest
+    environment:
+      - UNSTRUCTURED_API_KEY=${SERVICE_PASSWORD_APIKEY}
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - -qO-
+        - http://0.0.0.0:8000/healthcheck
+      interval: 5s
+      timeout: 30s
+      retries: 10

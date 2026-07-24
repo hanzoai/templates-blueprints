@@ -1,0 +1,16 @@
+{
+  "id": "your-spotify",
+  "name": "Your Spotify",
+  "description": "Self hosted Spotify tracking dashboard.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Yooooomi/your_spotify",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "music",
+    "utilities"
+  ]
+}

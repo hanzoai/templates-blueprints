@@ -1,0 +1,10 @@
+services:
+  radicale:
+    image: tomsquest/docker-radicale:${IMAGE_TAG}
+    volumes:
+      - radicale-data:/data
+    expose:
+      - "5232"
+    restart: always
+volumes:
+  radicale-data: {}

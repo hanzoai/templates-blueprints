@@ -1,0 +1,16 @@
+services:
+  medusa:
+    image: pymedusa/medusa:master
+    environment:
+      - TZ= $TZ
+    expose:
+      - "8081"
+    volumes:
+      - medusa-config:/config
+      - medusa-downloads:/downloads
+      - medusa-tv:/tv
+    restart: unless-stopped
+volumes:
+  medusa-config: {}
+  medusa-downloads: {}
+  medusa-tv: {}

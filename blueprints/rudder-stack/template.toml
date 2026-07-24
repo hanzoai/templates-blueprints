@@ -1,0 +1,27 @@
+[variables]
+main_domain = "${domain}"
+rudder-workspace-token = ""
+app-version = "1.49.3"
+rudder-transformer-version = "1.100.0"
+metrics-exporter-version = "v0.22.4"
+app-db-username = "postgres"
+app-db-password = "${password:24}"
+app-db-name = "rudder"
+app-backend-url = "${main_domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "rudder-stack-backend"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+RUDDER_WORKSPACE_TOKEN = "${rudder-workspace-token}"
+APP_VERSION = "${app-version}"
+RUDDER_TRANSFORMER_VERSION = "${rudder-transformer-version}"
+METRICS_EXPORTER_VERSION = "${metrics-exporter-version}"
+APP_DB_USERNAME = "${app-db-username}"
+APP_DB_PASSWORD = "${app-db-password}"
+APP_DB_NAME = "${app-db-name}"
+APP_BACKEND_URL = "${app-backend-url}"

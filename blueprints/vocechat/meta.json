@@ -1,0 +1,15 @@
+{
+  "id": "vocechat",
+  "name": "VoceChat",
+  "description": "Have a Private Social Space Hosted on Your Site",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/Privoce/vocechat-server-rust",
+    "website": "https://voce.chat",
+    "docs": "https://doc.voce.chat/"
+  },
+  "tags": [
+    "social"
+  ]
+}

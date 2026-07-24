@@ -1,0 +1,15 @@
+{
+  "id": "gateway-go",
+  "name": "gateway-go",
+  "description": "A third-party client for casaos and zimaOS, remote access management interface, remote access to installed applications.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/OpenIoTHub/gateway-go",
+    "website": "",
+    "docs": "https://docs.iothub.cloud/typical/index.html#casaoszimaos"
+  },
+  "tags": [
+    "networking"
+  ]
+}

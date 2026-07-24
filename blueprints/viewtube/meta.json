@@ -1,0 +1,15 @@
+{
+  "id": "viewtube",
+  "name": "ViewTube",
+  "description": "The open source, privacy-conscious way to enjoy your favorite YouTube content.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/ViewTube/viewtube",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "media"
+  ]
+}

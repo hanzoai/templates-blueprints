@@ -1,0 +1,13 @@
+[variables]
+main_domain = "${domain}"
+lounge-version = "4.1.0"
+
+[config]
+
+[[config.domains]]
+serviceName = "the-lounge"
+port = 9000
+host = "${main_domain}"
+
+[config.env]
+LOUNGE_VERSION = "${lounge-version}"

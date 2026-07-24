@@ -1,0 +1,14 @@
+services:
+  label-studio:
+    image: heartexlabs/label-studio:1.23.0
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+    expose:
+      - "8080"
+    volumes:
+      - label-studio-data:/label-studio/data
+    restart: unless-stopped
+volumes:
+  label-studio-data: {}

@@ -1,0 +1,15 @@
+{
+  "id": "logseq",
+  "name": "Logseq",
+  "description": "A privacy-first, open-source platform for knowledge management and collaboration.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/logseq/logseq",
+    "website": "https://logseq.com/",
+    "docs": "https://docs.logseq.com/"
+  },
+  "tags": [
+    "productivity"
+  ]
+}

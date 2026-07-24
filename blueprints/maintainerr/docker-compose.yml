@@ -1,0 +1,12 @@
+services:
+  maintainerr:
+    image: ghcr.io/maintainerr/maintainerr:3.18.0
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - maintainerr-data:/opt/data
+    expose:
+      - "6246"
+    restart: always
+volumes:
+  maintainerr-data: {}

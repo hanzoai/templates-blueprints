@@ -1,0 +1,16 @@
+{
+  "id": "mongo",
+  "name": "MongoDB",
+  "description": "MongoDB is an open-source NoSQL database",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/mongodb/mongo",
+    "website": "https://www.mongodb.com/",
+    "docs": "https://www.mongodb.com/"
+  },
+  "tags": [
+    "development",
+    "data"
+  ]
+}

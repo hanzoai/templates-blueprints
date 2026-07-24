@@ -1,0 +1,15 @@
+{
+  "id": "kasm-workspaces",
+  "name": "Kasm Workspaces",
+  "description": "Container streaming platform.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/kasmtech",
+    "website": "https://www.kasmweb.com/",
+    "docs": "https://www.kasmweb.com/"
+  },
+  "tags": [
+    "utilities"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "prisma",
+  "name": "Prisma",
+  "description": "Prisma 1 is a database abstraction layer that turns your databases into GraphQL APIs with CRUD operations and realtime capabilities",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/prismagraphql/prisma/",
+    "docs": "https://hub.docker.com/r/prismagraphql/prisma/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

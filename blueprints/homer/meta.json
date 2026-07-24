@@ -1,0 +1,15 @@
+{
+  "id": "homer",
+  "name": "Homer",
+  "description": "A very simple static homepage for your server",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/bastienwirtz/homer",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

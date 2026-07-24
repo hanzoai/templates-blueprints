@@ -1,0 +1,25 @@
+[variables]
+main_domain = "${domain}"
+fidi-version = "version-v1.0.1"
+ff-token = ""
+ff-url = "${main_domain}"
+nordigen-id = ""
+nordigen-key = ""
+spectre-app-id = ""
+spectre-secret = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "fireflyiii-data-importer"
+port = 8080
+host = "${main_domain}"
+
+[config.env]
+FIDI_VERSION = "${fidi-version}"
+FF_TOKEN = "${ff-token}"
+FF_URL = "${ff-url}"
+NORDIGEN_ID = "${nordigen-id}"
+NORDIGEN_KEY = "${nordigen-key}"
+SPECTRE_APP_ID = "${spectre-app-id}"
+SPECTRE_SECRET = "${spectre-secret}"

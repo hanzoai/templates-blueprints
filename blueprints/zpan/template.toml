@@ -1,0 +1,17 @@
+[variables]
+main_domain = "${domain}"
+public-url = "${main_domain}"
+bt-port = "46881"
+seed-cache-limit = "10GB"
+
+[config]
+
+[[config.domains]]
+serviceName = "zpan"
+port = 8222
+host = "${main_domain}"
+
+[config.env]
+PUBLIC_URL = "${public-url}"
+BT_PORT = "${bt-port}"
+SEED_CACHE_LIMIT = "${seed-cache-limit}"

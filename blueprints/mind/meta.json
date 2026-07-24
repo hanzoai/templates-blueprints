@@ -1,0 +1,15 @@
+{
+  "id": "mind",
+  "name": "Mind",
+  "description": "A simple self hosted reminder platform that uses push to send notifications to your device.",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/Casvt/MIND",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "utilities"
+  ]
+}

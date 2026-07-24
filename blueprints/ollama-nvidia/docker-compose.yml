@@ -1,0 +1,10 @@
+services:
+  ollama:
+    image: ollama/ollama:0.9.5
+    expose:
+      - "11434"
+    volumes:
+      - ollama-nvidia-ollama:/root/.ollama
+    restart: unless-stopped
+volumes:
+  ollama-nvidia-ollama: {}

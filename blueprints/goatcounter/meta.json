@@ -1,0 +1,17 @@
+{
+  "id": "goatcounter",
+  "name": "goatcounter",
+  "description": "Lightweight web analytics platform.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.goatcounter.com/help",
+    "docs": "https://www.goatcounter.com/help"
+  },
+  "tags": [
+    "analytics",
+    "insights",
+    "privacy"
+  ]
+}

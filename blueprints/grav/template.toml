@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "grav"
+port = 8161
+host = "${main_domain}"
+
+[config.env]
+TZ = ""

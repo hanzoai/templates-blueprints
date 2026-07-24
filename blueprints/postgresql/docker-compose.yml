@@ -1,0 +1,17 @@
+services:
+  postgresql:
+    image: postgres:17.4
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    expose:
+      - "5432"
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
+    restart: unless-stopped
+volumes:
+  postgresql-data: {}

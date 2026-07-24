@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+version = "1.0.1"
+tz = "America/Los_Angeles"
+
+[config]
+
+[[config.domains]]
+serviceName = "chadburn"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+VERSION = "${version}"
+TZ = "${tz}"

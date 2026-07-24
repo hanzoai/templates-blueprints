@@ -1,0 +1,15 @@
+{
+  "id": "petio",
+  "name": "Petio",
+  "description": "A third party companion app available to Plex server owners to allow their users to request, review and discover content.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/petio-team/petio",
+    "website": "https://petio.tv",
+    "docs": "https://docs.petio.tv"
+  },
+  "tags": [
+    "media"
+  ]
+}

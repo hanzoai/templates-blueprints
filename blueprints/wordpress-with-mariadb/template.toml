@@ -1,0 +1,14 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "wordpress"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_USER_WORDPRESS = "${username}"
+SERVICE_PASSWORD_WORDPRESS = "${password:32}"
+SERVICE_PASSWORD_ROOT = "${password:32}"

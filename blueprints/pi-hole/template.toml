@@ -1,0 +1,12 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "pihole"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PASSWORD_PIHOLE = "${password:32}"

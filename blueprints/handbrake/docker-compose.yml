@@ -1,0 +1,15 @@
+services:
+  handbrake:
+    image: jlesage/handbrake:v26.03.3
+    expose:
+      - "5800"
+    volumes:
+      - /DATA:/storage
+      - handbrake-watch:/watch
+      - handbrake-output:/output
+      - handbrake-config:/config
+    restart: unless-stopped
+volumes:
+  handbrake-watch: {}
+  handbrake-output: {}
+  handbrake-config: {}

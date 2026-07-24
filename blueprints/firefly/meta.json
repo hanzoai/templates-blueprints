@@ -1,0 +1,18 @@
+{
+  "id": "firefly",
+  "name": "firefly",
+  "description": "A personal finances manager that can help you save money.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://firefly-iii.org",
+    "docs": "https://firefly-iii.org"
+  },
+  "tags": [
+    "finance",
+    "money",
+    "personal",
+    "manager"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "sshwifty",
+  "name": "Sshwifty",
+  "description": "Web SSH & Telnet (WebSSH & WebTelnet client)",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/nirui/sshwifty",
+    "website": "https://sshwifty-demo.nirui.org/",
+    "docs": "https://sshwifty-demo.nirui.org/"
+  },
+  "tags": [
+    "development"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "rudder-stack",
+  "name": "RudderStack Data Plane",
+  "description": "Deploy RudderStack Data Plane, the open-source Customer Data Platform. This template includes the backend server, PostgreSQL database, data transformer, and metrics exporter.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://www.rudderstack.com/docs/",
+    "docs": "https://www.rudderstack.com/docs/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

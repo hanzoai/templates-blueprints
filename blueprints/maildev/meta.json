@@ -1,0 +1,16 @@
+{
+  "id": "maildev",
+  "name": "Maildev",
+  "description": "MailDev is a simple way to test your project's generated email during development.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/maildev/maildev",
+    "docs": "https://hub.docker.com/r/maildev/maildev"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "beszel-agent",
+  "name": "beszel-agent",
+  "description": "Monitoring agent for Beszel",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://www.beszel.dev/guide/agent-installation",
+    "docs": "https://www.beszel.dev/guide/agent-installation"
+  },
+  "tags": [
+    "beszel",
+    "monitoring",
+    "server",
+    "stats",
+    "alerts"
+  ]
+}

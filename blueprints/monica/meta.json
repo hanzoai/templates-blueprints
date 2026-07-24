@@ -1,0 +1,16 @@
+{
+  "id": "monica",
+  "name": "Monica",
+  "description": "Monica is a great open source personal relationship management system to organize the interactions with your loved ones.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/_/monica",
+    "docs": "https://hub.docker.com/_/monica"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

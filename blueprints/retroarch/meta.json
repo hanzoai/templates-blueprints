@@ -1,0 +1,15 @@
+{
+  "id": "retroarch",
+  "name": "RetroArch",
+  "description": "Online retro games emulator",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "https://github.com/libretro/RetroArch",
+    "website": "https://www.retroarch.com",
+    "docs": "https://docs.libretro.com/"
+  },
+  "tags": [
+    "media"
+  ]
+}

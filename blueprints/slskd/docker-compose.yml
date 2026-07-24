@@ -1,0 +1,24 @@
+services:
+  slskd:
+    image: slskd/slskd:0.26.0
+    environment:
+      SLSKD_WEB_USER: ${SLSKD_WEB_USER}
+      SLSKD_WEB_PASSWORD: ${SLSKD_WEB_PASSWORD}
+      SLSKD_USER: ${SLSKD_USER}
+      SLSKD_PASSWORD: ${SLSKD_PASSWORD}
+      SLSKD_REMOTE_CONFIGURATION: ${SLSKD_REMOTE_CONFIGURATION}
+      SLSKD_CONFIG: /app/data/slskd.yml
+      SLSKD_SHARED_DIR: /shared
+    volumes:
+      - slskd-app:/app
+      - slskd-downloads:/downloads
+      - slskd-incomplete:/incomplete
+      - slskd-shared:/shared
+    expose:
+      - "5030"
+    restart: always
+volumes:
+  slskd-app: {}
+  slskd-downloads: {}
+  slskd-incomplete: {}
+  slskd-shared: {}

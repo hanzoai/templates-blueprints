@@ -1,0 +1,15 @@
+{
+  "id": "nitter",
+  "name": "Nitter",
+  "description": "Twitter without annoyances!",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/zedeus/nitter",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "social"
+  ]
+}

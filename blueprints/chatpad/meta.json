@@ -1,0 +1,15 @@
+{
+  "id": "chatpad",
+  "name": "Chatpad AI",
+  "description": "Not just another ChatGPT user-interface!",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/deiucanta/chatpad",
+    "website": "https://chatpad.ai/",
+    "docs": "https://chatpad.ai/"
+  },
+  "tags": [
+    "ai"
+  ]
+}

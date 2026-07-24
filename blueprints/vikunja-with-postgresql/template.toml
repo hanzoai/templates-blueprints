@@ -1,0 +1,18 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "vikunja"
+port = 3456
+host = "${main_domain}"
+
+[config.env]
+SERVICE_PUBLICURL = ""
+SERVICE_URL_VIKUNJA = "https://${main_domain}"
+SERVICE_JWTSECRET = "${password:32}"
+SERVICE_PASSWORD_JWTSECRET = "${password:32}"
+SERVICE_ENABLEREGISTRATION = ""
+SERVICE_PASSWORD_POSTGRESQL = "${password:32}"
+SERVICE_USER_POSTGRESQL = "${username}"

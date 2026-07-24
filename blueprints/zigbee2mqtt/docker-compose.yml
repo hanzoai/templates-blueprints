@@ -1,0 +1,12 @@
+services:
+  zigbee2mqtt:
+    image: koenkk/zigbee2mqtt:2.12.1
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - zigbee2mqtt-data:/app/data
+    expose:
+      - "8080"
+    restart: always
+volumes:
+  zigbee2mqtt-data: {}

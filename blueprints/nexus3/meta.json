@@ -1,0 +1,16 @@
+{
+  "id": "nexus3",
+  "name": "Nexus3",
+  "description": "Nexus is a repository manager. It allows you to proxy, collect, and manage your dependencies",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "",
+    "website": "https://hub.docker.com/r/sonatype/nexus3/",
+    "docs": "https://hub.docker.com/r/sonatype/nexus3/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

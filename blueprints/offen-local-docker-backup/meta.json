@@ -1,0 +1,16 @@
+{
+  "id": "offen-local-docker-backup",
+  "name": "Offen Docker Backup (Local)",
+  "description": "Backup Docker volumes locally",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/offen/docker-volume-backup",
+    "website": "",
+    "docs": "https://github.com/offen/docker-volume-backup"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

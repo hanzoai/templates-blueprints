@@ -1,0 +1,15 @@
+{
+  "id": "serge",
+  "name": "Serge",
+  "description": "LLaMA made easy",
+  "version": "latest",
+  "logo": "logo.jpg",
+  "links": {
+    "github": "https://github.com/serge-chat/serge",
+    "website": "",
+    "docs": ""
+  },
+  "tags": [
+    "ai"
+  ]
+}

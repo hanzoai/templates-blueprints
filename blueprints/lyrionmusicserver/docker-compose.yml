@@ -1,0 +1,20 @@
+services:
+  lyrionmusicserver:
+    image: lmscommunity/lyrionmusicserver:9.1.1
+    environment:
+      HTTP_PORT: "9000"
+    expose:
+      - "9000"
+      - "9090"
+      - "3483"
+    volumes:
+      - lyrionmusicserver-config:/config
+      - lyrionmusicserver-music:/music
+      - lyrionmusicserver-playlist:/playlist
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    restart: unless-stopped
+volumes:
+  lyrionmusicserver-config: {}
+  lyrionmusicserver-music: {}
+  lyrionmusicserver-playlist: {}

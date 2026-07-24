@@ -1,0 +1,16 @@
+{
+  "id": "cronicle",
+  "name": "Cronicle",
+  "description": "A simple, distributed task scheduler and runner with a web based UI.",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/jhuckaby/Cronicle",
+    "website": "",
+    "docs": "https://github.com/jhuckaby/Cronicle"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

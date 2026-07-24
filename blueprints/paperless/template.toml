@@ -1,0 +1,15 @@
+[variables]
+main_domain = "${domain}"
+
+[config]
+
+[[config.domains]]
+serviceName = "paperless"
+port = 8000
+host = "${main_domain}"
+
+[config.env]
+SERVICE_URL_PAPERLESS = "https://${main_domain}"
+SERVICE_PASSWORD_PAPERLESS = "${password:32}"
+SERVICE_USER_PAPERLESS = "${username}"
+SERVICE_REALBASE64_64_PAPERLESS = "${base64:64}"

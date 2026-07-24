@@ -1,0 +1,13 @@
+services:
+  chatwoot-botpress-bridge:
+    image: douglara/chatwoot-botpress-bridge:${VERSION}
+    environment:
+      RAILS_ENV: production
+      CHATWOOT_ENDPOINT: ${CHATWOOT_ENDPOINT}
+      CHATWOOT_BOT_TOKEN: ${CHATWOOT_BOT_TOKEN}
+      BOTPRESS_ENDPOINT: ${BOTPRESS_ENDPOINT}
+      BOTPRESS_BOT_ID: ${BOTPRESS_BOT_ID}
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+    expose:
+      - "3000"
+    restart: always

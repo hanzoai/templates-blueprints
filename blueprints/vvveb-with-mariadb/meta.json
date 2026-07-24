@@ -1,0 +1,24 @@
+{
+  "id": "vvveb-with-mariadb",
+  "name": "vvveb-with-mariadb",
+  "description": "Powerful and easy to use cms to build websites, blogs or ecommerce stores.",
+  "version": "latest",
+  "logo": "logo.svg",
+  "links": {
+    "github": "",
+    "website": "https://docs.vvveb.com",
+    "docs": "https://docs.vvveb.com"
+  },
+  "tags": [
+    "cms",
+    "blog",
+    "content",
+    "management",
+    "ecommerce",
+    "page-builder",
+    "nocode",
+    "mysql",
+    "sqlite",
+    "pgsql"
+  ]
+}

@@ -1,0 +1,20 @@
+[variables]
+main_domain = "${domain}"
+postgres-passwd = "${password:16}"
+claper-ver = "1.4.0"
+postgres-version = "15-alpine"
+gensec64 = "${password:64}"
+
+[config]
+
+[[config.domains]]
+serviceName = "claper"
+port = 4000
+host = "${main_domain}"
+
+[config.env]
+POSTGRES_PASSWD = "${postgres-passwd}"
+CLAPER_VER = "${claper-ver}"
+POSTGRES_VERSION = "${postgres-version}"
+ROOT_DOMAIN = "${main_domain}"
+GENSEC64 = "${gensec64}"

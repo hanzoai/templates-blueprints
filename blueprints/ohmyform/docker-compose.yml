@@ -1,0 +1,27 @@
+services:
+  ohmyform:
+    image: ohmyform/ohmyform:0.9.9
+    environment:
+      CREATE_ADMIN: "TRUE"
+      ADMIN_EMAIL: ${OHMYFORM_EMAIL}
+      ADMIN_USERNAME: ${OHMYFORM_USER}
+      ADMIN_PASSWORD: ${OHMYFORM_PASS}
+      MAILER_URI: smtp://ohmyform-mailhog:1025
+      PORT: "5000"
+      MONGODB_URI: mongodb://ohmyform-mongo/ohmyform
+    volumes:
+      - ohmyform-data:/data
+    expose:
+      - "5000"
+    restart: always
+  ohmyform-mongo:
+    image: mongo:4
+    volumes:
+      - ohmyform-mongo:/data/db
+    restart: always
+  ohmyform-mailhog:
+    image: mailhog/mailhog:v1.0.1
+    restart: always
+volumes:
+  ohmyform-data: {}
+  ohmyform-mongo: {}

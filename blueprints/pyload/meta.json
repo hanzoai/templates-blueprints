@@ -1,0 +1,16 @@
+{
+  "id": "pyload",
+  "name": "Pyload",
+  "description": "The free and open-source Download Manager written in pure Python",
+  "version": "latest",
+  "logo": "logo.png",
+  "links": {
+    "github": "https://github.com/pyload/pyload/wiki",
+    "website": "https://docs.linuxserver.io/images/docker-pyload-ng/",
+    "docs": "https://docs.linuxserver.io/images/docker-pyload-ng/"
+  },
+  "tags": [
+    "self-hosted",
+    "caprover"
+  ]
+}

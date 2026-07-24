@@ -1,0 +1,23 @@
+[variables]
+main_domain = "${domain}"
+server-version = "2017-CU12-ubuntu"
+host-port = "1433"
+container-port = "1433"
+sa-pass = ""
+pid = "Developer"
+accept-eula = ""
+
+[config]
+
+[[config.domains]]
+serviceName = "mssql-db"
+port = 80
+host = "${main_domain}"
+
+[config.env]
+SERVER_VERSION = "${server-version}"
+HOST_PORT = "${host-port}"
+CONTAINER_PORT = "${container-port}"
+SA_PASS = "${sa-pass}"
+PID = "${pid}"
+ACCEPT_EULA = "${accept-eula}"
