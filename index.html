@@ -3,27 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hanzo Deploy Templates</title>
+  <title>Hanzo OSS — deploy 1000+ open-source apps</title>
+  <meta name="description" content="Explore and one-click deploy 1000+ open-source apps on Hanzo Cloud. Postgres, Ghost, n8n, Supabase, Grafana and more. Built one of these? Earn 20% when people run it on Hanzo." />
   <link rel="stylesheet" href="/catalog.css" />
+  <link rel="icon" href="https://hanzo.ai/favicon.ico" />
 </head>
 <body>
+  <header class="top">
+    <a class="brand" href="https://hanzo.ai">Hanzo</a>
+    <nav class="topnav">
+      <a href="https://platform.hanzo.ai">Deploy</a>
+      <a href="https://console.hanzo.ai/authors">Earn</a>
+      <a href="https://docs.hanzo.ai">Docs</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Deploy open source on Hanzo</h1>
+    <p class="lead"><strong id="count">1000+</strong> ready-to-run apps — one click to your own machine, GPU, or cluster.</p>
+    <div class="earn">
+      Built one of these? <a href="https://console.hanzo.ai/authors">Earn 20% of the compute revenue</a> when people run your project on Hanzo.
+    </div>
+    <input id="q" class="search" type="search" placeholder="Search 1000+ apps — postgres, ghost, n8n, grafana…" autocomplete="off" autofocus />
+    <div id="tags" class="tags"></div>
+  </section>
+
   <main>
-    <h1>Hanzo Deploy Templates</h1>
-    <p class="lead">The one-click deploy catalog for the Hanzo PaaS
-      (<a href="https://platform.hanzo.ai">platform.hanzo.ai</a>). Every entry is
-      a ready-to-run <code>docker-compose</code> stack with a Hanzo deploy
-      descriptor.</p>
-    <h2>Catalog API</h2>
-    <ul>
-      <li><a href="/meta.json"><code>/meta.json</code></a> — the full catalog as a JSON array.</li>
-      <li><code>/blueprints/&lt;id&gt;/template.toml</code> — a template's variables, domains and env.</li>
-      <li><code>/blueprints/&lt;id&gt;/docker-compose.yml</code> — the compose stack.</li>
-      <li><code>/blueprints/&lt;id&gt;/&lt;logo&gt;</code> — the app logo.</li>
-    </ul>
-    <p>Deploy any of these from the Templates tab in the Hanzo PaaS. Sourced from
-      the open-source Dokploy, Coolify, CapRover, CasaOS and Runtipi catalogs;
-      each app keeps its upstream license and attribution — see
-      <a href="https://github.com/hanzoai/templates-blueprints">the repository</a>.</p>
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <p id="empty" class="empty" hidden>No apps match — try another term.</p>
+    <button id="more" class="more" hidden>Load more</button>
   </main>
+
+  <footer class="foot">
+    <span>Sourced from the open-source Dokploy, Coolify, CapRover, CasaOS &amp; Runtipi catalogs — each app keeps its upstream license.</span>
+    <a href="/meta.json">Catalog API</a>
+  </footer>
+
+  <script src="/app.js" defer></script>
 </body>
 </html>
