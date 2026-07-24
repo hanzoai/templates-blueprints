@@ -37,6 +37,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # The arc pool image ships docker+buildx but no node on PATH; provision it
+      # so the validate gate (which uses the platform's own toml/yaml parsers)
+      # can run before we build the image.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Regenerate meta.json + validate catalog
         run: |
           cd scripts
