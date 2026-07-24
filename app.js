@@ -1,77 +1,100 @@
-// Hanzo OSS explorer — fetches the catalog and renders a fast, searchable gallery.
-// Static-served (hanzoai/static): same-origin fetch of /meta.json, no framework.
+// oss.hanzo.ai — the open-source explorer. One file, no framework, no inline JS
+// (CSP: script-src 'self'). Cards are built with the DOM API — never innerHTML —
+// so a hostile description can't inject, a missing logo can't break the grid, and
+// nothing here runs afoul of the strict Content-Security-Policy. Resilient by
+// construction: one bad template is skipped, never fatal.
 'use strict';
 
-var PLATFORM = 'https://platform.hanzo.ai/templates?deploy=';
-var AUTHORS = 'https://console.hanzo.ai/authors';
-var PAGE = 48;
-// Build-provenance tags are catalog plumbing, not user categories.
+var DEPLOY = 'https://platform.hanzo.ai/templates?deploy=';
+var EARN = 'https://console.hanzo.ai/authors';
+var PAGE = 60;
+
+// Build-provenance tags are catalog plumbing, not categories a human browses by.
 var HIDE = { caprover: 1, dokploy: 1, coolify: 1, casaos: 1, runtipi: 1 };
 var FEATURED = ['self-hosted', 'ai', 'database', 'media', 'productivity', 'monitoring', 'automation', 'developer'];
 
-var all = [], view = [], shown = 0, active = '';
+var $ = function (id) { return document.getElementById(id); };
+var el = function (tag, cls, text) {
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+};
 
-var grid = document.getElementById('grid');
-var q = document.getElementById('q');
-var tagsEl = document.getElementById('tags');
-var moreBtn = document.getElementById('more');
-var emptyEl = document.getElementById('empty');
-var countEl = document.getElementById('count');
+var ALL = [], view = [], shown = 0, active = '';
+var grid, q, tagsEl, moreBtn, emptyEl, countEl;
 
 function ghRepo(t) {
   var u = (t.links && t.links.github) || '';
   var m = u.match(/github\.com\/([^/]+)\/([^/#?]+)/);
-  return m ? (m[1] + '/' + m[2].replace(/\.git$/, '')) : '';
+  return m ? m[1] + '/' + m[2].replace(/\.git$/, '') : '';
+}
+
+// A logo that degrades gracefully: try the image; on error (or when absent),
+// fall back to a monogram tile. No inline handler — bound here, CSP-clean.
+function logo(t) {
+  var initial = (t.name || t.id || '?').charAt(0).toUpperCase();
+  var mono = el('div', 'logo mono', initial);
+  if (!t.logo) return mono;
+  var img = el('img', 'logo');
+  img.loading = 'lazy';
+  img.alt = '';
+  img.src = '/blueprints/' + encodeURIComponent(t.id) + '/' + t.logo;
+  img.addEventListener('error', function () {
+    if (img.parentNode) img.parentNode.replaceChild(mono, img);
+  });
+  return img;
 }
 
 function card(t) {
-  var el = document.createElement('article');
-  el.className = 'card';
-  var repo = ghRepo(t);
-  var logo = t.logo
-    ? '<img class="logo" loading="lazy" alt="" src="/blueprints/' + t.id + '/' + t.logo + '" onerror="this.replaceWith(mono(\'' + (t.name || t.id).replace(/[^a-z0-9]/gi, '') + '\'))">'
-    : monoHTML(t.name || t.id);
-  el.innerHTML =
-    logo +
-    '<div class="body">' +
-      '<p class="name">' + esc(t.name || t.id) + '</p>' +
-      '<p class="desc">' + esc(t.description || '') + '</p>' +
-      '<div class="row">' +
-        '<a class="deploy" href="' + PLATFORM + encodeURIComponent(t.id) + '">Deploy</a>' +
-        (t.links && t.links.github ? '<a class="link" target="_blank" rel="noopener" href="' + esc(t.links.github) + '">GitHub</a>' : '') +
-        (repo ? '<a class="claim" title="Are you the maintainer?" href="' + AUTHORS + '?claim=' + encodeURIComponent(repo) + '">Earn 20% →</a>' : '') +
-      '</div>' +
-    '</div>';
-  return el;
-}
+  var c = el('article', 'card');
 
-// exposed for the onerror fallback
-window.mono = function (letter) {
-  var d = document.createElement('div');
-  d.className = 'logo mono';
-  d.textContent = (letter || '?').charAt(0).toUpperCase();
-  return d;
-};
-function monoHTML(name) {
-  return '<div class="logo mono">' + esc((name || '?').charAt(0).toUpperCase()) + '</div>';
+  c.appendChild(logo(t));
+
+  var body = el('div', 'body');
+  body.appendChild(el('p', 'name', t.name || t.id));
+  body.appendChild(el('p', 'desc', t.description || ''));
+
+  var row = el('div', 'row');
+  var deploy = el('a', 'deploy', 'Deploy');
+  deploy.href = DEPLOY + encodeURIComponent(t.id);
+  row.appendChild(deploy);
+
+  if (t.links && t.links.github) {
+    var gh = el('a', 'link', 'GitHub');
+    gh.href = t.links.github; gh.target = '_blank'; gh.rel = 'noopener noreferrer';
+    row.appendChild(gh);
+  }
+  var repo = ghRepo(t);
+  if (repo) {
+    var earn = el('a', 'claim', 'Earn 20% →');
+    earn.href = EARN + '?claim=' + encodeURIComponent(repo);
+    earn.title = 'Are you the maintainer? Earn 20% of the compute revenue.';
+    row.appendChild(earn);
+  }
+  body.appendChild(row);
+  c.appendChild(body);
+  return c;
 }
-function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
 function render(reset) {
-  if (reset) { grid.innerHTML = ''; shown = 0; }
+  if (reset) { grid.textContent = ''; shown = 0; }
   var frag = document.createDocumentFragment();
   var end = Math.min(shown + PAGE, view.length);
-  for (var i = shown; i < end; i++) frag.appendChild(card(view[i]));
+  for (var i = shown; i < end; i++) {
+    try { frag.appendChild(card(view[i])); } catch (e) { /* skip one bad row, never break the grid */ }
+  }
   grid.appendChild(frag);
   shown = end;
   moreBtn.hidden = shown >= view.length;
   emptyEl.hidden = view.length > 0;
+  if (countEl) countEl.textContent = ALL.length.toLocaleString();
 }
 
 function apply() {
   var term = q.value.trim().toLowerCase();
-  view = all.filter(function (t) {
-    if (active && !(t.tags || []).some(function (x) { return x === active; })) return false;
+  view = ALL.filter(function (t) {
+    if (active && (t.tags || []).indexOf(active) < 0) return false;
     if (!term) return true;
     return (t.name || '').toLowerCase().indexOf(term) >= 0 ||
            (t.description || '').toLowerCase().indexOf(term) >= 0 ||
@@ -81,35 +104,48 @@ function apply() {
   render(true);
 }
 
-var timer;
-q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(apply, 90); });
-moreBtn.addEventListener('click', function () { render(false); });
-
 function buildTags() {
   FEATURED.forEach(function (name) {
     if (HIDE[name]) return;
-    var b = document.createElement('button');
-    b.className = 'tag'; b.textContent = name; b.dataset.tag = name;
+    var b = el('button', 'tag', name);
     b.addEventListener('click', function () {
-      if (active === name) { active = ''; b.classList.remove('on'); }
-      else {
-        active = name;
-        Array.prototype.forEach.call(tagsEl.children, function (c) { c.classList.remove('on'); });
-        b.classList.add('on');
-      }
+      var on = active === name;
+      Array.prototype.forEach.call(tagsEl.children, function (c) { c.classList.remove('on'); });
+      active = on ? '' : name;
+      if (!on) b.classList.add('on');
       apply();
     });
     tagsEl.appendChild(b);
   });
 }
 
-fetch('/meta.json')
-  .then(function (r) { return r.json(); })
-  .then(function (data) {
-    all = Array.isArray(data) ? data : [];
-    if (countEl) countEl.textContent = all.length.toLocaleString();
-    buildTags();
-    view = all;
-    render(true);
-  })
-  .catch(function () { emptyEl.hidden = false; emptyEl.textContent = 'Catalog failed to load — try /meta.json directly.'; });
+function fail(msg) {
+  if (emptyEl) { emptyEl.hidden = false; emptyEl.textContent = msg; }
+}
+
+function start() {
+  grid = $('grid'); q = $('q'); tagsEl = $('tags'); moreBtn = $('more');
+  emptyEl = $('empty'); countEl = $('count');
+  if (!grid) return;
+
+  moreBtn.addEventListener('click', function () { render(false); });
+  var timer;
+  q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(apply, 80); });
+
+  fetch('/meta.json', { cache: 'default' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      ALL = (Array.isArray(data) ? data : []).filter(function (t) { return t && t.id; });
+      if (!ALL.length) return fail('Catalog is empty.');
+      buildTags();
+      view = ALL;
+      render(true);
+    })
+    .catch(function () { fail('Catalog failed to load. Try /meta.json directly.'); });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', start);
+} else {
+  start();
+}
