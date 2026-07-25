@@ -3,35 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hanzo OSS — deploy 1000+ open-source apps</title>
-  <meta name="description" content="Explore and one-click deploy 1000+ open-source apps on Hanzo Cloud. Postgres, Ghost, n8n, Supabase, Grafana and more. Built one of these? Earn 20% when people run it on Hanzo." />
+  <title>Hanzo OSS — deploy the open-source internet in one click</title>
+  <meta name="description" content="The world runs on open source. Deploy any of 1,030 apps — Postgres, Ghost, n8n, Grafana, Ollama — in one click, on your machine or Hanzo Cloud. Build one, and earn 20% when the world runs it." />
   <link rel="stylesheet" href="/catalog.css" />
-  <link rel="icon" href="https://hanzo.ai/favicon.ico" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23000'/%3E%3Cg%20fill='%23fff'%3E%3Crect%20x='9'%20y='8'%20width='3.6'%20height='16'/%3E%3Crect%20x='19.4'%20y='8'%20width='3.6'%20height='16'/%3E%3Crect%20x='9'%20y='14.2'%20width='14'%20height='3.6'/%3E%3C/g%3E%3C/svg%3E" />
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="https://hanzo.ai">Hanzo</a>
+    <a class="brand" href="https://hanzo.ai" aria-label="Hanzo">
+      <span class="mark" aria-hidden="true"></span>Hanzo
+    </a>
     <nav class="topnav">
-      <a href="https://platform.hanzo.ai">Deploy</a>
-      <a href="https://console.hanzo.ai/authors">Earn</a>
+      <a href="#explore">Explore</a>
+      <a href="#makers">Earn</a>
       <a href="https://docs.hanzo.ai">Docs</a>
     </nav>
   </header>
 
+  <!-- HERO — the story, in three seconds. Static: paints instantly, survives any data failure. -->
   <section class="hero">
-    <h1>Deploy open source on Hanzo</h1>
-    <p class="lead"><strong id="count">1000+</strong> ready-to-run apps — one click to your own machine, GPU, or cluster.</p>
-    <div class="earn">
-      Built one of these? <a href="https://console.hanzo.ai/authors">Earn 20% of the compute revenue</a> when people run your project on Hanzo.
+    <p class="eyebrow">The open-source cloud</p>
+    <h1>The world runs on open source.<br /><span class="dim">Deploy any of it in one click.</span></h1>
+    <p class="lead">
+      Postgres, Ghost, n8n, Grafana, Ollama — <strong id="count">1,030</strong> apps,
+      packaged and ready to run on your machine, your GPU, your cluster.
+      Build one, and earn when the world runs it.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#explore">Browse apps</a>
+      <a class="btn ghost" href="#makers">How makers earn &rarr;</a>
     </div>
-    <input id="q" class="search" type="search" placeholder="Search 1000+ apps — postgres, ghost, n8n, grafana…" autocomplete="off" autofocus />
-    <div id="tags" class="tags"></div>
   </section>
 
-  <main>
-    <div id="grid" class="grid" aria-live="polite"></div>
-    <p id="empty" class="empty" hidden>No apps match — try another term.</p>
-    <button id="more" class="more" hidden>Load more</button>
+  <!-- PHILOSOPHY — what Hanzo believes. Static. -->
+  <section class="beliefs" aria-label="What we believe">
+    <div class="belt">
+      <article class="belief">
+        <h3>One binary. One API.</h3>
+        <p>The whole network is the cloud — no control planes to babysit, no YAML to appease.</p>
+      </article>
+      <article class="belief">
+        <h3>Deploy anything. Own everything.</h3>
+        <p>Your data, your keys, your machine. Self-host it or run it on Hanzo. Leave anytime — nothing's locked in.</p>
+      </article>
+      <article class="belief">
+        <h3>Earn when others run it.</h3>
+        <p>Ship a template, keep 20% of the compute it earns. Open source that pays its makers.</p>
+      </article>
+    </div>
+    <p class="signature">Open by default. Building in the open since Techstars&nbsp;'17.</p>
+  </section>
+
+  <!-- MAKERS — the economic story, first-class. Static. -->
+  <section class="makers" id="makers">
+    <p class="eyebrow">For makers</p>
+    <h2>Open source that pays.</h2>
+    <p class="makers-lead">
+      Every app here is somebody's work. When your project runs on Hanzo you keep
+      <strong>20% of the compute revenue</strong> — metered per second, paid out automatically.
+      No invoices. No gatekeepers.
+    </p>
+    <ol class="steps">
+      <li><span class="step-n">01</span> Claim your GitHub repo</li>
+      <li><span class="step-n">02</span> People deploy it</li>
+      <li><span class="step-n">03</span> You earn, automatically</li>
+    </ol>
+    <a class="btn primary" href="https://console.hanzo.ai/authors">Claim your project &rarr;</a>
+  </section>
+
+  <!-- EXPLORE — curated first, then the full searchable catalog. JS-rendered from /meta.json. -->
+  <main id="explore">
+    <section class="curated" aria-label="Start here">
+      <div class="section-head">
+        <h2>Start here</h2>
+        <p>The ones everyone deploys first.</p>
+      </div>
+      <div id="featured" class="featured"></div>
+    </section>
+
+    <section class="browse" aria-label="Browse by domain">
+      <div class="section-head">
+        <h2>Browse by what you want to do</h2>
+        <p>Eight domains. Pick a lane — the catalog follows.</p>
+      </div>
+      <div id="domains" class="domains"></div>
+    </section>
+
+    <section class="catalog" aria-label="All apps">
+      <div class="toolbar">
+        <input id="q" class="search" type="search" placeholder="Search 1,030 apps — postgres, ghost, n8n, grafana…" autocomplete="off" aria-label="Search apps" />
+        <div class="toolbar-meta">
+          <span id="active-filter" class="chip-slot"></span>
+          <span id="result-count" class="result-count"></span>
+        </div>
+      </div>
+      <div id="grid" class="grid" aria-live="polite"></div>
+      <p id="empty" class="empty" hidden>No apps match — try another term.</p>
+      <button id="more" class="more" hidden>Load more</button>
+    </section>
   </main>
 
   <footer class="foot">

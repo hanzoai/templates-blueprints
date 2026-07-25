@@ -1,17 +1,65 @@
 // oss.hanzo.ai — the open-source explorer. One file, no framework, no inline JS
-// (CSP: script-src 'self'). Cards are built with the DOM API — never innerHTML —
-// so a hostile description can't inject, a missing logo can't break the grid, and
-// nothing here runs afoul of the strict Content-Security-Policy. Resilient by
-// construction: one bad template is skipped, never fatal.
+// (CSP: script-src 'self'). Everything is built with the DOM API — never
+// innerHTML — so a hostile description can't inject, a missing logo can't break
+// the grid, and nothing runs afoul of the strict Content-Security-Policy.
+// Resilient by construction: the story (hero, beliefs, makers) is static HTML
+// that stands alone; only the catalog below needs data, and one bad row is
+// skipped, never fatal.
 'use strict';
 
 var DEPLOY = 'https://platform.hanzo.ai/templates?deploy=';
 var EARN = 'https://console.hanzo.ai/authors';
 var PAGE = 60;
 
-// Build-provenance tags are catalog plumbing, not categories a human browses by.
-var HIDE = { caprover: 1, dokploy: 1, coolify: 1, casaos: 1, runtipi: 1 };
-var FEATURED = ['self-hosted', 'ai', 'database', 'media', 'productivity', 'monitoring', 'automation', 'developer'];
+// The eight domains a human actually browses by. Each maps to a set of real
+// tags (build-provenance tags — caprover/dokploy/coolify/casaos/runtipi — are
+// never here). Filtering is one intersection test, parameterised by the set.
+var DOMAINS = [
+  { key: 'self-hosted', label: 'Self-hosted',
+    blurb: 'Run it on your own hardware. Your data never leaves the building.',
+    tags: ['self-hosted', 'selfhosted', 'homelab', 'privacy', 'local-first', 'home'] },
+  { key: 'ai', label: 'AI',
+    blurb: 'Local LLMs, vector search, agents — the whole AI stack, yours to run.',
+    tags: ['ai', 'llm', 'machine-learning', 'chatbot', 'openai', 'anthropic', 'rag', 'agent', 'agents', 'ollama', 'langchain', 'llmops', 'nlp', 'inference', 'generative-ai', 'artificial-intelligence'] },
+  { key: 'database', label: 'Databases',
+    blurb: 'Where your data lives. Postgres, Redis, and everything that remembers.',
+    tags: ['database', 'databases', 'postgres', 'postgresql', 'postgresdb', 'pgsql', 'mysql', 'mariadb', 'redis', 'mongodb', 'sqlite', 'sql', 'key-value', 'time-series', 'olap', 'vector-database', 'vector-db', 'clickhouse', 'surrealdb', 'nosql'] },
+  { key: 'media', label: 'Media',
+    blurb: 'Movies, music, photos — your own streaming service, no subscription.',
+    tags: ['media', 'media-server', 'media-system', 'streaming', 'video', 'videos', 'music', 'movies', 'photos', 'photo', 'tv', 'audio', 'podcast', 'podcasts', 'plex', 'jellyfin', 'live-streaming'] },
+  { key: 'productivity', label: 'Productivity',
+    blurb: 'Notes, docs, tasks, calendars — the tools you live in, self-owned.',
+    tags: ['productivity', 'notes', 'note-taking', 'notebook', 'documents', 'tasks', 'todo', 'calendar', 'kanban', 'project-management', 'projectmanagement', 'knowledge-base', 'knowledge-management', 'wiki', 'office', 'collaboration', 'crm', 'erp'] },
+  { key: 'monitoring', label: 'Monitoring',
+    blurb: 'Watch your systems breathe. Metrics, logs, and alerts before users notice.',
+    tags: ['monitoring', 'observability', 'metrics', 'logging', 'logs', 'alerting', 'alerts', 'apm', 'uptime', 'status-page', 'status', 'tracing', 'dashboard', 'analytics'] },
+  { key: 'automation', label: 'Automation',
+    blurb: 'Wire anything to anything. Let the robots do the boring parts.',
+    tags: ['automation', 'workflow', 'workflows', 'low-code', 'no-code', 'nocode', 'lowcode', 'integration', 'orchestration', 'scheduler', 'cron', 'background-jobs', 'background-tasks', 'queue', 'messaging'] },
+  { key: 'developer', label: 'Developer',
+    blurb: 'Git, CI, APIs, and backends — the machinery you ship software with.',
+    tags: ['developer', 'development', 'developer-tools', 'devtools', 'git', 'ci-cd', 'ci', 'cd', 'version-control', 'versioncontrol', 'code', 'devops', 'api', 'backend', 'ide', 'serverless', 'docker'] }
+];
+var DOMAP = {};
+DOMAINS.forEach(function (d) { d.set = {}; d.tags.forEach(function (t) { d.set[t] = 1; }); DOMAP[d.key] = d; });
+
+// Start here — hand-picked, iconic, with a plain-English line for what it IS.
+// Rendered through the same card factory as the grid (one renderer), just in
+// spotlight dress. A pick missing from the catalog is silently skipped.
+var FEATURED = [
+  ['supabase',    'The open-source Firebase. Postgres, auth, and APIs in one.'],
+  ['n8n',         'Wire anything to anything. Automation without the glue code.'],
+  ['ollama',      'Run open LLMs on your own metal. No API keys, no limits.'],
+  ['ghost',       'Publishing without the ads. A newsletter and blog you own.'],
+  ['postgres',    'The database the internet is built on.'],
+  ['grafana',     'See everything, all at once. Dashboards for any metric.'],
+  ['nextcloud',   'Your files, your cloud. Drive, calendar, and contacts, self-hosted.'],
+  ['immich',      'Google Photos, but yours. Every photo, backed up at home.'],
+  ['gitea',       'Git hosting you control. Lightweight, fast, all yours.'],
+  ['vaultwarden', 'Passwords you actually own. A Bitwarden server of your own.'],
+  ['uptime-kuma', 'Know before your users do. Uptime monitoring, beautifully simple.'],
+  ['redis',       'Memory at the speed of light. The cache behind everything fast.']
+];
 
 var $ = function (id) { return document.getElementById(id); };
 var el = function (tag, cls, text) {
@@ -21,8 +69,9 @@ var el = function (tag, cls, text) {
   return n;
 };
 
-var ALL = [], view = [], shown = 0, active = '';
-var grid, q, tagsEl, moreBtn, emptyEl, countEl;
+var ALL = [], BYID = {}, view = [], shown = 0, active = '';
+var armed = false, io = null;
+var grid, q, moreBtn, emptyEl, countEl, featuredEl, domainsEl, chipEl, resultEl, catalogEl;
 
 function ghRepo(t) {
   var u = (t.links && t.links.github) || '';
@@ -46,14 +95,17 @@ function logo(t) {
   return img;
 }
 
-function card(t) {
-  var c = el('article', 'card');
+// One card factory. opts.spotlight -> the roomier "Start here" treatment;
+// opts.note -> a curated one-liner shown in place of the raw description.
+function card(t, opts) {
+  opts = opts || {};
+  var c = el('article', opts.spotlight ? 'card spot' : 'card');
 
   c.appendChild(logo(t));
 
   var body = el('div', 'body');
   body.appendChild(el('p', 'name', t.name || t.id));
-  body.appendChild(el('p', 'desc', t.description || ''));
+  body.appendChild(el('p', 'desc', opts.note || t.description || ''));
 
   var row = el('div', 'row');
   var deploy = el('a', 'deploy', 'Deploy');
@@ -77,6 +129,24 @@ function card(t) {
   return c;
 }
 
+function inDomain(t) {
+  var d = DOMAP[active]; if (!d) return true;
+  var tags = t.tags || [];
+  for (var i = 0; i < tags.length; i++) if (d.set[tags[i]]) return true;
+  return false;
+}
+
+function counts() {
+  if (!resultEl) return;
+  var d = DOMAP[active];
+  var term = q && q.value.trim();
+  var txt;
+  if (term) txt = view.length + (view.length === 1 ? ' match' : ' matches');
+  else if (d) txt = view.length.toLocaleString() + ' in ' + d.label;
+  else txt = ALL.length.toLocaleString() + ' apps';
+  resultEl.textContent = txt;
+}
+
 function render(reset) {
   if (reset) { grid.textContent = ''; shown = 0; }
   var frag = document.createDocumentFragment();
@@ -88,44 +158,93 @@ function render(reset) {
   shown = end;
   moreBtn.hidden = shown >= view.length;
   emptyEl.hidden = view.length > 0;
-  if (countEl) countEl.textContent = ALL.length.toLocaleString();
 }
 
+// The 1,030-card grid is expensive, so it is deferred: nothing renders until the
+// catalog scrolls near (IntersectionObserver) or the reader searches/filters.
 function apply() {
-  var term = q.value.trim().toLowerCase();
+  if (io) { io.disconnect(); io = null; }
+  armed = true;
+  var term = (q.value || '').trim().toLowerCase();
   view = ALL.filter(function (t) {
-    if (active && (t.tags || []).indexOf(active) < 0) return false;
+    if (active && !inDomain(t)) return false;
     if (!term) return true;
     return (t.name || '').toLowerCase().indexOf(term) >= 0 ||
            (t.description || '').toLowerCase().indexOf(term) >= 0 ||
            (t.id || '').toLowerCase().indexOf(term) >= 0 ||
            (t.tags || []).join(' ').toLowerCase().indexOf(term) >= 0;
   });
+  counts();
   render(true);
 }
 
-function buildTags() {
-  FEATURED.forEach(function (name) {
-    if (HIDE[name]) return;
-    var b = el('button', 'tag', name);
-    b.addEventListener('click', function () {
-      var on = active === name;
-      Array.prototype.forEach.call(tagsEl.children, function (c) { c.classList.remove('on'); });
-      active = on ? '' : name;
-      if (!on) b.classList.add('on');
-      apply();
-    });
-    tagsEl.appendChild(b);
+function chip() {
+  if (!chipEl) return;
+  chipEl.textContent = '';
+  var d = DOMAP[active]; if (!d) return;
+  var b = el('button', 'chip', d.label + '  ✕');
+  b.setAttribute('aria-label', 'Clear ' + d.label + ' filter');
+  b.addEventListener('click', function () { setDomain(''); });
+  chipEl.appendChild(b);
+}
+
+// The one path for browse-by-domain — domain cards and the clear-chip both call
+// it. Sets the filter, reflects it, renders, and brings results into view.
+function setDomain(key) {
+  active = (active === key) ? '' : key;
+  if (domainsEl) Array.prototype.forEach.call(domainsEl.children, function (c) {
+    c.classList.toggle('on', c.getAttribute('data-key') === active);
   });
+  chip();
+  apply();
+  if (catalogEl) catalogEl.scrollIntoView({ block: 'start' });
+}
+
+function renderFeatured() {
+  if (!featuredEl) return;
+  var frag = document.createDocumentFragment();
+  FEATURED.forEach(function (pair) {
+    try {
+      var t = BYID[pair[0]]; if (!t) return;
+      frag.appendChild(card(t, { spotlight: true, note: pair[1] }));
+    } catch (e) { /* skip one pick, never break the row */ }
+  });
+  featuredEl.appendChild(frag);
+}
+
+function renderDomains() {
+  if (!domainsEl) return;
+  var frag = document.createDocumentFragment();
+  DOMAINS.forEach(function (d) {
+    try {
+      var n = ALL.filter(function (t) {
+        var tags = t.tags || [];
+        for (var i = 0; i < tags.length; i++) if (d.set[tags[i]]) return true;
+        return false;
+      }).length;
+      if (!n) return;
+      var b = el('button', 'domain');
+      b.setAttribute('data-key', d.key);
+      b.appendChild(el('span', 'domain-count', n.toLocaleString()));
+      b.appendChild(el('span', 'domain-label', d.label));
+      b.appendChild(el('span', 'domain-blurb', d.blurb));
+      b.addEventListener('click', function () { setDomain(d.key); });
+      frag.appendChild(b);
+    } catch (e) { /* skip one domain, never break the row */ }
+  });
+  domainsEl.appendChild(frag);
 }
 
 function fail(msg) {
   if (emptyEl) { emptyEl.hidden = false; emptyEl.textContent = msg; }
+  if (resultEl) resultEl.textContent = '';
 }
 
 function start() {
-  grid = $('grid'); q = $('q'); tagsEl = $('tags'); moreBtn = $('more');
-  emptyEl = $('empty'); countEl = $('count');
+  grid = $('grid'); q = $('q'); moreBtn = $('more'); emptyEl = $('empty');
+  countEl = $('count'); featuredEl = $('featured'); domainsEl = $('domains');
+  chipEl = $('active-filter'); resultEl = $('result-count');
+  catalogEl = document.querySelector('.catalog');
   if (!grid) return;
 
   moreBtn.addEventListener('click', function () { render(false); });
@@ -137,9 +256,21 @@ function start() {
     .then(function (data) {
       ALL = (Array.isArray(data) ? data : []).filter(function (t) { return t && t.id; });
       if (!ALL.length) return fail('Catalog is empty.');
-      buildTags();
+      ALL.forEach(function (t) { BYID[t.id] = t; });
+      if (countEl) countEl.textContent = ALL.length.toLocaleString();
+      renderFeatured();
+      renderDomains();
       view = ALL;
-      render(true);
+      counts();
+      // Arm the deferred grid: render when it scrolls near, or on first search.
+      if ('IntersectionObserver' in window && catalogEl) {
+        io = new IntersectionObserver(function (entries) {
+          if (entries.some(function (e) { return e.isIntersecting; })) apply();
+        }, { rootMargin: '400px 0px' });
+        io.observe(catalogEl);
+      } else {
+        apply();
+      }
     })
     .catch(function () { fail('Catalog failed to load. Try /meta.json directly.'); });
 }
