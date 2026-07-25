@@ -4,19 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hanzo OSS — deploy the open-source internet in one click</title>
-  <meta name="description" content="The world runs on open source. Deploy any of 1,030 apps — Postgres, Ghost, n8n, Grafana, Ollama — in one click, on your machine or Hanzo Cloud. Build one, and earn 20% when the world runs it." />
+  <meta name="description" content="The world runs on open source. Browse and one-click deploy 1,030 apps — Postgres, Ghost, n8n, Grafana, Ollama — on your machine or Hanzo Cloud. Build one, and earn a share when the world runs it." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0b'/%3E%3Cpath d='M10 8v16M22 8v16M10 16h12' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="/catalog.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23000'/%3E%3Cg%20fill='%23fff'%3E%3Crect%20x='9'%20y='8'%20width='3.6'%20height='16'/%3E%3Crect%20x='19.4'%20y='8'%20width='3.6'%20height='16'/%3E%3Crect%20x='9'%20y='14.2'%20width='14'%20height='3.6'/%3E%3C/g%3E%3C/svg%3E" />
+  <script src="/app.js"></script>
 </head>
 <body>
+  <!-- header -->
   <header class="top">
     <a class="brand" href="https://hanzo.ai" aria-label="Hanzo">
-      <span class="mark" aria-hidden="true"></span>Hanzo
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor"/><path d="M10 8v16M22 8v16M10 16h12" stroke="var(--bg)" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Hanzo <span class="sub">OSS</span></span>
     </a>
-    <nav class="topnav">
-      <a href="#explore">Explore</a>
-      <a href="#makers">Earn</a>
-      <a href="https://docs.hanzo.ai">Docs</a>
+    <nav class="topnav" aria-label="Primary">
+      <a class="hide-sm" href="#explore">Explore</a>
+      <a class="hide-sm" href="#makers">Earn</a>
+      <a class="hide-sm" href="https://docs.hanzo.ai" target="_blank" rel="noopener">Docs</a>
+      <a class="cta" href="https://platform.hanzo.ai" target="_blank" rel="noopener">Deploy console</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle color theme" title="Toggle theme">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
     </nav>
   </header>
 
@@ -48,7 +57,7 @@
       </article>
       <article class="belief">
         <h3>Earn when others run it.</h3>
-        <p>Ship a template, keep 20% of the compute it earns. Open source that pays its makers.</p>
+        <p>Ship a template, and keep a share of the compute it earns — paid out automatically. Open source that pays its makers.</p>
       </article>
     </div>
     <p class="signature">Open by default. Building in the open since Techstars&nbsp;'17.</p>
@@ -59,8 +68,8 @@
     <p class="eyebrow">For makers</p>
     <h2>Open source that pays.</h2>
     <p class="makers-lead">
-      Every app here is somebody's work. When your project runs on Hanzo you keep
-      <strong>20% of the compute revenue</strong> — metered per second, paid out automatically.
+      Every app here is somebody's work. When your project runs on Hanzo you keep a
+      <strong>share of the compute it earns</strong> — metered per second, paid out automatically.
       No invoices. No gatekeepers.
     </p>
     <ol class="steps">
@@ -71,43 +80,35 @@
     <a class="btn primary" href="https://console.hanzo.ai/authors">Claim your project &rarr;</a>
   </section>
 
-  <!-- EXPLORE — curated first, then the full searchable catalog. JS-rendered from /meta.json. -->
+  <!-- EXPLORE — the searchable 1,030-app launcher. JS-rendered from /meta.json. -->
   <main id="explore">
-    <section class="curated" aria-label="Start here">
-      <div class="section-head">
-        <h2>Start here</h2>
-        <p>The ones everyone deploys first.</p>
-      </div>
-      <div id="featured" class="featured"></div>
-    </section>
+    <div class="section-head">
+      <h2>Explore the catalog</h2>
+      <p>Search <span id="count-2">1,030</span> open-source apps, or filter by category — one click sends any of them to Hanzo Cloud.</p>
+    </div>
 
-    <section class="browse" aria-label="Browse by domain">
-      <div class="section-head">
-        <h2>Browse by what you want to do</h2>
-        <p>Eight domains. Pick a lane — the catalog follows.</p>
-      </div>
-      <div id="domains" class="domains"></div>
-    </section>
+    <div class="search-wrap">
+      <svg class="glass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" class="search" type="search" placeholder="Search apps — postgres, ghost, n8n, grafana, ollama…" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search open-source apps" />
+      <span class="kbd" aria-hidden="true">/</span>
+    </div>
+    <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+    <div class="tags" id="tags" role="group" aria-label="Filter by category"></div>
 
-    <section class="catalog" aria-label="All apps">
-      <div class="toolbar">
-        <input id="q" class="search" type="search" placeholder="Search 1,030 apps — postgres, ghost, n8n, grafana…" autocomplete="off" aria-label="Search apps" />
-        <div class="toolbar-meta">
-          <span id="active-filter" class="chip-slot"></span>
-          <span id="result-count" class="result-count"></span>
-        </div>
-      </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <p id="empty" class="empty" hidden>No apps match — try another term.</p>
-      <button id="more" class="more" hidden>Load more</button>
-    </section>
+    <div id="grid" class="grid" aria-label="Open-source apps" aria-live="polite"></div>
+    <p id="empty" class="empty" hidden>No apps match — try another term.</p>
+    <button id="more" class="more" type="button" hidden>Load more</button>
   </main>
 
+  <!-- footer -->
   <footer class="foot">
     <span>Sourced from the open-source Dokploy, Coolify, CapRover, CasaOS &amp; Runtipi catalogs — each app keeps its upstream license.</span>
-    <a href="/meta.json">Catalog API</a>
+    <span class="links">
+      <a href="/meta.json">Catalog API</a>
+      <a href="https://platform.hanzo.ai" target="_blank" rel="noopener">Hanzo PaaS</a>
+      <a href="https://docs.hanzo.ai" target="_blank" rel="noopener">Docs</a>
+      <a href="https://github.com/hanzoai" target="_blank" rel="noopener">GitHub</a>
+    </span>
   </footer>
-
-  <script src="/app.js" defer></script>
 </body>
 </html>
