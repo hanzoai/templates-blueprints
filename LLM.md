@@ -43,35 +43,42 @@ CI → `ghcr.io/hanzoai/templates-blueprints:sha-<short>-amd64` (arc pool
 `templates.hanzo.ai`, TLS via the ingress. DNS: `templates.hanzo.ai` A → the DOKS
 ingress LB.
 
-## The explorer UI (oss.hanzo.ai) — index.html + catalog.css + app.js
+## The storefront UI (oss.hanzo.ai / templates.hanzo.ai) — index.html + catalog.css + app.js
 
-The three presentation files are the ONLY moving parts of the storefront; they
-never touch the contract above (meta.json / blueprints are read-only to them).
-`static` serves a strict CSP: `script-src 'self'` (external app.js, NO inline
-`<script>` / handlers), `img-src 'self' data:` (logos same-origin, favicon +
-brand mark are inline data: SVGs — NEVER an external favicon URL), `style-src
-'self' 'unsafe-inline'` (external catalog.css + inline `<style>` OK), `connect-src
-'self'` (only `GET /meta.json`). Verify before shipping: `node --check app.js`,
-`grep -E 'onerror=|onclick=|onload=' *.js *.html` = 0.
+ONE page, three files: the editorial story (hero · beliefs · makers band) above a
+searchable 1,030-app launcher. The three presentation files are the ONLY moving
+parts; they never touch the contract above (meta.json / blueprints are read-only
+to them). `static` serves a strict CSP — verified live:
+`default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; frame-ancestors 'none'`.
+So: external `app.js` (NO inline `<script>` / handlers), logos same-origin +
+favicon/brand-mark inline data:/SVG (NEVER an external favicon), external
+`catalog.css`, only `GET /meta.json` on the wire, system-font stack (NO web font).
+Verify before shipping: `node --check app.js`; `grep -E 'onerror=|onclick=|onload=' *.js *.html` = 0;
+and no public compute-share percentage appears in index.html/catalog.css/app.js (the CTO killed the public number).
 
 Invariants that must not regress:
-- **DOM-built, never innerHTML.** Cards come from one factory `card(t, opts)`
-  (`opts.spotlight`/`opts.note` = the "Start here" dress). Per-item try/catch —
-  one bad row is skipped, never fatal. Logos degrade to a monogram tile on
-  `error` (proven: page stays whole even if the server vanishes).
+- **DOM-built, never innerHTML.** Cards come from one factory `card(t)` (logo +
+  name + category badge + Deploy + Source). Per-item try/catch — one bad row is
+  skipped, never fatal. Logos degrade to a monogram tile on `error` (proven: page
+  stays whole even if a logo 404s or the server vanishes).
 - **The story is static HTML** (hero · beliefs · makers band) so it first-paints
-  instantly and survives a `/meta.json` failure; only the catalog below needs data.
-- **Curated exploration, not a wall of 1030.** `FEATURED` = ~12 hand-picked ids
-  + one-liners. `DOMAINS` = 8 browse-domains, each a curated **set of real tags**
-  (build-provenance tags caprover/dokploy/coolify/casaos/runtipi are NEVER in a
-  set); filtering is one intersection test. Domain cards + the clear-chip both
-  call `setDomain()` — one path. Search is the power path.
-- **The 1030-grid is deferred** behind an IntersectionObserver (renders on scroll
-  or first search/filter), paginated 60 at a time, `content-visibility:auto` +
-  lazy logos. Keep it cheap.
-- **Economics are first-class:** Deploy → `platform.hanzo.ai/templates?deploy=<id>`;
-  maintainer "Earn 20% →" → `console.hanzo.ai/authors?claim=<owner/repo>` parsed
-  from `links.github`. Copy is honest — real count (1,030), real 20%, Techstars '17.
-- Motion: hero rises on load (always ends visible); below-fold reveal is opt-in
-  only under `@supports (animation-timeline: view())` so unsupported browsers and
-  `prefers-reduced-motion` always render fully visible.
+  instantly and survives a `/meta.json` failure; only the launcher needs data.
+- **Search + category chips, not a wall of 1030.** The chip row is **data-driven**:
+  a `PREFERRED` order (ai, llm, database, …) shown first when present, then the
+  most-common remaining tags fill up to 16; build-provenance tags
+  (caprover/dokploy/coolify/casaos/runtipi/docker/free/open-source) are hidden.
+  A chip filters by one exact-tag test; search (name+desc+id+tags) is the power
+  path. State is shareable in the URL hash (`#q=…&tag=…`); `/` focuses search,
+  `Esc` clears. Grid paginated 48 at a time, `content-visibility:auto` + lazy logos.
+- **Theme-aware.** Light default; dark via `prefers-color-scheme` and an explicit
+  `[data-theme]` toggle persisted to `localStorage['hz-theme']`. `app.js` is loaded
+  **blocking in `<head>`** so the theme bootstrap runs before first paint (no flash);
+  the catalog work waits for `DOMContentLoaded`. ONE JS file (theme + launcher).
+- **Economics are first-class, but the public % is gone:** Deploy →
+  `platform.hanzo.ai/templates?deploy=<id>` (proven live 200). The makers band
+  promises a **share of the compute a project earns — metered per second, paid out
+  automatically**, with NO percentage anywhere (CTO killed the public number). The
+  "Claim your project" CTA → `console.hanzo.ai/authors`. Copy stays honest: real
+  count (1,030), Techstars '17.
+- Motion: hero rises once on load (always ends visible); `prefers-reduced-motion`
+  disables all animation.
