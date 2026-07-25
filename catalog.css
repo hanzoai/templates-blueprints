@@ -270,3 +270,13 @@ main { max-width: 84rem; margin: 0 auto; padding: 0 1.5rem 4rem; scroll-margin-t
 }
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* ---- touch ergonomics ------------------------------------------------------
+   A category chip and the theme button are things a THUMB aims at, and at 32/34px
+   they sit under the ~44px a thumb reliably hits — measured on the live page at
+   390px. Sized on a COARSE pointer only, so the dense row a mouse wants is left
+   exactly as it is: one chip class, one adaptation, no second component. */
+@media (pointer: coarse) {
+  .tag { min-height: 44px; display: inline-flex; align-items: center; }
+  .icon-btn { width: 44px; height: 44px; }
+}
