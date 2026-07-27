@@ -23,6 +23,11 @@ COPY blueprints /public/blueprints
 COPY index.html /public/index.html
 COPY catalog.css /public/catalog.css
 COPY app.js /public/app.js
+# badge.svg is the "Deploy on Hanzo" mark the per-app page tells maintainers to
+# paste into their README. The COPY list here is explicit, so a new asset that is
+# not added is silently a 404 — which makes every README that adopted the snippet
+# render a broken image. It ships with the page that advertises it.
+COPY badge.svg /public/badge.svg
 
 EXPOSE 3000
 ENTRYPOINT ["/static", "-port", "3000", "-root", "/public"]
