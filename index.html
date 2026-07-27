@@ -85,6 +85,12 @@
     <div class="section-head">
       <h2>Explore the catalog</h2>
       <p>Search <span id="count-2">1,030</span> open-source apps, or filter by category — one click sends any of them to Hanzo Cloud.</p>
+      <p class="submit-line">
+        Missing something?
+        <a href="https://github.com/hanzoai/templates-blueprints/issues/new?title=Add%20app%3A%20&amp;labels=new-app&amp;body=App%20name%3A%0ARepo%3A%0AWhy%20it%20belongs%3A%0A" target="_blank" rel="noopener">Suggest an app</a>
+        or
+        <a href="https://github.com/hanzoai/templates-blueprints" target="_blank" rel="noopener">open a pull request</a>.
+      </p>
     </div>
 
     <div class="search-wrap">
@@ -100,6 +106,14 @@
     <button id="more" class="more" type="button" hidden>Load more</button>
   </main>
 
+  <!-- DETAIL — one app's page, addressable as #app=<id> so it can be linked and shared. -->
+  <dialog id="detail" class="detail" aria-label="App details">
+    <button id="detail-close" class="icon-btn detail-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div id="detail-body"></div>
+  </dialog>
+
   <!-- footer -->
   <footer class="foot">
     <span>Sourced from the open-source Dokploy, Coolify, CapRover, CasaOS &amp; Runtipi catalogs — each app keeps its upstream license.</span>
@@ -107,6 +121,7 @@
       <a href="/meta.json">Catalog API</a>
       <a href="https://platform.hanzo.ai" target="_blank" rel="noopener">Hanzo PaaS</a>
       <a href="https://docs.hanzo.ai" target="_blank" rel="noopener">Docs</a>
+      <a href="https://github.com/hanzoai/templates-blueprints/issues/new?title=Add%20app%3A%20&amp;labels=new-app" target="_blank" rel="noopener">Suggest an app</a>
       <a href="https://github.com/hanzoai" target="_blank" rel="noopener">GitHub</a>
     </span>
   </footer>

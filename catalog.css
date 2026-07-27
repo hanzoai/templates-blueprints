@@ -280,3 +280,71 @@ main { max-width: 84rem; margin: 0 auto; padding: 0 1.5rem 4rem; scroll-margin-t
   .tag { min-height: 44px; display: inline-flex; align-items: center; }
   .icon-btn { width: 44px; height: 44px; }
 }
+
+/* ---------------------------------------------------------------- detail --- */
+/* One app's page. Native <dialog>, so focus trapping, Esc and inertness are the
+   platform's job rather than hand-rolled. Every colour comes from the same tokens
+   as the grid, so it follows the theme toggle with no extra rules. */
+.detail {
+  width: min(680px, calc(100vw - 2rem));
+  max-height: min(86vh, 900px);
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--fg);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.detail::backdrop { background: rgb(0 0 0 / 0.55); }
+.detail-close { position: sticky; top: 0; float: right; margin: -0.25rem -0.25rem 0 0; }
+.detail-close svg { width: 18px; height: 18px; }
+
+.detail .dhead { display: flex; gap: 0.9rem; align-items: flex-start; margin-bottom: 1rem; }
+.detail .dhead .logo { width: 52px; height: 52px; flex: 0 0 auto; }
+.detail .dtitle h3 { margin: 0 0 0.15rem; font-size: 1.3rem; line-height: 1.2; }
+.detail .dtitle .desc { margin: 0; color: var(--muted); }
+
+.detail .row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.1rem; }
+
+.detail .dfacts { display: grid; gap: 0.5rem; margin-bottom: 1.25rem; }
+.detail .drow { display: flex; gap: 0.75rem; font-size: 0.875rem; }
+.detail .dt { flex: 0 0 92px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.72rem; padding-top: 0.15rem; }
+.detail .dd { color: var(--fg); word-break: break-word; }
+
+.detail .druns { margin-bottom: 1.25rem; }
+.detail h4 { margin: 0 0 0.5rem; font-size: 0.95rem; }
+.detail .svc-list { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.detail .svc { display: flex; gap: 0.75rem; padding: 0.6rem 0.75rem; align-items: baseline; }
+.detail .svc + .svc { border-top: 1px solid var(--line); }
+.detail .svc-n { flex: 0 0 34%; font-weight: 600; font-size: 0.875rem; word-break: break-word; }
+.detail .svc-i { color: var(--muted); font-size: 0.8rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; }
+
+.detail .badge-wrap { border-top: 1px solid var(--line); padding-top: 1.1rem; }
+.detail .muted { color: var(--muted); font-size: 0.85rem; margin: 0 0 0.6rem; }
+/* The snippet must be selectable and must not force the dialog to scroll sideways. */
+.detail .snippet {
+  margin: 0 0 0.6rem;
+  padding: 0.7rem 0.8rem;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  overflow-x: auto;
+  white-space: pre;
+  user-select: all;
+}
+.btn.small { padding: 0.3rem 0.7rem; font-size: 0.8rem; }
+
+.submit-line { color: var(--muted); font-size: 0.9rem; }
+.submit-line a { color: var(--fg); text-decoration: underline; text-underline-offset: 2px; }
+
+/* The grid card is now a control: show it, and keep the keyboard ring visible. */
+.card { cursor: pointer; }
+.card:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .detail[open] { animation: detail-in 140ms ease-out; }
+  @keyframes detail-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}

@@ -54,7 +54,7 @@ var LABEL = { ai: 'AI', llm: 'LLM', cms: 'CMS', api: 'API', crm: 'CRM', erp: 'ER
 // Too generic to be a useful per-card badge.
 var GENERIC = { 'self-hosted': 1, 'open-source': 1, docker: 1, free: 1, app: 1, web: 1, hosting: 1, utilities: 1 };
 
-var all = [], view = [], shown = 0, active = '';
+var all = [], view = [], shown = 0, active = '', openId = '';
 var grid, q, tagsEl, moreBtn, emptyEl, resultEl;
 
 function onReady(fn) {
@@ -116,7 +116,163 @@ function card(t) {
   }
   body.appendChild(row);
   c.appendChild(body);
+
+  // The card is the primary target: it OPENS the app. The two links inside keep
+  // their own behaviour, so a click on Deploy or Source must not also open the panel.
+  c.tabIndex = 0;
+  c.setAttribute('role', 'button');
+  c.setAttribute('aria-label', (t.name || t.id) + ' — details');
+  c.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('a')) return;
+    location.hash = 'app=' + encodeURIComponent(t.id);
+  });
+  c.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = 'app=' + encodeURIComponent(t.id); }
+  });
   return c;
+}
+
+/* ---------------------------------------------------------------- detail --- */
+// One app's page, opened from a card and addressable as #app=<id> so it can be
+// linked, shared and reloaded. It answers the question a tile cannot: what will
+// actually run — which containers start and which images they pull — read from
+// the blueprint's own docker-compose.yml rather than restated from the catalog row.
+
+// The load-bearing lines of a compose file: service names and their images. A
+// deliberately small indentation reader, not a YAML parser — anything it cannot
+// read is simply absent, never guessed, so the panel never claims something false
+// about what a deploy starts. Total: it never throws on hostile or malformed input.
+function services(yaml) {
+  var out = [], lines = String(yaml).split(/\r?\n/), inSvc = false, at = -1, cur = null;
+  for (var i = 0; i < lines.length; i++) {
+    var raw = lines[i].replace(/\t/g, ' '), s = raw.trim();
+    if (!s || s.charAt(0) === '#') continue;
+    var col = raw.length - raw.replace(/^ +/, '').length;
+    if (!inSvc) { if (/^services\s*:/.test(s)) { inSvc = true; at = col; } continue; }
+    if (col <= at) break;
+    var name = s.match(/^([A-Za-z0-9._-]+)\s*:\s*$/);
+    if (name && (cur === null || col <= cur.col)) { cur = { name: name[1], col: col, image: '' }; out.push(cur); continue; }
+    if (!cur) continue;
+    var img = s.match(/^image\s*:\s*(.+)$/);
+    if (img) cur.image = img[1].trim().replace(/^["']|["']$/g, '');
+  }
+  return out;
+}
+
+function detailRow(term, val) {
+  var d = el('div', 'drow');
+  d.appendChild(el('span', 'dt', term));
+  d.appendChild(el('span', 'dd', val));
+  return d;
+}
+
+// The snippet a maintainer pastes into their own README so their users can deploy
+// it here in one click — the "add this to your repo" ask.
+function badgeBlock(t) {
+  var url = DEPLOY + encodeURIComponent(t.id);
+  var md = '[![Deploy on Hanzo](https://oss.hanzo.ai/badge.svg)](' + url + ')';
+  var wrap = el('div', 'badge-wrap');
+  wrap.appendChild(el('h4', null, 'Add it to your repo'));
+  wrap.appendChild(el('p', 'muted', 'Paste this in your README so anyone can deploy ' + (t.name || t.id) + ' in one click.'));
+  var pre = el('pre', 'snippet', md);
+  wrap.appendChild(pre);
+  var copy = el('button', 'btn ghost small', 'Copy');
+  copy.type = 'button';
+  copy.addEventListener('click', function () {
+    // Clipboard API is unavailable on http/older browsers — select the text so the
+    // user can still copy by hand rather than silently doing nothing.
+    function selectIt() {
+      try {
+        var r = document.createRange(); r.selectNodeContents(pre);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      } catch (e) { /* ignore */ }
+      copy.textContent = 'Select + copy';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(md).then(function () {
+        copy.textContent = 'Copied';
+        setTimeout(function () { copy.textContent = 'Copy'; }, 1600);
+      }, selectIt);
+    } else selectIt();
+  });
+  wrap.appendChild(copy);
+  return wrap;
+}
+
+function detailBody(t) {
+  var b = document.createDocumentFragment();
+
+  var head = el('div', 'dhead');
+  if (t.logo) {
+    var img = el('img', 'logo');
+    img.alt = ''; img.src = LOGO_BASE + encodeURIComponent(t.id) + '/' + encodeURIComponent(t.logo);
+    img.addEventListener('error', function () { if (img.parentNode) img.parentNode.replaceChild(monoNode(t.name || t.id), img); });
+    head.appendChild(img);
+  } else head.appendChild(monoNode(t.name || t.id));
+  var ht = el('div', 'dtitle');
+  ht.appendChild(el('h3', null, t.name || t.id));
+  ht.appendChild(el('p', 'desc', t.description || ''));
+  head.appendChild(ht);
+  b.appendChild(head);
+
+  var row = el('div', 'row');
+  var dep = el('a', 'deploy', 'Deploy on Hanzo');
+  dep.href = DEPLOY + encodeURIComponent(t.id);
+  row.appendChild(dep);
+  [['github', 'Source'], ['website', 'Website'], ['docs', 'Docs']].forEach(function (p) {
+    var href = t.links && t.links[p[0]];
+    if (!href) return;
+    var a = el('a', 'link', p[1]);
+    a.href = href; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    row.appendChild(a);
+  });
+  b.appendChild(row);
+
+  var facts = el('div', 'dfacts');
+  facts.appendChild(detailRow('Version', t.version || 'latest'));
+  facts.appendChild(detailRow('Catalog id', t.id));
+  if ((t.tags || []).length) facts.appendChild(detailRow('Tags', t.tags.join(', ')));
+  b.appendChild(facts);
+
+  // Filled in asynchronously; absent blueprint simply leaves it out.
+  var runs = el('div', 'druns');
+  runs.hidden = true;
+  b.appendChild(runs);
+  fetch(LOGO_BASE + encodeURIComponent(t.id) + '/docker-compose.yml', { cache: 'default' })
+    .then(function (r) { return r.ok ? r.text() : ''; })
+    .then(function (yaml) {
+      var svc = yaml ? services(yaml) : [];
+      if (!svc.length) return;
+      runs.appendChild(el('h4', null, svc.length === 1 ? 'One container starts' : svc.length + ' containers start'));
+      var list = el('div', 'svc-list');
+      svc.forEach(function (s) {
+        var r = el('div', 'svc');
+        r.appendChild(el('span', 'svc-n', s.name));
+        r.appendChild(el('span', 'svc-i', s.image || 'built from source'));
+        list.appendChild(r);
+      });
+      runs.appendChild(list);
+      runs.hidden = false;
+    })
+    .catch(function () { /* optional asset — a missing blueprint is not an error */ });
+
+  b.appendChild(badgeBlock(t));
+  return b;
+}
+
+function closeDetail() {
+  var d = document.getElementById('detail');
+  if (d && d.open) d.close();
+}
+function openDetail(id) {
+  var d = document.getElementById('detail'), body = document.getElementById('detail-body');
+  if (!d || !body) return;
+  var t = null;
+  for (var i = 0; i < all.length; i++) if (all[i].id === id) { t = all[i]; break; }
+  body.textContent = '';
+  if (!t) { body.appendChild(el('p', 'empty', 'No app named "' + id + '" in the catalog.')); }
+  else body.appendChild(detailBody(t));
+  if (!d.open) d.showModal();
 }
 
 function render(reset) {
@@ -185,6 +341,8 @@ function buildTags() {
 // ---- shareable/deep-linkable state in the URL hash ----
 function syncHash() {
   var p = [];
+  // An open app owns the hash outright — its URL is the thing being shared.
+  if (openId) { try { history.replaceState(null, '', '#app=' + encodeURIComponent(openId)); } catch (e) { /* ignore */ } return; }
   if (q.value.trim()) p.push('q=' + encodeURIComponent(q.value.trim()));
   if (active) p.push('tag=' + encodeURIComponent(active));
   var url = p.length ? '#' + p.join('&') : location.pathname + location.search;
@@ -195,6 +353,7 @@ function readHash() {
   if (!h) return;
   var params = {};
   h.split('&').forEach(function (kv) { var i = kv.indexOf('='); if (i > 0) params[decodeURIComponent(kv.slice(0, i))] = decodeURIComponent(kv.slice(i + 1)); });
+  if (params.app) openId = params.app;
   if (params.q) q.value = params.q;
   if (params.tag) {
     active = params.tag;
@@ -202,6 +361,18 @@ function readHash() {
       if (c.dataset.tag === active) { c.classList.add('on'); c.setAttribute('aria-pressed', 'true'); }
     });
   }
+}
+
+// The hash is the router: it decides whether a detail page is open. Called on load
+// and on every hashchange (including Back), so the dialog and the URL never disagree.
+function routeHash() {
+  var h = location.hash.replace(/^#/, ''), app = '';
+  h.split('&').forEach(function (kv) {
+    var i = kv.indexOf('=');
+    if (i > 0 && decodeURIComponent(kv.slice(0, i)) === 'app') app = decodeURIComponent(kv.slice(i + 1));
+  });
+  openId = app;
+  if (app) openDetail(app); else closeDetail();
 }
 
 function fail(msg) { if (emptyEl) { emptyEl.hidden = false; emptyEl.textContent = msg; } if (resultEl) resultEl.textContent = ''; }
@@ -213,6 +384,17 @@ function start() {
   if (!grid || !q) return;
 
   moreBtn.addEventListener('click', function () { render(false); });
+
+  var dlg = document.getElementById('detail'), closeBtn = document.getElementById('detail-close');
+  if (closeBtn) closeBtn.addEventListener('click', function () { location.hash = ''; });
+  if (dlg) {
+    // Esc and the backdrop both close it; clearing the hash is what actually
+    // closes, so the URL stays the single source of truth for what is open.
+    dlg.addEventListener('cancel', function (e) { e.preventDefault(); location.hash = ''; });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) location.hash = ''; });
+    dlg.addEventListener('close', function () { if (openId) { openId = ''; try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { /* ignore */ } } });
+  }
+  window.addEventListener('hashchange', routeHash);
   var timer;
   q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(apply, 80); });
   document.addEventListener('keydown', function (e) {
@@ -238,6 +420,7 @@ function start() {
       buildTags();
       readHash();
       apply();
+      routeHash();
     })
     .catch(function () { fail('Catalog failed to load — open /meta.json directly.'); });
 }
